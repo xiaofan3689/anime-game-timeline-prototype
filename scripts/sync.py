@@ -11,7 +11,12 @@ MANUAL = ROOT / "data/manual.json"
 GAMES = {
     "ys": "原神", "nte": "异环", "sr": "崩坏：星穹铁道",
     "zzz": "绝区零", "ww": "鸣潮", "ak": "明日方舟",
-    "end": "明日方舟：终末地",
+    "end": "明日方舟：终末地", "ba-cn": "蔚蓝档案（国服）",
+    "ba-jp": "蔚蓝档案（日服）", "ba-global": "蔚蓝档案（国际服）",
+    "xtlr": "星塔旅人", "infinitynikki": "无限暖暖",
+    "gf2": "少女前线2：追放", "pgr": "战双帕弥什",
+    "czn": "卡厄斯梦境（国际服）", "bd2": "棕色尘埃2",
+    "nikke": "NIKKE（国际服）", "hyrz": "火影忍者",
 }
 GAME_ICONS = {
     "ys": "https://ys.mihoyo.com/favicon.ico",
@@ -21,6 +26,17 @@ GAME_ICONS = {
     "ww": "https://mc.kurogames.com/favicon.ico",
     "ak": "https://ak.hypergryph.com/favicon.ico",
     "end": "https://endfield.hypergryph.com/favicon.ico",
+    "ba-cn": "https://bluearchive-cn.com/favicon.ico",
+    "ba-jp": "https://bluearchive.jp/favicon.ico",
+    "ba-global": "https://bluearchive.nexon.com/favicon.ico",
+    "xtlr": "https://stella-sora.com/favicon.ico",
+    "infinitynikki": "https://infinitynikki.infoldgames.com/favicon.ico",
+    "gf2": "https://gf2.sunborngame.com/favicon.ico",
+    "pgr": "https://pns.kurogames.com/favicon.ico",
+    "czn": "https://chaoszeronightmare.com/favicon.ico",
+    "bd2": "https://www.browndust2.com/favicon.ico",
+    "nikke": "https://nikke-en.com/favicon.ico",
+    "hyrz": "https://hyrz.qq.com/favicon.ico",
 }
 BASE = "https://starrailassistant.top/api/v1/activity/"
 CN_OFFSET = "+08:00"

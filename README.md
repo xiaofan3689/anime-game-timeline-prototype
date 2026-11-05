@@ -4,8 +4,8 @@
 
 ## 已实现
 
-- 《原神》《异环》及其他已配置游戏的活动数据适配；活动来源为 [SRA 公共 API](https://starrailassistant.top/reference/public-api/)，属于社区维护的官方公告整理数据，并非官方实时 API。
-- 类似 Paimon.moe 的横向甘特时间线：日期横轴、跨日活动条、今日指示线、剩余时间和横向滚动；同时保留游戏筛选、搜索、状态筛选、来源链接与更新时间。页面每 5 分钟重新读取同源 JSON。
+- 已接入 [SRA 公共 API](https://starrailassistant.top/reference/public-api/) 文档中的全部 18 个游戏及区服标识。数据由社区维护者从官方公告整理，并非官方实时 API。
+- 类似 Paimon.moe 的横向活动时间线：日期横轴、精确到时刻的活动条、今日指示线、结束端 Banner 和剩余时间。桌面端可按住拖动或使用滚轮，触屏可横向滑动；活动名称随可见区域移动以保持可读。页面每 5 分钟重新读取同源 JSON。
 - 首次进入弹出游戏多选，选择结果保存在浏览器 localStorage；以后自动恢复，也可随时点击“选择游戏”修改。
 - 游戏图标只用于首次游戏选择界面。时间线活动条不显示图标或首字；右侧使用活动自己的横幅/封面图并向左渐隐，版本总封面不再误用为每个活动背景。
 - 人工补录字段：游戏 ID、游戏名称、游戏图标 URL、活动名称、开始和结束时间（须带时区）、公告 URL。
@@ -18,9 +18,8 @@
 ## 部署
 
 1. 新建公开 GitHub 仓库，上传此目录，保留 `.github/workflows/sync.yml`。
-2. 在仓库 Settings → Pages 的 Build and deployment 中选择 **GitHub Actions**。若默认分支不是 `main`，请同步修改工作流的 `git push origin HEAD:main`。
-3. 到 Actions 手动运行一次 **Sync game events**。成功后任务会提交 `data/events.json`，并直接部署 GitHub Pages。
-4. 可在 Pages 设置中绑定域名并按 GitHub 指引配置 DNS。HTTPS 与域名配置见 [GitHub Pages 文档](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)。
+2. 在 Cloudflare Pages 连接该 GitHub 仓库，构建命令留空，输出目录填写 `/`。域名在 Cloudflare Pages 中绑定。
+3. 到 GitHub Actions 手动运行一次 **Sync game events**。成功后任务会提交 `data/events.json`，Cloudflare Pages 会随着提交重新部署。若默认分支不是 `main`，需修改工作流中的分支及推送目标。
 
 未来客户端共用 `https://你的域名/data/events.json`。所有端均以这个带版本号的 JSON 作为只读数据源。不要在网页或 App 中放 GitHub 写入令牌。人工录入通过提交 `data/manual.json` 完成，网站访客无权写入仓库。
 
