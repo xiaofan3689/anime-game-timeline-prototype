@@ -1,6 +1,8 @@
 """Merge community activity feeds and hand-entered events into a public JSON feed."""
 import json
 import hashlib
+import os
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -88,6 +90,24 @@ def load_previous():
         return {}
 
 
+def write_feed(result):
+    encoded = json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False) + "\n"
+    json.loads(encoded)
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    name = None
+    try:
+        with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", newline="\n", dir=OUT.parent, prefix="events.", suffix=".tmp", delete=False) as handle:
+            name = handle.name
+            handle.write(encoded)
+            handle.flush()
+            os.fsync(handle.fileno())
+        json.loads(Path(name).read_text(encoding="utf-8"))
+        os.replace(name, OUT)
+    finally:
+        if name and Path(name).exists():
+            Path(name).unlink()
+
+
 def main():
     previous = load_previous()
     manual = json.loads(MANUAL.read_text(encoding="utf-8"))
@@ -153,10 +173,9 @@ def main():
     events = list({e["id"]: e for e in events}.values())
     events.sort(key=lambda e: (e["startAt"], e["gameId"], e["title"]))
     if not success and not previous_events and not manual.get("events"):
-        raise RuntimeError("所有上游均失败，且没有可保留的数据；未写入空数据文件")
+        print("WARN 所有上游均失败，写入有效的空活动数据，等待下次同步恢复")
     result = {"schemaVersion": 1, "generatedAt": now, "games": list(games.values()), "events": events, "sources": sources}
-    encoded = json.dumps(result, ensure_ascii=False, indent=2) + "\n"
-    OUT.write_text(encoded, encoding="utf-8")
+    write_feed(result)
     print(f"WROTE {len(events)} events")
 
 
