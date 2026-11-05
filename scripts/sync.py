@@ -13,6 +13,15 @@ GAMES = {
     "zzz": "绝区零", "ww": "鸣潮", "ak": "明日方舟",
     "end": "明日方舟：终末地",
 }
+GAME_ICONS = {
+    "ys": "https://ys.mihoyo.com/favicon.ico",
+    "nte": "https://nte.perfectworld.com/favicon.ico",
+    "sr": "https://sr.mihoyo.com/favicon.ico",
+    "zzz": "https://zzz.mihoyo.com/favicon.ico",
+    "ww": "https://mc.kurogames.com/favicon.ico",
+    "ak": "https://ak.hypergryph.com/favicon.ico",
+    "end": "https://endfield.hypergryph.com/favicon.ico",
+}
 BASE = "https://starrailassistant.top/api/v1/activity/"
 CN_OFFSET = "+08:00"
 
@@ -54,7 +63,7 @@ def main():
     previous = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
     manual = json.loads(MANUAL.read_text(encoding="utf-8"))
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    games = {k: {"id": k, "name": v, "iconUrl": None} for k, v in GAMES.items()}
+    games = {k: {"id": k, "name": v, "iconUrl": GAME_ICONS.get(k), "version": None, "versionName": None, "bannerUrl": None} for k, v in GAMES.items()}
     events = []
     sources = []
     previous_events = previous.get("events", [])
@@ -66,6 +75,7 @@ def main():
             feed = get_json(url)
             if not isinstance(feed.get("activities"), list):
                 raise ValueError("上游数据缺少 activities 列表")
+            games[game_id].update({"version": feed.get("version"), "versionName": feed.get("versionName"), "bannerUrl": feed.get("cover") or None})
             count = 0
             for activity in feed["activities"]:
                 try:
@@ -95,7 +105,7 @@ def main():
     for game in manual.get("games", []):
         if not all(isinstance(game.get(k), str) and game[k].strip() for k in ("id", "name", "iconUrl")):
             raise ValueError("人工游戏需要 id、name、iconUrl")
-        games[game["id"]] = {k: game[k] for k in ("id", "name", "iconUrl")}
+        games[game["id"]] = {k: game.get(k) for k in ("id", "name", "iconUrl", "version", "versionName", "bannerUrl")}
     for item in manual.get("events", []):
         game_id, title = item["gameId"], item["title"].strip()
         if game_id not in games or not title:

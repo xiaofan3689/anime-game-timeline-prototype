@@ -37,7 +37,7 @@ jobs:
       - name: Prepare site
         run: |
           mkdir -p public/data
-          cp index.html styles.css app.js public/
+          cp index.html styles.css styles-extra.css app.js public/
           cp data/events.json public/data/
           touch public/.nojekyll
       - uses: actions/upload-pages-artifact@v3
