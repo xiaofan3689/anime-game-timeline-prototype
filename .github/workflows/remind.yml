@@ -1,0 +1,41 @@
+name: Email ending event reminders
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 * * * *'
+permissions:
+  contents: write
+concurrency:
+  group: event-sync
+  cancel-in-progress: false
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Send pending reminders
+        env:
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+          ALERT_FROM: ${{ secrets.ALERT_FROM }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          ALERT_HOURS: ${{ vars.ALERT_HOURS }}
+          ALERT_GAME_IDS: ${{ vars.ALERT_GAME_IDS }}
+          SITE_URL: https://xiaofan3689.dpdns.org/
+        run: python scripts/remind.py
+      - name: Commit sent ledger
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/reminders-sent.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record sent event reminders'
+            git push origin HEAD:main
+          fi

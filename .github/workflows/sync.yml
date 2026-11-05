@@ -1,6 +1,8 @@
 name: Sync game events
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [manual-events-updated]
   push:
     branches: [main]
     paths:

@@ -27,6 +27,24 @@
 
 GitHub Actions 每 2 小时执行一次，另可手动触发；GitHub 的定时任务可能延迟或漏跑，Pages 发布和浏览器缓存也会增加延迟，因此这是**准实时**方案，不保证秒级同步。SRA 数据由社区维护者在公告后更新，来源更新速度是另一项限制。需要更快时，可提高定时频率（GitHub 最短 5 分钟）并监测失败，但仍不能保证严格实时。若将来需要官方公告直抓，可在 `scripts/sync.py` 中新增按游戏独立的采集器，并保留公告 URL、发布时间和人工复核。
 
+## 管理页面部署
+
+网站左上角的星形图标双击后进入 `/admin/`。页面只编辑 `data/manual.json` 中的人工游戏和人工活动；自动抓取的活动仍由同步脚本维护。时间字段在编辑页按北京时间输入并保存为 `+08:00`。提交后写入 GitHub，并通过仓库事件触发 `Sync game events`；Cloudflare Pages 随后重新部署。公开仓库中的手工活动数据对所有人可读。
+
+1. 确认 Cloudflare Pages 使用 **Git 集成部署**，项目根目录包含 `functions/api/admin/manual.js` 和 `admin/index.html`。纯静态直传方式不会运行 Pages Functions。部署后先访问 `/api/admin/manual`：未登录时应返回 403 或 Access 登录页。
+2. 在 Cloudflare Zero Trust 新建一个 Self-hosted Access 应用，为当前站点配置两个受保护路径：`/admin/*` 和 `/api/admin/*`。仅允许管理员邮箱登录；两个路径须属于**同一个 Access 应用**，以便共用 AUD。注意也保护 `/admin`（无尾斜杠）或将其重定向到 `/admin/`。Access 可用邮箱一次性验证码或已有身份提供商，项目不自行存储用户名密码。
+3. 到 Cloudflare Pages → Settings → Variables and Secrets，设置 `ACCESS_TEAM_DOMAIN`（例如 `https://你的团队.cloudflareaccess.com`）、`ACCESS_AUD`（Access 应用的 Audience Tag）、`ADMIN_EMAIL`、`GH_OWNER`、`GH_REPO`，若默认分支不是 `main` 还需 `GH_BRANCH`。将 `GH_TOKEN` 设为**加密 Secret**。修改环境变量后重新部署。
+4. GitHub Fine-grained Token 只授权此仓库，权限 `Contents: Read and write`，设置合理有效期。此方案用该权限更新 `data/manual.json` 并发送 `repository_dispatch`；无需把令牌放入网页或仓库。若工作流未自动启动，可到 Actions 手动运行 `Sync game events`。
+5. 登录后用 `/admin/` 新增或编辑条目。先点“保存到草稿”，再点“提交到 GitHub”。提交成功只说明仓库已更新；活动出现在网站上仍需等待同步工作流和 Pages 部署。若提示文件版本冲突，刷新编辑页后重新修改。
+
+## 管理员邮件提醒
+
+`.github/workflows/remind.yml` 每小时第 23 分钟检查一次 `data/events.json`，默认在结束前 24 小时和 6 小时发信。已发记录写入 `data/reminders-sent.json`，同一活动、结束时间、阈值不会在后续运行中重复发送。邮件目标目前只有管理员自己的邮箱，没有公开访客订阅表单。
+
+在 GitHub 仓库 Settings → Secrets and variables → Actions 中配置以下 Secrets：`ALERT_EMAIL`（收件邮箱）、`ALERT_FROM`（发件邮箱）、`SMTP_HOST`、`SMTP_PORT`（建议 SSL 465）、`SMTP_USER`、`SMTP_PASSWORD`。使用邮件服务商的 SMTP 授权码，**不要使用邮箱登录密码**。可选 Variables：`ALERT_HOURS`，例如 `24,6`；`ALERT_GAME_IDS`，例如 `ys,sr,nte`，留空表示全部游戏。配置完成后可在 Actions 手动运行 `Email ending event reminders` 验证。
+
+提醒精度受每小时调度、GitHub Actions 排队及数据更新速度影响；首次启用时，所有已进入阈值窗口且尚未结束的活动都可能立即发一封提醒。邮件服务商可能限制 GitHub Runner 的 SMTP 连接或发信额度，运行失败时查看 Actions 日志。发送成功后如果记录提交失败，下一次可能重复发信；生产级严格去重需要独立持久存储或邮件服务商幂等支持。未配置 SMTP 时脚本安全跳过。若仓库默认分支不是 `main`，同步和提醒工作流中的推送目标都要改为实际分支。
+
 ## 数据契约
 
 `data/events.json`：`schemaVersion`、`generatedAt`、`games[]`、`events[]`、`sources[]`。事件的 `startAt`、`endAt` 均为带偏移量的 ISO 8601 时间；`sourceType` 为 `community` 或 `manual`。同一事件的 `id` 跨同步保持稳定。人工补录示例如下。时间统一按来源的中国区时间解释；若活动属于其他区服，需要使用显式偏移量填写。
