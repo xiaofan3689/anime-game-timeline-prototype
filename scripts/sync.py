@@ -75,8 +75,21 @@ def get_json(url):
         return json.load(response)
 
 
+def load_previous():
+    if not OUT.exists():
+        return {}
+    try:
+        previous = json.loads(OUT.read_text(encoding="utf-8-sig"))
+        if not isinstance(previous, dict):
+            raise ValueError("缓存根节点必须是对象")
+        return previous
+    except (OSError, UnicodeError, json.JSONDecodeError, ValueError) as exc:
+        print(f"WARN 忽略损坏的旧活动缓存 {OUT}: {exc}")
+        return {}
+
+
 def main():
-    previous = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
+    previous = load_previous()
     manual = json.loads(MANUAL.read_text(encoding="utf-8"))
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     games = {k: {"id": k, "name": v, "iconUrl": GAME_ICONS.get(k), "version": None, "versionName": None, "bannerUrl": None} for k, v in GAMES.items()}

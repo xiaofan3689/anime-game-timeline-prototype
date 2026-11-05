@@ -1,10 +1,6 @@
 {
   "schemaVersion": 1,
-<<<<<<< HEAD
   "generatedAt": "2026-11-05T12:50:55+00:00",
-=======
-  "generatedAt": "2026-11-05T12:24:54+00:00",
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
   "games": [
     {
       "id": "ys",
@@ -61,7 +57,6 @@
       "version": "1.6",
       "versionName": "丹青渡",
       "bannerUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg"
-<<<<<<< HEAD
     },
     {
       "id": "ba-cn",
@@ -150,8 +145,6 @@
       "version": "2026-10-30",
       "versionName": "重吾[化妆舞会]登场",
       "bannerUrl": "https://static.gametalk.qq.com/image/25/1792660029_5697eba91e30725eea8a741b531bce5d.png"
-=======
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
     }
   ],
   "events": [
@@ -204,7 +197,6 @@
       "imageUrl": "https://i0.hdslb.com/bfs/new_dyn/13e21e998566cef8e41f4ae287c17fc11340190821.jpg"
     },
     {
-<<<<<<< HEAD
       "id": "191b9493f9f1ae9547c0",
       "gameId": "infinitynikki",
       "title": "「给曾是孩子的你」限时联动活动",
@@ -217,8 +209,6 @@
       "imageUrl": "https://webstatic.papegames.com/5af052bffce5c899/images/bg/PfpDqOmpXGmcHvVb.jpg"
     },
     {
-=======
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "id": "42c63f5071949c116033",
       "gameId": "sr",
       "title": "「星际幻宠」乐园：星际潮玩",
@@ -399,7 +389,6 @@
       "imageUrl": ""
     },
     {
-<<<<<<< HEAD
       "id": "22d8c7b5148ab50d6122",
       "gameId": "nikke",
       "title": "【上线即领】Cinderella Special",
@@ -460,8 +449,6 @@
       "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_493/h_163/4408/2026/9/8/73687495muzahov2.jpg"
     },
     {
-=======
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "id": "14a70237f2d83b989d12",
       "gameId": "ww",
       "title": "天工寻物",
@@ -474,7 +461,6 @@
       "imageUrl": "https://prod-alicdn-community.kurobbs.com/forum/2276fcae412f4285bac2bc2d090617a520260929.jpg"
     },
     {
-<<<<<<< HEAD
       "id": "5980a717dcd599c446f3",
       "gameId": "nikke",
       "title": "四周年情报站",
@@ -487,8 +473,6 @@
       "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_935/h_293/4408/2026/9/9/77004576mv0sgi5z.jpg"
     },
     {
-=======
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "id": "0643a5ddd98ff56d55ad",
       "gameId": "ww",
       "title": "回音盈域",
@@ -573,7 +557,6 @@
       "imageUrl": "https://i0.hdslb.com/bfs/new_dyn/13e21e998566cef8e41f4ae287c17fc11340190821.jpg"
     },
     {
-<<<<<<< HEAD
       "id": "04aff1ecd5a4d8ed0643",
       "gameId": "gf2",
       "title": "危区探遗",
@@ -646,8 +629,6 @@
       "imageUrl": ""
     },
     {
-=======
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "id": "790e6d83146e249c7f26",
       "gameId": "zzz",
       "title": "全新放送",
@@ -672,7 +653,6 @@
       "imageUrl": ""
     },
     {
-<<<<<<< HEAD
       "id": "69d9be5de9cb3a883059",
       "gameId": "czn",
       "title": "「希格」限定营救概率提升",
@@ -769,8 +749,6 @@
       "imageUrl": ""
     },
     {
-=======
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "id": "d0ddde0c8df01c3687c5",
       "gameId": "ww",
       "title": "凭栏听雨之礼",
@@ -855,7 +833,6 @@
       "imageUrl": ""
     },
     {
-<<<<<<< HEAD
       "id": "9532e48c29b740c3e009",
       "gameId": "ba-global",
       "title": "高地人铁道暴走事件﻿  ﻿~于是列车消失了~﻿  ﻿-复刻-",
@@ -892,8 +869,6 @@
       "imageUrl": "https://resource.starrailassistant.top/ba/activity/b801d0aee9d11773f64917db5a2c5616648ec6f4.webp"
     },
     {
-=======
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "id": "71c776946c3034deb56c",
       "gameId": "zzz",
       "title": "赛博圣手，出诊！",
@@ -942,7 +917,6 @@
       "imageUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg"
     },
     {
-<<<<<<< HEAD
       "id": "dcc7a70386e5df558ade",
       "gameId": "ba-cn",
       "title": "我等乃神秘学研究会！~学院之谜与古老咒文~",
@@ -1027,8 +1001,6 @@
       "imageUrl": ""
     },
     {
-=======
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "id": "7b7de6b403cc57b760b5",
       "gameId": "ak",
       "title": "2026感谢庆典·特别登录",
@@ -1101,7 +1073,6 @@
       "imageUrl": "https://sdk.hoyoverse.com/upload/ann/2026/03/04/9e61fb52eb6c278d1c0c354a4cc12047_5706720538292727403_transformed.png"
     },
     {
-<<<<<<< HEAD
       "id": "4fad190e5afbb12ed012",
       "gameId": "xtlr",
       "title": "「紧急悬赏」",
@@ -1186,8 +1157,6 @@
       "imageUrl": ""
     },
     {
-=======
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "id": "d037baadf9c2630f41bc",
       "gameId": "ww",
       "title": "声弦涤荡",
@@ -1260,7 +1229,6 @@
       "imageUrl": ""
     },
     {
-<<<<<<< HEAD
       "id": "5c25e2d1c8cd09516724",
       "gameId": "bd2",
       "title": "Blood Royale 赛季通行证",
@@ -1333,8 +1301,6 @@
       "imageUrl": ""
     },
     {
-=======
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "id": "077fcde912077306d6fe",
       "gameId": "nte",
       "title": "争锋赏宴·攻坚",
@@ -1395,7 +1361,6 @@
       "imageUrl": ""
     },
     {
-<<<<<<< HEAD
       "id": "1cc33a7dd9a1e65f7020",
       "gameId": "pgr",
       "title": "7日登录签到奖励",
@@ -1432,8 +1397,6 @@
       "imageUrl": ""
     },
     {
-=======
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "id": "5da691d6d1170b220dd5",
       "gameId": "end",
       "title": "「危机合约 浸蓝测试作战」挑战活动",
@@ -1482,7 +1445,6 @@
       "imageUrl": ""
     },
     {
-<<<<<<< HEAD
       "id": "fad8dc5ec1fe15979883",
       "gameId": "pgr",
       "title": "诸星迷寂-BOSS挑战",
@@ -1495,8 +1457,6 @@
       "imageUrl": ""
     },
     {
-=======
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "id": "b092ca195de82a55e622",
       "gameId": "ak",
       "title": "「卫戍协议·规程·序列I」",
@@ -1521,7 +1481,6 @@
       "imageUrl": ""
     },
     {
-<<<<<<< HEAD
       "id": "74e65c875d95fbae129b",
       "gameId": "ba-jp",
       "title": "课程表·交流会2倍",
@@ -1534,8 +1493,6 @@
       "imageUrl": "https://resource.starrailassistant.top/ba/activity/23fb7a4779943f5c1ed6941b035c84ebc69e3c98.webp"
     },
     {
-=======
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "id": "8653770c50b25c496c63",
       "gameId": "ys",
       "title": "幽境危战",
@@ -1584,7 +1541,6 @@
       "imageUrl": ""
     },
     {
-<<<<<<< HEAD
       "id": "227c9aae87d16720590d",
       "gameId": "bd2",
       "title": "魔物追踪者「心魔（光）」狩猎期",
@@ -1621,8 +1577,6 @@
       "imageUrl": "https://resource.starrailassistant.top/ba/activity/ceb594bb9650e98be778c5bcc55c9760e90f7216.webp"
     },
     {
-=======
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "id": "1dda4768437c724b8896",
       "gameId": "nte",
       "title": "征途坦荡",
@@ -1683,7 +1637,6 @@
       "imageUrl": ""
     },
     {
-<<<<<<< HEAD
       "id": "b9b2afa6671c90449ddc",
       "gameId": "pgr",
       "title": "像素嚼嚼乐",
@@ -1696,8 +1649,6 @@
       "imageUrl": ""
     },
     {
-=======
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "id": "1357b55d6836ecd79d1b",
       "gameId": "zzz",
       "title": "数据悬赏-实战模拟",
@@ -1708,7 +1659,6 @@
       "sourceName": "SRA 社区整理",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json",
       "imageUrl": ""
-<<<<<<< HEAD
     },
     {
       "id": "1fa0d76d21d9cc4f49ee",
@@ -1733,81 +1683,54 @@
       "sourceName": "SRA 社区整理",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/ba-cn.json",
       "imageUrl": "https://resource.starrailassistant.top/ba/activity/9166afb38aaebf5080ef5a7d35f2991bf14e7795.webp"
-=======
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
     }
   ],
   "sources": [
     {
       "gameId": "ys",
       "url": "https://starrailassistant.top/api/v1/activity/ys.json",
-<<<<<<< HEAD
       "fetchedAt": "2026-11-05T12:50:55+00:00",
-=======
-      "fetchedAt": "2026-11-05T12:24:54+00:00",
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "nte",
       "url": "https://starrailassistant.top/api/v1/activity/nte.json",
-<<<<<<< HEAD
       "fetchedAt": "2026-11-05T12:50:55+00:00",
-=======
-      "fetchedAt": "2026-11-05T12:24:54+00:00",
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "sr",
       "url": "https://starrailassistant.top/api/v1/activity/sr.json",
-<<<<<<< HEAD
       "fetchedAt": "2026-11-05T12:50:55+00:00",
-=======
-      "fetchedAt": "2026-11-05T12:24:54+00:00",
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "status": "ok",
       "eventCount": 15
     },
     {
       "gameId": "zzz",
       "url": "https://starrailassistant.top/api/v1/activity/zzz.json",
-<<<<<<< HEAD
       "fetchedAt": "2026-11-05T12:50:55+00:00",
-=======
-      "fetchedAt": "2026-11-05T12:24:54+00:00",
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ww",
       "url": "https://starrailassistant.top/api/v1/activity/ww.json",
-<<<<<<< HEAD
       "fetchedAt": "2026-11-05T12:50:55+00:00",
-=======
-      "fetchedAt": "2026-11-05T12:24:54+00:00",
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "status": "ok",
       "eventCount": 12
     },
     {
       "gameId": "ak",
       "url": "https://starrailassistant.top/api/v1/activity/ak.json",
-<<<<<<< HEAD
       "fetchedAt": "2026-11-05T12:50:55+00:00",
-=======
-      "fetchedAt": "2026-11-05T12:24:54+00:00",
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
       "status": "ok",
       "eventCount": 8
     },
     {
       "gameId": "end",
       "url": "https://starrailassistant.top/api/v1/activity/end.json",
-<<<<<<< HEAD
       "fetchedAt": "2026-11-05T12:50:55+00:00",
       "status": "ok",
       "eventCount": 14
@@ -1888,11 +1811,6 @@
       "fetchedAt": "2026-11-05T12:50:55+00:00",
       "status": "ok",
       "eventCount": 5
-=======
-      "fetchedAt": "2026-11-05T12:24:54+00:00",
-      "status": "ok",
-      "eventCount": 14
->>>>>>> 768946c9394630f9ae22b1eeb2f044bb33525102
     }
   ]
 }
