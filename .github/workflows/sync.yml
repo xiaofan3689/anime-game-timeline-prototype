@@ -1,21 +1,22 @@
 name: Sync game events
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'data/manual.json'
+      - '.github/workflows/sync.yml'
   schedule:
     - cron: '17 */2 * * *'
 permissions:
   contents: write
-  pages: write
-  id-token: write
 concurrency:
   group: event-sync
   cancel-in-progress: false
 jobs:
   sync:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -34,14 +35,3 @@ jobs:
             git commit -m 'Update game events'
             git push origin HEAD:main
           fi
-      - name: Prepare site
-        run: |
-          mkdir -p public/data
-          cp index.html styles.css styles-extra.css app.js public/
-          cp data/events.json public/data/
-          touch public/.nojekyll
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: public
-      - id: deployment
-        uses: actions/deploy-pages@v4
