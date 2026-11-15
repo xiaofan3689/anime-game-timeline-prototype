@@ -1,11 +1,11 @@
 const json = (body, status = 200) => new Response(JSON.stringify(body), {status, headers:{"Content-Type":"application/json; charset=utf-8","Cache-Control":"no-store"}});
 const fail = (message, status) => json({error:message}, status);
-const validUrl = value => !value || /^https:\/\/[^\s]+$/i.test(value);
+const validUrl = value => !value || /^\/assets\/[a-zA-Z0-9_./-]+$/.test(value) && !value.includes("..") || /^https:\/\/[^\s]+$/i.test(value);
 function validate(data) {
   if (!data || !Array.isArray(data.games) || !Array.isArray(data.events) || data.games.length > 100 || data.events.length > 2000) throw Error("数据格式或数量无效");
   const games = data.games.map(g => {
     if (!g || !/^[a-z0-9-]{2,40}$/.test(g.id) || !g.name?.trim() || g.name.length > 80 || !validUrl(g.iconUrl)) throw Error("游戏 ID、名称或图标 URL 无效");
-    return {id:g.id,name:g.name.trim(),iconUrl:g.iconUrl || "",version:g.version || null,versionName:g.versionName || null,bannerUrl:g.bannerUrl || null};
+    for(const k of ["bannerUrl"])if(!validUrl(g[k]))throw Error("图片地址须为 HTTPS 或 /assets/ 路径");for(const k of ["versionNoticeAt","nextVersionAt"])if(g[k]&&!Number.isFinite(Date.parse(g[k])))throw Error("版本时间无效");return {id:g.id,name:g.name.trim(),iconUrl:g.iconUrl || "",version:g.version || null,versionName:g.versionName || null,bannerUrl:g.bannerUrl || null,versionNoticeAt:g.versionNoticeAt || null,nextVersionAt:g.nextVersionAt || null,nextVersionEstimated:g.nextVersionEstimated===true};
   });
   if (new Set(games.map(g=>g.id)).size !== games.length) throw Error("游戏 ID 重复");
   const events = data.events.map(e => {

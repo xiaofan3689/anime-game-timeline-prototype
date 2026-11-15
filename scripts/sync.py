@@ -154,7 +154,7 @@ def main():
     for game in manual.get("games", []):
         if not all(isinstance(game.get(k), str) and game[k].strip() for k in ("id", "name", "iconUrl")):
             raise ValueError("人工游戏需要 id、name、iconUrl")
-        games[game["id"]] = {k: game.get(k) for k in ("id", "name", "iconUrl", "version", "versionName", "bannerUrl")}
+        games[game["id"]] = {k: game.get(k) for k in ("id", "name", "iconUrl", "version", "versionName", "bannerUrl", "versionNoticeAt", "nextVersionAt", "nextVersionEstimated")}
     for item in manual.get("events", []):
         game_id, title = item["gameId"], item["title"].strip()
         if game_id not in games or not title:
