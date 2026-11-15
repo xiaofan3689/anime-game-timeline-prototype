@@ -1,14 +1,4 @@
 {
   "games": [],
-  "events": [
-    {
-      "gameId": "ba-jp",
-      "title": "test",
-      "category": "1",
-      "startAt": "2026-10-11T11:11:00+08:00",
-      "endAt": "2026-11-20T02:20:00+08:00",
-      "imageUrl": "",
-      "sourceUrl": ""
-    }
-  ]
+  "events": []
 }
