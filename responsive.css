@@ -24,3 +24,5 @@ html{scroll-padding-top:16px}body{min-width:0}button,a,input,select{touch-action
 .smart-page{grid-template-rows:repeat(3,minmax(0,1fr))}#smart-panel>.smart-list.smart-pages{height:288px}.timeline-guide-help{font-size:12px;color:#b5a6ce;line-height:1.6;margin:10px 0}@media(max-width:600px){#smart-panel>.smart-list.smart-pages{height:390px}.timeline-guide-help{font-size:11px}}
 
 #smart-panel>.smart-list.smart-pages{height:285px}.smart-page{grid-template-rows:repeat(3,minmax(0,1fr))}.timeline-guide-help{font-size:12px;color:#aca1c3;margin:8px 0 0;line-height:1.6}@media(max-width:600px){#smart-panel>.smart-list.smart-pages{height:390px}.timeline-guide-help{font-size:11px}}
+
+.order-row.unselected{opacity:.65;border-top:1px solid #554b69;padding-top:8px}.order-row span{font-size:14px}.order-dialog{overflow-x:hidden;max-width:calc(100vw - 24px)}@media(max-width:390px){.order-row{gap:4px}.order-row button{padding:8px;font-size:12px}.order-row span{font-size:12px}}
