@@ -1,0 +1,16 @@
+body{background:#111226;isolation:isolate}
+.anime-scene{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 80% 15%,#8063bf55,transparent 55%),radial-gradient(ellipse at 5% 65%,#419bb035,transparent 55%),#111226;overflow:hidden}
+.anime-scene img{width:100%;height:100%;object-fit:cover;object-position:65% center;opacity:var(--scene-strength,.32)}
+.anime-scene img[hidden]{display:none}
+.anime-scene::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#101226e8,#15152c55 70%),linear-gradient(0deg,#101226f0,transparent 90%)}
+.shell{position:relative}
+.hero{position:relative;border-radius:24px;margin-top:20px;padding:30px;background:linear-gradient(115deg,#282442aa,#41335e44);border:1px solid #c4a9ef26;overflow:hidden}
+.hero::after{content:"✧　　✦　　✧";position:absolute;right:8%;top:20px;color:#f4d6ff88;letter-spacing:25px;font-size:22px;pointer-events:none}
+.hero h1 em{color:#d1b9ff;text-shadow:0 0 35px #b994ff44}
+.hero-art{filter:drop-shadow(0 0 25px #b9a0ff55)}
+.content,.smart-panel{background:#171b30eb;border:1px solid #bca7e332;border-radius:18px;padding:22px;box-shadow:0 16px 45px #08091a33}
+.timeline{background:#1a1e32}.topbar{border-color:#c6adf02b}
+.brand-mark{color:#dfc3ff;text-shadow:0 0 18px #c49aff}
+@media(max-width:680px){.hero{padding:22px 16px}.content,.smart-panel{padding:14px}.anime-scene img{object-position:65% center;opacity:var(--scene-strength,.32)}}
+
+.theme-dialog{width:min(440px,90vw);box-sizing:border-box;background:#202039;color:#eee7ff;border:1px solid #ac8bdd70;border-radius:20px;padding:26px;box-shadow:0 20px 100px #0009}.theme-dialog::backdrop{background:#080a18ba;backdrop-filter:blur(5px)}.theme-dialog label{display:grid;gap:10px;margin:22px 0}.theme-dialog select,.theme-dialog button{background:#393252;color:#fff;border:1px solid #9a80bd;border-radius:8px;padding:10px}.theme-dialog input{width:100%;accent-color:#b89ae8}.theme-dialog p{font-size:13px;color:#bbb3cf;line-height:1.7}.theme-dialog .theme-status{color:#d2c3ef}.theme-dialog button{cursor:pointer;float:right}.anime-scene img{animation:scene-reveal .7s ease-out}@keyframes scene-reveal{from{opacity:0}to{opacity:var(--scene-strength,.32)}}@media(prefers-reduced-motion:reduce){.anime-scene img{animation:none}}
