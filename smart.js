@@ -10,7 +10,7 @@ function smartRender(){
  const events=S.feed.events.filter(e=>S.selected.has(e.gameId)&&Date.parse(e.endAt)>Date.now()&&Date.parse(e.startAt)<=Date.now());
  const urgent=events.filter(e=>Date.parse(e.endAt)-Date.now()<=DAY);
  root.append(n("p","smart-summary",`进行中 ${events.length} 项 · 24 小时内结束 ${urgent.length} 项 · 已标记完成 ${events.filter(e=>progress[e.id]?.done).length} 项`));
- const list=n("div","smart-list");
+ const versions=n("div","smart-list");for(const g of S.feed.games.filter(g=>S.selected.has(g.id)&&Number.isFinite(Date.parse(g.nextVersionAt)))){versions.append(n("p","",`${g.name} · 下版本 ${fmt.format(new Date(g.nextVersionAt))}（${g.nextVersionEstimated?"按公告 +42 天推算，以官方为准":"管理员确认时间"}）`))}root.append(versions);const list=n("div","smart-list");
  const pending=events.filter(e=>!progress[e.id]?.done).sort((a,b)=>Number(!!progress[b.id]?.star)-Number(!!progress[a.id]?.star)||Date.parse(a.endAt)-Date.parse(b.endAt));
  for(const e of pending.slice(0,6)){
   const row=n("article","smart-row"),copy=n("div"),hours=(Date.parse(e.endAt)-Date.now())/3600000;

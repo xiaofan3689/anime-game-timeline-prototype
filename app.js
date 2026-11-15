@@ -7,7 +7,7 @@ function status(e){const now=Date.now();return now<Date.parse(e.startAt)?"upcomi
 function day(d){const x=new Date(d);x.setHours(0,0,0,0);return x}
 function dayIndex(d,origin){return Math.round((Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())-Date.UTC(origin.getFullYear(),origin.getMonth(),origin.getDate()))/DAY)}
 function position(value,origin){const d=new Date(value),begin=day(d),next=new Date(begin);next.setDate(next.getDate()+1);return(dayIndex(d,origin)+(d-begin)/(next-begin))*DW}
-function url(value){try{const u=new URL(value);return /^https?:$/.test(u.protocol)?u.href:null}catch{return null}}
+function url(value){if(typeof value==="string"&&value.startsWith("/assets/")&&!value.includes(".."))return new URL(value,location.origin).href;try{const u=new URL(value);return /^https?:$/.test(u.protocol)?u.href:null}catch{return null}}
 function remain(end){const ms=Math.max(0,Date.parse(end)-Date.now()),d=Math.floor(ms/DAY),h=Math.floor(ms%DAY/3600000);return d?`${d}天 ${h}时`:`${h}小时`}
 function load(ids){$("choose-games").disabled=!ids.length;if(!ids.length)return true;try{const saved=JSON.parse(localStorage.getItem(KEY));if(Array.isArray(saved)){S.selected=new Set(saved.filter(id=>ids.includes(id)));return S.selected.size>0}}catch{}return false}
 function save(){const ids=[...document.querySelectorAll("#game-options input:checked")].map(x=>x.value);if(!ids.length){$("picker-message").textContent="请至少选择一个游戏";return}S.selected=new Set(ids);try{localStorage.setItem(KEY,JSON.stringify(ids))}catch{}$("game-modal").hidden=true;render()}
