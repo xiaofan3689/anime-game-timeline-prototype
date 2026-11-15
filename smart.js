@@ -3,7 +3,7 @@ const SMART_KEY="timeline-progress-v1";
 let progress={};
 try{progress=JSON.parse(localStorage.getItem(SMART_KEY))||{}}catch{}
 function smartRender(){
- const root=document.getElementById("smart-panel");if(!root||!S.feed)return;
+ const root=document.getElementById("smart-panel");if(!root||!S.feed)return;const previousTop=root.querySelector(".smart-pages")?.scrollTop||0;
  root.replaceChildren();
  const title=n("h2","","今天先做什么"),hint=n("p","","按结束时间排序，优先显示已关注和即将结束的活动。操作保存在当前浏览器。" );root.append(title,hint);
  const games=Object.fromEntries(S.feed.games.map(g=>[g.id,g.name]));
@@ -11,10 +11,10 @@ function smartRender(){
  const urgent=events.filter(e=>Date.parse(e.endAt)-Date.now()<=DAY);
  root.append(n("p","smart-summary",`进行中 ${events.length} 项 · 24 小时内结束 ${urgent.length} 项 · 已标记完成 ${events.filter(e=>progress[e.id]?.done).length} 项`));
  const versions=n("div","smart-list");for(const g of S.feed.games.filter(g=>S.selected.has(g.id)&&Number.isFinite(Date.parse(g.nextVersionAt)))){versions.append(n("p","",`${g.name} · 下版本 ${fmt.format(new Date(g.nextVersionAt))}（${g.nextVersionEstimated?"按公告 +42 天推算，以官方为准":"管理员确认时间"}）`))}root.append(versions);const list=n("div","smart-list");
- const pending=events.filter(e=>!progress[e.id]?.done).sort((a,b)=>Number(!!progress[b.id]?.star)-Number(!!progress[a.id]?.star)||Date.parse(a.endAt)-Date.parse(b.endAt));
+ const pending=events.filter(e=>!progress[e.id]?.done).sort((a,b)=>gameOrderRank(a.gameId)-gameOrderRank(b.gameId)||a.gameId.localeCompare(b.gameId)||Number(!!progress[b.id]?.star)-Number(!!progress[a.id]?.star)||Date.parse(a.endAt)-Date.parse(b.endAt));
  const pageSize=4,pageCount=Math.max(1,Math.ceil(pending.length/pageSize)),page=Math.max(0,Math.min(pageCount-1,Number(root.dataset.page||0)));root.dataset.page=page;
  list.classList.add("smart-pages");list.tabIndex=0;list.setAttribute("aria-label","今日活动，滚轮或上下滑动翻页");
- const indicator=n("p","smart-page-indicator",`${page+1} / ${pageCount} · 滚轮或上下滑动翻页`);let currentPageBody;
+ const indicator=n("p","smart-page-indicator",`${page+1} / ${pageCount} · 滚轮或上下滑动浏览`);let currentPageBody;
  for(const [index,e] of pending.entries()){
   if(index%pageSize===0){currentPageBody=n("div","smart-page");list.append(currentPageBody)}
   const row=n("article","smart-row"),copy=n("div"),hours=(Date.parse(e.endAt)-Date.now())/3600000;
@@ -25,11 +25,9 @@ function smartRender(){
  }
  if(!pending.length)list.append(n("p","",events.length?"当前进行中的活动均已标记完成。":"所选游戏暂无进行中的活动。"));
  root.append(list,indicator);
- requestAnimationFrame(()=>{list.scrollTop=page*list.clientHeight});
- const updatePage=()=>{const value=Math.max(0,Math.min(pageCount-1,Math.round(list.scrollTop/list.clientHeight)));root.dataset.page=value;indicator.textContent=`${value+1} / ${pageCount} · 滚轮或上下滑动翻页`};
+ requestAnimationFrame(()=>{list.scrollTop=previousTop});
+ const updatePage=()=>{const value=Math.max(0,Math.min(pageCount-1,Math.round(list.scrollTop/list.clientHeight)));root.dataset.page=value;indicator.textContent=`${value+1} / ${pageCount} · 滚轮或上下滑动浏览`};
  list.addEventListener("scroll",updatePage,{passive:true});
- let wheelLockedUntil=0;
- list.addEventListener("wheel",event=>{if(event.ctrlKey||Math.abs(event.deltaX)>Math.abs(event.deltaY))return;event.preventDefault();if(!event.deltaY||Date.now()<wheelLockedUntil)return;wheelLockedUntil=Date.now()+450;const current=Math.round(list.scrollTop/list.clientHeight);list.scrollTo({top:Math.max(0,Math.min(pageCount-1,current+Math.sign(event.deltaY)))*list.clientHeight,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"instant":"smooth"})},{passive:false});
  list.addEventListener("keydown",event=>{if(event.target!==list)return;const direction={ArrowDown:1,PageDown:1,ArrowUp:-1,PageUp:-1}[event.key];if(!direction)return;event.preventDefault();list.scrollTop=Math.max(0,Math.min(pageCount-1,Number(root.dataset.page)+direction))*list.clientHeight});
 
  const reset=n("button","","恢复已完成活动");reset.onclick=()=>{for(const value of Object.values(progress))value.done=false;smartPersist();smartRender()};root.append(reset);

@@ -18,3 +18,5 @@ html{scroll-padding-top:16px}body{min-width:0}button,a,input,select{touch-action
 #smart-panel>.smart-list.smart-pages{display:block;height:380px;max-height:none}@media(max-width:600px){#smart-panel>.smart-list.smart-pages{height:520px}}
 
 .order-row{display:flex;align-items:center;gap:8px;margin:8px 0}.order-row span{flex:1;min-width:0;overflow-wrap:anywhere}.order-row button{float:none;flex:none;min-height:44px}.order-dialog>button{float:none;margin:8px 6px 0 0}.ended-heading{position:sticky;left:0;width:min(260px,80vw);padding:12px;color:#a9a2b8;border-top:2px dashed #756a88;margin-top:16px}.order-row button:disabled{opacity:.35}
+
+#smart-panel .smart-pages{scroll-snap-type:none;overscroll-behavior:contain}.smart-page{scroll-snap-align:none;scroll-snap-stop:normal}.lane{scroll-margin-top:16px}.lane:focus{outline:2px solid #b59ae4;outline-offset:-2px}
