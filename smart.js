@@ -26,7 +26,18 @@ function smartRender(){
  if(!Number.isFinite(generated)||Date.now()-generated>6*3600000)root.append(n("p","smart-warning","活动数据超过 6 小时未更新或更新时间无效，请核对官方公告后安排活动。"));
 }
 function smartPersist(){try{localStorage.setItem(SMART_KEY,JSON.stringify(progress))}catch{document.getElementById("smart-panel").append(n("p","smart-warning","浏览器禁止保存，当前标记将在刷新后丢失。"))}}
-function smartUpdate(id,key,value){progress[id]={...progress[id],[key]:value};smartRender();smartPersist()}
+function smartUpdate(id,key,value){progress[id]={...progress[id],[key]:value};smartRender();smartPersist();window.updateActivityDialog?.()}
 const timelineRender=render;
 render=function(){timelineRender();smartRender()};
 smartRender();
+
+const activityDialog=document.createElement("dialog");activityDialog.className="activity-dialog";document.body.append(activityDialog);let activeActivity=null;
+window.updateActivityDialog=()=>{
+ if(!activeActivity)return;const e=activeActivity;activityDialog.replaceChildren();
+ const close=n("button","activity-close","关闭"),title=n("h2","",e.title),game=S.feed?.games.find(g=>g.id===e.gameId),actions=n("div","activity-actions");close.type="button";close.onclick=()=>activityDialog.close();
+ activityDialog.append(close,title,n("p","",game?.name||e.gameId),n("p","",`${fmt.format(new Date(e.startAt))} — ${fmt.format(new Date(e.endAt))}`));
+ const banner=url(e.imageUrl||game?.bannerUrl);if(banner){const img=document.createElement("img");img.src=banner;img.alt=e.title;img.onerror=()=>img.remove();activityDialog.append(img)}
+ const star=n("button","",progress[e.id]?.star?"★ 取消关注":"☆ 关注"),done=n("button","",progress[e.id]?.done?"恢复未完成":"标记完成");star.type=done.type="button";star.onclick=()=>smartUpdate(e.id,"star",!progress[e.id]?.star);done.onclick=()=>smartUpdate(e.id,"done",!progress[e.id]?.done);actions.append(star,done);activityDialog.append(actions);
+};
+window.openActivity=e=>{activeActivity=e;window.updateActivityDialog();if(!activityDialog.open)activityDialog.showModal()};
+activityDialog.addEventListener("close",()=>{activeActivity=null});
