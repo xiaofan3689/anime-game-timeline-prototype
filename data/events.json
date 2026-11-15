@@ -22,9 +22,9 @@
       "id": "sr",
       "name": "崩坏：星穹铁道",
       "iconUrl": "https://sr.mihoyo.com/favicon.ico",
-      "version": "4.6",
-      "versionName": "月升之前，与兽共舞",
-      "bannerUrl": "https://i0.hdslb.com/bfs/new_dyn/31af0eb88c8c6dcfab5b7cbc72d67c781340190821.jpg"
+      "version": "4.7",
+      "versionName": "此刻，将群星付之一笑",
+      "bannerUrl": "https://i0.hdslb.com/bfs/new_dyn/51ed4397657edcd7e2f23c0cd92bf5cb1340190821.jpg"
     },
     {
       "id": "zzz",
@@ -38,9 +38,9 @@
       "id": "ww",
       "name": "鸣潮",
       "iconUrl": "https://mc.kurogames.com/favicon.ico",
-      "version": "3.7",
-      "versionName": "镜锁妄世，心照红尘",
-      "bannerUrl": "https://i0.hdslb.com/bfs/new_dyn/7ae8269b71e9ad214db2ef026d8075ee1955897084.jpg"
+      "version": "3.8",
+      "versionName": "旧梦凋零的百合",
+      "bannerUrl": "https://i0.hdslb.com/bfs/new_dyn/1369a05097b9f1d04edb3fd2d4971e311955897084.png"
     },
     {
       "id": "ak",
@@ -1037,18 +1037,6 @@
       "imageUrl": "https://web.hycdn.cn/upload/image/20261027/5254c742beaed7e402455815718d4880.JPG"
     },
     {
-      "id": "c2541271cc4d19d6ee92",
-      "gameId": "ak",
-      "title": "「塞梦珂城许愿墙」",
-      "startAt": "2026-11-01T12:00:00+08:00",
-      "endAt": "2026-11-15T03:59:59+08:00",
-      "category": "活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/ak.json",
-      "imageUrl": ""
-    },
-    {
       "id": "1f900b79b27a2deb07e7",
       "gameId": "sr",
       "title": "混沌回忆•物竞天择",
@@ -1529,6 +1517,138 @@
       "imageUrl": ""
     },
     {
+      "id": "7d42b80a7d7b0343f6c6",
+      "gameId": "sr",
+      "title": "剧场版绒绒号：欢闹厨房",
+      "startAt": "2026-11-11T11:00:00+08:00",
+      "endAt": "2026-12-23T03:59:59+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/sr.json",
+      "imageUrl": ""
+    },
+    {
+      "id": "fc07b48c3726c1eb8ed6",
+      "gameId": "sr",
+      "title": "奇库寻遗",
+      "startAt": "2026-11-11T11:00:00+08:00",
+      "endAt": "2026-12-23T03:59:59+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/sr.json",
+      "imageUrl": "https://i0.hdslb.com/bfs/new_dyn/a559fdebf0d3f0ba1eff611eca5870331340190821.jpg"
+    },
+    {
+      "id": "2446bede44d989bb7c9f",
+      "gameId": "sr",
+      "title": "开场好礼先抱走",
+      "startAt": "2026-11-11T11:00:00+08:00",
+      "endAt": "2026-12-23T05:59:59+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/sr.json",
+      "imageUrl": ""
+    },
+    {
+      "id": "469a2f4b2fee5ac8c167",
+      "gameId": "sr",
+      "title": "异相仲裁•隐藏关卡",
+      "startAt": "2026-11-11T11:00:00+08:00",
+      "endAt": "2026-12-23T05:59:59+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/sr.json",
+      "imageUrl": "https://i0.hdslb.com/bfs/new_dyn/0869ac215b041b4bbab8197c9c44cef71340190821.jpg"
+    },
+    {
+      "id": "18c8a65a10115157cc6a",
+      "gameId": "sr",
+      "title": "星际和平盛典：成名之路",
+      "startAt": "2026-11-11T11:00:00+08:00",
+      "endAt": "2026-12-23T03:59:59+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/sr.json",
+      "imageUrl": ""
+    },
+    {
+      "id": "598510b6cb105203d394",
+      "gameId": "czn",
+      "title": "「今日晴，宜开工」",
+      "startAt": "2026-11-11T13:00:00+08:00",
+      "endAt": "2026-12-23T13:00:00+08:00",
+      "category": "限时活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/czn.json",
+      "imageUrl": "https://vasd-cms.qq.com/vasd-cms/media/czn/1111更新公告/20261110_4f89d47d_36.png"
+    },
+    {
+      "id": "57db1e961e0a3208c075",
+      "gameId": "czn",
+      "title": "「布蕾兹贝尔」营救概率提升",
+      "startAt": "2026-11-11T13:00:00+08:00",
+      "endAt": "2026-12-02T13:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/czn.json",
+      "imageUrl": "https://vasd-cms.qq.com/vasd-cms/media/czn/1111更新公告/20261110_1f527951_6.jpg"
+    },
+    {
+      "id": "399b24afad05bc670367",
+      "gameId": "czn",
+      "title": "「映照记忆的焰火」",
+      "startAt": "2026-11-11T13:00:00+08:00",
+      "endAt": "2026-12-02T13:00:00+08:00",
+      "category": "剧情活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/czn.json",
+      "imageUrl": "https://vasd-cms.qq.com/vasd-cms/media/czn/1111更新公告/20261110_026e5fe3_34.png"
+    },
+    {
+      "id": "0ca5ac467840fd83bd06",
+      "gameId": "czn",
+      "title": "「薇薇安」营救概率提升",
+      "startAt": "2026-11-11T13:00:00+08:00",
+      "endAt": "2026-12-02T13:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/czn.json",
+      "imageUrl": "https://vasd-cms.qq.com/vasd-cms/media/czn/1111更新公告/20261110_3c210418_11.jpg"
+    },
+    {
+      "id": "38078409d570f3f37581",
+      "gameId": "czn",
+      "title": "虚拟战术模拟「布蕾兹贝尔」",
+      "startAt": "2026-11-11T13:00:00+08:00",
+      "endAt": "2026-12-02T13:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/czn.json",
+      "imageUrl": ""
+    },
+    {
+      "id": "b89aa5dde524ec918feb",
+      "gameId": "czn",
+      "title": "超时空流域 — 次元的黄昏",
+      "startAt": "2026-11-11T13:00:00+08:00",
+      "endAt": "2026-12-02T13:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/czn.json",
+      "imageUrl": ""
+    },
+    {
       "id": "ba6988a5ec2b555c4990",
       "gameId": "ak",
       "title": "2026感谢庆典·补给签到",
@@ -1689,126 +1809,126 @@
     {
       "gameId": "ys",
       "url": "https://starrailassistant.top/api/v1/activity/ys.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "nte",
       "url": "https://starrailassistant.top/api/v1/activity/nte.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "sr",
       "url": "https://starrailassistant.top/api/v1/activity/sr.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 15
     },
     {
       "gameId": "zzz",
       "url": "https://starrailassistant.top/api/v1/activity/zzz.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ww",
       "url": "https://starrailassistant.top/api/v1/activity/ww.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 12
     },
     {
       "gameId": "ak",
       "url": "https://starrailassistant.top/api/v1/activity/ak.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
-      "eventCount": 8
+      "eventCount": 4
     },
     {
       "gameId": "end",
       "url": "https://starrailassistant.top/api/v1/activity/end.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 14
     },
     {
       "gameId": "ba-cn",
       "url": "https://starrailassistant.top/api/v1/activity/ba-cn.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 4
     },
     {
       "gameId": "ba-jp",
       "url": "https://starrailassistant.top/api/v1/activity/ba-jp.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "ba-global",
       "url": "https://starrailassistant.top/api/v1/activity/ba-global.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "xtlr",
       "url": "https://starrailassistant.top/api/v1/activity/xtlr.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "infinitynikki",
       "url": "https://starrailassistant.top/api/v1/activity/infinitynikki.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "gf2",
       "url": "https://starrailassistant.top/api/v1/activity/gf2.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "pgr",
       "url": "https://starrailassistant.top/api/v1/activity/pgr.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "czn",
       "url": "https://starrailassistant.top/api/v1/activity/czn.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "bd2",
       "url": "https://starrailassistant.top/api/v1/activity/bd2.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 7
     },
     {
       "gameId": "nikke",
       "url": "https://starrailassistant.top/api/v1/activity/nikke.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "hyrz",
       "url": "https://starrailassistant.top/api/v1/activity/hyrz.json",
-      "fetchedAt": "2026-11-05T12:50:55+00:00",
+      "fetchedAt": "2026-11-15T09:25:33+00:00",
       "status": "ok",
       "eventCount": 5
     }
