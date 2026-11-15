@@ -14,3 +14,12 @@ body{background:#111226;isolation:isolate}
 @media(max-width:680px){.hero{padding:22px 16px}.content,.smart-panel{padding:14px}.anime-scene img{object-position:65% center;opacity:var(--scene-strength,.32)}}
 
 .theme-dialog{width:min(440px,90vw);box-sizing:border-box;background:#202039;color:#eee7ff;border:1px solid #ac8bdd70;border-radius:20px;padding:26px;box-shadow:0 20px 100px #0009}.theme-dialog::backdrop{background:#080a18ba;backdrop-filter:blur(5px)}.theme-dialog label{display:grid;gap:10px;margin:22px 0}.theme-dialog select,.theme-dialog button{background:#393252;color:#fff;border:1px solid #9a80bd;border-radius:8px;padding:10px}.theme-dialog input{width:100%;accent-color:#b89ae8}.theme-dialog p{font-size:13px;color:#bbb3cf;line-height:1.7}.theme-dialog .theme-status{color:#d2c3ef}.theme-dialog button{cursor:pointer;float:right}.anime-scene img{animation:scene-reveal .7s ease-out}@keyframes scene-reveal{from{opacity:0}to{opacity:var(--scene-strength,.32)}}@media(prefers-reduced-motion:reduce){.anime-scene img{animation:none}}
+
+/* Mobile artwork is a landscape masthead, never a portrait crop. */
+@media(max-width:768px){
+ .anime-scene{position:absolute;inset:0 0 auto;height:640px;background:radial-gradient(ellipse at 80% 5%,#8063bf55,transparent 65%),#111226}
+ .anime-scene img{position:absolute;top:76px;left:0;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;object-position:center top;opacity:var(--scene-strength,.32);mask-image:linear-gradient(to bottom,#000 45%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 45%,transparent 100%)}
+ .anime-scene::after{background:linear-gradient(to bottom,#11122633 0%,#11122655 24%,#111226e6 65%,#111226 100%)}
+ .hero{background:linear-gradient(115deg,#22203b99,#34274b44);border-color:#c4a9ef20}
+ .hero::after{font-size:16px;letter-spacing:12px;right:10px;top:12px}
+}
