@@ -12,7 +12,9 @@ function smartRender(){
  root.append(n("p","smart-summary",`进行中 ${events.length} 项 · 24 小时内结束 ${urgent.length} 项 · 已标记完成 ${events.filter(e=>progress[e.id]?.done).length} 项`));
  const versions=n("div","smart-list");for(const g of S.feed.games.filter(g=>S.selected.has(g.id)&&Number.isFinite(Date.parse(g.nextVersionAt)))){versions.append(n("p","",`${g.name} · 下版本 ${fmt.format(new Date(g.nextVersionAt))}（${g.nextVersionEstimated?"按公告 +42 天推算，以官方为准":"管理员确认时间"}）`))}root.append(versions);const list=n("div","smart-list");
  const pending=events.filter(e=>!progress[e.id]?.done).sort((a,b)=>Number(!!progress[b.id]?.star)-Number(!!progress[a.id]?.star)||Date.parse(a.endAt)-Date.parse(b.endAt));
- for(const e of pending.slice(0,6)){
+ const pageSize=4,page=Math.max(0,Math.min(Math.floor((pending.length-1)/pageSize),Number(root.dataset.page||0)));root.dataset.page=page;const pageItems=pending.slice(page*pageSize,(page+1)*pageSize);
+ const pager=n("div","smart-pager");const prev=n("button","","上一页"),next=n("button","","下一页");prev.disabled=page===0;next.disabled=(page+1)*pageSize>=pending.length;prev.onclick=()=>{root.dataset.page=page-1;smartRender()};next.onclick=()=>{root.dataset.page=page+1;smartRender()};pager.append(prev,n("span","",`${page+1} / ${Math.max(1,Math.ceil(pending.length/pageSize))}`),next);root.append(pager);
+ for(const e of pageItems){
   const row=n("article","smart-row"),copy=n("div"),hours=(Date.parse(e.endAt)-Date.now())/3600000;
   copy.append(n("strong","",e.title),n("p","",`${games[e.gameId]||e.gameId} · ${hours<24?"即将结束 · ":""}${remain(e.endAt)}后结束 · ${fmt.format(new Date(e.endAt))}`));
   const star=n("button","",progress[e.id]?.star?"★ 已关注":"☆ 关注"),done=n("button","","标记完成");
