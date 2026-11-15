@@ -78,26 +78,5 @@
       "nextVersionEstimated": true
     }
   ],
-  "events": [
-    {
-      "id": "70669e377f1ad7084826",
-      "gameId": "ys",
-      "title": "砺行修远（第六期）",
-      "category": "活动",
-      "startAt": "2026-11-02T04:00:00+08:00",
-      "endAt": "2027-01-25T03:59:00+08:00",
-      "imageUrl": "https://sdk.hoyoverse.com/upload/ann/2026/03/04/9e61fb52eb6c278d1c0c354a4cc12047_5706720538292727403_transformed.png",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/ys.json"
-    },
-    {
-      "id": "7482d994848e9204f4dc",
-      "gameId": "ys",
-      "title": "全域镇卫·逆捍谬罚",
-      "category": "活动",
-      "startAt": "2026-11-04T11:00:00+08:00",
-      "endAt": "2026-12-16T05:59:00+08:00",
-      "imageUrl": "https://i0.hdslb.com/bfs/new_dyn/1d86d0b8e9f6ebc3628ec43ee7b444a2401742377.png",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/ys.json"
-    }
-  ]
+  "events": []
 }
