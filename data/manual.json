@@ -1,4 +1,103 @@
 {
-  "games": [],
-  "events": []
+  "games": [
+    {
+      "id": "ys",
+      "name": "原神",
+      "iconUrl": "https://ys.mihoyo.com/favicon.ico",
+      "version": "7.2",
+      "versionName": "坏灭肇始之时",
+      "bannerUrl": "https://i0.hdslb.com/bfs/new_dyn/2e59edc3adb447b11b30b60d6c4ed8f1401742377.jpg",
+      "versionNoticeAt": "2026-11-04T11:00:00+08:00",
+      "nextVersionAt": "2026-12-16T11:00:00+08:00",
+      "nextVersionEstimated": true
+    },
+    {
+      "id": "nte",
+      "name": "异环",
+      "iconUrl": "https://nte.perfectworld.com/favicon.ico",
+      "version": "1.5",
+      "versionName": "致电，空想迷数",
+      "bannerUrl": "https://yh.wanmei.com/resources/jpg/20261028/1143e95213edf3e640a992e3cee5bb82d695.jpg",
+      "versionNoticeAt": "2026-11-05T11:00:00+08:00",
+      "nextVersionAt": "2026-12-17T11:00:00+08:00",
+      "nextVersionEstimated": true
+    },
+    {
+      "id": "sr",
+      "name": "崩坏：星穹铁道",
+      "iconUrl": "https://sr.mihoyo.com/favicon.ico",
+      "version": "4.7",
+      "versionName": "此刻，将群星付之一笑",
+      "bannerUrl": "https://i0.hdslb.com/bfs/new_dyn/51ed4397657edcd7e2f23c0cd92bf5cb1340190821.jpg",
+      "versionNoticeAt": "2026-11-11T11:00:00+08:00",
+      "nextVersionAt": "2026-12-23T11:00:00+08:00",
+      "nextVersionEstimated": true
+    },
+    {
+      "id": "zzz",
+      "name": "绝区零",
+      "iconUrl": "https://zzz.mihoyo.com/favicon.ico",
+      "version": "3.3",
+      "versionName": "重返天空的旅程",
+      "bannerUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166989/32b9db0af2f894141f99ce41aab85074_5943209145671856794.jpg",
+      "versionNoticeAt": "2026-10-21T11:00:00+08:00",
+      "nextVersionAt": "2026-12-02T11:00:00+08:00",
+      "nextVersionEstimated": true
+    },
+    {
+      "id": "ww",
+      "name": "鸣潮",
+      "iconUrl": "https://mc.kurogames.com/favicon.ico",
+      "version": "3.8",
+      "versionName": "旧梦凋零的百合",
+      "bannerUrl": "https://i0.hdslb.com/bfs/new_dyn/1369a05097b9f1d04edb3fd2d4971e311955897084.png",
+      "versionNoticeAt": "2026-11-12T11:00:00+08:00",
+      "nextVersionAt": "2026-12-24T11:00:00+08:00",
+      "nextVersionEstimated": true
+    },
+    {
+      "id": "ak",
+      "name": "明日方舟",
+      "iconUrl": "https://ak.hypergryph.com/favicon.ico",
+      "version": "2026-11",
+      "versionName": "2026感谢庆典",
+      "bannerUrl": "https://web.hycdn.cn/upload/image/20261027/5254c742beaed7e402455815718d4880.JPG",
+      "versionNoticeAt": "2026-11-01T11:00:00+08:00",
+      "nextVersionAt": "2026-12-13T11:00:00+08:00",
+      "nextVersionEstimated": true
+    },
+    {
+      "id": "end",
+      "name": "明日方舟：终末地",
+      "iconUrl": "https://endfield.hypergryph.com/favicon.ico",
+      "version": "1.6",
+      "versionName": "丹青渡",
+      "bannerUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg",
+      "versionNoticeAt": "2026-10-15T11:00:00+08:00",
+      "nextVersionAt": "2026-11-26T11:00:00+08:00",
+      "nextVersionEstimated": true
+    }
+  ],
+  "events": [
+    {
+      "id": "70669e377f1ad7084826",
+      "gameId": "ys",
+      "title": "砺行修远（第六期）",
+      "category": "活动",
+      "startAt": "2026-11-02T04:00:00+08:00",
+      "endAt": "2027-01-25T03:59:00+08:00",
+      "imageUrl": "https://sdk.hoyoverse.com/upload/ann/2026/03/04/9e61fb52eb6c278d1c0c354a4cc12047_5706720538292727403_transformed.png",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/ys.json"
+    },
+    {
+      "id": "7482d994848e9204f4dc",
+      "gameId": "ys",
+      "title": "全域镇卫·逆捍谬罚",
+      "category": "活动",
+      "startAt": "2026-11-04T11:00:00+08:00",
+      "endAt": "2026-12-16T05:59:00+08:00",
+      "imageUrl": "https://i0.hdslb.com/bfs/new_dyn/1d86d0b8e9f6ebc3628ec43ee7b444a2401742377.png",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/ys.json"
+    }
+  ]
 }

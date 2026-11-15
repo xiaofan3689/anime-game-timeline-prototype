@@ -1,0 +1,1 @@
+把游戏图标、版本图片放在这里，例如 ys-icon.png。后台填写 /assets/games/ys-icon.png。图片随 GitHub 提交部署；后台暂不提供文件上传。请使用有权使用的图片。
