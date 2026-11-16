@@ -133,5 +133,16 @@
       ]
     }
   ],
-  "events": []
+  "events": [
+    {
+      "featured": true,
+      "gameId": "test",
+      "title": "123",
+      "category": "活动",
+      "startAt": "2026-11-15T12:00:00+08:00",
+      "endAt": "2026-11-17T12:00:00+08:00",
+      "imageUrl": "",
+      "sourceUrl": ""
+    }
+  ]
 }
