@@ -5,14 +5,14 @@ function validate(data) {
   if (!data || !Array.isArray(data.games) || !Array.isArray(data.events) || data.games.length > 100 || data.events.length > 2000) throw Error("数据格式或数量无效");
   const games = data.games.map(g => {
     if (!g || !/^[a-z0-9-]{2,40}$/.test(g.id) || !g.name?.trim() || g.name.length > 80 || !validUrl(g.iconUrl)) throw Error("游戏 ID、名称或图标 URL 无效");
-    for(const k of ["bannerUrl"])if(!validUrl(g[k]))throw Error("图片地址须为 HTTPS 或 /assets/ 路径");for(const k of ["versionNoticeAt","nextVersionAt"])if(g[k]&&!Number.isFinite(Date.parse(g[k])))throw Error("版本时间无效");return {id:g.id,name:g.name.trim(),iconUrl:g.iconUrl || "",version:g.version || null,versionName:g.versionName || null,bannerUrl:g.bannerUrl || null,versionNoticeAt:g.versionNoticeAt || null,nextVersionAt:g.nextVersionAt || null,nextVersionEstimated:g.nextVersionEstimated===true};
+    for(const k of ["bannerUrl","previewBannerUrl","previewUrl"])if(!validUrl(g[k]))throw Error("图片地址须为 HTTPS 或 /assets/ 路径");for(const k of ["versionNoticeAt","nextVersionAt","previewAt","codesExpireAt"])if(g[k]&&!Number.isFinite(Date.parse(g[k])))throw Error("版本时间无效");return {id:g.id,name:g.name.trim(),iconUrl:g.iconUrl || "",version:g.version || null,versionName:g.versionName || null,bannerUrl:g.bannerUrl || null,versionNoticeAt:g.versionNoticeAt || null,nextVersionAt:g.nextVersionAt || null,nextVersionEstimated:g.nextVersionEstimated===true,previewBannerUrl:g.previewBannerUrl||null,previewUrl:g.previewUrl||null,previewAt:g.previewAt||null,codesExpireAt:g.codesExpireAt||null,previewCodes:Array.isArray(g.previewCodes)?g.previewCodes.filter(x=>typeof x==="string").slice(0,30):[]};
   });
   if (new Set(games.map(g=>g.id)).size !== games.length) throw Error("游戏 ID 重复");
   const events = data.events.map(e => {
     if (!e || !/^[a-z0-9-]{2,40}$/.test(e.gameId) || !e.title?.trim() || e.title.length > 160) throw Error("活动游戏或名称无效");
     if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2})?(?:Z|[+-]\d{2}:\d{2})$/.test(e.startAt) || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2})?(?:Z|[+-]\d{2}:\d{2})$/.test(e.endAt) || !(Date.parse(e.endAt)>Date.parse(e.startAt))) throw Error("活动时间无效，需包含时区且结束晚于开始");
     if (!validUrl(e.imageUrl) || !validUrl(e.sourceUrl)) throw Error("图片或公告链接无效，须使用 HTTPS");
-    return {id:e.id || undefined,gameId:e.gameId,title:e.title.trim(),category:e.category || "活动",startAt:e.startAt,endAt:e.endAt,imageUrl:e.imageUrl || "",sourceUrl:e.sourceUrl || ""};
+    return {featured:e.featured===true,id:e.id || undefined,gameId:e.gameId,title:e.title.trim(),category:e.category || "活动",startAt:e.startAt,endAt:e.endAt,imageUrl:e.imageUrl || "",sourceUrl:e.sourceUrl || ""};
   });
   return {games,events};
 }

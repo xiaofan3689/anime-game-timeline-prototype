@@ -154,7 +154,7 @@ def main():
     for game in manual.get("games", []):
         if not all(isinstance(game.get(k), str) and game[k].strip() for k in ("id", "name", "iconUrl")):
             raise ValueError("人工游戏需要 id、name、iconUrl")
-        games[game["id"]] = {k: game.get(k) for k in ("id", "name", "iconUrl", "version", "versionName", "bannerUrl", "versionNoticeAt", "nextVersionAt", "nextVersionEstimated")}
+        games[game["id"]] = {k: game.get(k) for k in ("id", "name", "iconUrl", "version", "versionName", "bannerUrl", "versionNoticeAt", "nextVersionAt", "nextVersionEstimated", "previewBannerUrl", "previewUrl", "previewAt", "codesExpireAt", "previewCodes")}
     for item in manual.get("events", []):
         game_id, title = item["gameId"], item["title"].strip()
         if game_id not in games or not title:
@@ -164,7 +164,7 @@ def main():
         if not any(mark in item["startAt"][10:] for mark in ("+", "-", "Z")) or not any(mark in item["endAt"][10:] for mark in ("+", "-", "Z")):
             raise ValueError("人工活动时间必须带时区偏移，例如 +08:00")
         events.append(valid_event({
-            "id": item.get("id") or event_id(game_id, title, start),
+            "featured": item.get("featured") is True, "id": item.get("id") or event_id(game_id, title, start),
             "gameId": game_id, "title": title, "startAt": start, "endAt": end,
             "category": item.get("category") or "活动",
             "sourceType": "manual", "sourceName": "人工录入",
