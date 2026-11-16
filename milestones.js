@@ -10,7 +10,7 @@ function versionMilestoneTiming(g,now){
  return {update,highlight:Number.isFinite(updateDay)&&now>=updateDay&&now<updateDay+86400000,hidden:Number.isFinite(updateDay)&&now>=updateDay+86400000};
 }
 function featuredMilestoneVisible(e){return e.featured&&S.selected.has(e.gameId)&&status(e)!=="ended"&&!progress[e.id]?.done}
-const milestones=document.createElement("section");milestones.className="smart-panel milestones";document.getElementById("smart-panel").before(milestones);
+const milestones=document.createElement("section");milestones.className="smart-panel milestones";const smartPanel=document.getElementById("smart-panel");const dashboard=document.createElement("div");dashboard.className="event-dashboard";smartPanel.before(dashboard);dashboard.append(milestones,smartPanel);
 function milestoneRender(){
  if(!S.feed)return;milestones.replaceChildren(n("h2","","版本大事件"));const now=Date.now();let count=0;
  for(const g of S.feed.games.filter(g=>S.selected.has(g.id))){
