@@ -9,7 +9,12 @@
       "bannerUrl": "https://i0.hdslb.com/bfs/new_dyn/2e59edc3adb447b11b30b60d6c4ed8f1401742377.jpg",
       "versionNoticeAt": "2026-11-04T11:00:00+08:00",
       "nextVersionAt": "2026-12-16T11:00:00+08:00",
-      "nextVersionEstimated": true
+      "nextVersionEstimated": true,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": []
     },
     {
       "id": "nte",
@@ -20,7 +25,12 @@
       "bannerUrl": "https://yh.wanmei.com/resources/jpg/20261028/1143e95213edf3e640a992e3cee5bb82d695.jpg",
       "versionNoticeAt": "2026-11-05T11:00:00+08:00",
       "nextVersionAt": "2026-12-17T11:00:00+08:00",
-      "nextVersionEstimated": true
+      "nextVersionEstimated": true,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": []
     },
     {
       "id": "sr",
@@ -31,7 +41,12 @@
       "bannerUrl": "https://i0.hdslb.com/bfs/new_dyn/51ed4397657edcd7e2f23c0cd92bf5cb1340190821.jpg",
       "versionNoticeAt": "2026-11-11T11:00:00+08:00",
       "nextVersionAt": "2026-12-23T11:00:00+08:00",
-      "nextVersionEstimated": true
+      "nextVersionEstimated": true,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": []
     },
     {
       "id": "zzz",
@@ -42,7 +57,12 @@
       "bannerUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166989/32b9db0af2f894141f99ce41aab85074_5943209145671856794.jpg",
       "versionNoticeAt": "2026-10-21T11:00:00+08:00",
       "nextVersionAt": "2026-12-02T11:00:00+08:00",
-      "nextVersionEstimated": true
+      "nextVersionEstimated": true,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": []
     },
     {
       "id": "ww",
@@ -53,7 +73,12 @@
       "bannerUrl": "https://i0.hdslb.com/bfs/new_dyn/1369a05097b9f1d04edb3fd2d4971e311955897084.png",
       "versionNoticeAt": "2026-11-12T11:00:00+08:00",
       "nextVersionAt": "2026-12-24T11:00:00+08:00",
-      "nextVersionEstimated": true
+      "nextVersionEstimated": true,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": []
     },
     {
       "id": "ak",
@@ -64,7 +89,12 @@
       "bannerUrl": "https://web.hycdn.cn/upload/image/20261027/5254c742beaed7e402455815718d4880.JPG",
       "versionNoticeAt": "2026-11-01T11:00:00+08:00",
       "nextVersionAt": "2026-12-13T11:00:00+08:00",
-      "nextVersionEstimated": true
+      "nextVersionEstimated": true,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": []
     },
     {
       "id": "end",
@@ -75,7 +105,28 @@
       "bannerUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg",
       "versionNoticeAt": "2026-10-15T11:00:00+08:00",
       "nextVersionAt": "2026-11-26T11:00:00+08:00",
-      "nextVersionEstimated": true
+      "nextVersionEstimated": true,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": []
+    },
+    {
+      "id": "test",
+      "name": "test",
+      "iconUrl": "https://ys.mihoyo.com/favicon.ico",
+      "version": "1.0.0",
+      "versionName": "1",
+      "bannerUrl": null,
+      "versionNoticeAt": null,
+      "nextVersionAt": "2026-11-17T12:00:00+08:00",
+      "nextVersionEstimated": false,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": []
     }
   ],
   "events": []
