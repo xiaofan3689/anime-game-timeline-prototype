@@ -1,3 +1,4 @@
+function officialLinkVisible(highlight,now){return highlight&&new Date(now+8*3600000).getUTCHours()>=6}
 function versionMilestoneTiming(g,now){
  const parse=value=>typeof value==="string"&&value.trim()?Date.parse(value):NaN;
  const cnDay=t=>Number.isFinite(t)?new Date(t+8*3600000).toISOString().slice(0,10):"";
@@ -20,10 +21,11 @@ function milestoneRender(){
  const highlight=timing.highlight;
  const endOfLive=new Date(at+8*3600000);endOfLive.setUTCHours(22,0,0,0);const ended=!Number.isFinite(at)||now>=endOfLive.getTime()-8*3600000;
  const card=n("article","milestone-card"),isExpired=Number.isFinite(expiry)&&now>=expiry;card.append(n("h3","",g.name));
- if(highlight){card.classList.add("update-today");card.append(n("strong","","今日版本更新"));const banner=url(g.previewBannerUrl),official=url(g.officialUrl);if(banner){const img=document.createElement("img");img.src=banner;img.alt=g.name+"版本更新";if(official&&official.startsWith("https://")){const link=n("a","","");link.href=official;link.target="_blank";link.rel="noopener noreferrer";link.append(img);card.append(link)}else card.append(img)}}
+ if(highlight){card.classList.add("update-today");card.append(n("strong","","今日版本更新"));const banner=url(g.previewBannerUrl),official=url(g.officialUrl);if(banner){const img=document.createElement("img");img.src=banner;img.alt=g.name+"版本更新";card.append(img)}}
  if(!ended&&!highlight){const imgUrl=url(g.previewBannerUrl);if(imgUrl){const img=document.createElement("img");img.src=imgUrl;img.alt=g.name+"版本前瞻";card.append(img)}card.append(n("p","",`前瞻直播：${fmt.format(new Date(at))}`));const live=url(g.previewUrl);if(live&&new URL(live).hostname==="live.bilibili.com"){const a=n("a","","前往 Bilibili 直播间 ↗");a.href=live;a.target="_blank";a.rel="noopener";card.append(a)}}
  if(!isExpired){for(const code of g.previewCodes||[]){const row=n("div","code-row"),copy=n("button","","复制");copy.onclick=async()=>{try{await navigator.clipboard.writeText(code);copy.textContent="已复制"}catch{copy.textContent="请长按选择复制"}};const text=n("code","",code);row.append(text,copy);card.append(row)}if(Number.isFinite(expiry))card.append(n("p","",`兑换截止：${fmt.format(new Date(expiry))}`))}
  else if(Number.isFinite(update)){card.append(n("p","",`版本更新：${fmt.format(new Date(update))}${g.nextVersionEstimated&&!highlight?"（预计）":""}${Number.isFinite(Date.parse(g.preDownloadAt))&&now>=Date.parse(g.preDownloadAt)&&now<update?"（已开启预下载）":""}`));}
+ if(highlight){const official=url(g.officialUrl);if(officialLinkVisible(highlight,now)&&official&&official.startsWith("https://")){const link=n("a","official-game-link","前往游戏官网");link.href=official;link.target="_blank";link.rel="noopener noreferrer";card.append(link)}}
  milestones.append(card);count++;
  }
  for(const e of S.feed.events.filter(featuredMilestoneVisible)){const card=n("article","milestone-card");card.append(n("h3","",e.title),n("p","",S.feed.games.find(g=>g.id===e.gameId)?.name||e.gameId));const star=n("button","",progress[e.id]?.star?"取消关注":"关注"),done=n("button","",progress[e.id]?.done?"恢复未完成":"标记完成"),detail=n("button","","查看详情");star.onclick=()=>smartUpdate(e.id,"star",!progress[e.id]?.star);done.onclick=()=>smartUpdate(e.id,"done",!progress[e.id]?.done);detail.onclick=()=>openActivity(e);card.append(star,done,detail);milestones.append(card);count++}

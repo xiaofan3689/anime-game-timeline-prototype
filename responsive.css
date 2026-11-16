@@ -78,3 +78,13 @@ html{scroll-padding-top:16px}body{min-width:0}button,a,input,select{touch-action
 .event-dashboard .milestone-card>button{display:inline-block;width:auto;min-height:44px;padding:7px 10px;margin:4px 5px 0 0;font-size:12px;vertical-align:middle}.event-dashboard .milestone-card>strong{display:block;margin:6px 0}.event-dashboard .code-row{display:flex;gap:8px;margin:6px 0}.event-dashboard .milestones-empty{display:flex}
 @media(min-width:1024px){.event-dashboard{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:20px}.event-dashboard>.smart-panel{padding:20px}.event-dashboard>.smart-panel>h2{font-size:22px;margin:0 0 12px}.event-dashboard .milestones-empty{display:block}.event-dashboard .milestones-empty p{margin-top:10px}#smart-panel .smart-hint{font-size:12px;line-height:1.6}.event-dashboard #smart-panel .smart-pages>.smart-row{grid-template-columns:minmax(0,1fr) auto;grid-template-rows:minmax(0,1fr) 44px;flex-basis:106px;min-height:106px;gap:3px 8px}.event-dashboard #smart-panel .smart-pages>.smart-row>div{grid-column:1/-1}.event-dashboard #smart-panel .smart-pages>.smart-row button{justify-self:start}.event-dashboard #smart-panel .smart-pages>.smart-row button:last-child{justify-self:end}.event-dashboard #smart-panel>.smart-list.smart-pages{height:330px}}
 @media(max-width:600px){.event-dashboard{margin:10px 0;gap:10px}.event-dashboard .milestone-card{padding:11px 12px}.event-dashboard .milestone-card h3{font-size:15px}.event-dashboard .milestone-card img{max-height:140px}.event-dashboard .milestone-card p{font-size:11px}}
+
+.official-game-link{display:inline-flex;align-items:center;min-height:44px;color:#c9b4ff;text-decoration:underline;font-size:13px;margin-top:4px}
+@media(min-width:1024px){
+ .event-dashboard{align-items:stretch}
+ .event-dashboard>#smart-panel{display:flex;flex-direction:column;min-height:510px}
+ .event-dashboard>#smart-panel>.smart-list.smart-pages{height:auto;min-height:330px;flex:1 1 330px}
+ .event-dashboard>#smart-panel>.smart-page-indicator,.event-dashboard>#smart-panel>.smart-reset{flex:none}
+ .event-dashboard>#smart-panel>.smart-reset{align-self:flex-start}
+ .event-dashboard>.milestones{align-self:stretch}
+}
