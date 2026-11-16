@@ -28,11 +28,13 @@ function manage(selected){
  const gameId=select.value,root=$("managed-events");root.replaceChildren();
  const events=new Map((window.sourceEvents||[]).filter(e=>e.gameId===gameId).map(e=>[e.id,e]));
  state.data.events.filter(e=>e.gameId===gameId).forEach((e,i)=>events.set(e.id||"manual-"+i,e));
+ const active=document.createElement("div"),archive=document.createElement("details");active.className="managed-event-list";archive.className="managed-event-archive";const summary=document.createElement("summary");summary.textContent="已结束存档（点击展开）";archive.append(summary);const archived=document.createElement("div");archive.append(archived);
  for(const e of events.values()){
- const button=document.createElement("button");button.className="entry";button.textContent=e.title+" · "+(e.sourceType==="community"?"同步活动（可人工覆盖）":"人工活动");
- button.onclick=()=>{let index=state.data.events.indexOf(e);if(index<0&&e.id)index=state.data.events.findIndex(x=>x.id===e.id);if(index<0){state.data.events.push({id:e.id,gameId:e.gameId,title:e.title,startAt:e.startAt,endAt:e.endAt,category:e.category,imageUrl:e.imageUrl||"",sourceUrl:e.sourceUrl||""});index=state.data.events.length-1;markDirty()}edit("event",index);notice("编辑后保存草稿并提交；同 ID 的人工活动将覆盖同步活动")};root.append(button)
+  const button=document.createElement("button");button.className="entry";button.textContent=e.title+" · "+(e.sourceType==="community"?"同步活动（可人工覆盖）":"人工活动");
+  button.onclick=()=>{let index=state.data.events.indexOf(e);if(index<0&&e.id)index=state.data.events.findIndex(x=>x.id===e.id);if(index<0){state.data.events.push({id:e.id,gameId:e.gameId,title:e.title,startAt:e.startAt,endAt:e.endAt,category:e.category,imageUrl:e.imageUrl||"",sourceUrl:e.sourceUrl||""});index=state.data.events.length-1;markDirty()}edit("event",index);notice("编辑后保存草稿并提交；同 ID 的人工活动将覆盖同步活动")};
+  const ended=e.sourceType==="community"&&Number.isFinite(Date.parse(e.endAt))&&Date.parse(e.endAt)<=Date.now();(ended?archived:active).append(button)
  }
- if(!events.size)root.textContent="此游戏暂无活动，可以点击上方按钮新增。";
+ if(events.size){root.append(active);if(archived.childElementCount)root.append(archive)}else root.textContent="此游戏暂无活动，可以点击上方按钮新增。";
  $("edit-selected-game").onclick=()=>{let index=state.data.games.findIndex(g=>g.id===gameId);if(index<0){const g=games.get(gameId);if(!g)return;state.data.games.push({...g});index=state.data.games.length-1}edit("game",index)};
  $("add-selected-event").onclick=()=>{edit("event",-1);$("event-form").elements.gameId.value=gameId};
  $("manager").scrollIntoView({behavior:"smooth",block:"start"});
