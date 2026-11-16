@@ -4,7 +4,7 @@ function milestoneRender(){
  for(const g of S.feed.games.filter(g=>S.selected.has(g.id))){
  const at=Date.parse(g.previewAt),expiry=Date.parse(g.codesExpireAt);const cnDay=t=>Number.isFinite(t)?new Date(t+8*3600000).toISOString().slice(0,10):"";
  const today=cnDay(now),candidates=[g.previousVersionAt,g.versionNoticeAt,g.nextVersionAt].map(Date.parse).filter(Number.isFinite);const todayUpdate=candidates.find(t=>cnDay(t)===today);const update=Number.isFinite(todayUpdate)?todayUpdate:Date.parse(g.nextVersionAt);const updateDay=Number.isFinite(update)?Date.parse(cnDay(update)+"T00:00:00+08:00"):NaN,updateNext=updateDay+86400000;
- if(!Number.isFinite(at)&&!Number.isFinite(update))continue;if(now>=updateNext)continue;
+ const hasPreview=Number.isFinite(at);const hasCodes=Array.isArray(g.previewCodes)&&g.previewCodes.some(Boolean);const hasCodeDeadline=Number.isFinite(expiry);if(!hasPreview&&!hasCodes&&!hasCodeDeadline)continue;if(now>=updateNext)continue;
  const highlight=Number.isFinite(todayUpdate);
  const endOfLive=new Date(at+8*3600000);endOfLive.setUTCHours(22,0,0,0);const ended=!Number.isFinite(at)||now>=endOfLive.getTime()-8*3600000;
  const card=n("article","milestone-card"),isExpired=Number.isFinite(expiry)&&now>=expiry;card.append(n("h3","",g.name));
