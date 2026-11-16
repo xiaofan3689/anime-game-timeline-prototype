@@ -4,7 +4,7 @@ function versionMilestoneTiming(g,now){
  const cnDay=t=>Number.isFinite(t)?new Date(t+8*3600000).toISOString().slice(0,10):"";
  // Bind this preview/code cycle to the first update at or after its announcement.
  const anchor=[parse(g.previewAt),parse(g.codesExpireAt)].filter(Number.isFinite).sort((a,b)=>a-b)[0];
- const dates=[g.previousVersionAt,g.versionNoticeAt,g.nextVersionAt].map(parse).filter(Number.isFinite).sort((a,b)=>a-b);
+ const dates=[g.updateReferenceAt,g.versionNoticeAt,g.nextVersionAt].map(parse).filter(Number.isFinite).sort((a,b)=>a-b);
  const relevant=Number.isFinite(anchor)?dates.filter(t=>cnDay(t)>=cnDay(anchor)):dates;
  const update=relevant[0]??NaN;
  const updateDay=Number.isFinite(update)?Date.parse(cnDay(update)+"T00:00:00+08:00"):NaN;
