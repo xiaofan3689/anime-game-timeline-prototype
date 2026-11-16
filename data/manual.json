@@ -511,6 +511,83 @@
       "endAt": "2026-11-17T10:59:59+08:00",
       "imageUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/10/23/dApx6FGO.jpg",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/xtlr.json"
+    },
+    {
+      "featured": false,
+      "id": "f49a16a7d2bd5452deba",
+      "gameId": "zzz",
+      "title": "修复吧！漂流画集",
+      "category": "活动",
+      "startAt": "2026-11-16T10:00:00+08:00",
+      "endAt": "2026-11-17T03:59:00+08:00",
+      "imageUrl": "",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
+    },
+    {
+      "featured": false,
+      "id": "6ca8c641e9abd9dd36a0",
+      "gameId": "zzz",
+      "title": "「嗯呢」从天降",
+      "category": "活动",
+      "startAt": "2026-11-11T10:00:00+08:00",
+      "endAt": "2026-11-12T03:59:00+08:00",
+      "imageUrl": "",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
+    },
+    {
+      "featured": false,
+      "id": "9b565b5310440990f27d",
+      "gameId": "zzz",
+      "title": "怪奇诡屋惊魂记",
+      "category": "活动",
+      "startAt": "2026-10-22T10:00:00+08:00",
+      "endAt": "2026-10-30T03:59:00+08:00",
+      "imageUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166971/e60c90b0d9aee6fd8448586ee92e7712_304316638077624531.jpg",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
+    },
+    {
+      "featured": false,
+      "id": "26a31a520db968fabb81",
+      "gameId": "zzz",
+      "title": "《绝区零》对iPhone Duo机型的适配说明",
+      "category": "活动",
+      "startAt": "2026-11-05T14:00:00+08:00",
+      "endAt": "2026-11-12T06:00:00+08:00",
+      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/04/31277066e538fef43aa5dafe73e3533d_8985718310596300355_transformed.png",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
+    },
+    {
+      "featured": false,
+      "id": "a3e7e413ff2cd7f64440",
+      "gameId": "zzz",
+      "title": "3.3版本「商城」上新说明",
+      "category": "活动",
+      "startAt": "2026-11-10T12:00:00+08:00",
+      "endAt": "2026-11-12T05:59:00+08:00",
+      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/06/258b465a8fb84ddde3dd2096cacaf718_5878293889572538722.jpg",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
+    },
+    {
+      "featured": false,
+      "id": "13dfaf8bbde9847203c1",
+      "gameId": "zzz",
+      "title": "跛脚乌鸦奇踪记",
+      "category": "活动",
+      "startAt": "2026-11-11T10:00:00+08:00",
+      "endAt": "2026-11-30T03:59:59+08:00",
+      "imageUrl": "",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
+    },
+    {
+      "featured": false,
+      "id": "790e6d83146e249c7f26",
+      "gameId": "zzz",
+      "title": "全新放送",
+      "category": "活动",
+      "startAt": "2026-10-21T11:00:00+08:00",
+      "endAt": "2026-11-01T03:59:00+08:00",
+      "imageUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166970/616a76f9fec948951b690270d84cadac_9098996815758943439.png",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     }
   ]
 }
