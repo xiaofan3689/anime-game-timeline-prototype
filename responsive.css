@@ -88,3 +88,5 @@ html{scroll-padding-top:16px}body{min-width:0}button,a,input,select{touch-action
  .event-dashboard>#smart-panel>.smart-reset{align-self:flex-start}
  .event-dashboard>.milestones{align-self:stretch}
 }
+
+.back-to-top{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:45;min-width:64px;min-height:44px;padding:10px 14px;border:1px solid #bca5ed;border-radius:14px;background:#514274;color:#fff;font-size:14px;box-shadow:0 4px 18px #0006;cursor:pointer}.back-to-top[hidden]{display:none}@media(max-width:600px){.back-to-top{right:max(12px,env(safe-area-inset-right));bottom:calc(14px + env(safe-area-inset-bottom));min-width:60px}}
