@@ -28,3 +28,25 @@ html{scroll-padding-top:16px}body{min-width:0}button,a,input,select{touch-action
 .order-row.unselected{opacity:.65;border-top:1px solid #554b69;padding-top:8px}.order-row span{font-size:14px}.order-dialog{overflow-x:hidden;max-width:calc(100vw - 24px)}@media(max-width:390px){.order-row{gap:4px}.order-row button{padding:8px;font-size:12px}.order-row span{font-size:12px}}
 
 .milestone-card{padding:14px;border:1px solid #655379;border-radius:12px;margin:10px 0;overflow-wrap:anywhere}.milestone-card img{width:100%;max-height:220px;object-fit:cover;border-radius:8px}.milestone-card button{margin:4px}.code-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.code-row code{user-select:all;overflow-wrap:anywhere;flex:1;min-width:0}.update-today{border-color:#e9be72;background:#57402744}textarea{width:100%;min-width:0;background:#111723;color:white;border:1px solid #495166;border-radius:7px;padding:10px;font:inherit}@media(max-width:600px){.milestone-card{padding:10px}.milestone-card img{max-height:140px}}
+
+/* V29: single continuous list; three rows with usable touch targets. */
+#smart-panel>.smart-list.smart-pages{display:flex;flex-direction:column;gap:6px;height:288px;padding:0 3px 0 0;scrollbar-width:thin}
+#smart-panel .smart-pages>.smart-row{flex:0 0 92px;min-height:92px;display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;padding:10px;align-items:center;overflow:hidden}
+#smart-panel .smart-pages>.smart-row>div{min-width:0}#smart-panel .smart-pages>.smart-row strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.4;font-size:14px}
+#smart-panel .smart-pages>.smart-row p{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:5px 0 0}
+#smart-panel .smart-pages>.smart-row button{min-height:44px;padding:7px 10px;font-size:12px;white-space:nowrap;margin:0}
+.milestones-empty{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px}.milestones-empty h2{margin:0;font-size:18px}.milestones-empty p{margin:0;font-size:12px}
+.smart-reset{font-size:12px;padding:6px 10px!important}.smart-page-indicator{margin:7px 0!important}
+@media(max-width:600px){
+ .hero h1{font-size:22px;line-height:1.4;text-wrap:balance}.hero::after{display:none}
+ #smart-panel{padding:12px;border-radius:12px}#smart-panel h2{font-size:18px;margin:0 0 8px}#smart-panel .smart-hint{font-size:11px;line-height:1.5;margin:4px 0}
+ #smart-panel .smart-summary{font-size:11px;line-height:1.5;margin:7px 0 10px}
+ #smart-panel>.smart-list.smart-pages{height:330px;gap:6px}
+ #smart-panel .smart-pages>.smart-row{flex-basis:106px;min-height:106px;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:minmax(0,1fr) 44px;padding:8px;gap:3px 8px;border-radius:9px}
+ #smart-panel .smart-pages>.smart-row>div{grid-column:1/-1}
+ #smart-panel .smart-pages>.smart-row strong{font-size:13px;-webkit-line-clamp:1}
+ #smart-panel .smart-pages>.smart-row p{font-size:11px;margin:3px 0}
+ #smart-panel .smart-pages>.smart-row button{width:auto;justify-self:start;padding:4px 12px;background:#393252;flex:none}
+ #smart-panel .smart-pages>.smart-row button:last-child{justify-self:end}
+ .milestones-empty{padding:12px;border-radius:12px}.milestones-empty h2{font-size:16px}.milestones-empty p{font-size:11px}
+}

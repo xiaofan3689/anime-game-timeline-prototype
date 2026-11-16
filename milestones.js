@@ -12,7 +12,7 @@ function milestoneRender(){
  milestones.append(card);count++;
  }
  for(const e of S.feed.events.filter(e=>e.featured&&S.selected.has(e.gameId)&&status(e)!=="ended")){const card=n("article","milestone-card");card.append(n("h3","",e.title),n("p","",S.feed.games.find(g=>g.id===e.gameId)?.name||e.gameId));const star=n("button","",progress[e.id]?.star?"取消关注":"关注"),done=n("button","",progress[e.id]?.done?"恢复未完成":"标记完成"),detail=n("button","","查看详情");star.onclick=()=>smartUpdate(e.id,"star",!progress[e.id]?.star);done.onclick=()=>smartUpdate(e.id,"done",!progress[e.id]?.done);detail.onclick=()=>openActivity(e);card.append(star,done,detail);milestones.append(card);count++}
- if(!count)milestones.append(n("p","","所选游戏暂无版本大事件"));
+ milestones.classList.toggle("milestones-empty",!count);if(!count)milestones.append(n("p","","暂无版本大事件"));
 }
 const beforeMilestoneRender=render;render=function(){beforeMilestoneRender();milestoneRender()};milestoneRender();
 async function refreshManualMilestones(){try{const r=await fetch("/data/manual.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)return;const manual=await r.json();if(!S.feed)return;for(const g of manual.games||[]){const target=S.feed.games.find(x=>x.id===g.id);if(target)Object.assign(target,g)}for(const e of manual.events||[]){const target=S.feed.events.find(x=>x.id===e.id);if(target)Object.assign(target,e);else if(e.featured)S.feed.events.push(e)}render()}catch{}}
