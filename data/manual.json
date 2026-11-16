@@ -456,6 +456,61 @@
       "endAt": "2026-11-16T17:00:00+08:00",
       "imageUrl": "https://yh.wanmei.com/resources/jpg/20261028/1143e95213edf3e640a992e3cee5bb82d695.jpg",
       "sourceUrl": "https://live.bilibili.com/27263119"
+    },
+    {
+      "featured": false,
+      "id": "70669e377f1ad7084826",
+      "gameId": "ys",
+      "title": "砺行修远（第六期）",
+      "category": "活动",
+      "startAt": "2026-11-02T04:00:00+08:00",
+      "endAt": "2027-01-25T03:59:59+08:00",
+      "imageUrl": "https://sdk.hoyoverse.com/upload/ann/2026/03/04/9e61fb52eb6c278d1c0c354a4cc12047_5706720538292727403_transformed.png",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/ys.json"
+    },
+    {
+      "featured": true,
+      "id": "2446bede44d989bb7c9f",
+      "gameId": "sr",
+      "title": "开场好礼先抱走",
+      "category": "活动",
+      "startAt": "2026-11-11T11:00:00+08:00",
+      "endAt": "2026-12-23T05:59:00+08:00",
+      "imageUrl": "",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/sr.json"
+    },
+    {
+      "featured": false,
+      "id": "6cef5be3d08e77ef2468",
+      "gameId": "ba-global",
+      "title": "出航！万魔船～真琴议长的华丽避暑～",
+      "category": "活动",
+      "startAt": "2026-11-10T10:00:00+08:00",
+      "endAt": "2026-11-24T10:00:59+08:00",
+      "imageUrl": "https://resource.starrailassistant.top/ba/activity/09da0c6ead7d41d9bdb264c9fe2292cd577d7f95.webp",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/ba-global.json"
+    },
+    {
+      "featured": false,
+      "id": "d9b31b81523ca5057951",
+      "gameId": "ba-cn",
+      "title": "商店购买次数异常问题说明",
+      "category": "活动",
+      "startAt": "2026-10-30T04:00:00+08:00",
+      "endAt": "2026-11-12T13:59:00+08:00",
+      "imageUrl": "https://webcnstatic.yostar.net/ba_cn_web/prod/upload/news/IstaVAdO.jpeg",
+      "sourceUrl": "https://bluearchive-cn.com/news/1997"
+    },
+    {
+      "featured": false,
+      "id": "589740b6794dee341eb5",
+      "gameId": "xtlr",
+      "title": "「乘光而起的星之砂」复刻纪念活动",
+      "category": "限时活动",
+      "startAt": "2026-10-27T12:00:00+08:00",
+      "endAt": "2026-11-17T10:59:59+08:00",
+      "imageUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/10/23/dApx6FGO.jpg",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/xtlr.json"
     }
   ]
 }
