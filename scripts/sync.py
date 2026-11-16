@@ -1,4 +1,5 @@
 """Merge community activity feeds and hand-entered events into a public JSON feed."""
+from auxiliary import collect
 import json
 import hashlib
 import os
@@ -151,6 +152,7 @@ def main():
             old = previous_sources.get(game_id, {})
             sources.append({"gameId": game_id, "url": url, "fetchedAt": old.get("fetchedAt"), "status": "stale", "eventCount": len(kept)})
             print(f"STALE {name}: {exc}")
+    honkai_news = collect(get_json, iso, event_id, valid_event, games, events, sources, previous, now)
     for game in manual.get("games", []):
         if not all(isinstance(game.get(k), str) and game[k].strip() for k in ("id", "name", "iconUrl")):
             raise ValueError("人工游戏需要 id、name、iconUrl")
@@ -178,7 +180,7 @@ def main():
     events.sort(key=lambda e: (e["startAt"], e["gameId"], e["title"]))
     if not success and not previous_events and not manual.get("events"):
         print("WARN 所有上游均失败，写入有效的空活动数据，等待下次同步恢复")
-    result = {"schemaVersion": 1, "generatedAt": now, "games": list(games.values()), "events": events, "sources": sources}
+    result = {"honkaiNews": honkai_news, "schemaVersion": 1, "generatedAt": now, "games": list(games.values()), "events": events, "sources": sources}
     write_feed(result)
     print(f"WROTE {len(events)} events")
 
