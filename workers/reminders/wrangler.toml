@@ -1,0 +1,12 @@
+name = "timeline-email-reminders"
+main = "worker.js"
+compatibility_date = "2026-11-18"
+[triggers]
+crons = ["*/10 * * * *"]
+[vars]
+SITE_URL = "https://xiaofan3689.dpdns.org/"
+# Replace the database ID before deploying. This must be the SAME database as Pages.
+[[d1_databases]]
+binding = "APPLICATION_DB"
+database_name = "timeline-applications"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"

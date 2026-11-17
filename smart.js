@@ -35,7 +35,7 @@ function smartRender(){
  const generated=Date.parse(S.feed.generatedAt);
  if(!Number.isFinite(generated)||Date.now()-generated>6*3600000)root.append(n("p","smart-warning","活动数据超过 6 小时未更新或更新时间无效，请核对官方公告后安排活动。"));
 }
-function smartPersist(){try{localStorage.setItem(SMART_KEY,JSON.stringify(progress))}catch{document.getElementById("smart-panel").append(n("p","smart-warning","浏览器禁止保存，当前标记将在刷新后丢失。"))}}
+function smartPersist(){window.dispatchEvent(new Event("timeline-preferences-changed"));try{localStorage.setItem(SMART_KEY,JSON.stringify(progress))}catch{document.getElementById("smart-panel").append(n("p","smart-warning","浏览器禁止保存，当前标记将在刷新后丢失。"))}}
 function smartUpdate(id,key,value){
  // Rebuilding cards removes the focused button. Restore document position after layout.
  const top=window.scrollY,left=window.scrollX;

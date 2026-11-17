@@ -1,0 +1,44 @@
+import {hash} from '../../lib/email-reminders.js';
+import {sendApplicationMail} from '../../lib/qq-smtp.js';
+const json=(body,status=200)=>Response.json(body,{status,headers:{'Cache-Control':'no-store'}});
+const list=(x,max)=>Array.isArray(x)&&x.length<=max&&x.every(v=>typeof v==='string'&&v.length>0&&v.length<=160);
+export async function onRequest({request,env}){
+ if(request.method!=='POST')return json({error:'方法不支持'},405);
+ if(request.headers.get('Origin')!==new URL(request.url).origin)return json({error:'来源无效'},403);
+ if(!env.APPLICATION_DB)return json({error:'邮件提醒数据库尚未配置'},503);
+ try{
+ const raw=await request.text();if(raw.length>100000)return json({error:'请求过大'},413);const b=JSON.parse(raw);
+ if(!/^[a-f0-9]{64}$/.test(b.token||''))return json({error:'订阅凭证无效'},400);
+ const db=env.APPLICATION_DB,key=await hash(b.token),now=Date.now();
+ let row=await db.prepare('SELECT * FROM email_subscriptions WHERE token_hash=?').bind(key).first();
+ if(b.action==='get')return json({email:row?.email||'',pendingEmail:row?.pending_email||'',active:!!row?.active});
+ if(b.action==='request-code'){
+  const email=typeof b.email==='string'?b.email.trim().toLowerCase():'';
+  if(email.length>254||!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email))return json({error:'请输入有效邮箱'},400);
+  if(row&&now-row.code_sent<60000)return json({error:'请60秒后再试'},429);
+  const ip=request.headers.get('CF-Connecting-IP')||'unknown';
+  for(const [bucket,limit] of [[`ip:${await hash(ip)}:${Math.floor(now/3600000)}`,10],[`mail:${await hash(email)}:${Math.floor(now/3600000)}`,5],[`day:${Math.floor(now/86400000)}`,100]]){
+   const r=await db.prepare('INSERT INTO email_rate_limits(bucket,count) VALUES (?,1) ON CONFLICT(bucket) DO UPDATE SET count=count+1 RETURNING count').bind(bucket).first();if(r.count>limit)return json({error:'验证邮件发送频率已达上限，请稍后再试'},429);
+  }
+  const numbers=new Uint32Array(1);crypto.getRandomValues(numbers);const code=String(numbers[0]%1000000).padStart(6,'0');
+  await db.prepare(`INSERT INTO email_subscriptions(token_hash,pending_email,code_hash,code_expires,code_sent,updated_at) VALUES (?,?,?,?,?,?) ON CONFLICT(token_hash) DO UPDATE SET pending_email=excluded.pending_email,code_hash=excluded.code_hash,code_expires=excluded.code_expires,code_sent=excluded.code_sent,attempts=0`).bind(key,email,await hash(key+email+code),now+600000,now,now).run();
+  try{await sendApplicationMail(env,`你的次元时刻邮件提醒验证码是：${code}\n10分钟内有效。只有在网站确认后才会启用或替换提醒邮箱。若非本人操作，请忽略。`,email,'次元时刻：验证提醒邮箱')}catch{return json({error:'验证码未确认发送成功，请稍后重试'},502)}
+  return json({ok:true});
+ }
+ if(!row)return json({error:'请先验证邮箱'},400);
+ if(b.action==='stop'){await db.prepare('UPDATE email_subscriptions SET active=0,revision=revision+1,updated_at=? WHERE token_hash=?').bind(now,key).run();return json({ok:true})}
+ if(!['confirm','sync'].includes(b.action))return json({error:'操作无效'},400);
+ if(!list(b.games,100)||!list(b.completed,2000))return json({error:'游戏或完成状态无效'},400);
+ if(b.action==='confirm'){
+  if(!row.pending_email||row.code_expires<now||row.attempts>=5)return json({error:'验证码过期或次数已用完，请重新获取'},400);
+  const attempt=await db.prepare('UPDATE email_subscriptions SET attempts=attempts+1 WHERE token_hash=? AND attempts<5 AND code_expires>=? RETURNING attempts').bind(key,now).first();
+  if(!attempt||await hash(key+row.pending_email+String(b.code))!==row.code_hash)return json({error:'验证码错误'},400);
+  const result=await db.prepare('UPDATE email_subscriptions SET email=pending_email,pending_email=NULL,code_hash=NULL,active=1,games=?,completed=?,revision=revision+1,updated_at=? WHERE token_hash=? AND code_hash=? AND code_expires>=?').bind(JSON.stringify([...new Set(b.games)]),JSON.stringify([...new Set(b.completed)]),now,key,row.code_hash,now).run();
+  if(!result.meta.changes)return json({error:'验证状态已变化，请重试'},409);
+ }else{
+  if(!row.active)return json({error:'提醒已停止，请验证邮箱重新启用'},409);
+  await db.prepare('UPDATE email_subscriptions SET games=?,completed=?,revision=revision+1,updated_at=? WHERE token_hash=? AND active=1').bind(JSON.stringify([...new Set(b.games)]),JSON.stringify([...new Set(b.completed)]),now,key).run();
+ }
+ return json({ok:true});
+ }catch{return json({error:'邮件提醒处理失败，请稍后再试'},500)}
+}
