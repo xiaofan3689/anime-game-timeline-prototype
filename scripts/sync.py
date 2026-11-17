@@ -154,8 +154,8 @@ def main():
             print(f"STALE {name}: {exc}")
     honkai_news = collect(get_json, iso, event_id, valid_event, games, events, sources, previous, now)
     for game in manual.get("games", []):
-        if not all(isinstance(game.get(k), str) and game[k].strip() for k in ("id", "name", "iconUrl")):
-            raise ValueError("人工游戏需要 id、name、iconUrl")
+        if not all(isinstance(game.get(k), str) and game[k].strip() for k in ("id", "name")):
+            raise ValueError("人工游戏需要非空 id、name")
         manual_game = {k: game.get(k) for k in ("id", "name", "iconUrl", "version", "versionName", "bannerUrl", "versionNoticeAt", "nextVersionAt", "nextVersionEstimated", "previewBannerUrl", "previewUrl", "previewAt", "codesExpireAt", "previewCodes", "previousVersionAt", "updateReferenceAt", "preDownloadAt", "officialUrl", "previewRecapUrl", "syncWithSra")}
         if game.get("syncWithSra") is True and game["id"] in games:
             # Keep administrator attributes, but restore SRA-maintained version fields.
@@ -176,6 +176,9 @@ def main():
             "sourceType": "manual", "sourceName": "人工录入",
             "sourceUrl": item.get("sourceUrl"), "imageUrl": item.get("imageUrl"),
         }))
+    disabled = {g["id"] for g in manual.get("games", []) if g.get("disabled") is True}
+    games = {k: v for k, v in games.items() if k not in disabled}
+    events = [e for e in events if e["gameId"] not in disabled]
     events = list({e["id"]: e for e in events}.values())
     events.sort(key=lambda e: (e["startAt"], e["gameId"], e["title"]))
     if not success and not previous_events and not manual.get("events"):
