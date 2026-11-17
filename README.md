@@ -338,3 +338,7 @@ Pages Functions 不直接承载 Cron，独立 Worker 是本方案必要的定时
 - [Worker Cron 配置及 UTC 时间](https://developers.cloudflare.com/workers/configuration/cron-triggers/)
 - [Resend 发信域与子域](https://resend.com/docs/dashboard/domains/introduction)
 - [Resend API Key 管理](https://resend.com/docs/dashboard/api-keys/introduction)
+
+## 协作者申请：QQ SMTP 临时测试配置（v51）
+
+当前申请通知已改用 QQ SMTP（仅该通知，不改变旧 Actions 提醒或上述未来订阅规划）。无需 Resend 或新域名 DNS。Pages 设置中普通变量 QQ_SMTP_USER 填完整 QQ 发信邮箱，机密 QQ_SMTP_AUTH_CODE 填 QQ 邮箱生成的 SMTP 授权码。保留 APPLICATION_DB。服务器固定 smtp.qq.com:465，使用 TLS；不需要 IMAP。部署及测试步骤见 [APPLICATION_SETUP.md](APPLICATION_SETUP.md)。真实 QQ 连通性和收件尚未验证。
