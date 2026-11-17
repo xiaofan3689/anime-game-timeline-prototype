@@ -137,7 +137,7 @@
     }
   ],
   "schemaVersion": 1,
-  "generatedAt": "2026-11-16T14:52:05+00:00",
+  "generatedAt": "2026-11-17T11:05:50+00:00",
   "games": [
     {
       "id": "ys",
@@ -159,7 +159,7 @@
       "preDownloadAt": null,
       "officialUrl": null,
       "previewRecapUrl": null,
-      "syncWithSra": null
+      "syncWithSra": true
     },
     {
       "id": "nte",
@@ -181,7 +181,7 @@
       "preDownloadAt": null,
       "officialUrl": null,
       "previewRecapUrl": null,
-      "syncWithSra": null
+      "syncWithSra": true
     },
     {
       "id": "sr",
@@ -203,7 +203,7 @@
       "preDownloadAt": null,
       "officialUrl": null,
       "previewRecapUrl": null,
-      "syncWithSra": null
+      "syncWithSra": true
     },
     {
       "id": "zzz",
@@ -225,7 +225,7 @@
       "preDownloadAt": null,
       "officialUrl": "https://zzz.mihoyo.com",
       "previewRecapUrl": null,
-      "syncWithSra": null
+      "syncWithSra": true
     },
     {
       "id": "ww",
@@ -247,7 +247,7 @@
       "preDownloadAt": null,
       "officialUrl": null,
       "previewRecapUrl": null,
-      "syncWithSra": null
+      "syncWithSra": true
     },
     {
       "id": "ak",
@@ -269,7 +269,7 @@
       "preDownloadAt": null,
       "officialUrl": null,
       "previewRecapUrl": null,
-      "syncWithSra": null
+      "syncWithSra": true
     },
     {
       "id": "end",
@@ -291,7 +291,7 @@
       "preDownloadAt": null,
       "officialUrl": null,
       "previewRecapUrl": null,
-      "syncWithSra": null
+      "syncWithSra": true
     },
     {
       "id": "ba-cn",
@@ -299,7 +299,21 @@
       "iconUrl": "https://bluearchive-cn.com/favicon.ico",
       "version": "2026-11",
       "versionName": "国服活动",
-      "bannerUrl": "https://resource.starrailassistant.top/ba/activity/9166afb38aaebf5080ef5a7d35f2991bf14e7795.webp"
+      "bannerUrl": "https://resource.starrailassistant.top/ba/activity/9166afb38aaebf5080ef5a7d35f2991bf14e7795.webp",
+      "versionNoticeAt": null,
+      "nextVersionAt": null,
+      "nextVersionEstimated": false,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": null,
+      "officialUrl": null,
+      "previewRecapUrl": null,
+      "syncWithSra": true
     },
     {
       "id": "ba-jp",
@@ -307,7 +321,21 @@
       "iconUrl": "https://bluearchive.jp/favicon.ico",
       "version": "2026-11",
       "versionName": "日服活动",
-      "bannerUrl": "https://resource.starrailassistant.top/ba/activity/9b238079c9ec8063526164908fc3e46478f78f26.webp"
+      "bannerUrl": "https://resource.starrailassistant.top/ba/activity/9b238079c9ec8063526164908fc3e46478f78f26.webp",
+      "versionNoticeAt": null,
+      "nextVersionAt": null,
+      "nextVersionEstimated": false,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": null,
+      "officialUrl": null,
+      "previewRecapUrl": null,
+      "syncWithSra": true
     },
     {
       "id": "ba-global",
@@ -315,7 +343,21 @@
       "iconUrl": "https://bluearchive.nexon.com/favicon.ico",
       "version": "2026-11",
       "versionName": "国际服活动",
-      "bannerUrl": "https://resource.starrailassistant.top/ba/activity/09da0c6ead7d41d9bdb264c9fe2292cd577d7f95.webp"
+      "bannerUrl": "https://resource.starrailassistant.top/ba/activity/09da0c6ead7d41d9bdb264c9fe2292cd577d7f95.webp",
+      "versionNoticeAt": null,
+      "nextVersionAt": null,
+      "nextVersionEstimated": false,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": null,
+      "officialUrl": null,
+      "previewRecapUrl": null,
+      "syncWithSra": false
     },
     {
       "id": "xtlr",
@@ -323,7 +365,21 @@
       "iconUrl": "https://stella-sora.com/favicon.ico",
       "version": "2026-11-13",
       "versionName": "执笔展卷，勾勒未名之境",
-      "bannerUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/11/09/sgus1yfz.jpg"
+      "bannerUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/11/09/sgus1yfz.jpg",
+      "versionNoticeAt": null,
+      "nextVersionAt": null,
+      "nextVersionEstimated": false,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": null,
+      "officialUrl": null,
+      "previewRecapUrl": null,
+      "syncWithSra": false
     },
     {
       "id": "infinitynikki",
@@ -331,7 +387,21 @@
       "iconUrl": "https://infinitynikki.infoldgames.com/favicon.ico",
       "version": "2.11",
       "versionName": "时光缝合的扉页",
-      "bannerUrl": "https://webstatic.papegames.com/5af052bffce5c899/images/bg/yxtMDTt0VBdwtIuR.jpg"
+      "bannerUrl": "https://webstatic.papegames.com/5af052bffce5c899/images/bg/yxtMDTt0VBdwtIuR.jpg",
+      "versionNoticeAt": null,
+      "nextVersionAt": null,
+      "nextVersionEstimated": false,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": null,
+      "officialUrl": null,
+      "previewRecapUrl": null,
+      "syncWithSra": false
     },
     {
       "id": "gf2",
@@ -339,7 +409,21 @@
       "iconUrl": "https://gf2.sunborngame.com/favicon.ico",
       "version": "2026-11-03",
       "versionName": "热寂悖论",
-      "bannerUrl": "https://i0.hdslb.com/bfs/archive/0c38c8078f74299ee985f014708a14e2ffdc4cae.jpg"
+      "bannerUrl": "https://i0.hdslb.com/bfs/archive/0c38c8078f74299ee985f014708a14e2ffdc4cae.jpg",
+      "versionNoticeAt": null,
+      "nextVersionAt": null,
+      "nextVersionEstimated": false,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": null,
+      "officialUrl": null,
+      "previewRecapUrl": null,
+      "syncWithSra": true
     },
     {
       "id": "pgr",
@@ -347,7 +431,21 @@
       "iconUrl": "https://pns.kurogames.com/favicon.ico",
       "version": "2026-11-05",
       "versionName": "流光抛诸寰宇",
-      "bannerUrl": "https://i.17173cdn.com/2fhnvk/YWxqaGBf/cms3/PkGyFcbugdgskae.jpg"
+      "bannerUrl": "https://i.17173cdn.com/2fhnvk/YWxqaGBf/cms3/PkGyFcbugdgskae.jpg",
+      "versionNoticeAt": null,
+      "nextVersionAt": null,
+      "nextVersionEstimated": false,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": null,
+      "officialUrl": null,
+      "previewRecapUrl": null,
+      "syncWithSra": false
     },
     {
       "id": "czn",
@@ -355,7 +453,21 @@
       "iconUrl": "https://chaoszeronightmare.com/favicon.ico",
       "version": "2026-11-11",
       "versionName": "凝结于雪上的约定·第2章",
-      "bannerUrl": "https://vasd-cms.qq.com/vasd-cms/ee57a83c423151259fffcaf375147fe03546720799557898_jpg_b1ad8b6506.avif"
+      "bannerUrl": "https://vasd-cms.qq.com/vasd-cms/ee57a83c423151259fffcaf375147fe03546720799557898_jpg_b1ad8b6506.avif",
+      "versionNoticeAt": null,
+      "nextVersionAt": null,
+      "nextVersionEstimated": false,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": null,
+      "officialUrl": null,
+      "previewRecapUrl": null,
+      "syncWithSra": false
     },
     {
       "id": "bd2",
@@ -363,7 +475,21 @@
       "iconUrl": "https://www.browndust2.com/favicon.ico",
       "version": "2026-11-05",
       "versionName": "Blood Royale",
-      "bannerUrl": null
+      "bannerUrl": null,
+      "versionNoticeAt": null,
+      "nextVersionAt": null,
+      "nextVersionEstimated": false,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": null,
+      "officialUrl": null,
+      "previewRecapUrl": null,
+      "syncWithSra": false
     },
     {
       "id": "nikke",
@@ -371,7 +497,21 @@
       "iconUrl": "https://nikke-en.com/favicon.ico",
       "version": "2026-10-08",
       "versionName": "2026-10-08",
-      "bannerUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_490/h_162/4408/2026/9/8/69022535muza8j8o.jpg"
+      "bannerUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_490/h_162/4408/2026/9/8/69022535muza8j8o.jpg",
+      "versionNoticeAt": null,
+      "nextVersionAt": null,
+      "nextVersionEstimated": false,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": null,
+      "officialUrl": null,
+      "previewRecapUrl": null,
+      "syncWithSra": true
     },
     {
       "id": "hyrz",
@@ -379,15 +519,43 @@
       "iconUrl": "https://hyrz.qq.com/favicon.ico",
       "version": "2026-11-13",
       "versionName": "川木[楔二]登场",
-      "bannerUrl": null
+      "bannerUrl": null,
+      "versionNoticeAt": null,
+      "nextVersionAt": null,
+      "nextVersionEstimated": false,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": null,
+      "officialUrl": null,
+      "previewRecapUrl": null,
+      "syncWithSra": true
     },
     {
       "id": "fgo",
       "name": "FGO（国服）",
-      "iconUrl": null,
+      "iconUrl": "",
       "version": null,
       "versionName": null,
-      "bannerUrl": null
+      "bannerUrl": null,
+      "versionNoticeAt": null,
+      "nextVersionAt": null,
+      "nextVersionEstimated": false,
+      "previewBannerUrl": null,
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": null,
+      "officialUrl": null,
+      "previewRecapUrl": null,
+      "syncWithSra": false
     },
     {
       "id": "snowbreak",
@@ -398,33 +566,63 @@
       "bannerUrl": null
     },
     {
-      "id": "test",
-      "name": "test",
-      "iconUrl": "https://ys.mihoyo.com/favicon.ico",
-      "version": "1.0.0",
-      "versionName": "1",
-      "bannerUrl": "https://yh.wanmei.com/resources/jpg/20261104/1143c50a94f0b3a54fceb9fa89863dfd4008.jpg",
-      "versionNoticeAt": "2026-11-15T11:30:00+08:00",
-      "nextVersionAt": "2026-12-27T11:30:00+08:00",
-      "nextVersionEstimated": true,
-      "previewBannerUrl": "https://yh.wanmei.com/resources/jpg/20261028/1143e95213edf3e640a992e3cee5bb82d695.jpg",
-      "previewUrl": "https://live.bilibili.com/27263119",
-      "previewAt": "2026-11-08T20:00:00+08:00",
-      "codesExpireAt": "2026-11-13T14:51:00+08:00",
-      "previewCodes": [
-        "cdk",
-        "123",
-        "456"
-      ],
-      "previousVersionAt": "2026-10-13T12:00:00+08:00",
-      "updateReferenceAt": "2026-11-16T12:00:00+08:00",
-      "preDownloadAt": "2026-11-14T12:00:00+08:00",
-      "officialUrl": "https://sr.mihoyo.com",
-      "previewRecapUrl": "https://www.bilibili.com/opus/1270410096682205192",
-      "syncWithSra": null
+      "id": "ap",
+      "name": "蓝色星原：旅谣",
+      "iconUrl": "https://plat-cdn.manjuu.com/platform/33c42214-f1f6-42a3-8e3a-ee4045bdfa74/P3OfficialWebsiteMobile/prod/_next/static/media/app-icon.5c4f54d8.png",
+      "version": "1.0",
+      "versionName": "公测",
+      "bannerUrl": "https://l1-all-plat-server.manjuu.com/websiteManagent/img/notice/1ee30950a80e092040b390bb7ac393b7-1792651127802-0.jpeg",
+      "versionNoticeAt": null,
+      "nextVersionAt": "2026-11-26T12:00:00+08:00",
+      "nextVersionEstimated": false,
+      "previewBannerUrl": "https://l1-all-plat-server.manjuu.com/websiteManagent/img/notice/1ee30950a80e092040b390bb7ac393b7-1792651127802-0.jpeg",
+      "previewUrl": "https://b23.tv/p0TgYuy",
+      "previewAt": "2026-11-20T19:00:00+08:00",
+      "codesExpireAt": null,
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": null,
+      "officialUrl": "https://azurpromilia.manjuu.com/",
+      "previewRecapUrl": null,
+      "syncWithSra": false
+    },
+    {
+      "id": "sliver",
+      "name": "白银之城",
+      "iconUrl": "https://silverpalace.leyuansu.com/favicon.ico",
+      "version": "1.0",
+      "versionName": "公测",
+      "bannerUrl": "https://fcupload.happyelements.com/official/image/20261030/5b1563e3a59f3bb6a1a06412316b453e.png",
+      "versionNoticeAt": null,
+      "nextVersionAt": "2026-12-14T12:00:00+08:00",
+      "nextVersionEstimated": false,
+      "previewBannerUrl": "https://fcupload.happyelements.com/official/image/20261030/5b1563e3a59f3bb6a1a06412316b453e.png",
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": null,
+      "officialUrl": "https://fcupload.happyelements.com",
+      "previewRecapUrl": null,
+      "syncWithSra": false
     }
   ],
   "events": [
+    {
+      "id": "a3dfbfacaa96f11cedc2",
+      "gameId": "nikke",
+      "title": "【联动活动】EVANGELION：Second Quest",
+      "startAt": "2025-02-19T16:00:00+08:00",
+      "endAt": "2025-03-12T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/648518.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_306/h_316/1253/4408/2025/2/5/27145.jpg"
+    },
     {
       "id": "5bd112ab311275dce8cf",
       "gameId": "ba-jp",
@@ -462,6 +660,18 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_796/h_367/829/43637/2025/2/11/946345.png"
     },
     {
+      "id": "3c3a808cca5834379960",
+      "gameId": "nikke",
+      "title": "【支线剧情】FOR REST",
+      "startAt": "2025-03-12T16:00:00+08:00",
+      "endAt": "2025-03-26T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/650768.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1170/h_1170/1253/4408/2025/2/13/107642.jpg"
+    },
+    {
       "id": "a73775190fa5906d2bda",
       "gameId": "ba-jp",
       "title": "学园交流会2倍",
@@ -486,6 +696,42 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_794/h_366/829/43637/2025/2/25/627073.png"
     },
     {
+      "id": "7683f0b76ef8c6316b1b",
+      "gameId": "nikke",
+      "title": "【支线】New Flavor",
+      "startAt": "2025-03-26T16:00:00+08:00",
+      "endAt": "2025-04-09T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/652495.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1170/h_1170/1253/4408/2025/2/28/958845.jpg"
+    },
+    {
+      "id": "00961825fe9939037f58",
+      "gameId": "nikke",
+      "title": "【签到】Maid In Bloom",
+      "startAt": "2025-03-26T16:00:00+08:00",
+      "endAt": "2025-04-23T15:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/652495.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_425/h_141/1253/4408/2025/2/28/416552.jpg"
+    },
+    {
+      "id": "e6ae4664a7bea35850a9",
+      "gameId": "nikke",
+      "title": "FOOL BURST DAY",
+      "startAt": "2025-03-31T20:00:00+08:00",
+      "endAt": "2025-04-03T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/653883.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_465/h_159/1253/4408/2025/3/1/650903.jpg"
+    },
+    {
       "id": "0a8003641eef81b1ebe8",
       "gameId": "ba-jp",
       "title": "总力战 室外战·若藻/气垫船",
@@ -508,6 +754,18 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/654848.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_568/h_226/829/43637/2025/3/8/770854.png"
+    },
+    {
+      "id": "551da49afba13b3802b8",
+      "gameId": "nikke",
+      "title": "【支线】TRUE FLAVOR",
+      "startAt": "2025-04-09T16:00:00+08:00",
+      "endAt": "2025-04-23T15:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/654759.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_697/h_626/1253/4408/2025/3/11/955906.jpg"
     },
     {
       "id": "d41300e758051ac7688a",
@@ -544,6 +802,78 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/657703.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1920/h_1080/829/43637/2025/3/21/930158.jpg"
+    },
+    {
+      "id": "d5bf0992a8df0f5fec66",
+      "gameId": "nikke",
+      "title": "【奖励】2.5th ANNIVERSARY Party",
+      "startAt": "2025-04-23T16:00:00+08:00",
+      "endAt": "2025-05-14T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/nikke",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_426/h_142/1253/4408/2025/3/24/217371.jpg"
+    },
+    {
+      "id": "dd3cec9c2e92eb3ad23b",
+      "gameId": "nikke",
+      "title": "【抽卡返利】RECRUITMENT BENEFITS",
+      "startAt": "2025-04-23T16:00:00+08:00",
+      "endAt": "2025-05-14T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/656804.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_428/h_146/1253/4408/2025/3/24/464696.jpg"
+    },
+    {
+      "id": "bd5ff0d83f24dc32301a",
+      "gameId": "nikke",
+      "title": "【支线】UNBREAKABLE SPHERE",
+      "startAt": "2025-04-23T16:00:00+08:00",
+      "endAt": "2025-05-14T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/656247.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_494/h_413/1253/4408/2025/3/24/731526.jpg"
+    },
+    {
+      "id": "f9dfa2a211fdec0088ae",
+      "gameId": "nikke",
+      "title": "【每日一抽】每天免费招募一次！",
+      "startAt": "2025-04-23T16:00:00+08:00",
+      "endAt": "2025-05-14T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/nikke",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_425/h_139/1253/4408/2025/3/24/851819.jpg"
+    },
+    {
+      "id": "3a7d0c4a5cc0796cf91b",
+      "gameId": "nikke",
+      "title": "【转盘】ABYSS FLOWER",
+      "startAt": "2025-04-23T16:00:00+08:00",
+      "endAt": "2025-05-14T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/nikke",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_428/h_141/1253/4408/2025/3/24/93652.jpg"
+    },
+    {
+      "id": "4d19990192f1e63a8d8e",
+      "gameId": "nikke",
+      "title": "【通行证】2.5th ANNIVERSARY PASS",
+      "startAt": "2025-04-23T16:00:00+08:00",
+      "endAt": "2025-05-14T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/nikke",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_427/h_145/1253/4408/2025/3/24/763305.jpg"
     },
     {
       "id": "520548abb3f9a34e8163",
@@ -606,6 +936,18 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1280/h_480/829/43637/2025/4/13/823041.jpg"
     },
     {
+      "id": "34037bdeeef7c639637f",
+      "gameId": "nikke",
+      "title": "【支线】ARCANE ARCHIVE",
+      "startAt": "2025-05-14T16:00:00+08:00",
+      "endAt": "2025-05-28T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/660901.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_483/h_492/1253/4408/2025/4/16/397516.jpg"
+    },
+    {
       "id": "177d9a643a95d7b7fd7f",
       "gameId": "ba-jp",
       "title": "引导任务「和乐祭特别庆典！」",
@@ -640,6 +982,42 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1920/h_1080/829/43637/2025/4/20/330912.jpg"
+    },
+    {
+      "id": "e4545ceb1a7e98ecd456",
+      "gameId": "nikke",
+      "title": "【剧情支线】Lord，For Justice",
+      "startAt": "2025-05-28T16:00:00+08:00",
+      "endAt": "2025-06-11T14:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/663334.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_444/h_402/1253/4408/2025/4/29/585041.jpg"
+    },
+    {
+      "id": "a83e925fd0d395bad4ae",
+      "gameId": "nikke",
+      "title": "【签到】DAILY LOGIN HOME IN!",
+      "startAt": "2025-05-28T16:00:00+08:00",
+      "endAt": "2025-06-19T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/nikke",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_432/h_143/1253/4408/2025/4/29/15601.jpg"
+    },
+    {
+      "id": "d1042788d7f72833c375",
+      "gameId": "nikke",
+      "title": "【通行证】BASE BALL PASS",
+      "startAt": "2025-05-28T16:00:00+08:00",
+      "endAt": "2025-06-19T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/nikke",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_432/h_145/1253/4408/2025/4/29/486937.jpg"
     },
     {
       "id": "c2493306df35be0c90e6",
@@ -678,6 +1056,42 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1280/h_720/829/43637/2025/5/3/586524.jpg"
     },
     {
+      "id": "4b8cdc47ab272818241d",
+      "gameId": "nikke",
+      "title": "【pass】NEURO LINK PASS",
+      "startAt": "2025-06-11T16:00:00+08:00",
+      "endAt": "2025-07-02T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/nikke",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_436/h_161/1253/4408/2025/5/12/520517.jpg"
+    },
+    {
+      "id": "d36cf83b4dd4408d287e",
+      "gameId": "nikke",
+      "title": "【联动支线】Memories Teller",
+      "startAt": "2025-06-11T16:00:00+08:00",
+      "endAt": "2025-07-02T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/665699.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_398/h_383/1253/4408/2025/5/12/673683.jpg"
+    },
+    {
+      "id": "33f0886092a376b25609",
+      "gameId": "nikke",
+      "title": "【转盘】RACER'S HIGH",
+      "startAt": "2025-06-11T16:00:00+08:00",
+      "endAt": "2025-07-02T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/nikke",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_436/h_146/1253/4408/2025/5/12/753049.jpg"
+    },
+    {
       "id": "95437415ee4623ccaacd",
       "gameId": "ba-jp",
       "title": "活动 百花脱颖唯一朵 ～水上对战、一决胜负～",
@@ -714,6 +1128,30 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1920/h_1080/829/43637/2025/5/25/227166.jpg"
     },
     {
+      "id": "60c9142c61723a9ed728",
+      "gameId": "nikke",
+      "title": "【复刻】OuteR：Automata",
+      "startAt": "2025-07-02T16:00:00+08:00",
+      "endAt": "2025-07-30T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/nikke",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_446/h_144/1253/4408/2025/6/3/246822.jpg"
+    },
+    {
+      "id": "c64ea5783e04f0ef92c1",
+      "gameId": "nikke",
+      "title": "【支线】OVER THE HORIZON",
+      "startAt": "2025-07-02T16:00:00+08:00",
+      "endAt": "2025-07-16T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/668493.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_375/h_352/1253/4408/2025/6/3/502660.jpg"
+    },
+    {
       "id": "e71e54a66c8a4c68ba2e",
       "gameId": "ba-jp",
       "title": "大决战 室外战・KAITEN FX Mk.0",
@@ -724,6 +1162,54 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/670389.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1280/h_720/829/43637/2025/6/8/612388.jpg"
+    },
+    {
+      "id": "61ef6a4a0395ddf2efdd",
+      "gameId": "nikke",
+      "title": "【PASS】SURVIVOR PASS",
+      "startAt": "2025-07-16T16:00:00+08:00",
+      "endAt": "2025-08-06T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/nikke",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_489/h_162/1253/4408/2025/6/18/887349.jpg"
+    },
+    {
+      "id": "3a2ad0074914d0f07499",
+      "gameId": "nikke",
+      "title": "【反抽】Recruitment BENEFITS",
+      "startAt": "2025-07-16T16:00:00+08:00",
+      "endAt": "2025-08-06T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/nikke",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_493/h_166/1253/4408/2025/6/18/85396.jpg"
+    },
+    {
+      "id": "439ff3cd68b0a186692e",
+      "gameId": "nikke",
+      "title": "【夏日活动】BOOM! THE GHOST!",
+      "startAt": "2025-07-16T16:00:00+08:00",
+      "endAt": "2025-08-06T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/670390.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_430/h_369/1253/4408/2025/6/18/984438.jpg"
+    },
+    {
+      "id": "05faaa6a7ff7c2107aae",
+      "gameId": "nikke",
+      "title": "【转盘抽奖】Red Flavor",
+      "startAt": "2025-07-16T16:00:00+08:00",
+      "endAt": "2025-08-06T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/nikke",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_490/h_163/1253/4408/2025/6/18/117489.jpg"
     },
     {
       "id": "b93502fbefad0b2bd4bb",
@@ -774,6 +1260,18 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1920/h_1080/829/43637/2025/6/21/572515.jpg"
     },
     {
+      "id": "cea8b57bb01873eafa84",
+      "gameId": "nikke",
+      "title": "【签到】1000天特别奖励",
+      "startAt": "2025-07-29T16:00:00+08:00",
+      "endAt": "2025-08-12T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/nikke",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_451/h_151/1253/4408/2025/6/30/735707.jpg"
+    },
+    {
       "id": "fc74feadf60e0dfcbf74",
       "gameId": "ba-jp",
       "title": "总力战 市街战・霍德",
@@ -808,6 +1306,42 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/672725.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1280/h_720/829/43637/2025/7/5/804886.jpg"
+    },
+    {
+      "id": "36c3a42566d5afb8528e",
+      "gameId": "nikke",
+      "title": "【14日签到】TACTICAL UP",
+      "startAt": "2025-08-06T16:00:00+08:00",
+      "endAt": "2025-09-03T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/672957.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_670/h_233/1253/4408/2025/7/8/276708.jpg"
+    },
+    {
+      "id": "62c722e0fa1545b74248",
+      "gameId": "nikke",
+      "title": "【21日签到】",
+      "startAt": "2025-08-06T16:00:00+08:00",
+      "endAt": "2025-09-03T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/nikke",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_669/h_226/1253/4408/2025/7/8/636537.jpg"
+    },
+    {
+      "id": "73606f678c709a35607f",
+      "gameId": "nikke",
+      "title": "【支线】ABSOLUTE",
+      "startAt": "2025-08-06T16:00:00+08:00",
+      "endAt": "2025-09-03T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/673254.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_407/h_382/1253/4408/2025/7/8/644398.jpg"
     },
     {
       "id": "d68431367fbab0a8adb3",
@@ -906,6 +1440,42 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1280/h_720/829/43637/2025/8/2/898551.jpg"
     },
     {
+      "id": "a5f5ad13dabb396dcff2",
+      "gameId": "nikke",
+      "title": "【pass】cheer bunny pass",
+      "startAt": "2025-09-03T16:00:00+08:00",
+      "endAt": "2025-09-22T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/675873.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_426/h_151/1253/4408/2025/8/8/643608.jpg"
+    },
+    {
+      "id": "16f00a1ab1ef0af959ea",
+      "gameId": "nikke",
+      "title": "【支线】COINS IN RUSH",
+      "startAt": "2025-09-03T16:00:00+08:00",
+      "endAt": "2025-09-23T14:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/676242.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_814/h_839/1253/4408/2025/8/4/192496.png"
+    },
+    {
+      "id": "fe1b45e40a4568a0fda4",
+      "gameId": "nikke",
+      "title": "【转盘】Unlucky Rabbit",
+      "startAt": "2025-09-03T16:00:00+08:00",
+      "endAt": "2025-09-22T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/676572.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_454/h_152/1253/4408/2025/8/4/37136.jpg"
+    },
+    {
       "id": "675eb389f1431acd1a63",
       "gameId": "ba-jp",
       "title": "大决战  屋外战・凯赛德",
@@ -928,6 +1498,42 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/675971.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1920/h_1080/829/43637/2025/8/2/425247.jpg"
+    },
+    {
+      "id": "d35d6e01db81101e6dea",
+      "gameId": "nikke",
+      "title": "【pass】Secret Agent Pass",
+      "startAt": "2025-09-23T16:00:00+08:00",
+      "endAt": "2025-10-21T14:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/678000.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_461/h_145/1253/4408/2025/8/24/527580.jpg"
+    },
+    {
+      "id": "94e52befc4ecfd945156",
+      "gameId": "nikke",
+      "title": "【支线】Reborn Evil",
+      "startAt": "2025-09-23T16:00:00+08:00",
+      "endAt": "2025-10-21T14:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/678119.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_500/h_317/1253/4408/2025/8/24/469272.jpg"
+    },
+    {
+      "id": "758c10510f9d97764735",
+      "gameId": "nikke",
+      "title": "【转盘】secret police",
+      "startAt": "2025-09-23T16:00:00+08:00",
+      "endAt": "2025-10-21T14:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/678000.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_425/h_139/1253/4408/2025/8/24/976955.jpg"
     },
     {
       "id": "36e32f58dd2d68736295",
@@ -1026,6 +1632,54 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1280/h_720/829/43637/2025/8/23/163047.jpg"
     },
     {
+      "id": "0bd368b29963c3cf27af",
+      "gameId": "nikke",
+      "title": "【活动支线】GO! NINJA THIEF!",
+      "startAt": "2025-10-15T16:00:00+08:00",
+      "endAt": "2025-10-29T14:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/679545.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_450/h_144/1253/4408/2025/9/16/120037.jpg"
+    },
+    {
+      "id": "8148c129f70413ae7dbf",
+      "gameId": "nikke",
+      "title": "【特别剧情】Yes，My Commander",
+      "startAt": "2025-10-15T16:00:00+08:00",
+      "endAt": "2025-10-29T14:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/680034.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_448/h_149/1253/4408/2025/9/16/119626.jpg"
+    },
+    {
+      "id": "503b89a4edddb613a3bd",
+      "gameId": "nikke",
+      "title": "【签到】Daliy Login",
+      "startAt": "2025-10-15T16:00:00+08:00",
+      "endAt": "2025-10-29T14:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/680034.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_448/h_154/1253/4408/2025/9/16/967567.jpg"
+    },
+    {
+      "id": "28bc2e71a89e952a1c3e",
+      "gameId": "nikke",
+      "title": "【领皮肤】RAPI REDHOOD SPECIAL",
+      "startAt": "2025-10-15T16:00:00+08:00",
+      "endAt": "2025-12-03T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/680034.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_445/h_150/1253/4408/2025/9/16/38441.jpg"
+    },
+    {
       "id": "a39861ac583db41ef9af",
       "gameId": "ba-jp",
       "title": "活动 重火力魔法少女~妖精的野心与正义的资格~",
@@ -1060,6 +1714,78 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/681639.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1920/h_1080/829/43637/2025/9/22/132772.jpg"
+    },
+    {
+      "id": "027e1b395abcb10f8384",
+      "gameId": "nikke",
+      "title": "3rd ANNIVERSARY Party",
+      "startAt": "2025-10-29T16:00:00+08:00",
+      "endAt": "2025-11-19T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/681618.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_440/h_143/1253/4408/2025/9/30/508562.jpg"
+    },
+    {
+      "id": "8d1b5f44828e655dbf14",
+      "gameId": "nikke",
+      "title": "【pass】Glorious Flower",
+      "startAt": "2025-10-29T16:00:00+08:00",
+      "endAt": "2025-11-19T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/681618.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_446/h_150/1253/4408/2025/9/30/325347.jpg"
+    },
+    {
+      "id": "bed54d17832ae142c0e1",
+      "gameId": "nikke",
+      "title": "【三周年】GODDESS FALL",
+      "startAt": "2025-10-29T16:00:00+08:00",
+      "endAt": "2025-11-19T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/681572.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_438/h_142/1253/4408/2025/9/30/559358.jpg"
+    },
+    {
+      "id": "2d1e5761e2d38a931165",
+      "gameId": "nikke",
+      "title": "【招募返利】BENEFITS",
+      "startAt": "2025-10-29T16:00:00+08:00",
+      "endAt": "2025-11-19T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/681618.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_445/h_150/1253/4408/2025/9/30/982817.jpg"
+    },
+    {
+      "id": "7bf48acddbdf3a66df2e",
+      "gameId": "nikke",
+      "title": "【转盘】RETRO DAYS",
+      "startAt": "2025-10-29T16:00:00+08:00",
+      "endAt": "2025-11-19T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/681618.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_443/h_144/1253/4408/2025/9/30/87633.jpg"
+    },
+    {
+      "id": "b9e1e50ae9ba64546100",
+      "gameId": "nikke",
+      "title": "每天免费招募一次",
+      "startAt": "2025-10-29T16:00:00+08:00",
+      "endAt": "2025-11-19T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/681618.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_440/h_148/1253/4408/2025/9/30/960583.jpg"
     },
     {
       "id": "07130a208620c4068f06",
@@ -1146,6 +1872,30 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1280/h_480/829/399789/2025/10/18/273623.jpg"
     },
     {
+      "id": "d3e2e7268a7d2a89feee",
+      "gameId": "nikke",
+      "title": "【7日签到】Daily Login",
+      "startAt": "2025-11-19T16:00:00+08:00",
+      "endAt": "2025-12-03T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/683312.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_493/h_166/1253/4408/2025/10/21/854048.jpg"
+    },
+    {
+      "id": "a7fd86aafbf0b048dfd3",
+      "gameId": "nikke",
+      "title": "【支线】BLANK Ticket",
+      "startAt": "2025-11-19T16:00:00+08:00",
+      "endAt": "2025-12-03T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/683312.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_493/h_165/1253/4408/2025/10/21/27690.jpg"
+    },
+    {
       "id": "0ff72d2572d68e913fdb",
       "gameId": "ba-jp",
       "title": "制约解除决战「可库玛」（重装甲）",
@@ -1218,11 +1968,47 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_600/h_314/829/399789/2025/10/18/697703.png"
     },
     {
+      "id": "73d45bc19ef1b59c5612",
+      "gameId": "nikke",
+      "title": "【PASS】FROSTY BITE PASS",
+      "startAt": "2025-12-03T16:00:00+08:00",
+      "endAt": "2025-12-29T20:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/684469.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_462/h_155/1253/4408/2025/11/4/722592.png"
+    },
+    {
+      "id": "4c84135784d4ba8cb00c",
+      "gameId": "nikke",
+      "title": "【支线】TERMINUS TICKET",
+      "startAt": "2025-12-03T16:00:00+08:00",
+      "endAt": "2025-12-29T20:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/684469.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_459/h_148/1253/4408/2025/11/4/47687.png"
+    },
+    {
+      "id": "9e1f438b73cb72e01d70",
+      "gameId": "nikke",
+      "title": "【转盘】布兰儿- 幸运特快车",
+      "startAt": "2025-12-03T16:00:00+08:00",
+      "endAt": "2025-12-29T20:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/684469.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_459/h_151/1253/4408/2025/11/4/980935.png"
+    },
+    {
       "id": "ce4cfb4d51ee9ad86401",
       "gameId": "end",
       "title": "于此启程",
       "startAt": "2025-12-09T04:00:00+08:00",
-      "endAt": "2031-11-16T14:52:00+08:00",
+      "endAt": "2031-11-17T11:04:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -1234,7 +2020,7 @@
       "gameId": "end",
       "title": "协议重连",
       "startAt": "2025-12-09T04:00:00+08:00",
-      "endAt": "2031-11-16T14:52:00+08:00",
+      "endAt": "2031-11-17T11:04:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -1246,7 +2032,7 @@
       "gameId": "end",
       "title": "启程福利展览板",
       "startAt": "2025-12-09T04:00:00+08:00",
-      "endAt": "2031-11-16T14:52:00+08:00",
+      "endAt": "2031-11-17T11:04:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -1258,7 +2044,7 @@
       "gameId": "end",
       "title": "唤醒签到",
       "startAt": "2025-12-09T04:00:00+08:00",
-      "endAt": "2031-11-16T14:52:00+08:00",
+      "endAt": "2031-11-17T11:04:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -1270,7 +2056,7 @@
       "gameId": "end",
       "title": "权限等阶奖励",
       "startAt": "2025-12-09T04:00:00+08:00",
-      "endAt": "2031-11-16T14:52:00+08:00",
+      "endAt": "2031-11-17T11:04:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -1386,6 +2172,42 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1920/h_1080/829/399789/2025/11/23/956997.webp"
     },
     {
+      "id": "7d814362588691fa0baf",
+      "gameId": "nikke",
+      "title": "【支线】ARK GUARDIAN",
+      "startAt": "2025-12-29T16:00:00+08:00",
+      "endAt": "2026-01-19T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/688267.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_434/h_145/1253/4408/2025/11/31/291944.jpg"
+    },
+    {
+      "id": "211914b036f291ac5373",
+      "gameId": "nikke",
+      "title": "【水晶】NEW YEAR BONUS",
+      "startAt": "2025-12-29T16:00:00+08:00",
+      "endAt": "2026-01-14T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/688267.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_440/h_143/1253/4408/2025/11/31/935498.jpg"
+    },
+    {
+      "id": "763866f469a2dfba4874",
+      "gameId": "nikke",
+      "title": "【签到】UNTIL CLOSE",
+      "startAt": "2025-12-29T16:00:00+08:00",
+      "endAt": "2026-01-19T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/688267.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_434/h_139/1253/4408/2025/11/31/680786.jpg"
+    },
+    {
       "id": "bdae04205cc2a36ee103",
       "gameId": "ba-jp",
       "title": "【任务(Normal)、日程表】2倍掉落",
@@ -1408,6 +2230,30 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/687083.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1024/h_572/829/399789/2025/11/23/768291.jpg"
+    },
+    {
+      "id": "9c7a6a7bcf00c7ce0662",
+      "gameId": "nikke",
+      "title": "【转盘】爱丽丝- 童话幻梦",
+      "startAt": "2025-12-31T15:00:00+08:00",
+      "endAt": "2026-01-21T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/688064.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_391/h_133/1253/4408/2025/11/31/529842.jpg"
+    },
+    {
+      "id": "8b62d4fb7888b9106a23",
+      "gameId": "nikke",
+      "title": "【通行证】2026 NEW YEAR PASS",
+      "startAt": "2025-12-31T16:00:00+08:00",
+      "endAt": "2026-01-21T20:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/688267.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_393/h_131/1253/4408/2025/11/31/715751.jpg"
     },
     {
       "id": "e831b9e0c8f3ab2dc45c",
@@ -1518,11 +2364,23 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1920/h_1080/829/399789/2026/0/6/832610.webp"
     },
     {
+      "id": "849a8fe0ec07f11e5ce2",
+      "gameId": "nikke",
+      "title": "【支线】SIN EDITOR",
+      "startAt": "2026-01-14T16:00:00+08:00",
+      "endAt": "2026-01-28T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/689397.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_457/h_154/1253/4408/2026/0/15/745153.jpg"
+    },
+    {
       "id": "3ec6ad60fc8e85cb7dc3",
       "gameId": "end",
       "title": "每周事务",
       "startAt": "2026-01-19T04:00:00+08:00",
-      "endAt": "2031-11-16T14:52:00+08:00",
+      "endAt": "2031-11-17T11:04:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -1576,6 +2434,18 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/690828.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1920/h_1080/829/399789/2026/0/19/32116.jpg"
+    },
+    {
+      "id": "9cb2c17d8aeee2a0b859",
+      "gameId": "nikke",
+      "title": "【支线活动】FATAL MAID",
+      "startAt": "2026-01-28T16:00:00+08:00",
+      "endAt": "2026-02-11T14:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/691470.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_468/h_151/1253/4408/2026/0/29/532819.png"
     },
     {
       "id": "934d43a77bf46166f26c",
@@ -1710,6 +2580,42 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1920/h_1080/829/399789/2026/0/19/899118.jpg"
     },
     {
+      "id": "fefd9ab43e47959592a6",
+      "gameId": "nikke",
+      "title": "【pass】First Lycoris",
+      "startAt": "2026-02-11T16:00:00+08:00",
+      "endAt": "2026-03-11T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/693149.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_517/h_176/1253/4408/2026/1/12/247402.jpg"
+    },
+    {
+      "id": "d1fd6e5e3cb8b8278f2c",
+      "gameId": "nikke",
+      "title": "【联动】Lie Cause Recoil",
+      "startAt": "2026-02-11T16:00:00+08:00",
+      "endAt": "2026-03-11T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/693378.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_517/h_168/1253/4408/2026/1/12/48239.jpg"
+    },
+    {
+      "id": "e92c06a0064071007280",
+      "gameId": "nikke",
+      "title": "【转盘】茶饮服务-马斯特：浪漫的女仆",
+      "startAt": "2026-02-11T16:00:00+08:00",
+      "endAt": "2026-03-11T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/693149.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_519/h_169/1253/4408/2026/1/12/783251.jpg"
+    },
+    {
       "id": "0bd1645e270ce0ec5de8",
       "gameId": "ba-jp",
       "title": "【联合作战】神名十文字·决战",
@@ -1750,7 +2656,7 @@
       "gameId": "end",
       "title": "影拓丰碑",
       "startAt": "2026-02-12T12:00:00+08:00",
-      "endAt": "2031-11-16T14:52:00+08:00",
+      "endAt": "2031-11-17T11:04:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -1798,7 +2704,7 @@
       "gameId": "end",
       "title": "密境行者",
       "startAt": "2026-02-24T12:00:00+08:00",
-      "endAt": "2031-11-16T14:52:00+08:00",
+      "endAt": "2031-11-17T11:04:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -1866,11 +2772,23 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1280/h_720/829/399789/2026/2/4/36867.webp"
     },
     {
+      "id": "e78e35b864a73da2b473",
+      "gameId": "nikke",
+      "title": "【支线】ENTER HEAVEN",
+      "startAt": "2026-03-04T16:00:00+08:00",
+      "endAt": "2026-03-18T20:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/696055.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_427/h_156/1253/4408/2026/2/5/806671.png"
+    },
+    {
       "id": "359125ffb6caa43f07b9",
       "gameId": "end",
       "title": "新手特许赠礼",
       "startAt": "2026-03-12T07:00:00+08:00",
-      "endAt": "2031-11-16T14:52:00+08:00",
+      "endAt": "2031-11-17T11:04:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -1900,6 +2818,54 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/698026.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1280/h_720/829/492704/2026/2/17/271078.jpg"
+    },
+    {
+      "id": "96c722c485d4f065a4ac",
+      "gameId": "nikke",
+      "title": "【pass】PURE Beginnies Pass",
+      "startAt": "2026-03-18T16:00:00+08:00",
+      "endAt": "2026-04-08T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/698309.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_636/h_168/1253/4408/2026/2/19/485793.jpg"
+    },
+    {
+      "id": "8a7c4619546812531b89",
+      "gameId": "nikke",
+      "title": "【支线】2x2 LOVE",
+      "startAt": "2026-03-18T16:00:00+08:00",
+      "endAt": "2026-04-08T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/698309.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_949/h_253/1253/4408/2026/2/19/355282.jpg"
+    },
+    {
+      "id": "fbe62546eefeee3046b7",
+      "gameId": "nikke",
+      "title": "【签到】LOVE DIARY",
+      "startAt": "2026-03-18T16:00:00+08:00",
+      "endAt": "2026-04-08T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/698309.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_853/h_233/1253/4408/2026/2/19/851278.jpg"
+    },
+    {
+      "id": "5ebd9988045e21ac2719",
+      "gameId": "nikke",
+      "title": "【转盘】普丽瓦蒂——严厉教诲",
+      "startAt": "2026-03-18T16:00:00+08:00",
+      "endAt": "2026-04-08T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/698309.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_922/h_245/1253/4408/2026/2/19/717639.jpg"
     },
     {
       "id": "8109c8dd79ba2626443c",
@@ -1938,6 +2904,18 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_801/h_447/829/191981/2026/2/17/416707.png"
     },
     {
+      "id": "ec8d102b72e9f84a811c",
+      "gameId": "nikke",
+      "title": "【pass】PUKKY STREET",
+      "startAt": "2026-03-25T16:00:00+08:00",
+      "endAt": "2026-04-15T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/698309.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_633/h_170/1253/4408/2026/2/19/465851.jpg"
+    },
+    {
       "id": "fc789f0cc11259aaabac",
       "gameId": "ba-jp",
       "title": "【账号经验值】2倍",
@@ -1948,6 +2926,18 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/698026.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_796/h_445/829/191981/2026/2/17/378919.png"
+    },
+    {
+      "id": "5f8822d907ee48d195d5",
+      "gameId": "nikke",
+      "title": "【愚人节】FOOL HETAL PANIC",
+      "startAt": "2026-03-31T16:00:00+08:00",
+      "endAt": "2026-04-03T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/700180.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_446/h_148/1253/4408/2026/3/1/206311.jpg"
     },
     {
       "id": "28c824b87c43f12a818f",
@@ -1986,6 +2976,30 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1920/h_1080/829/492704/2026/2/31/199197.jpg"
     },
     {
+      "id": "8a996ac493274f684e23",
+      "gameId": "nikke",
+      "title": "【签到】Cheer Up Spring！",
+      "startAt": "2026-04-01T16:00:00+08:00",
+      "endAt": "2026-04-29T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/698309.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_862/h_222/1253/4408/2026/2/19/797569.jpg"
+    },
+    {
+      "id": "72c85ed0bacc1214ed2c",
+      "gameId": "nikke",
+      "title": "【投票】第四届妮姬人气投票大赛",
+      "startAt": "2026-04-07T16:00:00+08:00",
+      "endAt": "2026-04-13T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/701030.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_444/h_170/1253/4408/2026/3/8/574724.jpg"
+    },
+    {
       "id": "bee16d259f2f586faad7",
       "gameId": "ba-jp",
       "title": "【Hard关卡】2倍掉落",
@@ -2010,6 +3024,30 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1280/h_720/829/492704/2026/2/31/633816.jpg"
     },
     {
+      "id": "440beea9576161557b22",
+      "gameId": "nikke",
+      "title": "【支线】Good World",
+      "startAt": "2026-04-08T16:00:00+08:00",
+      "endAt": "2026-04-21T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/700806.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_433/h_146/1253/4408/2026/3/9/192709.jpg"
+    },
+    {
+      "id": "1c96c32232c492987dbb",
+      "gameId": "nikke",
+      "title": "【转盘】RETURN  RUN TO VILLAIN ROAD",
+      "startAt": "2026-04-08T16:00:00+08:00",
+      "endAt": "2026-04-22T14:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/700806.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_439/h_146/1253/4408/2026/3/9/349597.jpg"
+    },
+    {
       "id": "127281ea5e35ebc017b3",
       "gameId": "ba-jp",
       "title": "【指名手配&特别依赖】2倍",
@@ -2026,7 +3064,7 @@
       "gameId": "end",
       "title": "干员培养助力",
       "startAt": "2026-04-17T07:00:00+08:00",
-      "endAt": "2031-11-16T14:52:00+08:00",
+      "endAt": "2031-11-17T11:04:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -2070,6 +3108,102 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1920/h_1080/829/492704/2026/3/20/346891.webp"
     },
     {
+      "id": "2eb94c0c8b636751e5a9",
+      "gameId": "nikke",
+      "title": "【pass】LunaLight Pass",
+      "startAt": "2026-04-22T16:00:00+08:00",
+      "endAt": "2026-05-13T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/702967.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_420/h_136/1253/4408/2026/3/23/898632.png"
+    },
+    {
+      "id": "c50cc0bc92cf12808d30",
+      "gameId": "nikke",
+      "title": "【wiki抽奖】3.5周年wiki活动",
+      "startAt": "2026-04-22T16:00:00+08:00",
+      "endAt": "2026-05-08T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/702928.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1340/h_499/1253/4408/2026/3/27/356996.jpg"
+    },
+    {
+      "id": "75f601edb4798277b2c2",
+      "gameId": "nikke",
+      "title": "【支线】STAR ANIS",
+      "startAt": "2026-04-22T16:00:00+08:00",
+      "endAt": "2026-05-13T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/702967.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_422/h_139/1253/4408/2026/3/23/655947.png"
+    },
+    {
+      "id": "83f4ceffd7167ecbb695",
+      "gameId": "nikke",
+      "title": "【每日】免费招募一次！",
+      "startAt": "2026-04-22T16:00:00+08:00",
+      "endAt": "2026-05-13T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/702967.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_420/h_139/1253/4408/2026/3/23/395909.png"
+    },
+    {
+      "id": "a763ceff735a84d9f4fe",
+      "gameId": "nikke",
+      "title": "【登录即领】3.5th Anniversary",
+      "startAt": "2026-04-22T16:00:00+08:00",
+      "endAt": "2026-05-13T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/702967.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_417/h_139/1253/4408/2026/3/23/432468.png"
+    },
+    {
+      "id": "c63a05b7ddc8033fad8f",
+      "gameId": "nikke",
+      "title": "【累充】STAR TRAL",
+      "startAt": "2026-04-22T16:00:00+08:00",
+      "endAt": "2026-05-20T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/702967.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_420/h_139/1253/4408/2026/3/23/413537.png"
+    },
+    {
+      "id": "93e4f2923a6c8b5a2f58",
+      "gameId": "nikke",
+      "title": "【翻牌】5x5 Supplies",
+      "startAt": "2026-04-22T16:00:00+08:00",
+      "endAt": "2026-05-13T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/702967.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_419/h_141/1253/4408/2026/3/23/999918.png"
+    },
+    {
+      "id": "8e2068fb17de4c66089c",
+      "gameId": "nikke",
+      "title": "【转盘】Dreaming Lake",
+      "startAt": "2026-04-22T16:00:00+08:00",
+      "endAt": "2026-05-13T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/702967.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_422/h_137/1253/4408/2026/3/23/102184.png"
+    },
+    {
       "id": "ee9fe100bb4438eb029f",
       "gameId": "ba-jp",
       "title": "Normal任务掉落2倍",
@@ -2092,6 +3226,18 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/702664.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1920/h_1080/829/492704/2026/3/20/747201.webp"
+    },
+    {
+      "id": "1561f9949f4730432479",
+      "gameId": "nikke",
+      "title": "【转盘】TWIAKLE STAR",
+      "startAt": "2026-04-29T16:00:00+08:00",
+      "endAt": "2026-05-20T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/tj/703135.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_391/h_134/1253/4408/2026/3/30/646000.png"
     },
     {
       "id": "e4359b9fd2c73c9812ca",
@@ -2142,6 +3288,30 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/images/w_1280/h_720/829/492704/2026/3/20/475847.webp"
     },
     {
+      "id": "8052035bab08345ee2df",
+      "gameId": "nikke",
+      "title": "【pass】FRESH MINT PASS",
+      "startAt": "2026-05-13T16:00:00+08:00",
+      "endAt": "2026-06-03T20:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/704775.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_417/h_134/1253/4408/2026/4/14/286620.jpg"
+    },
+    {
+      "id": "b236cad13dab53c2a327",
+      "gameId": "nikke",
+      "title": "【支线】B-SIDE IDOL",
+      "startAt": "2026-05-13T16:00:00+08:00",
+      "endAt": "2026-05-27T20:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/704775.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_424/h_137/1253/4408/2026/4/14/985772.png"
+    },
+    {
       "id": "646216052fbf904d5350",
       "gameId": "ba-jp",
       "title": "Hard任务掉落2倍",
@@ -2176,6 +3346,30 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/706388.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/829/images/w_1280/h_720/829/492704/2026/4/26/1779782025648_1779780853629_qead93cjn9_s2sm5pmyt3.webp"
+    },
+    {
+      "id": "abc46ec3338f46d09248",
+      "gameId": "nikke",
+      "title": "【pass】 COOL PAPRIKA",
+      "startAt": "2026-05-27T16:00:00+08:00",
+      "endAt": "2026-06-10T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/706306.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/215/images/w_438/h_146/1253/4408/2026/4/28/1779962346800_1779961475558_itbj5angmm_dsf8z5wsjy.png"
+    },
+    {
+      "id": "84e60e323f1cc199e412",
+      "gameId": "nikke",
+      "title": "【支线】BITTER SPICE",
+      "startAt": "2026-05-27T16:00:00+08:00",
+      "endAt": "2026-06-10T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/706306.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/215/images/w_434/h_145/1253/4408/2026/4/28/1779962181160_1779961499403_r9hko8h9bd_vvrx9j07dx.png"
     },
     {
       "id": "97d49037bf7c7487fa44",
@@ -2214,6 +3408,54 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/829/images/w_1280/h_720/829/492704/2026/5/9/1780987730481_1780987685174_xazic6d8ox_48qiuzhxvq.webp"
     },
     {
+      "id": "4f3d4606e1f105075b20",
+      "gameId": "nikke",
+      "title": "【pass】Junkyard Pass",
+      "startAt": "2026-06-10T16:00:00+08:00",
+      "endAt": "2026-07-01T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/708551.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_504/h_163/4408/2026/5/11/30656806mq9i39rp.png"
+    },
+    {
+      "id": "a4b2b163fd9ba04c335a",
+      "gameId": "nikke",
+      "title": "【转盘】King of Flowers",
+      "startAt": "2026-06-10T16:00:00+08:00",
+      "endAt": "2026-07-01T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/708551.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_505/h_166/4408/2026/5/11/02534792mq9i258q.png"
+    },
+    {
+      "id": "a25662576684f4eb6379",
+      "gameId": "nikke",
+      "title": "大型支线「ARK RANGER」",
+      "startAt": "2026-06-10T16:00:00+08:00",
+      "endAt": "2026-07-01T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/708551.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_510/h_171/4408/2026/5/11/93912868mq9i4kw6.png"
+    },
+    {
+      "id": "4a8714ab0a027057db1f",
+      "gameId": "nikke",
+      "title": "【投票】灰姑娘冠军时装",
+      "startAt": "2026-06-16T16:00:00+08:00",
+      "endAt": "2026-06-23T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/709155.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_1055/h_540/4408/2026/5/17/99605689mqhqaman.jpg"
+    },
+    {
       "id": "6f0cb133618f6f28d7fd",
       "gameId": "ba-jp",
       "title": "大决战 「室外战・气垫船」",
@@ -2224,6 +3466,18 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/708212.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/829/images/w_1280/h_720/829/492704/2026/5/9/1780987807049_1780987784056_dsv70ct0vo_283i723b5q.webp"
+    },
+    {
+      "id": "a43b2d3617a06da61d8a",
+      "gameId": "nikke",
+      "title": "【投票】3.5周年二创投票活动",
+      "startAt": "2026-06-21T16:00:00+08:00",
+      "endAt": "2026-06-29T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/709842.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_685/h_292/4408/2026/5/22/74582691mqp26ezz.jpg"
     },
     {
       "id": "6f768794748adbb6f014",
@@ -2286,6 +3540,66 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/50580/images/w_1920/h_1080/492704/2026/5/23/42097576mqqavgfn.webp"
     },
     {
+      "id": "4461d953125c6e51d303",
+      "gameId": "nikke",
+      "title": "【pass】SEA LIZZIE PASS",
+      "startAt": "2026-07-01T16:00:00+08:00",
+      "endAt": "2026-07-22T20:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/710630.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_477/h_158/4408/2026/6/2/20673236mr3csdqc.png"
+    },
+    {
+      "id": "fa04088500580ebb1308",
+      "gameId": "nikke",
+      "title": "【大型支线】WAVE TO YOU",
+      "startAt": "2026-07-01T16:00:00+08:00",
+      "endAt": "2026-07-22T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/710995.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_478/h_160/4408/2026/6/2/12311128mr3ceolu.png"
+    },
+    {
+      "id": "71e76c458c2f23850fa6",
+      "gameId": "nikke",
+      "title": "【网页活动】和可爱妮姬的夏日合照",
+      "startAt": "2026-07-01T16:00:00+08:00",
+      "endAt": "2026-07-08T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/711068.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_666/h_342/4408/2026/6/3/56785037mr4chmw3.jpg"
+    },
+    {
+      "id": "5ba38cee9182f819f81f",
+      "gameId": "nikke",
+      "title": "【转盘】Shell Princess",
+      "startAt": "2026-07-01T16:00:00+08:00",
+      "endAt": "2026-07-22T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/710630.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_480/h_160/4408/2026/6/2/89750453mr3cpk8i.png"
+    },
+    {
+      "id": "7ad0cd0a134f709e561c",
+      "gameId": "nikke",
+      "title": "【wiki特别活动】夏日特别补给 分享赢好礼！",
+      "startAt": "2026-07-02T16:00:00+08:00",
+      "endAt": "2026-07-13T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/711108.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_1254/h_1254/4408/2026/6/3/71510695mr4liqd3.jpg"
+    },
+    {
       "id": "372b1544ee0af223d47f",
       "gameId": "ba-jp",
       "title": "经验2倍",
@@ -2334,6 +3648,18 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/829/images/w_1920/h_1080/492704/2026/6/7/92509038mrac9h6c.webp"
     },
     {
+      "id": "3d8f81087ff7dd5c9050",
+      "gameId": "nikke",
+      "title": "【新网页活动】NIKKE POP! ISLAND！",
+      "startAt": "2026-07-09T16:00:00+08:00",
+      "endAt": "2026-07-22T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/712582.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_538/h_187/4408/2026/6/13/98724626mrindcu9.jpg"
+    },
+    {
       "id": "28f6ab841e4f153f4b63",
       "gameId": "ba-jp",
       "title": "困难任务2倍",
@@ -2362,7 +3688,7 @@
       "gameId": "end",
       "title": "主线先行解锁：武陵",
       "startAt": "2026-07-16T07:00:00+08:00",
-      "endAt": "2031-11-16T14:52:00+08:00",
+      "endAt": "2031-11-17T11:04:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -2374,7 +3700,7 @@
       "gameId": "end",
       "title": "战争回响",
       "startAt": "2026-07-16T07:00:00+08:00",
-      "endAt": "2031-11-16T14:52:00+08:00",
+      "endAt": "2031-11-17T11:04:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -2404,6 +3730,54 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/711713.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/829/images/w_1280/h_720/492704/2026/6/7/33712727mracboaw.webp"
+    },
+    {
+      "id": "bef38255a326366a7002",
+      "gameId": "nikke",
+      "title": "【pass】PROTOTYPE PASS",
+      "startAt": "2026-07-22T16:00:00+08:00",
+      "endAt": "2026-08-11T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/713407.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_445/h_148/4408/2026/6/23/22473717mrxdcxyc.jpg"
+    },
+    {
+      "id": "6e6e64500954668d44bc",
+      "gameId": "nikke",
+      "title": "【全语音支线】PROJECT MATIS",
+      "startAt": "2026-07-22T16:00:00+08:00",
+      "endAt": "2026-08-12T14:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/713407.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_445/h_146/4408/2026/6/23/62373632mrxdejpl.png"
+    },
+    {
+      "id": "b53515663549be44d144",
+      "gameId": "nikke",
+      "title": "【签到】HERO DAYS",
+      "startAt": "2026-07-22T16:00:00+08:00",
+      "endAt": "2026-08-12T14:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/713407.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_443/h_149/4408/2026/6/23/93744038mrxd85jb.jpg"
+    },
+    {
+      "id": "fdad6c8fd6484eb15ca5",
+      "gameId": "nikke",
+      "title": "【转盘】 时装抽取复刻：桃乐丝- 怀旧",
+      "startAt": "2026-07-22T16:00:00+08:00",
+      "endAt": "2026-08-12T15:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/tj/589849.html?tab=jn&style=style2",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_445/h_145/4408/2026/6/23/50216490mrxd9pho.jpg"
     },
     {
       "id": "a3a652950c1c42c48a3c",
@@ -2514,6 +3888,66 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/829/images/w_3628/h_2040/492704/2026/7/11/15171460mson9wq5.webp"
     },
     {
+      "id": "77eb837e91f397560e8b",
+      "gameId": "nikke",
+      "title": "【pass】THIEF QUEEN PASS",
+      "startAt": "2026-08-12T16:00:00+08:00",
+      "endAt": "2026-09-09T18:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/716193.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_453/h_152/4408/2026/7/13/09005528msqzjh38.jpg"
+    },
+    {
+      "id": "64a138ad9816a87d1573",
+      "gameId": "nikke",
+      "title": "【网页活动】方舟异常调查",
+      "startAt": "2026-08-12T16:00:00+08:00",
+      "endAt": "2026-08-19T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/716747.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_960/h_540/4408/2026/7/13/17721794msr8yx78.jpg"
+    },
+    {
+      "id": "aaa1e3236abdafa84c95",
+      "gameId": "nikke",
+      "title": "【联动支线】PERSONA ON FRONTLINE",
+      "startAt": "2026-08-12T16:00:00+08:00",
+      "endAt": "2026-09-09T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/716193.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_457/h_147/4408/2026/7/13/98513360msqzhesa.jpg"
+    },
+    {
+      "id": "c8e85279877344bf2bbf",
+      "gameId": "nikke",
+      "title": "【转盘】Saint Thief",
+      "startAt": "2026-08-12T16:00:00+08:00",
+      "endAt": "2026-09-09T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/716193.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_457/h_154/4408/2026/7/13/21499924msqz43k0.jpg"
+    },
+    {
+      "id": "cd47c0032527c9fdc33c",
+      "gameId": "nikke",
+      "title": "【限时通关】Trail Marker",
+      "startAt": "2026-08-12T16:00:00+08:00",
+      "endAt": "2026-10-07T20:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/716193.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_456/h_153/4408/2026/7/13/20216072msqzknnb.jpg"
+    },
+    {
       "id": "d688f8b0d06293ced950",
       "gameId": "ba-jp",
       "title": "普通任务掉落3倍",
@@ -2610,6 +4044,30 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/829/images/w_1920/h_1080/492704/2026/7/25/82195431mt8gclza.webp"
     },
     {
+      "id": "20f5ed61c0d4bb007362",
+      "gameId": "nikke",
+      "title": "【支线】 GREAT VILLAIN UNION",
+      "startAt": "2026-09-02T16:00:00+08:00",
+      "endAt": "2026-09-16T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/719378.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_471/h_157/4408/2026/8/10/22115959mtuzaxpk.jpg"
+    },
+    {
+      "id": "8ef24248f1e4408362f3",
+      "gameId": "nikke",
+      "title": "【签到】DAILY LOGIN",
+      "startAt": "2026-09-02T16:00:00+08:00",
+      "endAt": "2026-09-16T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/719378.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_473/h_154/4408/2026/8/10/57796680mtuzgiz8.jpg"
+    },
+    {
       "id": "a76516d117088428914e",
       "gameId": "ba-jp",
       "title": "经验值2倍",
@@ -2704,6 +4162,42 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/720237.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/50580/images/w_1280/h_720/492704/2026/8/8/93776756mtslyi53.webp"
+    },
+    {
+      "id": "f62dd7a3e5e536359e01",
+      "gameId": "nikke",
+      "title": "【支线】COIN RUSH SHOWDOWN",
+      "startAt": "2026-09-16T16:00:00+08:00",
+      "endAt": "2026-10-07T21:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/721420.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_463/h_149/4408/2026/8/17/42773578mu5egozn.jpg"
+    },
+    {
+      "id": "56ee530a2011e1ed4a0d",
+      "gameId": "nikke",
+      "title": "【活动PASS】LET'S DRINK PASS",
+      "startAt": "2026-09-16T16:00:00+08:00",
+      "endAt": "2026-10-07T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/721020.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_463/h_150/4408/2026/8/17/53398145mu5ef3wd.jpg"
+    },
+    {
+      "id": "f790c719cd278a36d32a",
+      "gameId": "nikke",
+      "title": "【转盘】KILLER BUNNY",
+      "startAt": "2026-09-16T16:00:00+08:00",
+      "endAt": "2026-10-07T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/721020.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_467/h_155/4408/2026/8/17/92876543mu5ecr0g.jpg"
     },
     {
       "id": "9211a3a22b99b9bc9c0e",
@@ -2938,7 +4432,7 @@
       "gameId": "end",
       "title": "挽弓试炼",
       "startAt": "2026-10-15T06:00:00+08:00",
-      "endAt": "2031-11-16T14:52:00+08:00",
+      "endAt": "2031-11-17T11:04:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -2992,6 +4486,18 @@
       "sourceName": "SRA 社区整理",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
       "imageUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg"
+    },
+    {
+      "id": "1bbfc925c128cd1bcc3a",
+      "gameId": "nte",
+      "title": "轨外之境「澄明环线」特别路线即将开启",
+      "startAt": "2026-10-16T05:00:00+08:00",
+      "endAt": "2026-10-30T04:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.tajiduo.com/bbs/index.html#/post?postId=514677",
+      "imageUrl": "https://bbs-upload.tajiduo.com/20261014/10100006/6U4AG9EJKTNOVH9H71K20BE7BCOFOALT.jpeg"
     },
     {
       "id": "021d330f2984c4dc5091",
@@ -3150,14 +4656,15 @@
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/12/30/d5ff609cfd2e21cef425170d044f4aca_4578138034465937229_transformed.png"
     },
     {
+      "featured": false,
       "id": "790e6d83146e249c7f26",
       "gameId": "zzz",
       "title": "全新放送",
       "startAt": "2026-10-21T11:00:00+08:00",
-      "endAt": "2026-12-01T03:59:59+08:00",
+      "endAt": "2026-11-01T03:59:00+08:00",
       "category": "活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json",
       "imageUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166970/616a76f9fec948951b690270d84cadac_9098996815758943439.png"
     },
@@ -3234,14 +4741,15 @@
       "imageUrl": ""
     },
     {
+      "featured": false,
       "id": "9b565b5310440990f27d",
       "gameId": "zzz",
       "title": "怪奇诡屋惊魂记",
       "startAt": "2026-10-22T10:00:00+08:00",
-      "endAt": "2026-11-30T03:59:59+08:00",
+      "endAt": "2026-10-30T03:59:00+08:00",
       "category": "活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json",
       "imageUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166971/e60c90b0d9aee6fd8448586ee92e7712_304316638077624531.jpg"
     },
@@ -3330,14 +4838,15 @@
       "imageUrl": "https://web.hycdn.cn/announce/images/20261023/9a4b1aac4203343a79c3f2df9b332deb.jpg"
     },
     {
+      "featured": false,
       "id": "589740b6794dee341eb5",
       "gameId": "xtlr",
       "title": "「乘光而起的星之砂」复刻纪念活动",
       "startAt": "2026-10-27T12:00:00+08:00",
       "endAt": "2026-11-17T10:59:59+08:00",
       "category": "限时活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/xtlr.json",
       "imageUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/10/23/dApx6FGO.jpg"
     },
@@ -3376,6 +4885,126 @@
       "sourceName": "SRA 社区整理",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json",
       "imageUrl": ""
+    },
+    {
+      "id": "1079646466389b520c37",
+      "gameId": "nikke",
+      "title": "【pass】DARK MONK PASS（娜由塔）",
+      "startAt": "2026-10-28T16:00:00+08:00",
+      "endAt": "2026-11-18T20:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/725772.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_458/h_152/4408/2026/9/29/44549859mvt6z4bj.jpg"
+    },
+    {
+      "id": "cffdc84242eb995568fb",
+      "gameId": "nikke",
+      "title": "【免费一抽】玛丽安：女王",
+      "startAt": "2026-10-28T16:00:00+08:00",
+      "endAt": "2026-11-18T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/725772.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_458/h_153/4408/2026/9/29/08278007mvt72zen.jpg"
+    },
+    {
+      "id": "f69e6276b074e599c6f9",
+      "gameId": "nikke",
+      "title": "【免费一抽】自选招募池",
+      "startAt": "2026-10-28T16:00:00+08:00",
+      "endAt": "2026-11-18T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/725772.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_458/h_148/4408/2026/9/29/05519583mvt73vvy.jpg"
+    },
+    {
+      "id": "c28786669ff80bb979a3",
+      "gameId": "nikke",
+      "title": "【双倍】FULL BURST DAY",
+      "startAt": "2026-10-28T16:00:00+08:00",
+      "endAt": "2026-11-07T20:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/725772.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_456/h_149/4408/2026/9/29/08424316mvt78ql2.jpg"
+    },
+    {
+      "id": "66a4d7436f3888ea1193",
+      "gameId": "nikke",
+      "title": "【掷骰】 VOLT TRIP",
+      "startAt": "2026-10-28T16:00:00+08:00",
+      "endAt": "2026-11-18T20:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/725772.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_451/h_148/4408/2026/9/29/69286989mvt79eop.jpg"
+    },
+    {
+      "id": "e086ef70a92a10c4c4ee",
+      "gameId": "nikke",
+      "title": "【活动支线】MARIA-n",
+      "startAt": "2026-10-28T16:00:00+08:00",
+      "endAt": "2026-11-18T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/726130.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_457/h_150/4408/2026/9/29/70614253mvt6w6jj.jpg"
+    },
+    {
+      "id": "6cedaf7ed0aa777403c3",
+      "gameId": "nikke",
+      "title": "【登录即领】4TH ANNIVERSARY",
+      "startAt": "2026-10-28T16:00:00+08:00",
+      "endAt": "2026-11-18T20:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/725772.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_451/h_152/4408/2026/9/29/11999271mvt776yz.jpg"
+    },
+    {
+      "id": "2282cbf09ea170dec056",
+      "gameId": "nikke",
+      "title": "【累充】AFFECTION TRAIL",
+      "startAt": "2026-10-28T16:00:00+08:00",
+      "endAt": "2026-11-25T20:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/725772.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_451/h_150/4408/2026/9/29/32640237mvt71kim.jpg"
+    },
+    {
+      "id": "110576a3f4552c9d5de1",
+      "gameId": "nikke",
+      "title": "【转盘】Lacrimosa【白雪公主：重型武装】",
+      "startAt": "2026-10-28T16:00:00+08:00",
+      "endAt": "2026-11-18T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/725772.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_460/h_150/4408/2026/9/29/15764376mvt7dajy.jpg"
+    },
+    {
+      "id": "dbeed6657532a158f4f7",
+      "gameId": "nikke",
+      "title": "【通关】TRAIL MARKER",
+      "startAt": "2026-10-28T16:00:00+08:00",
+      "endAt": "2026-11-18T19:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/725772.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_460/h_154/4408/2026/9/29/00856418mvt764e5.jpg"
     },
     {
       "id": "8d2bfdf09984a0140410",
@@ -3426,16 +5055,41 @@
       "imageUrl": "https://assets.fz.wiki/27a62342d7861270/a325505db02bd997.png"
     },
     {
+      "id": "a34aeaa784858e2e90f6",
+      "gameId": "nikke",
+      "title": "【新网页活动】第三次地面收复战",
+      "startAt": "2026-10-29T16:00:00+08:00",
+      "endAt": "2026-11-18T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/726504.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/215/images/w_522/h_217/4408/2026/9/30/68135036mvul5he3.jpg"
+    },
+    {
+      "featured": false,
       "id": "d9b31b81523ca5057951",
       "gameId": "ba-cn",
       "title": "商店购买次数异常问题说明",
       "startAt": "2026-10-30T04:00:00+08:00",
       "endAt": "2026-11-12T13:59:00+08:00",
       "category": "活动",
-      "sourceType": "community",
-      "sourceName": "game-schedule",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
       "sourceUrl": "https://bluearchive-cn.com/news/1997",
       "imageUrl": "https://webcnstatic.yostar.net/ba_cn_web/prod/upload/news/IstaVAdO.jpeg"
+    },
+    {
+      "id": "5529e6ff7bbc9d9a9e97",
+      "gameId": "nte",
+      "title": "轨外之境「飞芒环线」特别路线即将开启",
+      "startAt": "2026-10-30T05:00:00+08:00",
+      "endAt": "2026-11-13T04:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.tajiduo.com/bbs/index.html#/post?postId=526328",
+      "imageUrl": "https://bbs-upload.tajiduo.com/20261029/10100006/M6MPO0DIV1QR8QJO74122MKMOH83FOBR.jpeg"
     },
     {
       "id": "80180f7228ed14eed471",
@@ -3570,14 +5224,15 @@
       "imageUrl": ""
     },
     {
+      "featured": false,
       "id": "70669e377f1ad7084826",
       "gameId": "ys",
       "title": "砺行修远（第六期）",
       "startAt": "2026-11-02T04:00:00+08:00",
       "endAt": "2027-01-25T03:59:59+08:00",
       "category": "活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/ys.json",
       "imageUrl": "https://sdk.hoyoverse.com/upload/ann/2026/03/04/9e61fb52eb6c278d1c0c354a4cc12047_5706720538292727403_transformed.png"
     },
@@ -4074,14 +5729,15 @@
       "imageUrl": "https://assets.fz.wiki/27a62342d7861270/b731f48a809a5b4f.png"
     },
     {
+      "featured": false,
       "id": "26a31a520db968fabb81",
       "gameId": "zzz",
       "title": "《绝区零》对iPhone Duo机型的适配说明",
       "startAt": "2026-11-05T14:00:00+08:00",
-      "endAt": "2026-12-02T06:00:00+08:00",
+      "endAt": "2026-11-12T06:00:00+08:00",
       "category": "活动",
-      "sourceType": "community",
-      "sourceName": "game-schedule",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz",
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/04/31277066e538fef43aa5dafe73e3533d_8985718310596300355_transformed.png"
     },
@@ -4132,30 +5788,6 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/725953.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/829/images/w_1400/h_787/1609130/2026/9/27/39256958mvqfy8os.webp"
-    },
-    {
-      "id": "092d709726402503677b",
-      "gameId": "fgo",
-      "title": "【限时】「全世界1亿下载突破纪念活动」举办！",
-      "startAt": "2026-11-07T20:00:00+08:00",
-      "endAt": "2026-11-21T13:59:00+08:00",
-      "category": "活动",
-      "sourceType": "community",
-      "sourceName": "game-schedule",
-      "sourceUrl": "https://game.bilibili.com/fgo/news.html#!news/1/1/18566",
-      "imageUrl": "//i0.hdslb.com/bfs/game/afd11295689c1e597be3959cf7a49f066b05015a.png"
-    },
-    {
-      "id": "e218c7004f10e6fa7d27",
-      "gameId": "fgo",
-      "title": "【限时】「全世界1亿下载纪念推荐召唤」！",
-      "startAt": "2026-11-07T20:00:00+08:00",
-      "endAt": "2026-11-21T13:59:00+08:00",
-      "category": "活动",
-      "sourceType": "community",
-      "sourceName": "game-schedule",
-      "sourceUrl": "https://game.bilibili.com/fgo/news.html#!news/1/1/18567",
-      "imageUrl": "//i0.hdslb.com/bfs/game/bd9bc5319e7d31bce9487b5e812c9988e44eb584.png"
     },
     {
       "id": "b092ca195de82a55e622",
@@ -4242,14 +5874,15 @@
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/06/41167d6e12b410834dbc7b567f0635ad_7274554495606633977_transformed.jpg"
     },
     {
+      "featured": false,
       "id": "6cef5be3d08e77ef2468",
       "gameId": "ba-global",
       "title": "出航！万魔船～真琴议长的华丽避暑～",
       "startAt": "2026-11-10T10:00:00+08:00",
       "endAt": "2026-11-24T10:00:59+08:00",
       "category": "活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/ba-global.json",
       "imageUrl": "https://resource.starrailassistant.top/ba/activity/09da0c6ead7d41d9bdb264c9fe2292cd577d7f95.webp"
     },
@@ -4278,28 +5911,17 @@
       "imageUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/11/05/pDCnz7VL.jpg"
     },
     {
+      "featured": false,
       "id": "a3e7e413ff2cd7f64440",
       "gameId": "zzz",
       "title": "3.3版本「商城」上新说明",
       "startAt": "2026-11-10T12:00:00+08:00",
-      "endAt": "2026-12-02T05:59:00+08:00",
+      "endAt": "2026-11-12T05:59:00+08:00",
       "category": "活动",
-      "sourceType": "community",
-      "sourceName": "game-schedule",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz",
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/06/258b465a8fb84ddde3dd2096cacaf718_5878293889572538722.jpg"
-    },
-    {
-      "id": "aea0a925ad04ee2ceada",
-      "gameId": "fgo",
-      "title": "【限时】『Fate/Grand Order「Road to 终章」第7章篇纪念 特斯卡特利波卡推荐召唤』！",
-      "startAt": "2026-11-10T19:00:00+08:00",
-      "endAt": "2026-11-17T13:59:00+08:00",
-      "category": "活动",
-      "sourceType": "community",
-      "sourceName": "game-schedule",
-      "sourceUrl": "https://game.bilibili.com/fgo/news.html#!news/1/1/18562",
-      "imageUrl": "//i0.hdslb.com/bfs/game/c47a1da2ffeac432657a971c8cae2f010f958839.png"
     },
     {
       "id": "ea661fa9dd3918dd0908",
@@ -4350,26 +5972,28 @@
       "imageUrl": ""
     },
     {
+      "featured": false,
       "id": "6ca8c641e9abd9dd36a0",
       "gameId": "zzz",
       "title": "「嗯呢」从天降",
       "startAt": "2026-11-11T10:00:00+08:00",
-      "endAt": "2026-12-01T03:59:59+08:00",
+      "endAt": "2026-11-12T03:59:00+08:00",
       "category": "活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json",
       "imageUrl": ""
     },
     {
+      "featured": false,
       "id": "13dfaf8bbde9847203c1",
       "gameId": "zzz",
       "title": "跛脚乌鸦奇踪记",
       "startAt": "2026-11-11T10:00:00+08:00",
       "endAt": "2026-11-30T03:59:59+08:00",
       "category": "活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json",
       "imageUrl": ""
     },
@@ -4398,16 +6022,17 @@
       "imageUrl": "https://i0.hdslb.com/bfs/new_dyn/a559fdebf0d3f0ba1eff611eca5870331340190821.jpg"
     },
     {
+      "featured": true,
       "id": "2446bede44d989bb7c9f",
       "gameId": "sr",
       "title": "开场好礼先抱走",
       "startAt": "2026-11-11T11:00:00+08:00",
-      "endAt": "2026-12-23T05:59:59+08:00",
-      "category": "活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
+      "endAt": "2026-12-23T05:59:00+08:00",
+      "category": "奖励",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/sr.json",
-      "imageUrl": ""
+      "imageUrl": "https://fastcdn.mihoyo.com/content-v2/hkrpg/167107/412b4d82e3485a7271a27e4e04a0d071_7667666881235867542.jpg"
     },
     {
       "id": "469a2f4b2fee5ac8c167",
@@ -4926,6 +6551,18 @@
       "imageUrl": ""
     },
     {
+      "id": "53825c8951daf8a489a4",
+      "gameId": "nte",
+      "title": "轨外之境「霜寒环线」特别路线现已开启",
+      "startAt": "2026-11-13T05:00:00+08:00",
+      "endAt": "2026-11-27T04:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.tajiduo.com/bbs/index.html#/post?postId=538952",
+      "imageUrl": "https://bbs-upload.tajiduo.com/20261113/10100006/5JDKGET6J6DE5GBBD5OVQ6RUORVN6EDD.jpeg"
+    },
+    {
       "id": "1dda4768437c724b8896",
       "gameId": "nte",
       "title": "征途坦荡",
@@ -4984,19 +6621,6 @@
       "sourceName": "SRA 社区整理",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/xtlr.json",
       "imageUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/11/11/4KlhQ-Je.jpg"
-    },
-    {
-      "featured": true,
-      "id": "5f9c46f7fd360bcc44aa",
-      "gameId": "test",
-      "title": "123",
-      "startAt": "2026-11-15T12:00:00+08:00",
-      "endAt": "2026-11-16T17:00:00+08:00",
-      "category": "活动",
-      "sourceType": "manual",
-      "sourceName": "人工录入",
-      "sourceUrl": "https://live.bilibili.com/27263119",
-      "imageUrl": "https://yh.wanmei.com/resources/jpg/20261028/1143e95213edf3e640a992e3cee5bb82d695.jpg"
     },
     {
       "id": "b9b048461ffbfaf49cc5",
@@ -5059,14 +6683,15 @@
       "imageUrl": ""
     },
     {
+      "featured": false,
       "id": "f49a16a7d2bd5452deba",
       "gameId": "zzz",
       "title": "修复吧！漂流画集",
       "startAt": "2026-11-16T10:00:00+08:00",
-      "endAt": "2026-11-30T03:59:59+08:00",
+      "endAt": "2026-11-17T03:59:00+08:00",
       "category": "活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json",
       "imageUrl": ""
     },
@@ -5083,6 +6708,18 @@
       "imageUrl": "https://web.hycdn.cn/announce/images/20261023/b4982a6ec2df29f9d60576ec8f1240bc.JPG"
     },
     {
+      "id": "c1f56fb1f837ebbadb70",
+      "gameId": "nikke",
+      "title": "【网页活动】四周年数据总结",
+      "startAt": "2026-11-16T16:00:00+08:00",
+      "endAt": "2026-11-22T16:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/nikke/729488.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_860/h_364/4408/2026/10/17/09324348mwkduqbk.jpg"
+    },
+    {
       "id": "188e337566844b632c26",
       "gameId": "xtlr",
       "title": "「划破黑暗的银枪」复刻纪念活动",
@@ -5093,6 +6730,18 @@
       "sourceName": "SRA 社区整理",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/xtlr.json",
       "imageUrl": ""
+    },
+    {
+      "id": "0c085f366efeb73f35ac",
+      "gameId": "zzz",
+      "title": "3.4版本「长日终尽」前瞻特别节目预告",
+      "startAt": "2026-11-17T18:30:00+08:00",
+      "endAt": "2026-11-20T18:30:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz",
+      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/17/cc6e2f1dc1359ea87ac0b94dffa69124_4310232316573069326_transformed.jpg"
     },
     {
       "id": "1367efc6c1fbca7958e6",
@@ -5215,6 +6864,66 @@
       "imageUrl": "https://webcnstatic.yostar.net/ba_cn_web/prod/upload/news/UReifQGK.png"
     },
     {
+      "id": "f50066fe8ce7870bd967",
+      "gameId": "fgo",
+      "title": "【限时】「哈贝特洛特友情点推荐召唤」！",
+      "startAt": "2026-11-21T04:00:00+08:00",
+      "endAt": "2026-11-28T13:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://game.bilibili.com/fgo/news.html#!news/1/1/18606",
+      "imageUrl": "//i0.hdslb.com/bfs/game/1c95c2b9b7a50628fdc0ebdea98fb1a48582e567.png"
+    },
+    {
+      "id": "d6127b1e017b5d5299ca",
+      "gameId": "fgo",
+      "title": "【限时】『「冠位戴冠战：Rider」&「冠位戴冠战：Assassin」推荐召唤』！",
+      "startAt": "2026-11-21T04:00:00+08:00",
+      "endAt": "2026-11-28T13:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://game.bilibili.com/fgo/news.html#!news/1/1/18604",
+      "imageUrl": "//i0.hdslb.com/bfs/game/f0a641e644bd7e8a572cac8fbdf72385bbe78baf.png"
+    },
+    {
+      "id": "2e2a6c1686160d85eed7",
+      "gameId": "fgo",
+      "title": "【限时】『「冠位戴冠战：Rider」&「冠位戴冠战：Assassin」风暴罐消耗0！纪念活动』！",
+      "startAt": "2026-11-21T04:00:00+08:00",
+      "endAt": "2026-11-28T13:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://game.bilibili.com/fgo/news.html#!news/1/1/18605",
+      "imageUrl": "//i0.hdslb.com/bfs/game/27cfd3a55b08f6a9db0f227b01a4ba1a41fc3f4c.png"
+    },
+    {
+      "id": "05e13c02128bd85228a4",
+      "gameId": "ak",
+      "title": "一、SideStory「雪山降临1101」限时复刻开启",
+      "startAt": "2026-11-22T04:00:00+08:00",
+      "endAt": "2026-12-06T03:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/ak",
+      "imageUrl": "https://web.hycdn.cn/announce/images/20261110/36fac97b33ce9616e4267efb034b5bc9.jpg"
+    },
+    {
+      "id": "8d450e2f4a4b84cc0abe",
+      "gameId": "ak",
+      "title": "二、【雷神推进者】系列，新装限时上架",
+      "startAt": "2026-11-22T04:00:00+08:00",
+      "endAt": "2026-12-06T03:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/ak",
+      "imageUrl": "https://web.hycdn.cn/announce/images/20261110/cf85c35a989226bfca8d4cc3edf773d0.jpg"
+    },
+    {
       "id": "415ed28b7be7bc447ba3",
       "gameId": "czn",
       "title": "「循星迹而行」",
@@ -5267,7 +6976,7 @@
       "gameId": "end",
       "title": "烟火生缘",
       "startAt": "2026-11-25T06:00:00+08:00",
-      "endAt": "2031-11-16T14:52:00+08:00",
+      "endAt": "2031-11-17T11:04:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -5423,126 +7132,126 @@
     {
       "gameId": "ys",
       "url": "https://starrailassistant.top/api/v1/activity/ys.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "nte",
       "url": "https://starrailassistant.top/api/v1/activity/nte.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "sr",
       "url": "https://starrailassistant.top/api/v1/activity/sr.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "zzz",
       "url": "https://starrailassistant.top/api/v1/activity/zzz.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ww",
       "url": "https://starrailassistant.top/api/v1/activity/ww.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ak",
       "url": "https://starrailassistant.top/api/v1/activity/ak.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 4
     },
     {
       "gameId": "end",
       "url": "https://starrailassistant.top/api/v1/activity/end.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 14
     },
     {
       "gameId": "ba-cn",
       "url": "https://starrailassistant.top/api/v1/activity/ba-cn.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 3
     },
     {
       "gameId": "ba-jp",
       "url": "https://starrailassistant.top/api/v1/activity/ba-jp.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "ba-global",
       "url": "https://starrailassistant.top/api/v1/activity/ba-global.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "xtlr",
       "url": "https://starrailassistant.top/api/v1/activity/xtlr.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 10
     },
     {
       "gameId": "infinitynikki",
       "url": "https://starrailassistant.top/api/v1/activity/infinitynikki.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "gf2",
       "url": "https://starrailassistant.top/api/v1/activity/gf2.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "pgr",
       "url": "https://starrailassistant.top/api/v1/activity/pgr.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "czn",
       "url": "https://starrailassistant.top/api/v1/activity/czn.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 18
     },
     {
       "gameId": "bd2",
       "url": "https://starrailassistant.top/api/v1/activity/bd2.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 7
     },
     {
       "gameId": "nikke",
       "url": "https://starrailassistant.top/api/v1/activity/nikke.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "hyrz",
       "url": "https://starrailassistant.top/api/v1/activity/hyrz.json",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "status": "ok",
       "eventCount": 12
     },
@@ -5562,7 +7271,7 @@
       "status": "stale",
       "fetchedAt": null,
       "eventCount": 0,
-      "error": "unsupported response schema"
+      "error": "HTTP Error 500: Internal Server Error"
     },
     {
       "gameId": "sr",
@@ -5571,14 +7280,14 @@
       "status": "stale",
       "fetchedAt": null,
       "eventCount": 0,
-      "error": "unsupported response schema"
+      "error": "HTTP Error 500: Internal Server Error"
     },
     {
       "gameId": "fgo",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/fgo",
       "status": "ok",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "eventCount": 8,
       "error": null
     },
@@ -5587,8 +7296,8 @@
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/ak",
       "status": "ok",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
-      "eventCount": 21,
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
+      "eventCount": 23,
       "error": null
     },
     {
@@ -5596,7 +7305,7 @@
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/mc",
       "status": "ok",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "eventCount": 2,
       "error": null
     },
@@ -5605,7 +7314,7 @@
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/pns",
       "status": "ok",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "eventCount": 12,
       "error": null
     },
@@ -5614,7 +7323,7 @@
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/ba",
       "status": "ok",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "eventCount": 11,
       "error": null
     },
@@ -5623,7 +7332,7 @@
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/ba-jp",
       "status": "ok",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "eventCount": 182,
       "error": null
     },
@@ -5631,17 +7340,17 @@
       "gameId": "nikke",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/nikke",
-      "status": "stale",
-      "fetchedAt": null,
-      "eventCount": 0,
-      "error": "The read operation timed out"
+      "status": "ok",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
+      "eventCount": 121,
+      "error": null
     },
     {
       "gameId": "snowbreak",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/cbjq",
       "status": "ok",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "eventCount": 16,
       "error": null
     },
@@ -5650,7 +7359,7 @@
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/endfield",
       "status": "ok",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "eventCount": 20,
       "error": null
     },
@@ -5658,18 +7367,18 @@
       "gameId": "nte",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/nte",
-      "status": "stale",
-      "fetchedAt": null,
-      "eventCount": 0,
-      "error": "HTTP Error 500: Internal Server Error"
+      "status": "ok",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
+      "eventCount": 3,
+      "error": null
     },
     {
       "gameId": "zzz",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/zzz",
       "status": "ok",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
-      "eventCount": 12,
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
+      "eventCount": 13,
       "error": null
     },
     {
@@ -5677,7 +7386,7 @@
       "sourceName": "Ennead",
       "url": "https://api.ennead.cc/mihoyo/honkai/news/events?lang=zh-cn",
       "status": "ok",
-      "fetchedAt": "2026-11-16T14:52:05+00:00",
+      "fetchedAt": "2026-11-17T11:05:50+00:00",
       "kind": "news"
     }
   ]
