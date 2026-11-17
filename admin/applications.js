@@ -1,0 +1,1 @@
+document.getElementById('clear-applications').onclick=async function(){if(!confirm('清除所有协作者申请记录，让所有用户可以重新申请？已发送邮件不会被撤回。'))return;this.disabled=true;try{const r=await fetch('/api/admin/applications',{method:'POST'});if(!r.ok)throw Error(await r.text());alert('已清除，所有用户可重新申请。')}catch(e){alert('清除失败：'+e.message)}finally{this.disabled=false}};

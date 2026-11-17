@@ -16,7 +16,7 @@ function validate(data) {
   });
   return {games,events};
 }
-async function authorize(context) {
+export async function authorize(context) {
   const {env,request} = context, token=request.headers.get("Cf-Access-Jwt-Assertion");
   if (!env.ACCESS_TEAM_DOMAIN || !env.ACCESS_AUD || !env.ADMIN_EMAIL || !token) return false;
   const origin=new URL(request.url).origin;
