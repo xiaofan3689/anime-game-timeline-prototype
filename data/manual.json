@@ -1,6 +1,7 @@
 {
   "games": [
     {
+      "disabled": false,
       "id": "ys",
       "name": "原神",
       "iconUrl": "https://ys.mihoyo.com/favicon.ico",
@@ -23,6 +24,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "nte",
       "name": "异环",
       "iconUrl": "https://nte.perfectworld.com/favicon.ico",
@@ -45,6 +47,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "sr",
       "name": "崩坏：星穹铁道",
       "iconUrl": "https://sr.mihoyo.com/favicon.ico",
@@ -67,6 +70,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "zzz",
       "name": "绝区零",
       "iconUrl": "https://zzz.mihoyo.com/favicon.ico",
@@ -89,6 +93,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "ww",
       "name": "鸣潮",
       "iconUrl": "https://mc.kurogames.com/favicon.ico",
@@ -111,6 +116,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "ak",
       "name": "明日方舟",
       "iconUrl": "https://ak.hypergryph.com/favicon.ico",
@@ -133,6 +139,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "end",
       "name": "明日方舟：终末地",
       "iconUrl": "https://endfield.hypergryph.com/favicon.ico",
@@ -155,6 +162,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "ba-cn",
       "name": "蔚蓝档案（国服）",
       "iconUrl": "https://bluearchive-cn.com/favicon.ico",
@@ -177,6 +185,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "ba-jp",
       "name": "蔚蓝档案（日服）",
       "iconUrl": "https://bluearchive.jp/favicon.ico",
@@ -199,6 +208,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "ba-global",
       "name": "蔚蓝档案（国际服）",
       "iconUrl": "https://bluearchive.nexon.com/favicon.ico",
@@ -221,6 +231,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "xtlr",
       "name": "星塔旅人",
       "iconUrl": "https://stella-sora.com/favicon.ico",
@@ -243,6 +254,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "infinitynikki",
       "name": "无限暖暖",
       "iconUrl": "https://infinitynikki.infoldgames.com/favicon.ico",
@@ -265,6 +277,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "gf2",
       "name": "少女前线2：追放",
       "iconUrl": "https://gf2.sunborngame.com/favicon.ico",
@@ -287,6 +300,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "pgr",
       "name": "战双帕弥什",
       "iconUrl": "https://pns.kurogames.com/favicon.ico",
@@ -309,6 +323,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "czn",
       "name": "卡厄斯梦境（国际服）",
       "iconUrl": "https://chaoszeronightmare.com/favicon.ico",
@@ -331,6 +346,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "bd2",
       "name": "棕色尘埃2",
       "iconUrl": "https://www.browndust2.com/favicon.ico",
@@ -353,6 +369,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "nikke",
       "name": "NIKKE（国际服）",
       "iconUrl": "https://nikke-en.com/favicon.ico",
@@ -375,6 +392,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "hyrz",
       "name": "火影忍者",
       "iconUrl": "https://hyrz.qq.com/favicon.ico",
@@ -397,6 +415,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "fgo",
       "name": "FGO（国服）",
       "iconUrl": "",
@@ -419,6 +438,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "ap",
       "name": "蓝色星原：旅谣",
       "iconUrl": "https://plat-cdn.manjuu.com/platform/33c42214-f1f6-42a3-8e3a-ee4045bdfa74/P3OfficialWebsiteMobile/prod/_next/static/media/app-icon.5c4f54d8.png",
@@ -441,6 +461,7 @@
       "previewCodes": []
     },
     {
+      "disabled": false,
       "id": "sliver",
       "name": "白银之城",
       "iconUrl": "https://silverpalace.leyuansu.com/favicon.ico",
