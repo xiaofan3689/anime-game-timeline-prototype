@@ -497,7 +497,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/ys.json"
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "2446bede44d989bb7c9f",
       "gameId": "sr",
       "title": "开场好礼先抱走",
