@@ -65,8 +65,12 @@ function drawCompletedActivities(){
  completedDialog.replaceChildren();const title=n('h2','','已完成活动'),close=n('button','','关闭');close.type='button';close.onclick=()=>completedDialog.close();completedDialog.append(title,n('p','','可上下滚动查看，点击取消完成恢复单项活动。'));
  const list=n('div','completed-list');list.tabIndex=0;list.setAttribute('aria-label','已完成活动列表');
  const catalog=new Map((S.feed?.events||[]).map(e=>[e.id,e]));
- const ids=Object.keys(progress).filter(id=>progress[id]?.done);
+ const now=Date.now();
+ const ids=Object.keys(progress).filter(id=>{const event=catalog.get(id),end=Date.parse(event?.endAt);return progress[id]?.done&&Number.isFinite(end)&&end>now});
  for(const id of ids){const event=catalog.get(id),row=n('article','completed-row'),copy=n('div'),game=S.feed?.games.find(g=>g.id===event?.gameId);copy.append(n('strong','',event?.title||'已不在当前数据中的活动'),n('p','',event?`${game?.name||event.gameId} · ${fmt.format(new Date(event.endAt))}结束`:`活动记录：${id}`));const undo=n('button','','取消完成');undo.type='button';undo.onclick=()=>{smartUpdate(id,'done',false);drawCompletedActivities()};row.append(copy,undo);list.append(row)}
- if(!ids.length)list.append(n('p','','暂无已完成活动。'));completedDialog.append(list,close);list.scrollTop=oldScroll;
+ if(!ids.length)list.append(n('p','','暂无尚未结束的已完成活动。'));completedDialog.append(list,close);list.scrollTop=oldScroll;
 }
 function openCompletedActivities(){drawCompletedActivities();if(!completedDialog.open)completedDialog.showModal()}
+
+// Remove items that expire while this dialog stays open.
+setInterval(()=>{if(completedDialog.open)drawCompletedActivities()},1000);
