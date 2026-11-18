@@ -137,7 +137,7 @@
     }
   ],
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T22:23:43+00:00",
+  "generatedAt": "2026-11-18T05:31:49+00:00",
   "games": [
     {
       "id": "ys",
@@ -2008,7 +2008,7 @@
       "gameId": "end",
       "title": "于此启程",
       "startAt": "2025-12-09T04:00:00+08:00",
-      "endAt": "2031-11-17T17:37:00+08:00",
+      "endAt": "2031-11-18T05:32:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -2020,7 +2020,7 @@
       "gameId": "end",
       "title": "协议重连",
       "startAt": "2025-12-09T04:00:00+08:00",
-      "endAt": "2031-11-17T17:37:00+08:00",
+      "endAt": "2031-11-18T05:32:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -2032,7 +2032,7 @@
       "gameId": "end",
       "title": "启程福利展览板",
       "startAt": "2025-12-09T04:00:00+08:00",
-      "endAt": "2031-11-17T17:37:00+08:00",
+      "endAt": "2031-11-18T05:32:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -2044,7 +2044,7 @@
       "gameId": "end",
       "title": "唤醒签到",
       "startAt": "2025-12-09T04:00:00+08:00",
-      "endAt": "2031-11-17T17:37:00+08:00",
+      "endAt": "2031-11-18T05:32:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -2056,7 +2056,7 @@
       "gameId": "end",
       "title": "权限等阶奖励",
       "startAt": "2025-12-09T04:00:00+08:00",
-      "endAt": "2031-11-17T17:37:00+08:00",
+      "endAt": "2031-11-18T05:32:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -2380,7 +2380,7 @@
       "gameId": "end",
       "title": "每周事务",
       "startAt": "2026-01-19T04:00:00+08:00",
-      "endAt": "2031-11-17T17:37:00+08:00",
+      "endAt": "2031-11-18T05:32:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -2656,7 +2656,7 @@
       "gameId": "end",
       "title": "影拓丰碑",
       "startAt": "2026-02-12T12:00:00+08:00",
-      "endAt": "2031-11-17T17:37:00+08:00",
+      "endAt": "2031-11-18T05:32:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -2704,7 +2704,7 @@
       "gameId": "end",
       "title": "密境行者",
       "startAt": "2026-02-24T12:00:00+08:00",
-      "endAt": "2031-11-17T17:37:00+08:00",
+      "endAt": "2031-11-18T05:32:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -2788,7 +2788,7 @@
       "gameId": "end",
       "title": "新手特许赠礼",
       "startAt": "2026-03-12T07:00:00+08:00",
-      "endAt": "2031-11-17T17:37:00+08:00",
+      "endAt": "2031-11-18T05:32:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -3064,7 +3064,7 @@
       "gameId": "end",
       "title": "干员培养助力",
       "startAt": "2026-04-17T07:00:00+08:00",
-      "endAt": "2031-11-17T17:37:00+08:00",
+      "endAt": "2031-11-18T05:32:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -3688,7 +3688,7 @@
       "gameId": "end",
       "title": "主线先行解锁：武陵",
       "startAt": "2026-07-16T07:00:00+08:00",
-      "endAt": "2031-11-17T17:37:00+08:00",
+      "endAt": "2031-11-18T05:32:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -3700,7 +3700,7 @@
       "gameId": "end",
       "title": "战争回响",
       "startAt": "2026-07-16T07:00:00+08:00",
-      "endAt": "2031-11-17T17:37:00+08:00",
+      "endAt": "2031-11-18T05:32:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -4432,7 +4432,7 @@
       "gameId": "end",
       "title": "挽弓试炼",
       "startAt": "2026-10-15T06:00:00+08:00",
-      "endAt": "2031-11-17T17:37:00+08:00",
+      "endAt": "2031-11-18T05:32:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -5102,6 +5102,18 @@
       "sourceName": "SRA 社区整理",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/infinitynikki.json",
       "imageUrl": "https://webstatic.papegames.com/5af052bffce5c899/images/bg/tVzzvo1FAwI1FL3f.png"
+    },
+    {
+      "id": "4995c9d3681960289cc8",
+      "gameId": "xtlr",
+      "title": "「联合讨伐」",
+      "startAt": "2026-11-01T04:00:00+08:00",
+      "endAt": "2026-11-29T22:59:59+08:00",
+      "category": "挑战活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/xtlr.json",
+      "imageUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/10/28/b_9kRJCn.jpg"
     },
     {
       "id": "2def81b45a2e56e4fcaf",
@@ -5899,18 +5911,6 @@
       "imageUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/11/05/TF84F7um.jpg"
     },
     {
-      "id": "aa476f831bea00d246f3",
-      "gameId": "xtlr",
-      "title": "「攻略纪录大征集」",
-      "startAt": "2026-11-10T12:00:00+08:00",
-      "endAt": "2026-11-17T10:59:59+08:00",
-      "category": "限时活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/xtlr.json",
-      "imageUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/11/05/pDCnz7VL.jpg"
-    },
-    {
       "featured": false,
       "id": "a3e7e413ff2cd7f64440",
       "gameId": "zzz",
@@ -5924,6 +5924,18 @@
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/06/258b465a8fb84ddde3dd2096cacaf718_5878293889572538722.jpg"
     },
     {
+      "id": "13dde1888aa1181e84fe",
+      "gameId": "ba-jp",
+      "title": "课程表·交流会2倍",
+      "startAt": "2026-11-10T20:00:00+08:00",
+      "endAt": "2026-11-17T20:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://www.gamekee.com/ba/725953.html",
+      "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/829/images/w_1400/h_787/1609130/2026/9/27/75911274mvqfyyg7.webp"
+    },
+    {
       "id": "ea661fa9dd3918dd0908",
       "gameId": "ba-jp",
       "title": "「防御演习」",
@@ -5934,18 +5946,6 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/728425.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/829/images/w_871/h_488/1609130/2026/10/10/85681549mwaj8mll.png"
-    },
-    {
-      "id": "74e65c875d95fbae129b",
-      "gameId": "ba-jp",
-      "title": "课程表·交流会2倍",
-      "startAt": "2026-11-11T04:00:00+08:00",
-      "endAt": "2026-11-18T04:00:59+08:00",
-      "category": "活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/ba-jp.json",
-      "imageUrl": "https://resource.starrailassistant.top/ba/activity/23fb7a4779943f5c1ed6941b035c84ebc69e3c98.webp"
     },
     {
       "id": "3cc6e2990fcc04cd5031",
@@ -6608,7 +6608,7 @@
       "sourceType": "community",
       "sourceName": "SRA 社区整理",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/xtlr.json",
-      "imageUrl": ""
+      "imageUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/11/13/vd7batQj.jpg"
     },
     {
       "id": "70cc93e28b89be63613d",
@@ -6729,7 +6729,7 @@
       "sourceType": "community",
       "sourceName": "SRA 社区整理",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/xtlr.json",
-      "imageUrl": ""
+      "imageUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/11/16/JyYuhOqM.jpg"
     },
     {
       "id": "0c085f366efeb73f35ac",
@@ -6976,7 +6976,7 @@
       "gameId": "end",
       "title": "烟火生缘",
       "startAt": "2026-11-25T06:00:00+08:00",
-      "endAt": "2031-11-17T17:37:00+08:00",
+      "endAt": "2031-11-18T05:32:00+08:00",
       "category": "活动",
       "sourceType": "community",
       "sourceName": "game-schedule",
@@ -7020,9 +7020,9 @@
       "imageUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/11/05/aWHvo3a_.jpg"
     },
     {
-      "id": "3c54c2035f682192182a",
+      "id": "570010bc3b7d0bf2449e",
       "gameId": "xtlr",
-      "title": "「攻略纪录大征集」（新一期）",
+      "title": "「攻略纪录大征集」",
       "startAt": "2026-11-27T12:00:00+08:00",
       "endAt": "2026-12-04T10:59:59+08:00",
       "category": "限时活动",
@@ -7132,126 +7132,126 @@
     {
       "gameId": "ys",
       "url": "https://starrailassistant.top/api/v1/activity/ys.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "nte",
       "url": "https://starrailassistant.top/api/v1/activity/nte.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "sr",
       "url": "https://starrailassistant.top/api/v1/activity/sr.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "zzz",
       "url": "https://starrailassistant.top/api/v1/activity/zzz.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ww",
       "url": "https://starrailassistant.top/api/v1/activity/ww.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ak",
       "url": "https://starrailassistant.top/api/v1/activity/ak.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
       "eventCount": 4
     },
     {
       "gameId": "end",
       "url": "https://starrailassistant.top/api/v1/activity/end.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
       "eventCount": 14
     },
     {
       "gameId": "ba-cn",
       "url": "https://starrailassistant.top/api/v1/activity/ba-cn.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
       "eventCount": 3
     },
     {
       "gameId": "ba-jp",
       "url": "https://starrailassistant.top/api/v1/activity/ba-jp.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
-      "eventCount": 2
+      "eventCount": 1
     },
     {
       "gameId": "ba-global",
       "url": "https://starrailassistant.top/api/v1/activity/ba-global.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "xtlr",
       "url": "https://starrailassistant.top/api/v1/activity/xtlr.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
-      "eventCount": 10
+      "eventCount": 9
     },
     {
       "gameId": "infinitynikki",
       "url": "https://starrailassistant.top/api/v1/activity/infinitynikki.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "gf2",
       "url": "https://starrailassistant.top/api/v1/activity/gf2.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "pgr",
       "url": "https://starrailassistant.top/api/v1/activity/pgr.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "czn",
       "url": "https://starrailassistant.top/api/v1/activity/czn.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
       "eventCount": 18
     },
     {
       "gameId": "bd2",
       "url": "https://starrailassistant.top/api/v1/activity/bd2.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
       "eventCount": 7
     },
     {
       "gameId": "nikke",
       "url": "https://starrailassistant.top/api/v1/activity/nikke.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "hyrz",
       "url": "https://starrailassistant.top/api/v1/activity/hyrz.json",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "status": "ok",
       "eventCount": 12
     },
@@ -7262,7 +7262,7 @@
       "status": "stale",
       "fetchedAt": null,
       "eventCount": 0,
-      "error": "'list' object has no attribute 'get'"
+      "error": "HTTP Error 500: Internal Server Error"
     },
     {
       "gameId": "ys",
@@ -7271,7 +7271,7 @@
       "status": "stale",
       "fetchedAt": null,
       "eventCount": 0,
-      "error": "HTTP Error 500: Internal Server Error"
+      "error": "unsupported response schema"
     },
     {
       "gameId": "sr",
@@ -7280,77 +7280,77 @@
       "status": "stale",
       "fetchedAt": null,
       "eventCount": 0,
-      "error": "HTTP Error 500: Internal Server Error"
+      "error": "unsupported response schema"
     },
     {
       "gameId": "fgo",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/fgo",
-      "status": "stale",
-      "fetchedAt": null,
+      "status": "ok",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "eventCount": 8,
-      "error": "HTTP Error 500: Internal Server Error"
+      "error": null
     },
     {
       "gameId": "ak",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/ak",
-      "status": "stale",
-      "fetchedAt": null,
+      "status": "ok",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "eventCount": 23,
-      "error": "HTTP Error 500: Internal Server Error"
+      "error": null
     },
     {
       "gameId": "ww",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/mc",
-      "status": "stale",
-      "fetchedAt": null,
+      "status": "ok",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "eventCount": 2,
-      "error": "HTTP Error 500: Internal Server Error"
+      "error": null
     },
     {
       "gameId": "pgr",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/pns",
-      "status": "stale",
-      "fetchedAt": null,
+      "status": "ok",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "eventCount": 12,
-      "error": "HTTP Error 500: Internal Server Error"
+      "error": null
     },
     {
       "gameId": "ba-cn",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/ba",
-      "status": "stale",
-      "fetchedAt": null,
-      "eventCount": 10,
-      "error": "The read operation timed out"
+      "status": "ok",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
+      "eventCount": 11,
+      "error": null
     },
     {
       "gameId": "ba-jp",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/ba-jp",
-      "status": "stale",
-      "fetchedAt": null,
-      "eventCount": 182,
-      "error": "HTTP Error 500: Internal Server Error"
+      "status": "ok",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
+      "eventCount": 183,
+      "error": null
     },
     {
       "gameId": "nikke",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/nikke",
-      "status": "stale",
-      "fetchedAt": null,
+      "status": "ok",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "eventCount": 121,
-      "error": "HTTP Error 500: Internal Server Error"
+      "error": null
     },
     {
       "gameId": "snowbreak",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/cbjq",
       "status": "ok",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "eventCount": 16,
       "error": null
     },
@@ -7358,17 +7358,17 @@
       "gameId": "end",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/endfield",
-      "status": "stale",
-      "fetchedAt": null,
+      "status": "ok",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "eventCount": 20,
-      "error": "The read operation timed out"
+      "error": null
     },
     {
       "gameId": "nte",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/nte",
       "status": "ok",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "eventCount": 3,
       "error": null
     },
@@ -7377,7 +7377,7 @@
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/zzz",
       "status": "ok",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "eventCount": 13,
       "error": null
     },
@@ -7386,7 +7386,7 @@
       "sourceName": "Ennead",
       "url": "https://api.ennead.cc/mihoyo/honkai/news/events?lang=zh-cn",
       "status": "ok",
-      "fetchedAt": "2026-11-17T22:23:43+00:00",
+      "fetchedAt": "2026-11-18T05:31:49+00:00",
       "kind": "news"
     }
   ]
