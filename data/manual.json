@@ -627,6 +627,17 @@
       "endAt": "2026-11-17T19:30:00+08:00",
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/17/cc6e2f1dc1359ea87ac0b94dffa69124_4310232316573069326_transformed.jpg",
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
+    },
+    {
+      "featured": true,
+      "id": "0f48d42d8fbfdd4da444",
+      "gameId": "nte",
+      "title": "《异环》TGA 2026提名答谢",
+      "category": "奖励",
+      "startAt": "2026-11-18T15:00:00+08:00",
+      "endAt": "2026-12-17T06:00:00+08:00",
+      "imageUrl": "https://yh.wanmei.com/resources/jpg/20261118/11432ed6309180de4271910df88ef238d096.jpg",
+      "sourceUrl": "https://yh.wanmei.com/m/news/gamebroad/20261118/265103.html"
     }
   ]
 }
