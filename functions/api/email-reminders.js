@@ -11,7 +11,8 @@ export async function onRequest({request,env}){
  const raw=await request.text();if(raw.length>100000)return json({error:'请求过大'},413);const b=JSON.parse(raw);
  if(!/^[a-f0-9]{64}$/.test(b.token||''))return json({error:'订阅凭证无效'},400);
  const db=env.APPLICATION_DB,rawKey=await hash(b.token),key=await accountKey(db,rawKey),now=Date.now();
- let row=await db.prepare('SELECT * FROM email_subscriptions WHERE token_hash=?').bind(key).first();
+ const verifyKey='verify:'+rawKey;
+ let row=await db.prepare('SELECT * FROM email_subscriptions WHERE token_hash=?').bind(['request-code','confirm'].includes(b.action)?verifyKey:key).first();
  if(b.action==='get')return json({email:row?.email||'',pendingEmail:row?.pending_email||'',active:!!row?.active,...(row?.email?stateOf(row):{})});
  if(b.action==='request-code'){
   const email=typeof b.email==='string'?b.email.trim().toLowerCase():'';
@@ -22,8 +23,8 @@ export async function onRequest({request,env}){
    const r=await db.prepare('INSERT INTO email_rate_limits(bucket,count) VALUES (?,1) ON CONFLICT(bucket) DO UPDATE SET count=count+1 RETURNING count').bind(bucket).first();if(r.count>limit)return json({error:'验证邮件发送频率已达上限，请稍后再试'},429);
   }
   const numbers=new Uint32Array(1);crypto.getRandomValues(numbers);const code=String(numbers[0]%1000000).padStart(6,'0');
-  await db.prepare(`INSERT INTO email_subscriptions(token_hash,pending_email,code_hash,code_expires,code_sent,updated_at) VALUES (?,?,?,?,?,?) ON CONFLICT(token_hash) DO UPDATE SET pending_email=excluded.pending_email,code_hash=excluded.code_hash,code_expires=excluded.code_expires,code_sent=excluded.code_sent,attempts=0`).bind(key,email,await hash(key+email+code),now+600000,now,now).run();
-  try{await sendApplicationMail(env,`你的次元时刻邮件提醒验证码是：${code}\n10分钟内有效。只有在网站确认后才会启用或替换提醒邮箱。若非本人操作，请忽略。`,email,'次元时刻：验证提醒邮箱')}catch{return json({error:'验证码未确认发送成功，请稍后重试'},502)}
+  await db.prepare(`INSERT INTO email_subscriptions(token_hash,pending_email,code_hash,code_expires,code_sent,updated_at) VALUES (?,?,?,?,?,?) ON CONFLICT(token_hash) DO UPDATE SET pending_email=excluded.pending_email,code_hash=excluded.code_hash,code_expires=excluded.code_expires,code_sent=excluded.code_sent,attempts=0`).bind(verifyKey,email,await hash(verifyKey+email+code),now+600000,now,now).run();
+  try{await sendApplicationMail(env,`你的次元时刻邮件提醒验证码是：${code}\n10分钟内有效。只有在网站确认后才会注册或切换邮箱账号，原账号数据保留。若非本人操作，请忽略。`,email,'次元时刻：验证提醒邮箱')}catch{return json({error:'验证码未确认发送成功，请稍后重试'},502)}
   return json({ok:true});
  }
  if(!row)return json({error:'请先验证邮箱'},400);
@@ -32,10 +33,10 @@ export async function onRequest({request,env}){
  if(!list(b.games,100)||!list(b.completed,2000))return json({error:'游戏或完成状态无效'},400);
  if(b.action==='confirm'){
   if(!row.pending_email||row.code_expires<now||row.attempts>=5)return json({error:'验证码过期或次数已用完，请重新获取'},400);
-  const attempt=await db.prepare('UPDATE email_subscriptions SET attempts=attempts+1 WHERE token_hash=? AND attempts<5 AND code_expires>=? RETURNING attempts').bind(key,now).first();
-  if(!attempt||await hash(key+row.pending_email+String(b.code))!==row.code_hash)return json({error:'验证码错误'},400);
+  const attempt=await db.prepare('UPDATE email_subscriptions SET attempts=attempts+1 WHERE token_hash=? AND attempts<5 AND code_expires>=? RETURNING attempts').bind(verifyKey,now).first();
+  if(!attempt||await hash(verifyKey+row.pending_email+String(b.code))!==row.code_hash)return json({error:'验证码错误'},400);
   // Claim OTP once, before linking this browser to an already verified account.
-  const claimed=await db.prepare('UPDATE email_subscriptions SET code_hash=NULL WHERE token_hash=? AND code_hash=? AND code_expires>=?').bind(key,row.code_hash,now).run();
+  const claimed=await db.prepare('UPDATE email_subscriptions SET code_hash=NULL WHERE token_hash=? AND code_hash=? AND code_expires>=?').bind(verifyKey,row.code_hash,now).run();
   if(!claimed.meta.changes)return json({error:'验证码已使用，请重新获取'},409);
   const existing=await db.prepare('SELECT * FROM email_subscriptions WHERE email=?').bind(row.pending_email).first();
   if(existing){
@@ -44,10 +45,10 @@ export async function onRequest({request,env}){
    const restored=await db.prepare('SELECT * FROM email_subscriptions WHERE token_hash=?').bind(existing.token_hash).first();
    return json({ok:true,restored:true,...stateOf(restored)});
   }
-  const result=await db.prepare('UPDATE email_subscriptions SET email=pending_email,pending_email=NULL,active=1,games=?,completed=?,revision=revision+1,updated_at=? WHERE token_hash=? AND pending_email=?').bind(JSON.stringify([...new Set(b.games)]),JSON.stringify([...new Set(b.completed)]),now,key,row.pending_email).run();
-  if(!result.meta.changes)return json({error:'验证状态已变化，请重试'},409);
-  row=await db.prepare('SELECT * FROM email_subscriptions WHERE token_hash=?').bind(key).first();
-  return json({ok:true,restored:false,...stateOf(row)});
+  // A new email is a new account. Never mutate the previously signed-in account.
+  const account=crypto.randomUUID();
+  await db.batch([db.prepare('INSERT INTO email_subscriptions(token_hash,email,games,completed,active,updated_at) VALUES (?,?,?, ?,1,?)').bind(account,row.pending_email,'[]','[]',now),db.prepare('INSERT INTO email_sessions(token_hash,account_hash) VALUES (?,?) ON CONFLICT(token_hash) DO UPDATE SET account_hash=excluded.account_hash').bind(rawKey,account)]);
+  return json({ok:true,newAccount:true,restored:false,games:[],completed:[],active:true,revision:0});
  }else{
   if(!row.active)return json({error:'提醒已停止，请验证邮箱重新启用'},409);
   if(!Number.isInteger(b.revision))return json({error:'请刷新页面加载最新同步版本'},409);
