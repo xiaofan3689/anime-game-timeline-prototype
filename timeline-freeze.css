@@ -1,0 +1,1 @@
+.timeline-frozen-dates{position:fixed;z-index:12;overflow:hidden;pointer-events:none;background:#1e2331;box-shadow:0 3px 8px #0005}.timeline-frozen-dates[hidden]{display:none}.timeline-frozen-dates .date-head{position:absolute;inset:0 auto auto 0;max-width:none}.lane{scroll-margin-top:52px}
