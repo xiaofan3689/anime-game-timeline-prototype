@@ -85,7 +85,7 @@
  .milestone-card img{height:104px!important;object-fit:contain!important}
  .mobile-gallery-track{height:130px!important}
  .mobile-gallery-track figure{height:130px!important}
- .mobile-gallery-track img{object-fit:contain!important}
+ .mobile-gallery-track img{width:100%!important;height:100%!important;object-fit:fill!important}
 }
 
 @media(max-width:680px){
