@@ -616,6 +616,17 @@
       "endAt": "2026-11-01T03:59:00+08:00",
       "imageUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166970/616a76f9fec948951b690270d84cadac_9098996815758943439.png",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
+    },
+    {
+      "featured": false,
+      "id": "0c085f366efeb73f35ac",
+      "gameId": "zzz",
+      "title": "3.4版本「长日终尽」前瞻特别节目预告",
+      "category": "活动",
+      "startAt": "2026-11-17T18:30:00+08:00",
+      "endAt": "2026-11-17T19:30:00+08:00",
+      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/17/cc6e2f1dc1359ea87ac0b94dffa69124_4310232316573069326_transformed.jpg",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
     }
   ]
 }
