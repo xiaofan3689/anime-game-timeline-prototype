@@ -1,3 +1,4 @@
+import {accountKey} from '../../../lib/email-session.js';
 import {authorize} from './manual.js';
 import {eligible,hash} from '../../../lib/email-reminders.js';
 import {sendApplicationMail} from '../../../lib/qq-smtp.js';
@@ -14,7 +15,7 @@ export async function onRequest(context){
  try{
   const raw=await request.text();if(raw.length>100000)return json({error:'请求过大'},413);
   const b=JSON.parse(raw);if(!/^[a-f0-9]{64}$/.test(b.token||'')||!validList(b.games,100)||!validList(b.completed,2000))return json({error:'浏览器订阅凭证或游戏／完成数据无效'},400);
-  const key=await hash(b.token),db=env.APPLICATION_DB;
+  const db=env.APPLICATION_DB,key=await accountKey(db,await hash(b.token));
   stage='读取提醒订阅表';
   const sub=await db.prepare('SELECT email,active FROM email_subscriptions WHERE token_hash=?').bind(key).first();
   if(!sub?.email||!sub.active)return json({error:'请先在当前域名首页验证提醒邮箱并启用提醒；停止提醒的订阅不能用于测试'},409);
@@ -34,7 +35,7 @@ export async function onRequest(context){
   const lock=await db.prepare('INSERT INTO email_rate_limits(bucket,count) VALUES (?,1) ON CONFLICT(bucket) DO NOTHING').bind(`admin-test:${key}:${Math.floor(now/60000)}`).run();
   if(!lock.meta.changes)return json({error:'本分钟已尝试发送测试邮件，请下一分钟再试'},429);
   stage='同步游戏与完成状态';
-  await db.prepare('UPDATE email_subscriptions SET games=?,completed=?,revision=revision+1,updated_at=? WHERE token_hash=? AND active=1').bind(JSON.stringify([...new Set(b.games)]),JSON.stringify([...new Set(b.completed)]),now,key).run();
+  // Manual test uses its browser snapshot without overwriting the shared account.
   stage='生成邮件内容';
   const names=Object.fromEntries(feed.games.map(g=>[g.id,g.name]));
   const text='【管理员手动测试】\n当前浏览器所选游戏中，以下活动未标记完成，并将在48小时内结束：\n\n'+events.map(e=>`${names[e.gameId]||e.gameId} · ${e.title}\n截止：${new Date(e.endAt).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',hour12:false})}（北京时间）`).join('\n\n')+'\n\n查看活动：'+site+'/\n本邮件为手动测试，不占用自动提醒的发送记录。';

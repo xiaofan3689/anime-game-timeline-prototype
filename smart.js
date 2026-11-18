@@ -31,7 +31,7 @@ function smartRender(){
  list.addEventListener("scroll",updatePage,{passive:true});
  list.addEventListener("keydown",event=>{if(event.target!==list)return;const direction={ArrowDown:1,PageDown:1,ArrowUp:-1,PageUp:-1}[event.key];if(!direction)return;event.preventDefault();list.scrollTop=Math.max(0,Math.min(pageCount-1,Number(root.dataset.page)+direction))*list.clientHeight});
 
- const reset=n("button","smart-reset","恢复已完成活动");reset.onclick=()=>{for(const value of Object.values(progress))value.done=false;smartPersist();render()};root.append(reset);
+ const reset=n("button","smart-reset","恢复已完成活动");reset.onclick=openCompletedActivities;root.append(reset);
  const generated=Date.parse(S.feed.generatedAt);
  if(!Number.isFinite(generated)||Date.now()-generated>6*3600000)root.append(n("p","smart-warning","活动数据超过 6 小时未更新或更新时间无效，请核对官方公告后安排活动。"));
 }
@@ -57,3 +57,16 @@ window.updateActivityDialog=()=>{
 };
 window.openActivity=e=>{activeActivity=e;window.updateActivityDialog();if(!activityDialog.open)activityDialog.showModal()};
 activityDialog.addEventListener("close",()=>{activeActivity=null});
+
+// Keep a separate dialog so normal page re-rendering never closes the completed list.
+const completedDialog=document.createElement('dialog');completedDialog.className='completed-dialog';completedDialog.setAttribute('aria-label','已完成活动');document.body.append(completedDialog);
+function drawCompletedActivities(){
+ const oldScroll=completedDialog.querySelector('.completed-list')?.scrollTop||0;
+ completedDialog.replaceChildren();const title=n('h2','','已完成活动'),close=n('button','','关闭');close.type='button';close.onclick=()=>completedDialog.close();completedDialog.append(title,n('p','','可上下滚动查看，点击取消完成恢复单项活动。'));
+ const list=n('div','completed-list');list.tabIndex=0;list.setAttribute('aria-label','已完成活动列表');
+ const catalog=new Map((S.feed?.events||[]).map(e=>[e.id,e]));
+ const ids=Object.keys(progress).filter(id=>progress[id]?.done);
+ for(const id of ids){const event=catalog.get(id),row=n('article','completed-row'),copy=n('div'),game=S.feed?.games.find(g=>g.id===event?.gameId);copy.append(n('strong','',event?.title||'已不在当前数据中的活动'),n('p','',event?`${game?.name||event.gameId} · ${fmt.format(new Date(event.endAt))}结束`:`活动记录：${id}`));const undo=n('button','','取消完成');undo.type='button';undo.onclick=()=>{smartUpdate(id,'done',false);drawCompletedActivities()};row.append(copy,undo);list.append(row)}
+ if(!ids.length)list.append(n('p','','暂无已完成活动。'));completedDialog.append(list,close);list.scrollTop=oldScroll;
+}
+function openCompletedActivities(){drawCompletedActivities();if(!completedDialog.open)completedDialog.showModal()}
