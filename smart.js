@@ -19,7 +19,7 @@ function smartRender(){
  for(const [index,e] of pending.entries()){
 
   const row=n("article","smart-row"),copy=n("div"),hours=(Date.parse(e.endAt)-Date.now())/3600000;
-  copy.append(n("strong","",e.title),n("p","",`${games[e.gameId]||e.gameId} · 剩余 ${remain(e.endAt)}`));
+  const countdown=n("p","",`${games[e.gameId]||e.gameId} · 剩余 ${remain(e.endAt)}`);countdown.dataset.countdownEnd=e.endAt;countdown.dataset.countdownPrefix=`${games[e.gameId]||e.gameId} · 剩余 `;copy.append(n("strong","",e.title),countdown);
   const star=n("button","",matchMedia("(max-width:680px)").matches?"查看详情":progress[e.id]?.star?"★ 已关注":"☆ 关注"),done=n("button","","标记完成");
   star.onclick=()=>{if(matchMedia("(max-width:680px)").matches)window.openActivity?.(e);else smartUpdate(e.id,"star",!progress[e.id]?.star)};done.onclick=()=>smartUpdate(e.id,"done",true);
   row.append(copy,star,done);list.append(row);
