@@ -17,10 +17,13 @@
   localStorage.setItem('timeline-progress-v1',JSON.stringify(next));
   // Restore the shared game selection exactly; a browser-local CN filter cannot remove imported games.
   if(S.feed&&b.games.some(id=>window.timelineIsForeignGame?.(S.feed.games.find(g=>g.id===id)||{id}))){localStorage.setItem('timeline-cn-only-v1','false')}
+  dialog.classList.add('email-refresh-only');
+  current.textContent=`原邮箱：${b.email||form.elements.email.value}（${b.active?'提醒已开启':'提醒已停止'}）`;
   revision=b.revision;active=b.active;refreshRequired=true;dirty=false;clearTimeout(timer);
   status('已恢复此邮箱的游戏选择和完成情况，请刷新页面使所有区域同步。');
   let refresh=dialog.querySelector('#email-refresh');if(!refresh){refresh=document.createElement('button');refresh.id='email-refresh';refresh.type='button';refresh.textContent='刷新页面同步数据';refresh.onclick=()=>location.reload();form.append(refresh)}
   if(!dialog.open)dialog.showModal();
+  requestAnimationFrame(()=>refresh.focus());
  }
  async function load(){const b=await api('get');active=b.active;form.elements.email.value=b.email||b.pendingEmail||'';current.textContent=b.email?`原邮箱：${b.email}（${active?'提醒已开启':'提醒已停止'}）`:'尚未设置提醒邮箱';dialog.querySelector('#email-stop').disabled=!active;return b}
  button.onclick=async()=>{dialog.showModal();status('正在读取…');try{const b=await load();if(revision!==null&&b.revision!==revision)restore(b);if(!refreshRequired)status('可修改邮箱并验证，或关闭此窗口。')}catch(e){status(e.message)}};
