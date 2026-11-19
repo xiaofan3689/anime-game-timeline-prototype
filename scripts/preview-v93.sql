@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS content_previews(id TEXT PRIMARY KEY,email TEXT NOT NULL,role TEXT NOT NULL,digest TEXT NOT NULL,payload TEXT NOT NULL,created_at INTEGER NOT NULL,expires_at INTEGER NOT NULL,status TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS collaborator_application_archive(id TEXT PRIMARY KEY,email TEXT NOT NULL,username TEXT,has_github INTEGER,status TEXT NOT NULL,reason TEXT,created_at TEXT,reviewed_at INTEGER);

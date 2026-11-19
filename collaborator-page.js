@@ -14,7 +14,7 @@ function renderSources(){const root=$('source-events');root.replaceChildren();fo
 function drawHistory(){const root=$('history');root.replaceChildren();for(const p of history){const row=document.createElement('article');row.className='feedback-record';const text=document.createElement('p');text.textContent=p.id+' · '+p.status+(p.note?' · '+p.note:'');row.append(text);if(p.pr_url){const a=document.createElement('a');a.href=p.pr_url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='查看 GitHub PR';row.append(a)}root.append(row)}}
 async function load(){const b=await api('collaborator/data');state=b.data;revision=b.revision;catalog=b.sourceEvents;history=b.items;dirty=false;$('identity').textContent=b.email+' · 分配游戏：'+b.games.join('、');$('game-select').replaceChildren(...state.games.map(g=>new Option(g.name,g.id)));current=$('game-select').value;renderGame();drawHistory();$('save').disabled=false;$('submit').disabled=false;await connection()}
 async function connection(){const b=await api('collaborator/github');$('oauth-start').disabled=!b.appConfigured;$('app-install').hidden=!b.installUrl;if(b.installUrl)$('app-install').href=b.installUrl;$('connection').textContent=b.connection?'已授权：'+b.connection.login+' · '+(b.connection.fork_repo||'尚未验证 Fork'):'尚未绑定 GitHub'}
-async function save(){collect();const b=await api('collaborator/data','PUT',{data:state,revision});revision=b.revision;dirty=false;message('草稿已保存')}
+async function save(){collect();const b=await api('collaborator/data','PUT',{data:state,revision});revision=b.revision;dirty=false;message('草稿已保存，请预览验证后提交');if(confirm('是否进入草稿主页预览？'))await window.launchContentPreview({})}
 async function run(fn){if(busy)return;busy=true;$('save').disabled=true;$('submit').disabled=true;try{await fn()}catch(e){message(e.message)}finally{busy=false;$('save').disabled=!state;$('submit').disabled=!state}}
 $('game-select').onchange=()=>{collect();current=$('game-select').value;renderGame()};
 $('add-event').onclick=()=>{if(!state)return;collect();state.events.push({id:crypto.randomUUID(),gameId:current,title:'',category:'活动',startAt:'',endAt:'',imageUrl:'',sourceUrl:'',featured:false});dirty=true;renderEvents()};
@@ -39,3 +39,5 @@ $('fork-form').onsubmit=e=>{e.preventDefault();const f=e.currentTarget;run(async
 
 ;(()=>{if(document.querySelector('script[data-backend-updates]'))return;const script=document.createElement('script');script.src='/backend-updates.js?v=88';script.dataset.backendUpdates='1';document.body.append(script)})();
 
+
+;(()=>{const s=document.createElement('script');s.src='/content-preview.js?v=93';document.body.append(s)})();
