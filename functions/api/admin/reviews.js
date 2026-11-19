@@ -10,7 +10,7 @@ export const onRequest=endpoint(async({request,env})=>{
   return json({applications:r.results,games:catalog.games.map(g=>({id:g.id,name:g.name}))});
  }
  if(request.method!=='POST')return json({error:'方法不支持'},405);
- const input=await body(request);
- if(input.action!=='refuse'){const catalog=(await file(env.GH_TOKEN,mainRepo(env),env.GH_BRANCH||'main','data/events.json')).data;if(!Array.isArray(input.games)||input.games.some(id=>!catalog.games.some(g=>g.id===id)))throw Error('分配的游戏不存在')}
+ const input=await body(request);if(input.allGames===true)input.games=['*'];
+ if(input.action!=='refuse'&&input.allGames!==true){const catalog=(await file(env.GH_TOKEN,mainRepo(env),env.GH_BRANCH||'main','data/events.json')).data;if(!Array.isArray(input.games)||input.games.some(id=>!catalog.games.some(g=>g.id===id)))throw Error('分配的游戏不存在')}
  return json(await reviewApplication(env,actor,input,sendApplicationMail));
 });
