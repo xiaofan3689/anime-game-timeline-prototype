@@ -44,3 +44,6 @@ function manage(selected){
 $("manage-games").onclick=()=>manage();$("manage-events").onclick=()=>manage();$("manage-game-filter").onchange=()=>manage();
 
 async function normalizeEventIds(){for(const e of state.data.events){if(e.id)continue;let start=e.startAt.trim().replace(/Z$/,'+00:00');if(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?:[+-]\d{2}:\d{2})$/.test(start))start=start.slice(0,16)+':00'+start.slice(16);const hash=new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(`${e.gameId}|${e.title}|${start}`)));e.id=[...hash].map(x=>x.toString(16).padStart(2,'0')).join('').slice(0,20)}}
+
+;(()=>{if(document.querySelector('script[data-repository-images]'))return;const css=document.createElement('link');css.rel='stylesheet';css.href='/repository-images.css?v=84';document.head.append(css);const script=document.createElement('script');script.src='/repository-images.js?v=84';script.dataset.repositoryImages='1';document.body.append(script)})();
+
