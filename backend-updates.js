@@ -9,8 +9,32 @@
  const initialResources=resources();let baseline=null,checking=false,changed=false,refreshing=false;
  const digest=async s=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))).map(b=>b.toString(16).padStart(2,'0')).join('');
  async function read(url,cache){const response=await fetch(url,{cache,credentials:'same-origin',signal:AbortSignal.timeout(12000)});if(!response.ok||response.redirected)throw Error('资源请求失败或登录已过期');const mime=response.headers.get('content-type')||'';if(url!==page.href&&mime.includes('text/html'))throw Error('资源返回登录页面');return response.text()}
- async function snapshot(){const role=location.pathname.startsWith('/admin/')?'admin':'collaborator';const response=await fetch('/api/'+role+'/page-version?page='+encodeURIComponent(page.pathname),{cache:'no-store',credentials:'same-origin',signal:AbortSignal.timeout(15000)});if(!response.ok)throw Error('源码检测失败');const data=await response.json();if(!/^[a-f0-9]{64}$/.test(data.version||''))throw Error('源码版本无效');return data.version}
- async function check(){if(checking||changed||refreshing||document.hidden||!navigator.onLine)return;checking=true;try{if(!baseline){baseline=await snapshot();text.textContent='页面源码更新检测已开启';return}const latest=await snapshot();if(latest!==baseline){changed=true;toolbar.classList.add('has-update');text.textContent='检测到当前后台源码更新。请先保存草稿，再点击强制刷新。'}else text.textContent='页面已是最新版本'}catch{text.textContent='暂时无法检查更新，请检查网络或登录状态；可手动强制刷新。'}finally{checking=false}}
+ const handlers=new Map();
+ window.backendHotUpdate={register(path,handler){if(!path.startsWith('/')||typeof handler?.apply!=='function'||typeof handler?.rollback!=='function')throw Error('热更模块必须提供 apply 和 rollback');handlers.set(path,handler);return ()=>{if(handlers.get(path)===handler)handlers.delete(path)}}};
+ async function hotApply(previous,next){
+  if(!previous.files||!next.files)return false;
+  const paths=[...new Set([...Object.keys(previous.files),...Object.keys(next.files)])].filter(path=>previous.files[path]!==next.files[path]);
+  if(!paths.length)return true;
+  // Plan the whole update before touching the page. HTML and unregistered JS require reload.
+  const links=[],modules=[];
+  for(const path of paths){
+   if(!next.files[path])return false;
+   if(path.endsWith('.css')){const old=[...document.querySelectorAll('link[rel="stylesheet"][href]')].filter(link=>new URL(link.href,location.href).pathname===path);if(!old.length)return false;for(const link of old)links.push({link,path})}
+   else if(handlers.has(path))modules.push({path,handler:handlers.get(path)});
+   else return false;
+  }
+  const staged=[],applied=[];
+  try{
+   for(const {link,path} of links){const copy=link.cloneNode();const url=new URL(link.href,location.href);url.searchParams.set('_hot',next.files[path]);copy.href=url.href;copy.media='not all';staged.push({old:link,copy});await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('样式加载超时')),15000);copy.onload=()=>{clearTimeout(timer);resolve()};copy.onerror=()=>{clearTimeout(timer);reject(Error('样式加载失败'))};link.after(copy)})}
+   for(const {path,handler} of modules){const context={path,version:next.files[path],previous:previous.files[path],url:path+'?_hot='+next.files[path]};const state=await handler.prepare?.(context);const entry={handler,context,state};applied.push(entry);await handler.apply(context,state)}
+   for(const {old,copy} of staged){copy.media=old.media;old.remove()}
+   window.dispatchEvent(new CustomEvent('backend:hot-updated',{detail:{paths,version:next.version}}));
+   return true;
+  }catch(error){for(const {handler,context,state} of applied.reverse()){try{await handler.rollback(context,state)}catch{}}for(const {copy} of staged)copy.remove();console.warn('后台热更未完成，请保存后刷新');return false}
+ }
+
+ async function snapshot(){const role=location.pathname.startsWith('/admin/')?'admin':'collaborator';const response=await fetch('/api/'+role+'/page-version?page='+encodeURIComponent(page.pathname),{cache:'no-store',credentials:'same-origin',signal:AbortSignal.timeout(15000)});if(!response.ok)throw Error('源码检测失败');const data=await response.json();if(!/^[a-f0-9]{64}$/.test(data.version||''))throw Error('源码版本无效');return data}
+ async function check(){if(checking||changed||refreshing||document.hidden||!navigator.onLine)return;checking=true;try{if(!baseline){baseline=await snapshot();text.textContent='页面源码更新检测已开启';return}const latest=await snapshot();if(latest.version!==baseline.version){if(await hotApply(baseline,latest)){baseline=latest;text.textContent='页面已自动更新，编辑内容已保留';return}changed=true;toolbar.classList.add('has-update');text.textContent='本次更新无法自动应用，请先保存草稿，再点击强制刷新。'}else text.textContent='页面已是最新版本'}catch{text.textContent='暂时无法检查更新，请检查网络或登录状态；可手动强制刷新。'}finally{checking=false}}
  button.onclick=async()=>{
   if(refreshing)return;if(!confirm('刷新可能丢失未保存的表单内容。请先保存草稿，确认现在强制刷新？'))return;
   refreshing=true;button.disabled=true;text.textContent='正在重新获取页面资源…';
