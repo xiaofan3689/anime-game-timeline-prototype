@@ -18,3 +18,6 @@ $('user-form').onsubmit=e=>{e.preventDefault();const f=e.currentTarget;run(async
 })();
 
 
+
+;(()=>{if(document.querySelector('script[data-backend-updates]'))return;const script=document.createElement('script');script.src='/backend-updates.js?v=88';script.dataset.backendUpdates='1';document.body.append(script)})();
+

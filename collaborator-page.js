@@ -36,3 +36,6 @@ $('fork-form').onsubmit=e=>{e.preventDefault();const f=e.currentTarget;run(async
 
 ;(()=>{if(document.querySelector('script[data-repository-images]'))return;const css=document.createElement('link');css.rel='stylesheet';css.href='/repository-images.css?v=84';document.head.append(css);const script=document.createElement('script');script.src='/repository-images.js?v=84';script.dataset.repositoryImages='1';document.body.append(script)})();
 
+
+;(()=>{if(document.querySelector('script[data-backend-updates]'))return;const script=document.createElement('script');script.src='/backend-updates.js?v=88';script.dataset.backendUpdates='1';document.body.append(script)})();
+

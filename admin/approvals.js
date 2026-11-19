@@ -9,3 +9,6 @@ all.onchange=()=>{for(const input of scope.querySelectorAll('input')){input.chec
 if(row.status==='sent'){const reject=document.createElement('button');reject.textContent='拒绝申请';reject.onclick=()=>{const reason=prompt('填写拒绝理由（会发送给申请人，最多500字）');if(!reason?.trim())return;run(async()=>{const result=await api('POST',{id:row.id,action:'refuse',reason:reason.trim()});await load();msg(result.message)})};card.append(reject)}$('review-list').append(card)}msg(b.applications.length?'已加载申请，请分配维护游戏后审批。':'暂无申请')}
 $('reload-reviews').onclick=()=>run(load);run(load);
 })();
+
+;(()=>{if(document.querySelector('script[data-backend-updates]'))return;const script=document.createElement('script');script.src='/backend-updates.js?v=88';script.dataset.backendUpdates='1';document.body.append(script)})();
+
