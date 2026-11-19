@@ -155,7 +155,7 @@
       "preDownloadAt": null,
       "officialUrl": "https://endfield.hypergryph.com",
       "previewRecapUrl": null,
-      "previewBannerUrl": "https://i0.hdslb.com/bfs/new_dyn/d1fb63e04b7d6274d033fdae6a7ae71b1265652806.png",
+      "previewBannerUrl": "/assets/games/1120end.webp",
       "previewUrl": "https://live.bilibili.com/h5/1921300321",
       "previewAt": "2026-11-21T19:30:00+08:00",
       "codesExpireAt": null,
@@ -647,7 +647,7 @@
       "category": "奖励",
       "startAt": "2026-11-18T12:00:00+08:00",
       "endAt": "2026-11-26T10:14:00+08:00",
-      "imageUrl": "https://web.hycdn.cn/upload/image/20261118/fe7771ec2f077d0a2504210c10749ad8.png",
+      "imageUrl": "/assets/games/1118end.png",
       "sourceUrl": ""
     }
   ]
