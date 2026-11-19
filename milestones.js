@@ -33,5 +33,4 @@ function milestoneRender(){
  milestones.classList.toggle("milestones-empty",!count);if(!count)milestones.append(n("p","","暂无版本大事件"));
 }
 const beforeMilestoneRender=render;render=function(){beforeMilestoneRender();milestoneRender()};milestoneRender();
-async function refreshManualMilestones(){try{const r=await fetch("/data/manual.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)return;const manual=await r.json();if(!S.feed)return;for(const g of manual.games||[]){const target=S.feed.games.find(x=>x.id===g.id);if(target)Object.assign(target,g)}for(const e of manual.events||[]){const target=S.feed.events.find(x=>x.id===e.id);if(target)Object.assign(target,e);else if(e.featured)S.feed.events.push(e)}render()}catch{}}
-setTimeout(refreshManualMilestones,1500);setInterval(refreshManualMilestones,60000);
+// v92: all milestone data comes from the authoritative feed handled by app.js.
