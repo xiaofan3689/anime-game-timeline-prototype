@@ -1,6 +1,25 @@
-(()=>{const role=location.pathname.split('/')[1],id=new URL(location.href).searchParams.get('id'),api='/api/'+role+'/preview',frame=document.querySelector('iframe'),dialog=document.querySelector('dialog'),status=document.querySelector('#status');let timer;
-async function finish(action){const r=await fetch(api,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id,action})}),b=await r.json();if(!r.ok){status.textContent=b.error;return}frame.remove();dialog.close();status.textContent=action==='verify'?'已确认验证，地址已失效。请回到编辑页提交。':'已返回修改，地址已失效。请回到编辑页。';window.close()}
-document.querySelector('#more').onclick=()=>{dialog.close();start()};document.querySelector('#back').onclick=()=>finish('cancel');document.querySelector('#verify').onclick=()=>finish('verify');
-let elapsed=0;function start(){elapsed=0;clearInterval(timer);timer=setInterval(()=>{if(document.hidden)return;if(++elapsed>=10){clearInterval(timer);dialog.showModal()}},1000)}
-(async()=>{const r=await fetch(api+'?id='+encodeURIComponent(id),{cache:'no-store'}),b=await r.json();if(!r.ok)throw Error(b.error);const feed=JSON.stringify(b.feed).replace(/</g,'\\u003c');const boot=`<base href="/"><script>const previewFeed=${feed};window.fetch=async(input,options)=>{const path=new URL(typeof input==='string'?input:input.url,location.href).pathname;if(path.endsWith('/data/events.json'))return new Response(JSON.stringify(previewFeed),{headers:{'Content-Type':'application/json'}});throw Error('预览禁止网络写入及账号操作')};const memory={};Object.defineProperty(window,'localStorage',{value:{getItem:k=>k==='anime-timeline-games-v1'?JSON.stringify(previewFeed.games.map(g=>g.id)):memory[k]||null,setItem:(k,v)=>memory[k]=v,removeItem:k=>delete memory[k]}});Object.defineProperty(window,'sessionStorage',{value:{getItem:k=>memory['session:'+k]||null,setItem:(k,v)=>memory['session:'+k]=v,removeItem:k=>delete memory['session:'+k]}});<\/script>`;frame.srcdoc=b.html.replace('<head>','<head>'+boot);status.textContent='草稿预览，不会正式提交；停留10秒后确认。';frame.onload=start})().catch(e=>status.textContent=e.message);
+function previewBootstrap(feed,id){
+ const memory={};
+ Object.defineProperty(window,'localStorage',{value:{getItem:k=>k==='anime-timeline-games-v1'?JSON.stringify(feed.games.map(g=>g.id)):memory[k]||null,setItem:(k,v)=>memory[k]=String(v),removeItem:k=>delete memory[k]}});
+ Object.defineProperty(window,'sessionStorage',{value:{getItem:k=>memory['session:'+k]||null,setItem:(k,v)=>memory['session:'+k]=String(v),removeItem:k=>delete memory['session:'+k]}});
+ window.fetch=async input=>{const path=new URL(typeof input==='string'?input:input.url,document.baseURI).pathname;if(path==='/data/events.json')return new Response(JSON.stringify(feed),{headers:{'Content-Type':'application/json'}});throw Error('预览禁止正式数据请求和账号操作')};
+ let ready=false;function report(){if(ready)return;ready=true;parent.postMessage({type:'draft-preview-ready',id},'*')}
+ window.addEventListener('timeline-feed-updated',report,{once:true});
+ window.addEventListener('load',()=>{if(document.querySelector('#timeline .timeline-board,#timeline .empty'))report()});
+}
+function buildPreviewHTML(html,feed,id){
+ const doc=new DOMParser().parseFromString(html,'text/html');
+ doc.querySelectorAll('base').forEach(e=>e.remove());const base=doc.createElement('base');base.href=location.origin+'/';
+ const script=doc.createElement('script');script.textContent='('+previewBootstrap.toString()+')('+JSON.stringify(feed).replace(/</g,()=>String.fromCharCode(92)+'u003c')+','+JSON.stringify(id)+');';
+ doc.head.prepend(base,script);return '<!doctype html>'+doc.documentElement.outerHTML;
+}
+(()=>{
+ const role=location.pathname.split('/')[1],id=new URL(location.href).searchParams.get('id'),api='/api/'+role+'/preview',frame=document.querySelector('iframe'),dialog=document.querySelector('dialog'),status=document.querySelector('#status');let timer,elapsed=0,finishing=false;
+ async function jsonRequest(options){const r=await fetch(api+(options?'':'?id='+encodeURIComponent(id)),options||{cache:'no-store'});let b;try{b=await r.json()}catch{throw Error('预览接口返回非 JSON（HTTP '+r.status+'），请检查登录和接口部署')}if(!r.ok)throw Error(b.error||'预览请求失败');return b}
+ async function finish(action){if(finishing)return;finishing=true;try{await jsonRequest({method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id,action})});clearInterval(timer);frame.remove();dialog.close();status.textContent=action==='verify'?'已验证，预览网址已失效。请回编辑页提交。':'预览网址已失效。请回编辑页修改。';window.close()}catch(e){status.textContent=e.message}finally{finishing=false}}
+ function start(){elapsed=0;clearInterval(timer);timer=setInterval(()=>{if(document.hidden)return;if(++elapsed>=10){clearInterval(timer);dialog.showModal()}},1000)}
+ document.querySelector('#more').onclick=()=>{dialog.close();start()};document.querySelector('#back').onclick=()=>finish('cancel');document.querySelector('#verify').onclick=()=>finish('verify');
+ window.addEventListener('message',event=>{if(event.source!==frame.contentWindow||event.data?.type!=='draft-preview-ready'||event.data?.id!==id)return;status.textContent='草稿已加载，前台预览10秒后确认。';start()},{once:false});
+ if(!id){status.textContent='缺少预览编号，请返回编辑页重新创建。';return}
+ jsonRequest().then(b=>{frame.srcdoc=buildPreviewHTML(b.html,b.feed,id);status.textContent='正在加载草稿主页；尚未开始计时。'}).catch(e=>{status.textContent=e.message});
 })();
