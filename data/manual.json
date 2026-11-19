@@ -153,11 +153,11 @@
       "previousVersionAt": null,
       "updateReferenceAt": null,
       "preDownloadAt": null,
-      "officialUrl": null,
+      "officialUrl": "https://endfield.hypergryph.com",
       "previewRecapUrl": null,
-      "previewBannerUrl": null,
-      "previewUrl": null,
-      "previewAt": null,
+      "previewBannerUrl": "https://i0.hdslb.com/bfs/new_dyn/d1fb63e04b7d6274d033fdae6a7ae71b1265652806.png",
+      "previewUrl": "https://live.bilibili.com/h5/1921300321",
+      "previewAt": "2026-11-21T19:30:00+08:00",
       "codesExpireAt": null,
       "previewCodes": []
     },
@@ -638,6 +638,16 @@
       "endAt": "2026-12-17T06:00:00+08:00",
       "imageUrl": "https://yh.wanmei.com/resources/jpg/20261118/11432ed6309180de4271910df88ef238d096.jpg",
       "sourceUrl": "https://yh.wanmei.com/m/news/gamebroad/20261118/265103.html"
+    },
+    {
+      "featured": true,
+      "gameId": "end",
+      "title": "特别答谢｜致管理员的谢礼",
+      "category": "奖励",
+      "startAt": "2026-11-18T12:00:00+08:00",
+      "endAt": "2026-11-26T10:14:00+08:00",
+      "imageUrl": "https://web.hycdn.cn/upload/image/20261118/fe7771ec2f077d0a2504210c10749ad8.png",
+      "sourceUrl": ""
     }
   ]
 }
