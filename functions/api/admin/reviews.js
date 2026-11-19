@@ -19,8 +19,8 @@ export async function onRequest({request,env}){
   const sendMail=async(...args)=>{const {sendApplicationMail}=await import('../../../lib/qq-smtp.js');return sendApplicationMail(...args)};
   return json(await reviewApplication(env,actor,input,sendMail));
  }catch(e){
-  const code=e.code?.startsWith('ACCESS_')?e.code:'REVIEW_'+stage.toUpperCase()+'_FAILED';
-  console.error(JSON.stringify({event:'admin_reviews_failed',requestId,stage,code,errorType:e.name}));
+  const code=e.code?.startsWith('ACCESS_')||e.code?.startsWith('REVIEW_')?e.code:'REVIEW_'+stage.toUpperCase()+'_FAILED';
+  console.error(JSON.stringify({event:'admin_reviews_failed',requestId,stage,code,errorType:e.name,causeType:e.cause?.message||undefined}));
   let message=e.message||'请求失败';
   if(stage==='applications')message='申请记录读取失败，请检查 APPLICATION_DB 绑定及 applications.sql 表结构';
   return json({error:message,code,requestId},e.status||(['applications','catalog'].includes(stage)?503:400));
