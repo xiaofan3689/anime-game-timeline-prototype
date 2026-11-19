@@ -1,4 +1,5 @@
 function previewBootstrap(feed,id,siteOrigin){
+ Object.defineProperty(window,"__PREVIEW_ORIGIN__",{value:siteOrigin});
  const reportError=e=>parent.postMessage({type:'draft-preview-error',id,message:String(e.message||e.reason?.message||'脚本或资源加载失败').slice(0,300)},'*');window.addEventListener('error',reportError);window.addEventListener('unhandledrejection',reportError);const memory={};
  Object.defineProperty(window,'localStorage',{value:{getItem:k=>k==='anime-timeline-games-v1'?JSON.stringify(feed.games.map(g=>g.id)):memory[k]||null,setItem:(k,v)=>memory[k]=String(v),removeItem:k=>delete memory[k]}});
  Object.defineProperty(window,'sessionStorage',{value:{getItem:k=>memory['session:'+k]||null,setItem:(k,v)=>memory['session:'+k]=String(v),removeItem:k=>delete memory['session:'+k]}});

@@ -18,7 +18,7 @@ function status(e){const now=Date.now();return now<Date.parse(e.startAt)?"upcomi
 function day(d){const x=new Date(d);x.setHours(0,0,0,0);return x}
 function dayIndex(d,origin){return Math.round((Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())-Date.UTC(origin.getFullYear(),origin.getMonth(),origin.getDate()))/DAY)}
 function position(value,origin){const d=new Date(value),begin=day(d),next=new Date(begin);next.setDate(next.getDate()+1);return(dayIndex(d,origin)+(d-begin)/(next-begin))*DW}
-function url(value){if(typeof value==="string"&&value.startsWith("/assets/")&&!value.includes(".."))return new URL(value,location.origin).href;try{const u=new URL(value);return /^https?:$/.test(u.protocol)?u.href:null}catch{return null}}
+function url(value){if(typeof value==="string"&&value.startsWith("/assets/")&&!value.includes("..")){try{return new URL(value,window.__PREVIEW_ORIGIN__||location.origin).href}catch{return null}};try{const u=new URL(value);return /^https?:$/.test(u.protocol)?u.href:null}catch{return null}}
 function remain(end,now=Date.now()){
  const ms=Date.parse(end)-now;if(!Number.isFinite(ms))return "时间待确认";if(ms<=0)return "已结束";
  const seconds=Math.ceil(ms/1000),days=Math.floor(seconds/86400),hours=Math.floor(seconds%86400/3600),minutes=Math.floor(seconds%3600/60),secs=seconds%60;
