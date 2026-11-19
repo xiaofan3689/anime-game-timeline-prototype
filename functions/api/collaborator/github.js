@@ -1,8 +1,9 @@
 import {member,body,json,endpoint,audit} from '../../../lib/collaborator-auth.js';
 import {seal,verifyCredential,credential} from '../../../lib/collaborator-github.js';
+import {usesOwnGithub} from '../../../lib/collaborator-mode.js';
 export const onRequest=endpoint(async({request,env})=>{
  const u=await member(request,env),db=env.APPLICATION_DB;
- if(request.method==='GET'){const c=await db.prepare('SELECT login,fork_repo,updated_at FROM collaborator_credentials WHERE email=?').bind(u.email).first();return json({connection:c,appConfigured:!!(env.GITHUB_CLIENT_ID&&env.GITHUB_CLIENT_SECRET),installUrl:env.GITHUB_APP_SLUG&&/^[a-z0-9-]+$/.test(env.GITHUB_APP_SLUG)?'https://github.com/apps/'+env.GITHUB_APP_SLUG+'/installations/new':null})}
+ if(request.method==='GET'){const c=await db.prepare('SELECT login,fork_repo,updated_at FROM collaborator_credentials WHERE email=?').bind(u.email).first();return json({useGithub:await usesOwnGithub(env,u.email),connection:c,appConfigured:!!(env.GITHUB_CLIENT_ID&&env.GITHUB_CLIENT_SECRET),installUrl:env.GITHUB_APP_SLUG&&/^[a-z0-9-]+$/.test(env.GITHUB_APP_SLUG)?'https://github.com/apps/'+env.GITHUB_APP_SLUG+'/installations/new':null})}
  if(request.method==='DELETE'){await db.prepare('DELETE FROM collaborator_credentials WHERE email=?').bind(u.email).run();await audit(env,u.email,null,'github-disconnect');return json({ok:true})}
  if(request.method!=='POST')return json({error:'方法不支持'},405);
  const b=await body(request);
