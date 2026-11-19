@@ -137,7 +137,7 @@
     }
   ],
   "schemaVersion": 1,
-  "generatedAt": "2026-11-19T05:20:08+00:00",
+  "generatedAt": "2026-11-19T06:15:29+00:00",
   "games": [
     {
       "id": "ys",
@@ -281,15 +281,15 @@
       "versionNoticeAt": "2026-10-15T11:00:00+08:00",
       "nextVersionAt": "2026-11-26T11:00:00+08:00",
       "nextVersionEstimated": true,
-      "previewBannerUrl": null,
-      "previewUrl": null,
-      "previewAt": null,
+      "previewBannerUrl": "https://i0.hdslb.com/bfs/new_dyn/d1fb63e04b7d6274d033fdae6a7ae71b1265652806.png",
+      "previewUrl": "https://live.bilibili.com/h5/1921300321",
+      "previewAt": "2026-11-21T19:30:00+08:00",
       "codesExpireAt": null,
       "previewCodes": [],
       "previousVersionAt": null,
       "updateReferenceAt": null,
       "preDownloadAt": null,
-      "officialUrl": null,
+      "officialUrl": "https://endfield.hypergryph.com",
       "previewRecapUrl": null,
       "syncWithSra": true
     },
@@ -6638,6 +6638,19 @@
     },
     {
       "featured": true,
+      "id": "6de12df85b892e5d4606",
+      "gameId": "end",
+      "title": "特别答谢｜致管理员的谢礼",
+      "startAt": "2026-11-18T12:00:00+08:00",
+      "endAt": "2026-11-26T10:14:00+08:00",
+      "category": "奖励",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
+      "sourceUrl": "",
+      "imageUrl": "https://web.hycdn.cn/upload/image/20261118/fe7771ec2f077d0a2504210c10749ad8.png"
+    },
+    {
+      "featured": true,
       "id": "0f48d42d8fbfdd4da444",
       "gameId": "nte",
       "title": "《异环》TGA 2026提名答谢",
@@ -7170,126 +7183,126 @@
     {
       "gameId": "ys",
       "url": "https://starrailassistant.top/api/v1/activity/ys.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "nte",
       "url": "https://starrailassistant.top/api/v1/activity/nte.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "sr",
       "url": "https://starrailassistant.top/api/v1/activity/sr.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "zzz",
       "url": "https://starrailassistant.top/api/v1/activity/zzz.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ww",
       "url": "https://starrailassistant.top/api/v1/activity/ww.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ak",
       "url": "https://starrailassistant.top/api/v1/activity/ak.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 4
     },
     {
       "gameId": "end",
       "url": "https://starrailassistant.top/api/v1/activity/end.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 14
     },
     {
       "gameId": "ba-cn",
       "url": "https://starrailassistant.top/api/v1/activity/ba-cn.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 3
     },
     {
       "gameId": "ba-jp",
       "url": "https://starrailassistant.top/api/v1/activity/ba-jp.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "ba-global",
       "url": "https://starrailassistant.top/api/v1/activity/ba-global.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "xtlr",
       "url": "https://starrailassistant.top/api/v1/activity/xtlr.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "infinitynikki",
       "url": "https://starrailassistant.top/api/v1/activity/infinitynikki.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "gf2",
       "url": "https://starrailassistant.top/api/v1/activity/gf2.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "pgr",
       "url": "https://starrailassistant.top/api/v1/activity/pgr.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "czn",
       "url": "https://starrailassistant.top/api/v1/activity/czn.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 18
     },
     {
       "gameId": "bd2",
       "url": "https://starrailassistant.top/api/v1/activity/bd2.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "nikke",
       "url": "https://starrailassistant.top/api/v1/activity/nikke.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "hyrz",
       "url": "https://starrailassistant.top/api/v1/activity/hyrz.json",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "status": "ok",
       "eventCount": 12
     },
@@ -7309,7 +7322,7 @@
       "status": "stale",
       "fetchedAt": null,
       "eventCount": 0,
-      "error": "The read operation timed out"
+      "error": "unsupported response schema"
     },
     {
       "gameId": "sr",
@@ -7325,7 +7338,7 @@
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/fgo",
       "status": "ok",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "eventCount": 8,
       "error": null
     },
@@ -7334,7 +7347,7 @@
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/ak",
       "status": "ok",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "eventCount": 23,
       "error": null
     },
@@ -7342,17 +7355,17 @@
       "gameId": "ww",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/mc",
-      "status": "ok",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "status": "stale",
+      "fetchedAt": null,
       "eventCount": 2,
-      "error": null
+      "error": "HTTP Error 500: Internal Server Error"
     },
     {
       "gameId": "pgr",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/pns",
       "status": "ok",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "eventCount": 12,
       "error": null
     },
@@ -7361,7 +7374,7 @@
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/ba",
       "status": "ok",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "eventCount": 9,
       "error": null
     },
@@ -7370,7 +7383,7 @@
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/ba-jp",
       "status": "ok",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "eventCount": 183,
       "error": null
     },
@@ -7379,7 +7392,7 @@
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/nikke",
       "status": "ok",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "eventCount": 121,
       "error": null
     },
@@ -7388,7 +7401,7 @@
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/cbjq",
       "status": "ok",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "eventCount": 16,
       "error": null
     },
@@ -7396,17 +7409,17 @@
       "gameId": "end",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/endfield",
-      "status": "ok",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "status": "stale",
+      "fetchedAt": null,
       "eventCount": 19,
-      "error": null
+      "error": "The read operation timed out"
     },
     {
       "gameId": "nte",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/nte",
       "status": "ok",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "eventCount": 3,
       "error": null
     },
@@ -7415,7 +7428,7 @@
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/zzz",
       "status": "ok",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "eventCount": 13,
       "error": null
     },
@@ -7424,7 +7437,7 @@
       "sourceName": "Ennead",
       "url": "https://api.ennead.cc/mihoyo/honkai/news/events?lang=zh-cn",
       "status": "ok",
-      "fetchedAt": "2026-11-19T05:20:08+00:00",
+      "fetchedAt": "2026-11-19T06:15:29+00:00",
       "kind": "news"
     }
   ]
