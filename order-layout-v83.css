@@ -1,0 +1,6 @@
+.order-dialog[open]{display:flex!important;flex-direction:column;box-sizing:border-box;max-height:calc(100dvh - 24px)!important;overflow:hidden!important}
+.order-dialog>h2,.order-dialog>p{flex-shrink:0;margin:0 0 10px}
+.order-dialog .order-list{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain}
+.order-dialog .order-actions{flex:0 0 auto;display:flex;gap:8px;padding:12px 0 max(0px,env(safe-area-inset-bottom));background:inherit}
+.order-dialog .order-actions button{flex:1;min-height:42px}
+@media(max-width:680px){.order-dialog[open]{width:calc(100vw - 20px)!important;max-height:calc(100dvh - 24px)!important}.order-dialog .order-actions button{font-size:13px;padding:8px}.order-dialog>p{font-size:12px}}

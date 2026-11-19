@@ -162,6 +162,8 @@ def main():
             manual_game.update({k: games[game["id"]].get(k) for k in ("version", "versionName", "bannerUrl")})
         games[game["id"]] = manual_game
     for item in manual.get("events", []):
+        if item.get("disabled") is True:
+            continue
         game_id, title = item["gameId"], item["title"].strip()
         if game_id not in games or not title:
             raise ValueError("人工活动需要已定义的游戏及非空名称")
@@ -176,9 +178,10 @@ def main():
             "sourceType": "manual", "sourceName": "人工录入",
             "sourceUrl": item.get("sourceUrl"), "imageUrl": item.get("imageUrl"),
         }))
+    suppressed = {e.get("id") or event_id(e["gameId"], e["title"].strip(), iso(e["startAt"])) for e in manual.get("events", []) if e.get("disabled") is True}
     disabled = {g["id"] for g in manual.get("games", []) if g.get("disabled") is True}
     games = {k: v for k, v in games.items() if k not in disabled}
-    events = [e for e in events if e["gameId"] not in disabled]
+    events = [e for e in events if e["gameId"] not in disabled and e["id"] not in suppressed]
     events = list({e["id"]: e for e in events}.values())
     events.sort(key=lambda e: (e["startAt"], e["gameId"], e["title"]))
     if not success and not previous_events and not manual.get("events"):
