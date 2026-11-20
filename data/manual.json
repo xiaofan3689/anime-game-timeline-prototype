@@ -85,7 +85,7 @@
       "updateReferenceAt": null,
       "preDownloadAt": null,
       "officialUrl": "https://zzz.mihoyo.com",
-      "previewRecapUrl": null,
+      "previewRecapUrl": "https://www.bilibili.com/opus/1272753926875119625",
       "previewBannerUrl": "https://fastcdn.mihoyo.com/content-v2/nap/167359/4bf38927676032d6f4e9a1e985bcfdf3_836673183561287863.jpg",
       "previewUrl": "https://live.bilibili.com/32805602",
       "previewAt": "2026-11-20T18:30:00+08:00",
@@ -484,6 +484,54 @@
       "previewAt": null,
       "codesExpireAt": null,
       "previewCodes": []
+    },
+    {
+      "disabled": false,
+      "id": "planet",
+      "name": "星布谷地",
+      "iconUrl": "https://planet.mihoyo.com/favicon.ico",
+      "version": "1.0",
+      "versionName": "公测",
+      "bannerUrl": "https://fastcdn.mihoyo.com/mi18n/hyg_cn/m20260717hy2gujnke8/upload/81bb1188669bbbe02121c7308fc25ad4_1169376224097716465.png",
+      "versionNoticeAt": null,
+      "nextVersionAt": "2026-12-04T12:00:00+08:00",
+      "nextVersionEstimated": false,
+      "syncWithSra": true,
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": "2026-12-01T12:00:00+08:00",
+      "officialUrl": "https://planet.mihoyo.com/",
+      "previewRecapUrl": "https://www.bilibili.com/opus/1265702823245381637",
+      "previewBannerUrl": "https://fastcdn.mihoyo.com/mi18n/hyg_cn/m20260717hy2gujnke8/upload/81bb1188669bbbe02121c7308fc25ad4_1169376224097716465.png",
+      "previewUrl": null,
+      "previewAt": "2026-11-12T00:00:00+08:00",
+      "codesExpireAt": "2027-01-03T00:00:00+08:00",
+      "previewCodes": [
+        "XBGD1204"
+      ]
+    },
+    {
+      "disabled": false,
+      "id": "testa",
+      "name": "123",
+      "iconUrl": "/assets/games/XBGD1204.webp",
+      "version": "1",
+      "versionName": "1",
+      "bannerUrl": "/assets/games/1120end.webp",
+      "versionNoticeAt": null,
+      "nextVersionAt": "2026-11-11T00:00:00+08:00",
+      "nextVersionEstimated": false,
+      "syncWithSra": false,
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": null,
+      "officialUrl": null,
+      "previewRecapUrl": "/assets/games/1118end.png",
+      "previewBannerUrl": "/assets/games/1118end.png",
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": []
     }
   ],
   "events": [
@@ -678,6 +726,18 @@
       "endAt": "2026-12-01T03:59:00+08:00",
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/19/f67983c6a4ac940510a17957aed4eef3_9068928630684717048.jpg",
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
+    },
+    {
+      "disabled": false,
+      "featured": false,
+      "id": "77ba51f8-9df5-4548-a37f-3a91b4d5c291",
+      "gameId": "planet",
+      "title": "公测前瞻兑换码",
+      "category": "奖励",
+      "startAt": "2026-12-04T12:00:00+08:00",
+      "endAt": "2027-01-03T00:00:00+08:00",
+      "imageUrl": "/assets/games/planet/XBGD1204.webp",
+      "sourceUrl": ""
     }
   ]
 }
