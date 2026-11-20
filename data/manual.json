@@ -834,6 +834,36 @@
       "endAt": "2026-12-21T11:59:00+08:00",
       "imageUrl": "https://prod-alicdn-community.kurobbs.com/forum/528aff07a9604b149680e11fb015541620261111.jpg",
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/mc"
+    },
+    {
+      "dailyCheckin": true,
+      "checkinTarget": 7,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "180be63184b620da72d0",
+      "gameId": "zzz",
+      "title": "「全新放送」活动说明",
+      "category": "活动",
+      "startAt": "2026-10-20T14:15:00+08:00",
+      "endAt": "2026-12-01T03:59:00+08:00",
+      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/16/313b01a985b6a742c300528834d608c9_4921857407890368250_transformed.png",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
+    },
+    {
+      "dailyCheckin": true,
+      "checkinTarget": 7,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "d874f5df42556571f470",
+      "gameId": "zzz",
+      "title": "「『嗯呢』从天降」活动说明",
+      "category": "活动",
+      "startAt": "2026-11-09T14:30:00+08:00",
+      "endAt": "2026-12-01T03:59:00+08:00",
+      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/06/41167d6e12b410834dbc7b567f0635ad_7274554495606633977_transformed.jpg",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
     }
   ]
 }
