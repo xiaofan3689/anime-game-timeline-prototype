@@ -511,7 +511,7 @@
       ]
     },
     {
-      "disabled": false,
+      "disabled": true,
       "id": "testa",
       "name": "123",
       "iconUrl": "/assets/games/XBGD1204.webp",
@@ -536,6 +536,9 @@
   ],
   "events": [
     {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
       "disabled": false,
       "featured": false,
       "id": "70669e377f1ad7084826",
@@ -548,6 +551,9 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/ys.json"
     },
     {
+      "dailyCheckin": false,
+      "checkinTarget": 7,
+      "activityUrl": "",
       "disabled": false,
       "featured": true,
       "id": "2446bede44d989bb7c9f",
@@ -560,6 +566,9 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/sr.json"
     },
     {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
       "disabled": false,
       "featured": false,
       "id": "6cef5be3d08e77ef2468",
@@ -572,6 +581,9 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/ba-global.json"
     },
     {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
       "disabled": false,
       "featured": false,
       "id": "d9b31b81523ca5057951",
@@ -584,6 +596,9 @@
       "sourceUrl": "https://bluearchive-cn.com/news/1997"
     },
     {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
       "disabled": false,
       "featured": false,
       "id": "589740b6794dee341eb5",
@@ -596,6 +611,9 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/xtlr.json"
     },
     {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
       "disabled": false,
       "featured": false,
       "id": "f49a16a7d2bd5452deba",
@@ -608,6 +626,9 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
       "disabled": false,
       "featured": false,
       "id": "6ca8c641e9abd9dd36a0",
@@ -620,6 +641,9 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
       "disabled": false,
       "featured": false,
       "id": "9b565b5310440990f27d",
@@ -632,6 +656,9 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
       "disabled": false,
       "featured": false,
       "id": "26a31a520db968fabb81",
@@ -644,6 +671,9 @@
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
     },
     {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
       "disabled": false,
       "featured": false,
       "id": "a3e7e413ff2cd7f64440",
@@ -656,6 +686,9 @@
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
     },
     {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
       "disabled": false,
       "featured": false,
       "id": "13dfaf8bbde9847203c1",
@@ -668,6 +701,9 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
       "disabled": false,
       "featured": false,
       "id": "790e6d83146e249c7f26",
@@ -680,6 +716,9 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
       "disabled": false,
       "featured": false,
       "id": "0c085f366efeb73f35ac",
@@ -692,6 +731,9 @@
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
     },
     {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
       "disabled": false,
       "featured": true,
       "id": "0f48d42d8fbfdd4da444",
@@ -704,6 +746,9 @@
       "sourceUrl": "https://yh.wanmei.com/m/news/gamebroad/20261118/265103.html"
     },
     {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
       "disabled": false,
       "featured": true,
       "id": "6de12df85b892e5d4606",
@@ -716,6 +761,9 @@
       "sourceUrl": ""
     },
     {
+      "dailyCheckin": false,
+      "checkinTarget": 7,
+      "activityUrl": "https://act.mihoyo.com/zzz/event/e20261120reserve-auy9i1/index.html",
       "disabled": false,
       "featured": true,
       "id": "c27dedc9e308d390b4eb",
@@ -728,6 +776,9 @@
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
     },
     {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
       "disabled": false,
       "featured": false,
       "id": "77ba51f8-9df5-4548-a37f-3a91b4d5c291",
@@ -738,6 +789,51 @@
       "endAt": "2027-01-03T00:00:00+08:00",
       "imageUrl": "/assets/games/planet/XBGD1204.webp",
       "sourceUrl": ""
+    },
+    {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "0fbf9de4521b2efe359b",
+      "gameId": "nte",
+      "title": "环期赏令",
+      "category": "活动",
+      "startAt": "2026-11-05T11:00:00+08:00",
+      "endAt": "2026-12-16T23:59:00+08:00",
+      "imageUrl": "https://i0.hdslb.com/bfs/new_dyn/e8db1397ced4007264a4f69a17d003743546636978489848.jpg",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/nte.json"
+    },
+    {
+      "dailyCheckin": false,
+      "checkinTarget": 7,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "7b7afa6c12b5a14635b3",
+      "gameId": "nte",
+      "title": "环期赠礼",
+      "category": "活动",
+      "startAt": "2026-11-05T11:00:00+08:00",
+      "endAt": "2026-12-17T05:59:00+08:00",
+      "imageUrl": "https://i0.hdslb.com/bfs/new_dyn/e274ca87fc4f3c5eb4ff90dc8a0491313546636978489848.jpg",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/nte.json"
+    },
+    {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "ae26e88614438502a8dc",
+      "gameId": "ww",
+      "title": "忆旅赠礼",
+      "category": "活动",
+      "startAt": "2026-11-12T11:00:00+08:00",
+      "endAt": "2026-12-21T11:59:00+08:00",
+      "imageUrl": "https://prod-alicdn-community.kurobbs.com/forum/528aff07a9604b149680e11fb015541620261111.jpg",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/mc"
     }
   ]
 }
