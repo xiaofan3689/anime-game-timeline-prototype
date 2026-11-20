@@ -654,7 +654,7 @@
     },
     {
       "disabled": false,
-      "featured": true,
+      "featured": false,
       "id": "c27dedc9e308d390b4eb",
       "gameId": "zzz",
       "title": "「决战于黎明之前」活动说明",
