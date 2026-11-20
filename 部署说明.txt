@@ -1,4 +1,2 @@
-基于v107覆盖部署Pages，无需SQL。新“不使用本人GitHub”提案采用app-bot通道：App安装令牌创建主仓库临时分支、bot作者Commit及bot PR；管理员后台批准后，GH_TOKEN代表管理员执行GitHub审核，App执行合并及删除分支。退回/拒绝沿用管理员关闭PR，分支删除由App执行。
-App须具有主仓库Contents及Pull requests读写权限，管理员GH_TOKEN须具备审核权限。bot不能批准自己创建的PR，因此GitHub审核仍由管理员令牌执行，不绕过仓库保护。
-旧robot通道提案保留原管理员代提交身份，以免旧PR无法继续处理；新建提案才按新方式执行。旧退回提案要沿用编号时若遇模式冲突，请勿强行重试，保留旧模式处理或另建新草稿。
-语法检查通过，尚未真实GitHub端到端验收。
+修复v107/v108提交接口调用cleanupBranch但未导入的问题。覆盖functions/api/collaborator/submit.js并部署Pages即可，无需SQL、无需修改权限。依赖v108已有lib/proposal-cleanup.js。
+已检查提交接口显式导入并通过语法检查；此修复不代表其他GitHub权限或提案状态错误已解决。

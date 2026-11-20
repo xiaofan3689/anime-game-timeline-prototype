@@ -1,3 +1,4 @@
+import {cleanupBranch} from '../../../lib/proposal-cleanup.js';
 import {requirePreview} from '../../../lib/content-preview.js';
 import {member,body,json,endpoint,fail} from '../../../lib/collaborator-auth.js';
 import {baseline,credential,gh,mainRepo} from '../../../lib/collaborator-github.js';
@@ -30,3 +31,4 @@ export const onRequest=endpoint(async({request,env})=>{
  const lock=await db.prepare("UPDATE collaborator_reviews_v79 SET status='preparing',updated_at=? WHERE id=? AND (status='failed' OR (status='preparing' AND updated_at<?))").bind(now,p.id,now-120000).run();if(!lock.meta.changes)throw fail('提案正在处理',409);
  try{const result=await buildPR(env,p);await db.prepare('DELETE FROM collaborator_revision_links WHERE email=? AND id=?').bind(u.email,p.id).run();return json({ok:true,...result})}catch(e){await db.prepare("UPDATE collaborator_reviews_v79 SET status='failed',note=?,updated_at=? WHERE id=? AND status='preparing'").bind(e.message,Date.now(),p.id).run();throw e}
 });
+
