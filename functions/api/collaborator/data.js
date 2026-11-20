@@ -13,9 +13,10 @@ export const onRequest=endpoint(async({request,env})=>{
    await db.prepare('INSERT OR IGNORE INTO collaborator_drafts_v79 VALUES(?,?,?,?,?,?,?)').bind(u.email,base.sha,JSON.stringify(base.data),JSON.stringify(catalog),JSON.stringify(initial),revision,Date.now()).run();
    draft=await db.prepare('SELECT * FROM collaborator_drafts_v79 WHERE email=?').bind(u.email).first();
   }
+  const latest=await baseline(env);const stale=latest.sha!==draft.base_sha;
   const data=JSON.parse(draft.data);if(data.games.some(g=>!u.games.includes(g.id)))throw fail('权限已变化，请点击重新加载最新数据',409);
   const items=await db.prepare('SELECT id,status,pr_url,note,head_sha,created_at FROM collaborator_reviews_v79 WHERE email=? AND id NOT IN (SELECT id FROM collaborator_hidden_records) ORDER BY created_at DESC LIMIT 50').bind(u.email).all();
-  const catalog=JSON.parse(draft.catalog);return json({email:u.email,games:u.games,revision:draft.revision,baseSha:draft.base_sha,data,sourceEvents:catalog.events.filter(e=>u.games.includes(e.gameId)),items:items.results});
+  const catalog=JSON.parse(draft.catalog);return json({email:u.email,games:u.games,revision:draft.revision,baseSha:draft.base_sha,latestBaseSha:latest.sha,stale,data,sourceEvents:catalog.events.filter(e=>u.games.includes(e.gameId)),items:items.results});
  }
  if(request.method==='DELETE'){await db.prepare('DELETE FROM collaborator_revision_links WHERE email=?').bind(u.email).run();
   await db.prepare('DELETE FROM collaborator_drafts_v79 WHERE email=?').bind(u.email).run();return json({ok:true});
