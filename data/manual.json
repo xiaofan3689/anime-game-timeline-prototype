@@ -551,7 +551,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/ys.json"
     },
     {
-      "dailyCheckin": false,
+      "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "",
       "disabled": false,
@@ -761,7 +761,7 @@
       "sourceUrl": ""
     },
     {
-      "dailyCheckin": false,
+      "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "https://act.mihoyo.com/zzz/event/e20261120reserve-auy9i1/index.html",
       "disabled": false,
