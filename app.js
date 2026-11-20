@@ -124,3 +124,33 @@ orderButton.onclick=openGameOrder;
 setInterval(()=>{if(document.hidden)return;document.querySelectorAll('[data-countdown-end]').forEach(el=>{el.textContent=(el.dataset.countdownPrefix||'')+remain(el.dataset.countdownEnd)})},1000);
 
 
+
+// Game catalog acknowledgement is independent from the user's selected games.
+(()=>{
+ const seenKey='timeline-known-games-v115';let dialog=null,shown=[];
+ const read=()=>{try{const v=JSON.parse(localStorage.getItem(seenKey));return Array.isArray(v)?v:null}catch{return null}};
+ const write=ids=>localStorage.setItem(seenKey,JSON.stringify([...new Set(ids)]));
+ function check(){
+  if(!S.feed||window.__PREVIEW_ORIGIN__)return;
+  const ids=S.feed.games.map(g=>g.id);let prior=read();
+  let existing=false;try{existing=Array.isArray(JSON.parse(localStorage.getItem(KEY)))}catch{}
+  // First installation establishes the catalog baseline; never guess which historical games are new.
+  if(!prior){try{write(ids)}catch{}return}
+  if(!existing){try{write(ids)}catch{}return}
+  if(dialog?.open)return;
+  const additions=S.feed.games.filter(g=>!prior.includes(g.id));if(!additions.length)return;
+  if(!$('game-modal').hidden||document.querySelector('dialog[open]'))return;
+  shown=additions.map(g=>g.id);dialog=document.createElement('dialog');dialog.className='game-picker game-update-dialog';
+  dialog.append(n('h2','','游戏更新提醒'),n('p','','本网站新增以下游戏，如有需求可进行勾选，若无需求请点击关闭按钮'));
+  const list=n('div','game-options');
+  for(const g of additions){const label=n('label','game-choice'),input=n('input'),copy=n('span','game-choice-copy');input.type='checkbox';input.value=g.id;input.disabled=cnOnly&&window.timelineIsForeignGame(g);copy.append(n('strong','',g.name),n('small','',g.version?[g.version,g.versionName].filter(Boolean).join(' · '):'版本信息待更新'));label.append(input,icon(g),copy);list.append(label)}
+  const message=n('p','picker-message'),actions=n('div','picker-actions'),saveButton=n('button','primary','保存并排序'),close=n('button','','关闭');saveButton.type=close.type='button';
+  function finish(save){const picked=[...list.querySelectorAll('input:checked:not(:disabled)')].map(i=>i.value);if(save&&!picked.length){message.textContent='请勾选游戏，或点击关闭表示不选择。';return}
+   const previous=new Set(S.selected);if(save)for(const id of picked)S.selected.add(id);
+   try{if(save)localStorage.setItem(KEY,JSON.stringify([...S.selected]));write([...(read()||[]),...shown])}catch{S.selected=previous;message.textContent='浏览器无法保存，请允许本站存储后重试。';return}
+   dialog.close();dialog.remove();dialog=null;if(save){enforceRegionSelection();normalizeGameOrder();render();window.dispatchEvent(new Event('timeline-preferences-changed'));openGameOrder()}
+  }
+  saveButton.onclick=()=>finish(true);close.onclick=()=>finish(false);dialog.addEventListener('cancel',e=>e.preventDefault());actions.append(saveButton,close);dialog.append(list,message,actions);document.body.append(dialog);dialog.showModal();
+ }
+ window.addEventListener('timeline-feed-updated',check);setInterval(check,2000);check();
+})();
