@@ -1,3 +1,6 @@
+
+function checkinButton(e){const dates=(()=>{try{return JSON.parse(localStorage.getItem('daily-checkin:'+e.id))||[]}catch{return []}})(),today=new Date(Date.now()+8*3600000).toISOString().slice(0,10),target=Number(e.checkinTarget)||1,b=n('button','','标记签到 '+dates.length+'/'+target);b.disabled=dates.includes(today)||Date.now()<Date.parse(e.startAt)||Date.now()>=Date.parse(e.endAt);b.onclick=()=>{const next=[...new Set([...dates,today])];try{localStorage.setItem('daily-checkin:'+e.id,JSON.stringify(next))}catch{alert('签到保存失败');return}if(next.length>=target)smartUpdate(e.id,'done',true);else{smartRender();milestoneRender();window.updateActivityDialog?.()}};return b}
+function activityHome(e){const href=url(e.activityUrl);if(!href)return null;const a=n('a','official-game-link','前往活动主页');a.href=href;a.target='_blank';a.rel='noopener noreferrer';return a}
 /* Local activity assistant: no account or external AI service required. */
 const SMART_KEY="timeline-progress-v1";
 let progress={};
@@ -22,7 +25,7 @@ function smartRender(){
   const countdown=n("p","",`${games[e.gameId]||e.gameId} · 剩余 ${remain(e.endAt)}`);countdown.dataset.countdownEnd=e.endAt;countdown.dataset.countdownPrefix=`${games[e.gameId]||e.gameId} · 剩余 `;copy.append(n("strong","",e.title),countdown);
   const star=n("button","",matchMedia("(max-width:680px)").matches?"查看详情":progress[e.id]?.star?"★ 已关注":"☆ 关注"),done=n("button","","标记完成");
   star.onclick=()=>{if(matchMedia("(max-width:680px)").matches)window.openActivity?.(e);else smartUpdate(e.id,"star",!progress[e.id]?.star)};done.onclick=()=>smartUpdate(e.id,"done",true);
-  row.append(copy,star,done);list.append(row);
+  row.append(copy,star);if(e.dailyCheckin){if(!matchMedia('(max-width:680px)').matches)row.append(done);row.append(checkinButton(e))}else row.append(done);list.append(row);
  }
  if(!pending.length)list.append(n("p","",events.length?"当前进行中的活动均已标记完成。":"所选游戏暂无进行中的活动。"));
  root.append(list,indicator);
@@ -53,7 +56,7 @@ window.updateActivityDialog=()=>{
  const close=n("button","activity-close","关闭"),title=n("h2","",e.title),game=S.feed?.games.find(g=>g.id===e.gameId),actions=n("div","activity-actions");close.type="button";close.onclick=()=>activityDialog.close();
  activityDialog.append(close,title,n("p","",game?.name||e.gameId),n("p","",`${fmt.format(new Date(e.startAt))} — ${fmt.format(new Date(e.endAt))}`));
  const banner=url(e.imageUrl||game?.bannerUrl);if(banner){const img=document.createElement("img");img.src=banner;img.alt=e.title;img.onerror=()=>img.remove();activityDialog.append(img)}
- const star=n("button","",progress[e.id]?.star?"★ 取消关注":"☆ 关注"),done=n("button","",progress[e.id]?.done?"恢复未完成":"标记完成");star.type=done.type="button";star.onclick=()=>smartUpdate(e.id,"star",!progress[e.id]?.star);done.onclick=()=>smartUpdate(e.id,"done",!progress[e.id]?.done);actions.append(star,done);activityDialog.append(actions);
+ const star=n("button","",progress[e.id]?.star?"★ 取消关注":"☆ 关注"),done=n("button","",progress[e.id]?.done?"恢复未完成":"标记完成");star.type=done.type="button";star.onclick=()=>smartUpdate(e.id,"star",!progress[e.id]?.star);done.onclick=()=>smartUpdate(e.id,"done",!progress[e.id]?.done);actions.append(star,done);if(e.dailyCheckin)actions.append(checkinButton(e));const home=activityHome(e);if(home)actions.append(home);activityDialog.append(actions);
 };
 window.openActivity=e=>{activeActivity=e;window.updateActivityDialog();if(!activityDialog.open)activityDialog.showModal()};
 activityDialog.addEventListener("close",()=>{activeActivity=null});

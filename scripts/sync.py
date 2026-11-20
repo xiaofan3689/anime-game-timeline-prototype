@@ -185,7 +185,7 @@ def main():
         if not any(mark in item["startAt"][10:] for mark in ("+", "-", "Z")) or not any(mark in item["endAt"][10:] for mark in ("+", "-", "Z")):
             raise ValueError("人工活动时间必须带时区偏移，例如 +08:00")
         events.append(valid_event({
-            "featured": item.get("featured") is True, "id": item.get("id") or event_id(game_id, title, start),
+            "dailyCheckin": item.get("dailyCheckin") is True, "checkinTarget": int(item.get("checkinTarget") or 1), "activityUrl": item.get("activityUrl") or "", "featured": item.get("featured") is True, "id": item.get("id") or event_id(game_id, title, start),
             "gameId": game_id, "title": title, "startAt": start, "endAt": end,
             "category": item.get("category") or "活动",
             "sourceType": "manual", "sourceName": "人工录入",
