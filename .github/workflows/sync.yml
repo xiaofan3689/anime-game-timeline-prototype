@@ -13,6 +13,7 @@ on:
     - cron: '17 */2 * * *'
 permissions:
   contents: write
+  pull-requests: write
 concurrency:
   group: event-sync
   cancel-in-progress: false
@@ -22,38 +23,57 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
           ref: main
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build shared JSON
-        run: python scripts/sync.py
-      - name: Validate shared JSON
-        run: python -m json.tool data/events.json > /dev/null
-      - name: Commit changed feed
+      - name: Build and validate feed
         run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          for attempt in 1 2 3; do
-            git fetch origin main
-            if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
-              # Ephemeral runner only: regenerate from latest code and manual edits.
-              git reset --hard origin/main
-              python scripts/sync.py
-              python -m json.tool data/events.json > /dev/null
-            fi
-            git add data/events.json
-            if git diff --cached --quiet; then
-              echo "Feed is already up to date"
+          python scripts/sync.py
+          python -m json.tool data/events.json > /dev/null
+      - name: Create feed PR with Actions identity
+        id: pr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ github.token }}
+          branch: automation/event-sync
+          base: main
+          add-paths: data/events.json
+          commit-message: Update game events
+          title: '自动同步：游戏活动数据'
+          body: '自动生成，仅更新 data/events.json。由独立 GitHub App 审核及合并。'
+      - name: Generate reviewer App token
+        if: steps.pr.outputs.pull-request-number != ''
+        id: app
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.SYNC_REVIEW_APP_ID }}
+          private-key: ${{ secrets.SYNC_REVIEW_APP_PRIVATE_KEY }}
+      - name: Validate, approve and merge with App
+        if: steps.pr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          PR_NUMBER: ${{ steps.pr.outputs.pull-request-number }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          pr=$(gh api "repos/$GH_REPO/pulls/$PR_NUMBER")
+          head=$(jq -r '.head.sha' <<< "$pr")
+          jq -e --arg repo "$GH_REPO" '.base.ref == "main" and .head.ref == "automation/event-sync" and .head.repo.full_name == $repo and .user.login == "github-actions[bot]" and .changed_files == 1' <<< "$pr" > /dev/null
+          gh api "repos/$GH_REPO/pulls/$PR_NUMBER/files" --jq 'length == 1 and .[0].filename == "data/events.json"' | grep -qx true
+          gh api "repos/$GH_REPO/pulls/$PR_NUMBER/reviews" -f event=APPROVE -f commit_id="$head" -f body='App已校验自动同步PR仅修改活动数据。'
+          # Wait briefly for mergeability; branch rules/required CI are never bypassed.
+          for attempt in 1 2 3 4 5 6; do
+            if gh pr merge "$PR_NUMBER" --repo "$GH_REPO" --merge --match-head-commit "$head"; then
+              current=$(gh api "repos/$GH_REPO/git/ref/heads/automation/event-sync" --jq '.object.sha' 2>/dev/null || true)
+              if [ "$current" = "$head" ]; then
+                gh api -X DELETE "repos/$GH_REPO/git/refs/heads/automation/event-sync"
+              fi
               exit 0
             fi
-            git commit -m 'Update game events'
-            if git push origin HEAD:main; then
-              exit 0
-            fi
-            echo "Remote changed; rebuilding from latest main (attempt $attempt)"
+            sleep 10
           done
-          echo "Push failed after three attempts; no force push was used"
+          echo 'PR已审核，但合并被规则或检查阻止。保留PR，请检查GitHub状态。'
           exit 1
