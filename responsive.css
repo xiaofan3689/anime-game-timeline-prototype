@@ -119,3 +119,44 @@ html{scroll-padding-top:16px}body{min-width:0}button,a,input,select{touch-action
  }
 }
 @media(min-width:681px){#smart-panel .smart-list.smart-pages>.smart-row:has(>button:nth-of-type(3)){grid-template-columns:minmax(0,1fr) auto auto}#smart-panel .smart-list.smart-pages>.smart-row:has(>button:nth-of-type(3))>button:nth-of-type(2){grid-column:2}#smart-panel .smart-list.smart-pages>.smart-row:has(>button:nth-of-type(3))>button:last-child{grid-column:3}}
+
+/* v121: consistent, wrapping activity controls; scoped away from timeline cards. */
+.event-dashboard .milestone-card .featured-card-actions,
+.activity-dialog .activity-actions {
+ display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;
+ gap:8px;margin:12px 0 0;min-width:0;
+}
+.event-dashboard .milestone-card .featured-card-actions>button,
+.event-dashboard .milestone-card .featured-card-actions>a.official-game-link,
+.activity-dialog .activity-actions>button,
+.activity-dialog .activity-actions>a.official-game-link {
+ box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;
+ flex:0 0 auto;min-height:36px;height:auto;max-width:100%;margin:0;
+ padding:7px 12px;border:1px solid #82739f;border-radius:9px;
+ background:#3d3455;color:#f4efff;font:inherit;font-size:13px;font-weight:500;
+ line-height:1.4;text-decoration:none;white-space:normal;overflow-wrap:anywhere;
+ cursor:pointer;vertical-align:middle;
+}
+.event-dashboard .milestone-card .featured-card-actions>a.official-game-link,
+.activity-dialog .activity-actions>a.official-game-link {
+ background:#29253d;border-color:#65567f;color:#d5c3ff;
+}
+.event-dashboard .milestone-card .featured-card-actions>button:hover,
+.event-dashboard .milestone-card .featured-card-actions>a:hover,
+.activity-dialog .activity-actions>button:hover,
+.activity-dialog .activity-actions>a:hover {background:#514369}
+.event-dashboard .milestone-card .featured-card-actions>:focus-visible,
+.activity-dialog .activity-actions>:focus-visible {outline:2px solid #d5c3ff;outline-offset:3px}
+.event-dashboard .milestone-card .featured-card-actions>button:disabled,
+.activity-dialog .activity-actions>button:disabled {opacity:.55;cursor:default}
+@media(max-width:680px){
+ .event-dashboard .milestone-card .featured-card-actions{display:flex;gap:6px}
+ .event-dashboard .milestone-card .featured-card-actions>.featured-follow{display:none}
+ .event-dashboard .milestone-card .featured-card-actions>button,
+ .event-dashboard .milestone-card .featured-card-actions>a.official-game-link{
+  flex:1 1 calc(50% - 6px);min-width:0;min-height:36px;padding:7px 5px;font-size:12px;
+ }
+ .event-dashboard .milestone-card .featured-card-actions>a.official-game-link{flex-basis:100%}
+ .activity-dialog .activity-actions{gap:6px}
+ .activity-dialog .activity-actions>button,.activity-dialog .activity-actions>a.official-game-link{min-height:40px}
+}
