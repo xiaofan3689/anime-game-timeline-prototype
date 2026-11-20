@@ -6,7 +6,7 @@
  const style=document.createElement('style');style.textContent='.backend-update-bar{position:sticky;top:0;z-index:10000;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;background:#252238;color:#eee;border-bottom:1px solid #8274ae;font-size:13px}.backend-update-bar button{flex-shrink:0;min-height:38px;padding:7px 12px;cursor:pointer}.backend-update-bar.has-update{background:#513a20}.backend-update-bar span{overflow-wrap:anywhere}@media(max-width:680px){.backend-update-bar{font-size:12px;padding:8px;gap:6px}}';document.head.append(style);
  const page=new URL(location.href);page.hash='';page.searchParams.delete('_backend_refresh');
  const resources=()=>[...new Set([...document.querySelectorAll('script[src],link[rel="stylesheet"][href]')].map(e=>new URL(e.src||e.href,location.href).href).filter(u=>new URL(u).origin===location.origin))];
- const initialResources=resources();let baseline=null,checking=false,changed=false,refreshing=false;
+ const initialResources=resources();let baseline=null,checking=false,changed=false,refreshing=false,hotMessage='';
  const digest=async s=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))).map(b=>b.toString(16).padStart(2,'0')).join('');
  async function read(url,cache){const response=await fetch(url,{cache,credentials:'same-origin',signal:AbortSignal.timeout(12000)});if(!response.ok||response.redirected)throw Error('资源请求失败或登录已过期');const mime=response.headers.get('content-type')||'';if(url!==page.href&&mime.includes('text/html'))throw Error('资源返回登录页面');return response.text()}
  const handlers=new Map();
@@ -34,7 +34,7 @@
  }
 
  async function snapshot(){const role=location.pathname.startsWith('/admin/')?'admin':'collaborator';const response=await fetch('/api/'+role+'/page-version?page='+encodeURIComponent(page.pathname),{cache:'no-store',credentials:'same-origin',signal:AbortSignal.timeout(15000)});const data=await response.json();if(!response.ok)throw Error(data.error||'源码检测失败');if(!/^[a-f0-9]{64}$/.test(data.version||''))throw Error('源码版本无效');return data}
- async function check(){if(checking||changed||refreshing||document.hidden||!navigator.onLine)return;checking=true;try{if(!baseline){baseline=await snapshot();text.textContent='已开始监测 GitHub 对应页面源码提交';return}const latest=await snapshot();if(latest.version!==baseline.version){if(await hotApply(baseline,latest)){baseline=latest;text.textContent='页面已自动更新，编辑内容已保留';return}changed=true;toolbar.classList.add('has-update');text.textContent='本次更新无法自动应用，请先保存草稿，再点击强制刷新。'}else if(latest.repositoryVersion&&latest.repositoryVersion!==baseline.repositoryVersion){text.textContent='GitHub 已有相关源码提交，等待正式部署或核对提交内容；稍后自动重查。';toolbar.classList.add('has-update')}else text.textContent='监测中：暂未发现相关源码新提交'}catch(e){text.textContent='更新检测失败：'+e.message+'；可手动强制刷新。'}finally{checking=false}}
+ async function check(){if(checking||changed||refreshing||document.hidden||!navigator.onLine)return;checking=true;try{if(!baseline){baseline=await snapshot();text.textContent='已开始监测 GitHub 对应页面源码提交';return}const latest=await snapshot();if(latest.version!==baseline.version){if(await hotApply(baseline,latest)){baseline=latest;hotMessage='该次更新为热更新，已自动部署至页面，无需强制更新';text.textContent=hotMessage;toolbar.classList.remove('has-update');button.textContent='手动刷新';return}changed=true;toolbar.classList.add('has-update');text.textContent='本次更新无法自动应用，请先保存草稿，再点击强制刷新。'}else if(latest.repositoryVersion&&latest.repositoryVersion!==baseline.repositoryVersion){text.textContent='GitHub 已有相关源码提交，等待正式部署或核对提交内容；稍后自动重查。';toolbar.classList.add('has-update')}else text.textContent=hotMessage||'监测中：暂未发现相关源码新提交'}catch(e){text.textContent='更新检测失败：'+e.message+'；可手动强制刷新。'}finally{checking=false}}
  button.onclick=async()=>{
   if(refreshing)return;if(!confirm('刷新可能丢失未保存的表单内容。请先保存草稿，确认现在强制刷新？'))return;
   refreshing=true;button.disabled=true;text.textContent='正在重新获取页面资源…';
@@ -46,5 +46,11 @@
    const destination=new URL(location.href);destination.searchParams.set('_backend_refresh',Date.now());location.replace(destination.href);
   }catch{refreshing=false;button.disabled=false;text.textContent='刷新未完成，请检查网络或重新登录后重试；电脑也可按 Ctrl+F5。'}
  };
+ // Status module can be replaced independently: its disposer removes prior observers.
+ window.backendHotUpdate.register('/operation-status.js',{
+  async apply(context){await loadStatus(context.url)},
+  async rollback(context){await loadStatus(context.path+'?_hot='+context.previous)}
+ });
+ function loadStatus(url){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=url;const timer=setTimeout(()=>reject(Error('状态栏热更加载超时')),15000);script.onload=()=>{clearTimeout(timer);script.remove();resolve()};script.onerror=()=>{clearTimeout(timer);script.remove();reject(Error('状态栏热更加载失败'))};document.head.append(script)})}
  check();setInterval(check,90000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)check()});window.addEventListener('online',check);
 })();
