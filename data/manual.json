@@ -864,6 +864,36 @@
       "endAt": "2026-12-01T03:59:00+08:00",
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/06/41167d6e12b410834dbc7b567f0635ad_7274554495606633977_transformed.jpg",
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
+    },
+    {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "https://azurpromilia.manjuu.com/",
+      "disabled": false,
+      "featured": true,
+      "id": "6df3dc34-df39-484d-9574-9f1b4dd19339",
+      "gameId": "ap",
+      "title": "集结，勇闯奇波巢穴",
+      "category": "预约活动",
+      "startAt": "2026-11-20T20:00:00+08:00",
+      "endAt": "2026-12-31T12:00:00+08:00",
+      "imageUrl": "/assets/games/azurpro/ScreenShot_2026-11-20_234236_875.png",
+      "sourceUrl": ""
+    },
+    {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": true,
+      "id": "1cb01c78-834b-4d03-b63f-573ad664122d",
+      "gameId": "ap",
+      "title": "奇波营地大作战",
+      "category": "活动",
+      "startAt": "2026-10-23T12:00:00+08:00",
+      "endAt": "2026-12-31T23:59:00+08:00",
+      "imageUrl": "/assets/games/azurpro/ScreenShot_2026-11-20_234131_533.png",
+      "sourceUrl": ""
     }
   ]
 }
