@@ -137,7 +137,7 @@
     }
   ],
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T07:18:32+00:00",
+  "generatedAt": "2026-11-20T13:10:09+00:00",
   "games": [
     {
       "id": "ys",
@@ -214,12 +214,14 @@
       "bannerUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166989/32b9db0af2f894141f99ce41aab85074_5943209145671856794.jpg",
       "versionNoticeAt": "2026-10-21T11:00:00+08:00",
       "nextVersionAt": "2026-12-02T11:00:00+08:00",
-      "nextVersionEstimated": true,
+      "nextVersionEstimated": false,
       "previewBannerUrl": "https://fastcdn.mihoyo.com/content-v2/nap/167359/4bf38927676032d6f4e9a1e985bcfdf3_836673183561287863.jpg",
       "previewUrl": "https://live.bilibili.com/32805602",
       "previewAt": "2026-11-20T18:30:00+08:00",
-      "codesExpireAt": null,
-      "previewCodes": [],
+      "codesExpireAt": "2026-11-22T23:59:00+08:00",
+      "previewCodes": [
+        "WANZHOU1202"
+      ],
       "previousVersionAt": null,
       "updateReferenceAt": null,
       "preDownloadAt": null,
@@ -6723,19 +6725,6 @@
       "imageUrl": "https://prod-alicdn-community.kurobbs.com/forum/5d387fe4f622489ba4f311e52435548a20261116.png"
     },
     {
-      "featured": false,
-      "id": "51fd7212-16bd-412d-bd5e-a87db049ff1a",
-      "gameId": "sliver",
-      "title": "test",
-      "startAt": "2026-11-20T00:00:00+08:00",
-      "endAt": "2026-11-25T00:00:00+08:00",
-      "category": "活动",
-      "sourceType": "manual",
-      "sourceName": "人工录入",
-      "sourceUrl": "",
-      "imageUrl": ""
-    },
-    {
       "featured": true,
       "id": "c27dedc9e308d390b4eb",
       "gameId": "zzz",
@@ -7221,126 +7210,126 @@
     {
       "gameId": "ys",
       "url": "https://starrailassistant.top/api/v1/activity/ys.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "nte",
       "url": "https://starrailassistant.top/api/v1/activity/nte.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "sr",
       "url": "https://starrailassistant.top/api/v1/activity/sr.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "zzz",
       "url": "https://starrailassistant.top/api/v1/activity/zzz.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ww",
       "url": "https://starrailassistant.top/api/v1/activity/ww.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ak",
       "url": "https://starrailassistant.top/api/v1/activity/ak.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 4
     },
     {
       "gameId": "end",
       "url": "https://starrailassistant.top/api/v1/activity/end.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 14
     },
     {
       "gameId": "ba-cn",
       "url": "https://starrailassistant.top/api/v1/activity/ba-cn.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 3
     },
     {
       "gameId": "ba-jp",
       "url": "https://starrailassistant.top/api/v1/activity/ba-jp.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "ba-global",
       "url": "https://starrailassistant.top/api/v1/activity/ba-global.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "xtlr",
       "url": "https://starrailassistant.top/api/v1/activity/xtlr.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "infinitynikki",
       "url": "https://starrailassistant.top/api/v1/activity/infinitynikki.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "gf2",
       "url": "https://starrailassistant.top/api/v1/activity/gf2.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "pgr",
       "url": "https://starrailassistant.top/api/v1/activity/pgr.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "czn",
       "url": "https://starrailassistant.top/api/v1/activity/czn.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 18
     },
     {
       "gameId": "bd2",
       "url": "https://starrailassistant.top/api/v1/activity/bd2.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "nikke",
       "url": "https://starrailassistant.top/api/v1/activity/nikke.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "hyrz",
       "url": "https://starrailassistant.top/api/v1/activity/hyrz.json",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "status": "ok",
       "eventCount": 12
     },
@@ -7351,7 +7340,7 @@
       "status": "stale",
       "fetchedAt": null,
       "eventCount": 0,
-      "error": "HTTP Error 500: Internal Server Error"
+      "error": "signal only works in main thread of the main interpreter"
     },
     {
       "gameId": "ys",
@@ -7360,7 +7349,7 @@
       "status": "stale",
       "fetchedAt": null,
       "eventCount": 0,
-      "error": "unsupported response schema"
+      "error": "signal only works in main thread of the main interpreter"
     },
     {
       "gameId": "sr",
@@ -7369,7 +7358,7 @@
       "status": "stale",
       "fetchedAt": null,
       "eventCount": 0,
-      "error": "unsupported response schema"
+      "error": "signal only works in main thread of the main interpreter"
     },
     {
       "gameId": "fgo",
@@ -7378,16 +7367,16 @@
       "status": "stale",
       "fetchedAt": null,
       "eventCount": 8,
-      "error": "HTTP Error 500: Internal Server Error"
+      "error": "signal only works in main thread of the main interpreter"
     },
     {
       "gameId": "ak",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/ak",
-      "status": "ok",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "status": "stale",
+      "fetchedAt": null,
       "eventCount": 23,
-      "error": null
+      "error": "signal only works in main thread of the main interpreter"
     },
     {
       "gameId": "ww",
@@ -7396,7 +7385,7 @@
       "status": "stale",
       "fetchedAt": null,
       "eventCount": 2,
-      "error": "HTTP Error 500: Internal Server Error"
+      "error": "signal only works in main thread of the main interpreter"
     },
     {
       "gameId": "pgr",
@@ -7405,77 +7394,77 @@
       "status": "stale",
       "fetchedAt": null,
       "eventCount": 12,
-      "error": "HTTP Error 500: Internal Server Error"
+      "error": "signal only works in main thread of the main interpreter"
     },
     {
       "gameId": "ba-cn",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/ba",
-      "status": "ok",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "status": "stale",
+      "fetchedAt": null,
       "eventCount": 9,
-      "error": null
+      "error": "signal only works in main thread of the main interpreter"
     },
     {
       "gameId": "ba-jp",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/ba-jp",
-      "status": "ok",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "status": "stale",
+      "fetchedAt": null,
       "eventCount": 183,
-      "error": null
+      "error": "signal only works in main thread of the main interpreter"
     },
     {
       "gameId": "nikke",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/nikke",
-      "status": "ok",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "status": "stale",
+      "fetchedAt": null,
       "eventCount": 121,
-      "error": null
+      "error": "signal only works in main thread of the main interpreter"
     },
     {
       "gameId": "snowbreak",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/cbjq",
-      "status": "ok",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "status": "stale",
+      "fetchedAt": null,
       "eventCount": 16,
-      "error": null
+      "error": "signal only works in main thread of the main interpreter"
     },
     {
       "gameId": "end",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/endfield",
-      "status": "ok",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "status": "stale",
+      "fetchedAt": null,
       "eventCount": 19,
-      "error": null
+      "error": "signal only works in main thread of the main interpreter"
     },
     {
       "gameId": "nte",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/nte",
-      "status": "ok",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "status": "stale",
+      "fetchedAt": null,
       "eventCount": 3,
-      "error": null
+      "error": "signal only works in main thread of the main interpreter"
     },
     {
       "gameId": "zzz",
       "sourceName": "game-schedule",
       "url": "https://gebc.lee-sikaha.cloudns.ch/zzz",
-      "status": "ok",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
-      "eventCount": 15,
-      "error": null
+      "status": "stale",
+      "fetchedAt": null,
+      "eventCount": 11,
+      "error": "signal only works in main thread of the main interpreter"
     },
     {
       "gameId": "honkai",
       "sourceName": "Ennead",
       "url": "https://api.ennead.cc/mihoyo/honkai/news/events?lang=zh-cn",
       "status": "ok",
-      "fetchedAt": "2026-11-20T07:18:32+00:00",
+      "fetchedAt": "2026-11-20T13:10:09+00:00",
       "kind": "news"
     }
   ]
