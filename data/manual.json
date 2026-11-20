@@ -667,7 +667,7 @@
     },
     {
       "disabled": false,
-      "featured": true,
+      "featured": false,
       "id": "51fd7212-16bd-412d-bd5e-a87db049ff1a",
       "gameId": "sliver",
       "title": "test",
