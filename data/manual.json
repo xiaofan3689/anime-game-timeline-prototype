@@ -89,8 +89,10 @@
       "previewBannerUrl": "https://fastcdn.mihoyo.com/content-v2/nap/167359/4bf38927676032d6f4e9a1e985bcfdf3_836673183561287863.jpg",
       "previewUrl": "https://live.bilibili.com/32805602",
       "previewAt": "2026-11-20T18:30:00+08:00",
-      "codesExpireAt": null,
-      "previewCodes": []
+      "codesExpireAt": "2026-11-22T23:59:00+08:00",
+      "previewCodes": [
+        "WANZHOU1202"
+      ]
     },
     {
       "disabled": false,
@@ -498,6 +500,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/ys.json"
     },
     {
+      "disabled": false,
       "featured": true,
       "id": "2446bede44d989bb7c9f",
       "gameId": "sr",
@@ -509,6 +512,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/sr.json"
     },
     {
+      "disabled": false,
       "featured": false,
       "id": "6cef5be3d08e77ef2468",
       "gameId": "ba-global",
@@ -520,6 +524,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/ba-global.json"
     },
     {
+      "disabled": false,
       "featured": false,
       "id": "d9b31b81523ca5057951",
       "gameId": "ba-cn",
@@ -531,6 +536,7 @@
       "sourceUrl": "https://bluearchive-cn.com/news/1997"
     },
     {
+      "disabled": false,
       "featured": false,
       "id": "589740b6794dee341eb5",
       "gameId": "xtlr",
@@ -542,6 +548,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/xtlr.json"
     },
     {
+      "disabled": false,
       "featured": false,
       "id": "f49a16a7d2bd5452deba",
       "gameId": "zzz",
@@ -553,6 +560,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
+      "disabled": false,
       "featured": false,
       "id": "6ca8c641e9abd9dd36a0",
       "gameId": "zzz",
@@ -564,6 +572,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
+      "disabled": false,
       "featured": false,
       "id": "9b565b5310440990f27d",
       "gameId": "zzz",
@@ -575,6 +584,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
+      "disabled": false,
       "featured": false,
       "id": "26a31a520db968fabb81",
       "gameId": "zzz",
@@ -586,6 +596,7 @@
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
     },
     {
+      "disabled": false,
       "featured": false,
       "id": "a3e7e413ff2cd7f64440",
       "gameId": "zzz",
@@ -609,6 +620,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
+      "disabled": false,
       "featured": false,
       "id": "790e6d83146e249c7f26",
       "gameId": "zzz",
@@ -620,6 +632,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
+      "disabled": false,
       "featured": false,
       "id": "0c085f366efeb73f35ac",
       "gameId": "zzz",
@@ -631,6 +644,7 @@
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
     },
     {
+      "disabled": false,
       "featured": true,
       "id": "0f48d42d8fbfdd4da444",
       "gameId": "nte",
@@ -642,6 +656,7 @@
       "sourceUrl": "https://yh.wanmei.com/m/news/gamebroad/20261118/265103.html"
     },
     {
+      "disabled": false,
       "featured": true,
       "id": "6de12df85b892e5d4606",
       "gameId": "end",
