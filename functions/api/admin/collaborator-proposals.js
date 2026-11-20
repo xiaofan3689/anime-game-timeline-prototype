@@ -1,3 +1,4 @@
+import {cleanupBranch} from '../../../lib/proposal-cleanup.js';
 import {admin,body,json,endpoint,fail,audit} from '../../../lib/collaborator-auth.js';
 import {inspectPR,mergePR} from '../../../lib/collaborator-publish.js';
 import {gh,mainRepo,repoPath} from '../../../lib/collaborator-github.js';
@@ -20,5 +21,6 @@ export const onRequest=endpoint(async({request,env})=>{
  const note=String(b.note||'').trim().slice(0,2000);if(!note)throw fail('请填写退回或拒绝原因');
  if(p.pr_number){const pr=await gh(env.GH_TOKEN,repoPath(mainRepo(env))+'/pulls/'+p.pr_number);if(pr.merged)throw fail('GitHub 上已合并，请先核对合并状态',409);if(pr.state==='open')await gh(env.GH_TOKEN,repoPath(mainRepo(env))+'/pulls/'+p.pr_number,'PATCH',{state:'closed'});}
  const r=await db.prepare("UPDATE collaborator_reviews_v79 SET status=?,note=?,updated_at=? WHERE id=? AND status IN ('pending','failed')").bind(b.action==='return'?'returned':'rejected',note,Date.now(),p.id).run();if(!r.meta.changes)throw fail('提案状态已变化',409);
+ try{await cleanupBranch(env,p)}catch(e){if(p.status!=='failed')console.warn('temporary branch cleanup failed',e.message)}
  await audit(env,actor,p.id,b.action,note);return json({ok:true});
 });

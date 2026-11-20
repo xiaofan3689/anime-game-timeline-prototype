@@ -1,3 +1,4 @@
+;(()=>{const l=document.createElement('link');l.rel='stylesheet';l.href='/preview-dialog.css?v=101';document.head.append(l)})();
 function previewBootstrap(feed,id,siteOrigin){
  Object.defineProperty(window,"__PREVIEW_ORIGIN__",{value:siteOrigin});
  const reportError=e=>parent.postMessage({type:'draft-preview-error',id,message:String(e.message||e.reason?.message||'脚本或资源加载失败').slice(0,300)},'*');window.addEventListener('error',reportError);window.addEventListener('unhandledrejection',reportError);const memory={};

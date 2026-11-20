@@ -1,3 +1,4 @@
+;(()=>{const l=document.createElement('link');l.rel='stylesheet';l.href='/preview-dialog.css?v=101';document.head.append(l)})();
 (()=>{
  const role=location.pathname.startsWith('/admin/')?'admin':'collaborator';let busy=false;
  window.launchContentPreview=async data=>{
