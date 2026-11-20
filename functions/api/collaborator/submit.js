@@ -3,7 +3,7 @@ import {member,body,json,endpoint,fail} from '../../../lib/collaborator-auth.js'
 import {baseline,credential,gh,mainRepo} from '../../../lib/collaborator-github.js';
 import {mergeScoped,canonical,diffData} from '../../../lib/collaborator-data.js';
 import {buildPR} from '../../../lib/collaborator-publish.js';
-import {delegated,channel} from '../../../lib/github-app-installation.js';
+import {delegated,robot,channel} from '../../../lib/github-app-installation.js';
 import {usesOwnGithub} from '../../../lib/collaborator-mode.js';
 export const onRequest=endpoint(async({request,env})=>{
  if(request.method!=='POST')return json({error:'方法不支持'},405);
@@ -11,8 +11,8 @@ export const onRequest=endpoint(async({request,env})=>{
  const draft=await db.prepare('SELECT * FROM collaborator_drafts_v79 WHERE email=?').bind(u.email).first();if(!draft||draft.revision!==b.revision)throw fail('草稿版本已变化，请重新加载',409);
  const before=JSON.parse(draft.snapshot),after=mergeScoped(before,JSON.parse(draft.catalog),JSON.parse(draft.data),u.games);
  await requirePreview(env,u.email,'collaborator',after);if(!diffData(before,after).length)throw fail('没有需要提交的修改');
- const mode=await usesOwnGithub(env,u.email)?'app-personal':'robot';if(!['app-personal','robot'].includes(mode))throw fail('请选择本人提交或机器人代提交');
- const bot=mode==='robot'?await delegated(env):null;let c;if(bot)c={github_user_id:bot.user.id,login:bot.user.login,fork_repo:bot.forkRepo};else{const auth=await credential(env,u.email),user=await gh(auth.token,'/user');if(Number(user.id)!==Number(auth.github_user_id))throw fail('GitHub 身份已变化',409);c={github_user_id:user.id,login:user.login,fork_repo:mainRepo(env)}}const now=Date.now();
+ const mode=await usesOwnGithub(env,u.email)?'app-personal':'app-bot';if(!['app-personal','app-bot'].includes(mode))throw fail('请选择本人提交或机器人代提交');
+ const bot=mode==='app-bot'?await robot(env):null;let c;if(bot)c={github_user_id:bot.user.id,login:bot.user.login,fork_repo:bot.forkRepo};else{const auth=await credential(env,u.email),user=await gh(auth.token,'/user');if(Number(user.id)!==Number(auth.github_user_id))throw fail('GitHub 身份已变化',409);c={github_user_id:user.id,login:user.login,fork_repo:mainRepo(env)}}const now=Date.now();
  const active=await db.prepare("SELECT id,draft_revision FROM collaborator_reviews_v79 WHERE email=? AND status IN ('pending','preparing','merging') LIMIT 1").bind(u.email).first();
  if(active&&active.draft_revision!==draft.revision)throw fail('你已有处理中提案，请等待审理结束后再提交新版本',409);
  const link=await db.prepare('SELECT id FROM collaborator_revision_links WHERE email=?').bind(u.email).first();
