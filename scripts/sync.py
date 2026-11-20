@@ -4,6 +4,11 @@ import json
 import hashlib
 import os
 import tempfile
+import time
+import signal
+import sys
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(line_buffering=True)
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -73,6 +78,14 @@ def valid_event(item):
 
 
 def get_json(url):
+    started = time.monotonic()
+    print(f"FETCH START {url}", flush=True)
+    def deadline(signum, frame):
+        raise TimeoutError("request exceeded 30 second total deadline")
+    bounded = hasattr(signal, "SIGALRM")
+    old_handler = signal.signal(signal.SIGALRM, deadline) if bounded else None
+    if bounded:
+        signal.alarm(30)
     req = Request(url, headers={"User-Agent": "AnimeEventsPrototype/0.1 (+https://github.com/)", "Accept": "application/json"})
     with urlopen(req, timeout=18) as response:
         return json.load(response)

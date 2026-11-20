@@ -20,6 +20,9 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONUNBUFFERED: "1"
     steps:
       - uses: actions/checkout@v4
         with:
@@ -29,8 +32,9 @@ jobs:
         with:
           python-version: '3.12'
       - name: Build and validate feed
+        timeout-minutes: 12
         run: |
-          python scripts/sync.py
+          python -u scripts/sync.py
           python -m json.tool data/events.json > /dev/null
       - name: Create feed PR with Actions identity
         id: pr
