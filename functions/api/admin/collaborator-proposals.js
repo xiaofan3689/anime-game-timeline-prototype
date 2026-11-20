@@ -4,9 +4,10 @@ import {inspectPR,mergePR} from '../../../lib/collaborator-publish.js';
 import {gh,mainRepo,repoPath} from '../../../lib/collaborator-github.js';
 export const onRequest=endpoint(async({request,env})=>{
  const actor=await admin(request,env),db=env.APPLICATION_DB,url=new URL(request.url);
+ await db.prepare('CREATE TABLE IF NOT EXISTS collaborator_hidden_records(id TEXT PRIMARY KEY,email TEXT NOT NULL)').run();
  if(request.method==='GET'){
   if(url.searchParams.has('id')){const p=await db.prepare('SELECT * FROM collaborator_reviews_v79 WHERE id=?').bind(url.searchParams.get('id')).first();if(!p)throw fail('提案不存在',404);const {pr,changes}=await inspectPR(env,p);return json({id:p.id,headSha:p.head_sha,prUrl:p.pr_url,status:p.status,merged:pr.merged,changes})}
-  const r=await db.prepare('SELECT id,email,login,status,head_sha,pr_url,note,created_at,updated_at FROM collaborator_reviews_v79 ORDER BY created_at DESC LIMIT 200').all();return json({items:r.results});
+  const r=await db.prepare('SELECT id,email,login,status,head_sha,pr_url,note,created_at,updated_at FROM collaborator_reviews_v79 WHERE id NOT IN (SELECT id FROM collaborator_hidden_records) ORDER BY created_at DESC LIMIT 200').all();return json({items:r.results});
  }
  if(request.method!=='POST')return json({error:'方法不支持'},405);
  const b=await body(request),p=await db.prepare('SELECT * FROM collaborator_reviews_v79 WHERE id=?').bind(b.id||'').first();if(!p)throw fail('提案不存在',404);
