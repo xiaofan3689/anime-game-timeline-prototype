@@ -30,6 +30,7 @@ export async function onRequest({request,env}){
  if(!row)return json({error:'请先验证邮箱'},400);
  if(b.action==='stop'){await db.prepare('UPDATE email_subscriptions SET active=0,revision=revision+1,updated_at=? WHERE token_hash=?').bind(now,key).run();return json({ok:true})}
  if(!['confirm','sync'].includes(b.action))return json({error:'操作无效'},400);
+ if(b.action==='sync'&&(!b.checkins||typeof b.checkins!=='object'||Array.isArray(b.checkins)||Object.keys(b.checkins).length>2000||Object.entries(b.checkins).some(([id,days])=>id.length>200||!Array.isArray(days)||days.length>366||days.some(d=>typeof d!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(d)))))return json({error:'签到数据无效，请更新页面'},400);
  if(!list(b.games,100)||!list(b.completed,2000))return json({error:'游戏或完成状态无效'},400);
  if(b.action==='confirm'){
   if(!row.pending_email||row.code_expires<now||row.attempts>=5)return json({error:'验证码过期或次数已用完，请重新获取'},400);
@@ -52,7 +53,7 @@ export async function onRequest({request,env}){
  }else{
   if(!row.active)return json({error:'提醒已停止，请验证邮箱重新启用'},409);
   if(!Number.isInteger(b.revision))return json({error:'请刷新页面加载最新同步版本'},409);
-  const result=await db.prepare('UPDATE email_subscriptions SET games=?,completed=?,revision=revision+1,updated_at=? WHERE token_hash=? AND active=1 AND revision=?').bind(JSON.stringify([...new Set(b.games)]),JSON.stringify([...new Set(b.completed)]),now,key,b.revision).run();
+  const result=await db.prepare('UPDATE email_subscriptions SET games=?,completed=?,checkins=?,revision=revision+1,updated_at=? WHERE token_hash=? AND active=1 AND revision=?').bind(JSON.stringify([...new Set(b.games)]),JSON.stringify([...new Set(b.completed)]),JSON.stringify(b.checkins),now,key,b.revision).run();
   if(!result.meta.changes){const latest=await db.prepare('SELECT * FROM email_subscriptions WHERE token_hash=?').bind(key).first();return json({error:'其他浏览器已更新，已恢复最新状态，请刷新页面',conflict:true,...stateOf(latest)},409)}
   return json({ok:true,revision:b.revision+1});
  }

@@ -7,10 +7,13 @@
  function status(text){message.textContent=text;button.title=text}
  function credential(){if(token)return token;token=localStorage.getItem(credentialKey)||'';if(!/^[a-f0-9]{64}$/.test(token)){const bytes=new Uint8Array(32);crypto.getRandomValues(bytes);token=Array.from(bytes,b=>b.toString(16).padStart(2,'0')).join('');localStorage.setItem(credentialKey,token)}return token}
  async function api(action,extra={}){const r=await fetch('/api/email-reminders',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({token:credential(),action,...extra})});const b=await r.json();if(b.conflict){restore(b);throw Error(b.error)}if(!r.ok)throw Error(b.error||'请求失败');return b}
- function newAccount(){localStorage.removeItem('anime-timeline-games-v1');localStorage.setItem('timeline-progress-v1','{}');localStorage.removeItem('timeline-game-order-v1');localStorage.setItem('timeline-cn-only-v1','false');sessionStorage.setItem('timeline-new-account','1');location.reload()}
- function snapshot(){if(!S.feed)throw Error('活动数据尚未加载，请稍后再试');return {games:[...S.selected],completed:Object.keys(progress).filter(id=>progress[id]?.done)}}
+ function newAccount(){clearCheckins();localStorage.removeItem('anime-timeline-games-v1');localStorage.setItem('timeline-progress-v1','{}');localStorage.removeItem('timeline-game-order-v1');localStorage.setItem('timeline-cn-only-v1','false');sessionStorage.setItem('timeline-new-account','1');location.reload()}
+ function checkins(){const result={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith('daily-checkin:')){try{result[k.slice(14)]=JSON.parse(localStorage.getItem(k))}catch{}}}return result}
+ function clearCheckins(){for(const k of Object.keys(localStorage))if(k.startsWith('daily-checkin:'))localStorage.removeItem(k)}
+ function snapshot(){if(!S.feed)throw Error('活动数据尚未加载，请稍后再试');return {checkins:checkins(),games:[...S.selected],completed:Object.keys(progress).filter(id=>progress[id]?.done)}}
  function restore(b){
   if(!Array.isArray(b.games)||!Array.isArray(b.completed))return;
+  clearCheckins();for(const [id,days] of Object.entries(b.checkins||{}))localStorage.setItem('daily-checkin:'+id,JSON.stringify(days));
   const next=JSON.parse(localStorage.getItem('timeline-progress-v1')||'{}');
   for(const value of Object.values(next))if(value&&typeof value==='object')value.done=false;
   for(const id of b.completed)next[id]={...next[id],done:true};
@@ -38,5 +41,5 @@
  window.addEventListener('online',pull);window.addEventListener('focus',pull);setInterval(pull,30000);
  window.addEventListener('storage',e=>{if(['anime-timeline-games-v1','timeline-progress-v1'].includes(e.key))location.reload()});
  // Restored subscriptions need a snapshot after the asynchronous feed is ready.
- (async()=>{try{if(!localStorage.getItem(credentialKey))return;const b=await load();revision=b.revision;const poll=setInterval(()=>{if(S.feed){clearInterval(poll);if(sessionStorage.getItem('timeline-new-account')){sessionStorage.removeItem('timeline-new-account');status('新邮箱账号已建立，请先选择正在玩的游戏并保存。');return}if(Array.isArray(b.games)&&b.active){const local=snapshot();if(JSON.stringify([...local.games].sort())!==JSON.stringify([...b.games].sort())||JSON.stringify([...local.completed].sort())!==JSON.stringify([...b.completed].sort()))restore(b)}}},500);setTimeout(()=>clearInterval(poll),60000)}catch(e){button.title=e.message}})();
+ (async()=>{try{if(!localStorage.getItem(credentialKey))return;const b=await load();revision=b.revision;const poll=setInterval(()=>{if(S.feed){clearInterval(poll);if(sessionStorage.getItem('timeline-new-account')){sessionStorage.removeItem('timeline-new-account');status('新邮箱账号已建立，请先选择正在玩的游戏并保存。');return}if(Array.isArray(b.games)&&b.active){const local=snapshot();if(JSON.stringify(local.checkins)!==JSON.stringify(b.checkins||{})||JSON.stringify([...local.games].sort())!==JSON.stringify([...b.games].sort())||JSON.stringify([...local.completed].sort())!==JSON.stringify([...b.completed].sort()))restore(b)}}},500);setTimeout(()=>clearInterval(poll),60000)}catch(e){button.title=e.message}})();
 })();
