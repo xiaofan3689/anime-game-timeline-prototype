@@ -79,7 +79,7 @@
       "bannerUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166989/32b9db0af2f894141f99ce41aab85074_5943209145671856794.jpg",
       "versionNoticeAt": "2026-10-21T11:00:00+08:00",
       "nextVersionAt": "2026-12-02T11:00:00+08:00",
-      "nextVersionEstimated": true,
+      "nextVersionEstimated": false,
       "syncWithSra": true,
       "previousVersionAt": null,
       "updateReferenceAt": null,
