@@ -90,3 +90,31 @@ html{scroll-padding-top:16px}body{min-width:0}button,a,input,select{touch-action
 }
 
 .back-to-top{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:45;min-width:64px;min-height:44px;padding:10px 14px;border:1px solid #bca5ed;border-radius:14px;background:#514274;color:#fff;font-size:14px;box-shadow:0 4px 18px #0006;cursor:pointer}.back-to-top[hidden]{display:none}@media(max-width:600px){.back-to-top{right:max(12px,env(safe-area-inset-right));bottom:calc(14px + env(safe-area-inset-bottom));min-width:60px}}
+
+/* v104: desktop activity cards reserve independent text and action rows. */
+@media (min-width:681px){
+ #smart-panel .smart-list.smart-pages>.smart-row,
+ .event-dashboard #smart-panel .smart-pages>.smart-row{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;
+  grid-template-rows:auto auto;align-content:start;align-items:start;
+  height:auto;min-height:0;max-height:none;flex:0 0 auto;
+  padding:12px 14px;gap:10px 12px;box-sizing:border-box;
+ }
+ #smart-panel .smart-list.smart-pages>.smart-row>div{
+  grid-column:1/-1;grid-row:1;min-width:0;min-height:0;
+ }
+ #smart-panel .smart-list.smart-pages>.smart-row strong{
+  display:block;white-space:normal;overflow-wrap:anywhere;
+  line-height:1.45;max-height:none;-webkit-line-clamp:unset;
+ }
+ #smart-panel .smart-list.smart-pages>.smart-row p{
+  margin:6px 0 0;white-space:normal;overflow-wrap:anywhere;line-height:1.5;
+ }
+ #smart-panel .smart-list.smart-pages>.smart-row>button{
+  position:static;grid-row:2;grid-column:1;justify-self:start;
+  align-self:start;margin:0;min-height:38px;height:auto;max-width:100%;
+ }
+ #smart-panel .smart-list.smart-pages>.smart-row>button:last-child{
+  grid-row:2;grid-column:2;justify-self:end;
+ }
+}
