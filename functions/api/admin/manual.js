@@ -12,5 +12,6 @@ export const onRequest=endpoint(async({request,env})=>{
  const input=await body(request);if(!/^[a-f0-9]{40}$/.test(input.sha||''))throw Error('缺少文件版本，请刷新');
  await requirePreview(env,actor,'admin',validate(input.data));const result=await createDataPR(env,{path:'data/manual.json',data:validate(input.data),expectedFileSha:input.sha,title:'Administrator manual data proposal',branchPrefix:'admin-data'});
  await audit(env,actor,null,'administrator-pr',result.prUrl||'unchanged');
- return json({ok:true,sha:result.sha,commitUrl:result.prUrl||'',syncTriggered:false,warning:result.unchanged?'数据没有变化':'已创建管理员 PR；请打开链接审核合并。尚未上线，main 没有直接写入。'});
+ return json({ok:true,sha:result.sha,commitUrl:result.prUrl||'',syncTriggered:false,warning:result.unchanged?'数据没有变化':(result.merged?'管理员提交已自动审核并合并；正式页面需等待活动同步与部署。'+(result.cleanupWarning||''):'已创建PR，请核对GitHub状态。')});
 });
+

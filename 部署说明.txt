@@ -1,2 +1,4 @@
-修复v107/v108提交接口调用cleanupBranch但未导入的问题。覆盖functions/api/collaborator/submit.js并部署Pages即可，无需SQL、无需修改权限。依赖v108已有lib/proposal-cleanup.js。
-已检查提交接口显式导入并通过语法检查；此修复不代表其他GitHub权限或提案状态错误已解决。
+覆盖部署Pages，无需SQL。仅管理员manual接口的admin-data提交流程自动批准并合并，不影响协作者必须由管理员审理的流程。
+同一个bot不能批准自己创建的PR，因此真实审核通过GH_TOKEN对应管理员执行，bot执行创建PR、合并、删除分支。管理员仍须先完成草稿预览验证。
+GH_TOKEN需要Pull requests读写并满足审核资格；App需Contents和Pull requests读写。必需CI和分支规则保持有效，暂不能合并时会报错并保留PR，需要在GitHub核对后处理，不绕过检查。本包未增加后台重试任务。
+语法检查通过，未真实GitHub端到端验收。合并不等于正式站已完成同步部署。
