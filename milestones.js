@@ -12,20 +12,21 @@ function versionMilestoneTiming(g,now){
 }
 function featuredMilestoneVisible(e){return e.featured&&S.selected.has(e.gameId)&&status(e)!=="ended"&&!progress[e.id]?.done}
 const milestones=document.createElement("section");milestones.className="smart-panel milestones";const smartPanel=document.getElementById("smart-panel");const dashboard=document.createElement("div");dashboard.className="event-dashboard";smartPanel.before(dashboard);dashboard.append(milestones,smartPanel);
+function previewCodesVisible(g,now){const start=Date.parse(g.previewAt),end=Date.parse(g.codesExpireAt);return Number.isFinite(start)&&Number.isFinite(end)&&now>=start&&now<end&&Array.isArray(g.previewCodes)&&g.previewCodes.some(c=>typeof c==='string'&&c.trim())}
 function milestoneRender(){
  if(!S.feed)return;milestones.replaceChildren(n("h2","","版本大事件"));const now=Date.now();let count=0;
  for(const g of S.feed.games.filter(g=>S.selected.has(g.id))){
  const at=Date.parse(g.previewAt),expiry=Date.parse(g.codesExpireAt);const cnDay=t=>Number.isFinite(t)?new Date(t+8*3600000).toISOString().slice(0,10):"";
  const timing=versionMilestoneTiming(g,now),update=timing.update;
- const hasPreview=Number.isFinite(at);const hasCodes=Array.isArray(g.previewCodes)&&g.previewCodes.some(Boolean);const hasCodeDeadline=Number.isFinite(expiry);if(!hasPreview&&!hasCodes&&!hasCodeDeadline)continue;if(timing.hidden)continue;
+ const hasPreview=Number.isFinite(at);const hasCodes=Array.isArray(g.previewCodes)&&g.previewCodes.some(Boolean);const hasCodeDeadline=Number.isFinite(expiry);const recap=url(g.previewRecapUrl),showCodes=previewCodesVisible(g,now);if(!hasPreview&&!hasCodes&&!hasCodeDeadline&&!recap)continue;if(timing.hidden&&!showCodes)continue;
  const highlight=timing.highlight;
  const endOfLive=new Date(at+8*3600000);endOfLive.setUTCHours(22,0,0,0);const ended=!Number.isFinite(at)||now>=endOfLive.getTime()-8*3600000;
  const card=n("article","milestone-card"),isExpired=Number.isFinite(expiry)&&now>=expiry;card.append(n("h3","",g.name));
  if(highlight){card.classList.add("update-today");card.append(n("strong","","今日版本更新"));const banner=url(g.previewBannerUrl),official=url(g.officialUrl);if(banner){const img=document.createElement("img");img.src=banner;img.alt=g.name+"版本更新";card.append(img)}}
- if(!ended&&!highlight){const imgUrl=url(g.previewBannerUrl);if(imgUrl){const img=document.createElement("img");img.src=imgUrl;img.alt=g.name+"版本前瞻";card.append(img)}card.append(n("p","",`前瞻直播：${fmt.format(new Date(at))}`));const live=url(g.previewUrl);if(live&&new URL(live).hostname==="live.bilibili.com"){const a=n("a","","前往 Bilibili 直播间 ↗");a.href=live;a.target="_blank";a.rel="noopener";card.append(a)}}
- if(ended&&!highlight){const recap=url(g.previewRecapUrl);if(recap){const link=n("a","official-game-link","观看版本前瞻回顾长图");link.href=recap;link.target="_blank";link.rel="noopener noreferrer";card.append(link)}}
- if(!isExpired){for(const code of g.previewCodes||[]){const row=n("div","code-row"),copy=n("button","","复制");copy.onclick=async()=>{try{await navigator.clipboard.writeText(code);copy.textContent="已复制"}catch{copy.textContent="请长按选择复制"}};const text=n("code","",code);row.append(text,copy);card.append(row)}if(Number.isFinite(expiry))card.append(n("p","",`兑换截止：${fmt.format(new Date(expiry))}`))}
- else if(Number.isFinite(update)){card.append(n("p","",`版本更新：${fmt.format(new Date(update))}${g.nextVersionEstimated&&!highlight?"（预计）":""}${Number.isFinite(Date.parse(g.preDownloadAt))&&now>=Date.parse(g.preDownloadAt)&&now<update?"（已开启预下载）":""}`));}
+ if(!ended&&!highlight&&!recap){const imgUrl=url(g.previewBannerUrl);if(imgUrl){const img=document.createElement("img");img.src=imgUrl;img.alt=g.name+"版本前瞻";card.append(img)}card.append(n("p","",`前瞻直播：${fmt.format(new Date(at))}`));const live=url(g.previewUrl);if(live&&new URL(live).hostname==="live.bilibili.com"){const a=n("a","","前往 Bilibili 直播间 ↗");a.href=live;a.target="_blank";a.rel="noopener";card.append(a)}}
+ if(recap){const link=n("a","official-game-link","观看版本前瞻回顾长图");link.href=recap;link.target="_blank";link.rel="noopener noreferrer";card.append(link)}
+ if(showCodes){for(const code of g.previewCodes.filter(c=>typeof c==='string'&&c.trim())){const row=n("div","code-row"),copy=n("button","","复制");copy.onclick=async()=>{try{await navigator.clipboard.writeText(code);copy.textContent="已复制"}catch{copy.textContent="请长按选择复制"}};const text=n("code","",code);row.append(text,copy);card.append(row)}if(Number.isFinite(expiry))card.append(n("p","",`兑换截止：${fmt.format(new Date(expiry))}`))}
+ else if(isExpired&&Number.isFinite(update)){card.append(n("p","",`版本更新：${fmt.format(new Date(update))}${g.nextVersionEstimated&&!highlight?"（预计）":""}${Number.isFinite(Date.parse(g.preDownloadAt))&&now>=Date.parse(g.preDownloadAt)&&now<update?"（已开启预下载）":""}`));}
  if(highlight){const official=url(g.officialUrl);if(officialLinkVisible(highlight,now)&&official&&official.startsWith("https://")){const link=n("a","official-game-link","前往游戏官网");link.href=official;link.target="_blank";link.rel="noopener noreferrer";card.append(link)}}
  milestones.append(card);count++;
  }
