@@ -127,16 +127,20 @@ setInterval(()=>{if(document.hidden)return;document.querySelectorAll('[data-coun
 
 // Game catalog acknowledgement is independent from the user's selected games.
 (()=>{
- const seenKey='timeline-known-games-v115';let dialog=null,shown=[];
+ const seenKey='timeline-known-games-v115';let dialog=null,shown=[],readyAt=0,newVisitor=false;
+ const releaseBaseline=["ys","nte","sr","zzz","ww","ak","end","ba-cn","ba-jp","ba-global","xtlr","infinitynikki","gf2","pgr","czn","bd2","nikke","hyrz","fgo","snowbreak","ap","sliver"];
  const read=()=>{try{const v=JSON.parse(localStorage.getItem(seenKey));return Array.isArray(v)?v:null}catch{return null}};
  const write=ids=>localStorage.setItem(seenKey,JSON.stringify([...new Set(ids)]));
  function check(){
   if(!S.feed||window.__PREVIEW_ORIGIN__)return;
+  if(!readyAt){readyAt=Date.now()+1000;newVisitor=!$('game-modal').hidden;setTimeout(check,1000);return}
+  if(Date.now()<readyAt)return;
+  if(!$('game-modal').hidden)newVisitor=true;
   const ids=S.feed.games.map(g=>g.id);let prior=read();
   let existing=false;try{existing=Array.isArray(JSON.parse(localStorage.getItem(KEY)))}catch{}
-  // First installation establishes the catalog baseline; never guess which historical games are new.
-  if(!prior){try{write(ids)}catch{}return}
-  if(!existing){try{write(ids)}catch{}return}
+  // The server release baseline preserves additions for returning browsers that were offline.
+  if(newVisitor){try{write(ids)}catch{}return}
+  if(!prior)prior=releaseBaseline;
   if(dialog?.open)return;
   const additions=S.feed.games.filter(g=>!prior.includes(g.id));if(!additions.length)return;
   if(!$('game-modal').hidden||document.querySelector('dialog[open]'))return;

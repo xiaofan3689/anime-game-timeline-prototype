@@ -1,0 +1,27 @@
+{
+  "description": "v116发布基础目录；新增游戏时不要重建此文件或app.js内releaseBaseline",
+  "gameIds": [
+    "ys",
+    "nte",
+    "sr",
+    "zzz",
+    "ww",
+    "ak",
+    "end",
+    "ba-cn",
+    "ba-jp",
+    "ba-global",
+    "xtlr",
+    "infinitynikki",
+    "gf2",
+    "pgr",
+    "czn",
+    "bd2",
+    "nikke",
+    "hyrz",
+    "fgo",
+    "snowbreak",
+    "ap",
+    "sliver"
+  ]
+}
