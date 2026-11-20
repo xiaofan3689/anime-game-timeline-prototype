@@ -663,24 +663,6 @@
       "endAt": "2026-12-01T03:59:00+08:00",
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/19/f67983c6a4ac940510a17957aed4eef3_9068928630684717048.jpg",
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
-<<<<<<< HEAD
-<<<<<<< HEAD
-    },
-    {
-      "disabled": false,
-      "featured": false,
-      "id": "51fd7212-16bd-412d-bd5e-a87db049ff1a",
-      "gameId": "sliver",
-      "title": "test",
-      "category": "活动",
-      "startAt": "2026-11-20T00:00:00+08:00",
-      "endAt": "2026-11-25T00:00:00+08:00",
-      "imageUrl": "",
-      "sourceUrl": ""
-=======
->>>>>>> parent of cb95865 (Update assigned game data (23ed1d48-3ea6-44d3-9ad7-8c050751eacd))
-=======
->>>>>>> parent of cb95865 (Update assigned game data (23ed1d48-3ea6-44d3-9ad7-8c050751eacd))
     }
   ]
 }
