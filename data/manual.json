@@ -487,7 +487,7 @@
   "events": [
     {
       "disabled": false,
-      "featured": false,
+      "featured": true,
       "id": "70669e377f1ad7084826",
       "gameId": "ys",
       "title": "砺行修远（第六期）",
@@ -654,7 +654,7 @@
     },
     {
       "disabled": false,
-      "featured": true,
+      "featured": false,
       "id": "c27dedc9e308d390b4eb",
       "gameId": "zzz",
       "title": "「决战于黎明之前」活动说明",
