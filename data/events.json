@@ -137,7 +137,7 @@
     }
   ],
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T15:22:34+00:00",
+  "generatedAt": "2026-11-20T15:26:03+00:00",
   "games": [
     {
       "id": "ys",
@@ -4610,14 +4610,18 @@
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/16/4a81388acbbe241827ec534f9df62fed_6277365941721836895_transformed.png"
     },
     {
+      "dailyCheckin": true,
+      "checkinTarget": 7,
+      "activityUrl": "",
+      "featured": false,
       "id": "180be63184b620da72d0",
       "gameId": "zzz",
       "title": "「全新放送」活动说明",
       "startAt": "2026-10-20T14:15:00+08:00",
       "endAt": "2026-12-01T03:59:00+08:00",
       "category": "活动",
-      "sourceType": "community",
-      "sourceName": "game-schedule",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz",
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/16/313b01a985b6a742c300528834d608c9_4921857407890368250_transformed.png"
     },
@@ -5866,14 +5870,18 @@
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/06/9cc4f934f6ffda939a80c2fc70769e47_885571584667886245_transformed.png"
     },
     {
+      "dailyCheckin": true,
+      "checkinTarget": 7,
+      "activityUrl": "",
+      "featured": false,
       "id": "d874f5df42556571f470",
       "gameId": "zzz",
       "title": "「『嗯呢』从天降」活动说明",
       "startAt": "2026-11-09T14:30:00+08:00",
       "endAt": "2026-12-01T03:59:00+08:00",
       "category": "活动",
-      "sourceType": "community",
-      "sourceName": "game-schedule",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz",
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/06/41167d6e12b410834dbc7b567f0635ad_7274554495606633977_transformed.jpg"
     },
@@ -7310,126 +7318,126 @@
     {
       "gameId": "ys",
       "url": "https://starrailassistant.top/api/v1/activity/ys.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "nte",
       "url": "https://starrailassistant.top/api/v1/activity/nte.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "sr",
       "url": "https://starrailassistant.top/api/v1/activity/sr.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "zzz",
       "url": "https://starrailassistant.top/api/v1/activity/zzz.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ww",
       "url": "https://starrailassistant.top/api/v1/activity/ww.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ak",
       "url": "https://starrailassistant.top/api/v1/activity/ak.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 4
     },
     {
       "gameId": "end",
       "url": "https://starrailassistant.top/api/v1/activity/end.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 14
     },
     {
       "gameId": "ba-cn",
       "url": "https://starrailassistant.top/api/v1/activity/ba-cn.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 3
     },
     {
       "gameId": "ba-jp",
       "url": "https://starrailassistant.top/api/v1/activity/ba-jp.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "ba-global",
       "url": "https://starrailassistant.top/api/v1/activity/ba-global.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "xtlr",
       "url": "https://starrailassistant.top/api/v1/activity/xtlr.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "infinitynikki",
       "url": "https://starrailassistant.top/api/v1/activity/infinitynikki.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "gf2",
       "url": "https://starrailassistant.top/api/v1/activity/gf2.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "pgr",
       "url": "https://starrailassistant.top/api/v1/activity/pgr.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "czn",
       "url": "https://starrailassistant.top/api/v1/activity/czn.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 18
     },
     {
       "gameId": "bd2",
       "url": "https://starrailassistant.top/api/v1/activity/bd2.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "nikke",
       "url": "https://starrailassistant.top/api/v1/activity/nikke.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "hyrz",
       "url": "https://starrailassistant.top/api/v1/activity/hyrz.json",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "status": "ok",
       "eventCount": 12
     },
@@ -7564,7 +7572,7 @@
       "sourceName": "Ennead",
       "url": "https://api.ennead.cc/mihoyo/honkai/news/events?lang=zh-cn",
       "status": "ok",
-      "fetchedAt": "2026-11-20T15:22:34+00:00",
+      "fetchedAt": "2026-11-20T15:26:03+00:00",
       "kind": "news"
     }
   ]
