@@ -342,3 +342,80 @@
   .public-ui .content .toolbar { align-items: stretch; }
   .public-ui .timeline-meta { row-gap: .4rem; }
 }
+
+/* Explicit content and action rows prevent older card rules shrinking the copy. */
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row {
+  display: grid !important;
+  grid-template-columns: minmax(0,1fr) !important;
+  grid-template-rows: auto auto !important;
+  align-content: start !important;
+  justify-content: stretch;
+  gap: 8px !important;
+  flex: 0 0 auto !important;
+  padding: 10px 12px !important;
+  height: auto !important;
+  min-height: min-content !important;
+  max-height: none !important;
+}
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row > .smart-card-copy,
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row > .smart-card-actions {
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  min-width: 0;
+  width: 100%;
+  margin: 0 !important;
+  flex: none !important;
+  align-self: start !important;
+}
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row > .smart-card-copy {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  display: grid;
+  gap: 2px;
+}
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row > .smart-card-actions {
+  grid-column: 1 !important;
+  grid-row: 2 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  overflow: visible !important;
+}
+.public-ui .event-dashboard #smart-panel .smart-card-copy :is(strong,p) {
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+.public-ui .event-dashboard #smart-panel .smart-card-copy p {
+  display: block;
+}
+.public-ui .event-dashboard #smart-panel .smart-card-actions > button {
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+  grid-area: auto !important;
+  margin: 0 !important;
+  min-height: 36px;
+  max-height: none;
+  flex: 0 0 auto;
+  line-height: 1.3;
+}
+@media(max-width:680px) {
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row {
+    gap: 5px !important;
+    padding: 6px !important;
+  }
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row > .smart-card-actions {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 5px;
+  }
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row .smart-card-actions > button {
+    min-height: 44px !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+}
