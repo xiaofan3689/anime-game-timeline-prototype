@@ -67,6 +67,7 @@ function smartRender(){
 
   const row = n("article","smart-row");
   row.dataset.activityId = e.id;
+  row.classList.toggle("ending-soon", Date.parse(e.endAt)-Date.now() <= DAY);
   const copy = n("div","smart-card-copy");
   const countdown = n("p","smart-countdown","剩余 " + remain(e.endAt));
   countdown.dataset.countdownEnd = e.endAt;

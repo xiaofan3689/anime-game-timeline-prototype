@@ -273,3 +273,72 @@
   .public-ui #smart-panel > .smart-summary { gap: .5rem; padding-block: .5rem; }
   .public-ui .hero h1 { font-size: 1.35rem; }
 }
+
+
+/* Keep the repeated daily actions and dates above decorative emphasis. */
+.public-ui .dashboard-shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.2rem;
+  margin-block-start: .8rem;
+}
+.public-ui .dashboard-shortcuts a {
+  color: var(--ui-accent);
+  font-size: .875rem;
+  text-decoration-thickness: 1px;
+}
+.public-ui :is(#smart-panel, #activity-timeline) { scroll-margin-top: 1rem; }
+.public-ui #smart-panel .smart-summary dd { order: -1; }
+.public-ui #smart-panel .smart-summary .summary-urgent dt {
+  color: var(--ui-accent);
+  font-weight: 600;
+}
+.public-ui #smart-panel .smart-card-copy .smart-game-name {
+  color: var(--ui-muted);
+  font-weight: 400;
+}
+.public-ui .event-dashboard #smart-panel .smart-card-copy .smart-countdown {
+  display: block;
+  margin-inline-start: 0 !important;
+  font-weight: 600;
+}
+.public-ui .event-dashboard #smart-panel .ending-soon .smart-countdown {
+  color: #f1b36f;
+}
+.public-ui #smart-panel .smart-card-actions .smart-detail {
+  border-color: #9485bd;
+}
+.public-ui .event-dashboard .milestone-card h3 {
+  font-size: 1rem;
+  margin-block: .2rem .6rem;
+}
+.public-ui .event-dashboard .milestone-card p {
+  color: var(--ui-muted);
+  line-height: 1.5;
+}
+.public-ui .content .toolbar {
+  gap: .75rem 1rem;
+  padding-block: .7rem;
+  border-block: 1px solid var(--ui-border);
+}
+.public-ui .content .section-heading h2 #event-count {
+  display: inline-block;
+  font-size: .95rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  background: transparent;
+  color: var(--ui-accent);
+}
+.public-ui .content > .timeline-guide-help { display: none; }
+.public-ui .timeline-meta strong { font-weight: 500; }
+.public-ui .top-actions #choose-games {
+  background: var(--ui-primary);
+  border-color: var(--ui-primary);
+  color: white;
+}
+@media (max-width:680px) {
+  .public-ui .dashboard-shortcuts { gap: .4rem 1rem; margin-block-start: .6rem; }
+  .public-ui .dashboard-shortcuts a { display: inline-flex; align-items: center; min-height: 44px; }
+  .public-ui .content .toolbar { align-items: stretch; }
+  .public-ui .timeline-meta { row-gap: .4rem; }
+}
