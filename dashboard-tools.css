@@ -181,3 +181,24 @@
     text-overflow: ellipsis;
   }
 }
+
+/* Only the right panel stretches when the dashboard has two columns. */
+@media (min-width: 1024px) {
+  .public-ui .event-dashboard > .milestones {
+    align-self: start;
+  }
+  .public-ui .event-dashboard > #smart-panel {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+  }
+  .public-ui .event-dashboard > #smart-panel > :not(.smart-list) {
+    flex-shrink: 0;
+  }
+  .public-ui .event-dashboard > #smart-panel > .smart-list.smart-pages {
+    /* Reserve about three cards for row sizing, then fill any extra height. */
+    flex: 1 0 330px;
+    contain: size;
+    max-height: none !important;
+  }
+}
