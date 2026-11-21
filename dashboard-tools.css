@@ -1,0 +1,125 @@
+.timeline-date-tools, .timeline-date-tools form, .timeline-date-tools label,
+.timeline-feed-notice, .completion-notice, .smart-card-actions {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.timeline-date-tools { margin-block: .6rem; }
+.timeline-date-tools form { margin: 0; }
+.timeline-date-tools label { color: var(--ui-muted); }
+.timeline-date-tools input { padding-inline: .6rem; min-height: 40px; }
+.timeline-date-feedback { color: var(--ui-muted); font-size: .85rem; }
+.timeline-feed-notice {
+  background: var(--ui-raised);
+  border: 1px solid var(--ui-border);
+  border-radius: 10px;
+  padding: .55rem .75rem;
+  margin-block: .65rem;
+}
+.timeline-feed-notice p { margin: 0; color: var(--ui-muted); }
+.public-ui :is(.timeline-date-tools, .timeline-feed-notice, #timeline .empty, .completion-notice) button {
+  background: var(--ui-raised);
+  color: var(--ui-text);
+  border: 1px solid #777096;
+  border-radius: 8px;
+  min-height: 40px;
+  padding: .4rem .7rem;
+  font-size: .875rem;
+}
+.public-ui :is(.timeline-date-tools form, .completion-notice) button:first-of-type {
+  background: var(--ui-primary);
+}
+.public-ui #timeline .empty { padding: 2.5rem 1rem; }
+.public-ui .timeline-meta { font-size: .78rem; }
+.completion-notice {
+  position: fixed;
+  inset: auto max(.75rem,env(safe-area-inset-right)) max(.75rem,env(safe-area-inset-bottom)) auto;
+  z-index: 60;
+  width: min(28rem,calc(100% - 1.5rem));
+  padding: .7rem;
+  background: var(--ui-panel);
+  color: var(--ui-text);
+  border: 1px solid #777096;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px #0a091480;
+}
+.completion-notice span { flex: 1 0 100%; overflow-wrap: anywhere; }
+.completion-notice-inline { position: static; width: 100%; margin-block-start: .8rem; box-shadow: none; }
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row > div {
+  max-height: none !important;
+  align-self: stretch !important;
+  overflow: visible !important;
+}
+.public-ui .event-dashboard #smart-panel .smart-card-copy p {
+  font-size: .78rem !important;
+  line-height: 1.35 !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+}
+.public-ui .event-dashboard #smart-panel .smart-countdown {
+  color: var(--ui-text);
+  font-variant-numeric: tabular-nums;
+}
+.public-ui .smart-card-actions { margin-block-start: .35rem; }
+.public-ui .event-dashboard #smart-panel .smart-card-actions button {
+  flex: 0 1 auto;
+  width: auto;
+  min-width: 0;
+  white-space: normal;
+}
+@media(max-width:680px) {
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages {
+    grid-auto-rows: auto !important;
+    height: auto !important;
+    max-height: 21rem !important;
+    align-items: stretch !important;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-row strong { font-size: .8rem !important; line-height: 1.35 !important; }
+  .public-ui .smart-card-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .25rem; }
+  .public-ui .event-dashboard #smart-panel .smart-card-actions button {
+    min-height: 44px !important;
+    height: auto !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: .2rem !important;
+    font-size: .75rem !important;
+    line-height: 1.25;
+  }
+  .public-ui #smart-panel .smart-card-actions button::before { inset: 0; }
+  .public-ui #smart-panel .smart-card-actions :is(.smart-follow,.smart-daily-done) { display: none !important; }
+  .public-ui :is(.timeline-date-tools, .timeline-feed-notice, #timeline .empty, .completion-notice) button { min-height: 44px; }
+}
+
+/* Legacy mobile cards positioned their direct action buttons in a second grid row. */
+@media(max-width:680px) {
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row {
+    flex-wrap: nowrap;
+  }
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row > div {
+    flex-basis: auto;
+    width: 100%;
+  }
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row .smart-card-actions > button {
+    grid-row: auto !important;
+    grid-column: auto !important;
+    position: static !important;
+    align-self: stretch !important;
+    justify-self: stretch !important;
+    min-height: 44px !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: .2rem !important;
+    font-size: .75rem !important;
+  }
+}
