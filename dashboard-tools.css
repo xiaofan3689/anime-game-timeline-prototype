@@ -202,3 +202,74 @@
     max-height: none !important;
   }
 }
+
+
+/* A shared summary row gives counts priority over supporting instructions. */
+.public-ui #smart-panel > h2 { margin: 0 0 1rem; }
+.public-ui #smart-panel > .smart-summary {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: .75rem;
+  margin: 0 0 .6rem;
+  padding: .7rem 0;
+  border-block: 1px solid var(--ui-border);
+}
+.public-ui #smart-panel .smart-summary > div {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: .2rem;
+}
+.public-ui #smart-panel .smart-summary dt {
+  font-size: .78rem;
+  line-height: 1.4;
+  color: var(--ui-muted);
+}
+.public-ui #smart-panel .smart-summary dd {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--ui-text);
+}
+.public-ui #smart-panel .smart-summary .summary-urgent dd { color: var(--ui-accent); }
+.public-ui #smart-panel .smart-hint {
+  font-size: .78rem;
+  line-height: 1.5;
+  margin: 0 0 .7rem;
+  color: var(--ui-muted);
+}
+.public-ui #smart-panel .smart-card-copy strong {
+  font-weight: 650;
+}
+.public-ui #smart-panel .smart-card-actions {
+  gap: .4rem;
+}
+.public-ui #smart-panel .smart-card-actions .smart-follow {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--ui-muted);
+}
+.public-ui #smart-panel .smart-card-actions .smart-follow[aria-pressed=true] {
+  color: var(--ui-accent);
+}
+.public-ui #smart-panel > .smart-page-indicator {
+  margin: .5rem 0;
+  font-size: .78rem;
+  color: var(--ui-muted);
+}
+.public-ui .hero { padding-block: 1rem; }
+.public-ui .hero h1 { font-size: 2rem; }
+.public-ui .hero-copy { margin-block: .4rem; }
+.public-ui .toolbar { align-items: center; }
+.public-ui .section-heading { gap: .8rem; flex-wrap: wrap; }
+.public-ui .timeline-date-feedback { flex: 1; }
+.public-ui .timeline-feed-notice { font-size: .8rem; }
+@media(max-width:680px) {
+  .public-ui #smart-panel .smart-summary dt { font-size: .72rem; }
+  .public-ui #smart-panel .smart-summary dd { font-size: 1.25rem; }
+  .public-ui #smart-panel > h2 { margin-block-end: .6rem; }
+  .public-ui #smart-panel > .smart-summary { gap: .5rem; padding-block: .5rem; }
+  .public-ui .hero h1 { font-size: 1.35rem; }
+}
