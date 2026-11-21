@@ -43,11 +43,23 @@ function showCompletionNotice(root, activity) {
 function smartRender(){
  const root=document.getElementById("smart-panel");if(!root||!S.feed)return;const previousTop=root.querySelector(".smart-pages")?.scrollTop||0;
  root.replaceChildren();
- const title=n("h2","","今天先做什么"),hint=n("p","smart-hint","优先展示一周内结束的活动，越临近结束越靠前；其余按游戏排序。" );root.append(title,hint);
+ const title=n("h2","","今天先做什么"),hint=n("p","smart-hint","优先展示一周内结束的活动，越临近结束越靠前；其余按游戏排序。" );root.append(title);
  const games=Object.fromEntries(S.feed.games.map(g=>[g.id,g.name]));
  const events=S.feed.events.filter(e=>S.selected.has(e.gameId)&&Date.parse(e.endAt)>Date.now()&&Date.parse(e.startAt)<=Date.now());
  const urgent=events.filter(e=>Date.parse(e.endAt)-Date.now()<=DAY);
- root.append(n("p","smart-summary",`进行中 ${events.length} 项 · 24 小时内结束 ${urgent.length} 项 · 已标记完成 ${events.filter(e=>progress[e.id]?.done).length} 项`));
+ const summary = n("dl","smart-summary");
+ for (const [label, count, className] of [
+  ["24 小时内结束", urgent.length, "summary-urgent"],
+  ["进行中", events.length, ""],
+  ["已标记完成", events.filter(e=>progress[e.id]?.done).length, ""]
+ ]) {
+  const item = n("div",className);
+  const value = n("dd");
+  value.append(n("span","summary-value",String(count)),n("span","summary-unit","项"));
+  item.append(n("dt","",label),value);
+  summary.append(item);
+ }
+ root.append(summary,hint);
  const list=n("div","smart-list");
  const pending=events.filter(e=>!progress[e.id]?.done&&!e.featured).sort((a,b)=>{const now=Date.now(),week=7*DAY,nearA=Date.parse(a.endAt)-now<=week,nearB=Date.parse(b.endAt)-now<=week;return Number(nearB)-Number(nearA)||(nearA&&nearB?Date.parse(a.endAt)-Date.parse(b.endAt):0)||Number(Date.parse(b.endAt)-Date.now()<=7*DAY)-Number(Date.parse(a.endAt)-Date.now()<=7*DAY)||((Date.parse(a.endAt)-Date.now()<=7*DAY&&Date.parse(b.endAt)-Date.now()<=7*DAY)?Date.parse(a.endAt)-Date.parse(b.endAt):0)||gameOrderRank(a.gameId)-gameOrderRank(b.gameId)||a.gameId.localeCompare(b.gameId)||Number(!!progress[b.id]?.star)-Number(!!progress[a.id]?.star)||Date.parse(a.endAt)-Date.parse(b.endAt)});
  const pageSize=3,pageCount=Math.max(1,Math.ceil(pending.length/pageSize)),page=Math.max(0,Math.min(pageCount-1,Number(root.dataset.page||0)));root.dataset.page=page;
@@ -57,6 +69,7 @@ function smartRender(){
 
   const row = n("article","smart-row");
   row.dataset.activityId = e.id;
+  row.classList.toggle("ending-soon", Date.parse(e.endAt)-Date.now() <= DAY);
   const copy = n("div","smart-card-copy");
   const countdown = n("p","smart-countdown","剩余 " + remain(e.endAt));
   countdown.dataset.countdownEnd = e.endAt;
