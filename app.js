@@ -57,7 +57,81 @@ function updateTitles(scroll){const left=scroll.scrollLeft;for(const bar of scro
 let timelineManualDate=null;
 try{const saved=Number(sessionStorage.getItem('timeline-view-date-v78'));if(saved>0&&Number.isFinite(saved))timelineManualDate=saved}catch{}
 function timelineDateAt(left,origin){const days=left/DW,whole=Math.floor(days),a=new Date(origin),b=new Date(origin);a.setDate(a.getDate()+whole);b.setDate(b.getDate()+whole+1);return +a+(+b-+a)*(days-whole)}
-function bindTimelinePosition(scroll,start){
+const timelineRoot = $("timeline");
+const timelineTools = n("div", "timeline-date-tools");
+const todayButton = n("button", "", "回到今天");
+const dateForm = n("form");
+const dateLabel = n("label", "", "跳转日期");
+const dateInput = n("input");
+dateInput.type = "date";
+dateInput.required = true;
+dateInput.setAttribute("aria-label", "跳转日期");
+todayButton.type = "button";
+const dateSubmit = n("button", "", "跳转");
+dateSubmit.type = "submit";
+const dateFeedback = n("span", "timeline-date-feedback");
+dateFeedback.setAttribute("role", "status");
+dateLabel.append(dateInput);
+dateForm.append(dateLabel, dateSubmit);
+timelineTools.append(todayButton, dateForm, dateFeedback);
+timelineTools.hidden = true;
+const feedNotice = n("div", "timeline-feed-notice");
+feedNotice.hidden = true;
+timelineRoot.before(feedNotice, timelineTools);
+const feedNoticeText = n("p");
+feedNoticeText.setAttribute("role", "status");
+const feedRetry = n("button", "", "重试");
+feedRetry.type = "button";
+feedRetry.onclick = () => refresh();
+feedNotice.append(feedNoticeText, feedRetry);
+function localDateValue(date) {
+ return [date.getFullYear(), date.getMonth()+1, date.getDate()].map((part,i)=>String(part).padStart(i===0?4:2,"0")).join("-");
+}
+function showFeedNotice(message, retry = false) {
+ feedNoticeText.textContent = message;
+ feedNotice.hidden = !message;
+ feedRetry.hidden = !retry;
+}
+function setStatusFilter(status) {
+ S.status = status;
+ for (const button of document.querySelectorAll("[data-status]")) {
+  const active = button.dataset.status === status;
+  button.classList.toggle("active", active);
+  button.setAttribute("aria-pressed", String(active));
+ }
+}
+function showTimelineEmpty(root, feed) {
+ const empty = n("div","empty");
+ if (!S.feed) {
+  empty.append(n("strong","","活动数据尚未加载"));
+ } else if (S.query || S.game !== "all" || S.status !== "all") {
+  empty.append(n("strong","","没有符合筛选条件的活动"));
+  const clear = n("button","","清除筛选");
+  clear.type = "button";
+  clear.onclick = () => {
+   S.query = $("search").value = "";
+   S.game = "all";
+   setStatusFilter("all");
+   render();
+   $("search").focus({preventScroll:true});
+  };
+  empty.append(clear);
+ } else if (!feed.events.length) {
+  empty.append(n("strong","","暂无已同步活动"));
+  const retry = n("button","","重试");
+  retry.type = "button";
+  retry.onclick = () => { retry.disabled=true; refresh().finally(()=>{retry.disabled=false}); };
+  empty.append(retry);
+ } else {
+  empty.append(n("strong","",S.selected.size?"已选游戏暂无活动":"请先选择游戏"));
+  const choose = n("button","","选择游戏");
+  choose.type = "button";
+  choose.onclick = () => picker();
+  empty.append(choose);
+ }
+ root.append(empty);
+}
+function bindTimelinePosition(scroll,start,days){
  let interacting=false,down=null,last=scroll.scrollLeft;
  const mark=()=>{interacting=true};
  scroll.addEventListener('wheel',mark,{passive:true});
@@ -72,12 +146,42 @@ function bindTimelinePosition(scroll,start){
  scroll.tabIndex=0;scroll.setAttribute('aria-label','横向活动时间线，可用左右方向键移动日期');
  let placed=false;
  function place(){if(S.scroll!==scroll||!scroll.isConnected||!scroll.clientWidth||interacting)return;scroll.scrollLeft=timelineManualDate===null?Math.max(0,position(new Date(),start)-scroll.clientWidth*.3):Math.max(0,position(timelineManualDate,start));last=scroll.scrollLeft;placed=true;updateTitles(scroll)}
+ const lastDate = new Date(start);
+ lastDate.setDate(lastDate.getDate()+days-1);
+ dateInput.min = localDateValue(start);
+ dateInput.max = localDateValue(lastDate);
+ if (!dateInput.value || dateInput.value < dateInput.min || dateInput.value > dateInput.max) {
+  dateInput.value = localDateValue(new Date());
+ }
+ function jump(date, today) {
+  interacting = true;
+  timelineManualDate = today ? null : +date;
+  try {
+   if (today) sessionStorage.removeItem("timeline-view-date-v78");
+   else sessionStorage.setItem("timeline-view-date-v78",String(timelineManualDate));
+  } catch {}
+  scroll.scrollLeft = Math.max(0, position(date,start) - (today ? scroll.clientWidth*.3 : 0));
+  last = scroll.scrollLeft;
+  updateTitles(scroll);
+  dateInput.value = localDateValue(date);
+  dateFeedback.textContent = today ? "已回到今天" : "已跳转到 " + dateInput.value;
+ }
+ todayButton.onclick = () => jump(new Date(),true);
+ dateForm.onsubmit = event => {
+  event.preventDefault();
+  if (!dateInput.reportValidity()) return;
+  const [year,month,date] = dateInput.value.split("-").map(Number);
+  const target = new Date(0);
+  target.setFullYear(year, month-1, date);
+  target.setHours(0,0,0,0);
+  jump(target,false);
+ };
  requestAnimationFrame(()=>{place();requestAnimationFrame(place)});
  for(const ms of [100,400])setTimeout(place,ms);
  if(typeof ResizeObserver!=='undefined'){const observer=new ResizeObserver(()=>{if(!placed)place()});observer.observe(scroll);setTimeout(()=>observer.disconnect(),2000)}
 }
 
-function render(){const f=S.feed||{games:[],events:[],sources:[]},gm=Object.fromEntries(f.games.map(g=>[g.id,g])),select=$("game-filter"),old=S.game;select.replaceChildren(new Option("我的全部游戏","all"));f.games.filter(g=>S.selected.has(g.id)&&f.events.some(e=>e.gameId===g.id)).forEach(g=>select.add(new Option(g.name,g.id)));select.value=[...select.options].some(o=>o.value===old)?old:"all";S.game=select.value;const events=f.events.filter(e=>S.selected.has(e.gameId)&&Number.isFinite(Date.parse(e.startAt))&&Number.isFinite(Date.parse(e.endAt))).filter(e=>(S.status==="all"||status(e)===S.status)&&(S.game==="all"||e.gameId===S.game)&&(!S.query||(e.title+" "+(gm[e.gameId]?.name||"")).toLowerCase().includes(S.query))).sort(compareTimeline);$("event-count").textContent=events.length;const root=$("timeline"),oldScroll=S.scroll,oldLeft=oldScroll?.scrollLeft,hadBoard=!!oldScroll?.querySelector(".timeline-board");root.replaceChildren();if(!events.length){const empty=n("div","empty");empty.append(n("strong","",f.events.length?"所选游戏暂无符合条件的活动":"暂无已同步活动"),n("span","",f.events.length?"重新选择游戏或调整筛选条件。":"同步完成后活动会显示在这里。"));root.append(empty);S.scroll=null;return}const now=new Date(),start=day(new Date(Math.min(Date.now(),...events.map(e=>Date.parse(e.startAt)))));start.setDate(start.getDate()-2);const end=day(new Date(Math.max(Date.now(),...events.map(e=>Date.parse(e.endAt)))));end.setDate(end.getDate()+4);const days=Math.max(16,dayIndex(end,start)),scroll=n("div","timeline-scroll"),board=n("div","timeline-board"),head=n("div","date-head"),grid=n("div","grid"),lanes=n("div","lanes");board.style.width=days*DW+"px";for(let i=0;i<days;i++){const date=new Date(start.getFullYear(),start.getMonth(),start.getDate()+i),cell=n("div","date-cell"+(date.toDateString()===now.toDateString()?" today":""));if(i===0||date.getDate()===1)cell.append(n("b","month-name",new Intl.DateTimeFormat("zh-CN",{month:"long"}).format(date)));cell.append(n("small","",new Intl.DateTimeFormat("zh-CN",{weekday:"short"}).format(date)),n("strong","",date.getDate()));head.append(cell);const line=n("i","grid-line");line.style.left=i*DW+"px";grid.append(line)}const marker=n("div","now-marker");marker.style.left=position(now,start)+"px";marker.append(n("span","","现在"));grid.append(marker);let previousGame=null,endedHeading=false,doneHeading=false,pendingGuide=null;for(const event of events){if(status(event)==="ended"){if(!endedHeading){lanes.append(n("div","ended-heading","已结束活动"));endedHeading=true}}else if(window.activityDone?.(event.id)){if(!doneHeading){lanes.append(n("div","ended-heading","已完成活动"));doneHeading=true}}else if(activityBucket(event)===1){if(!doneHeading){lanes.append(n("div","ended-heading","已完成活动"));doneHeading=true}}else if(previousGame!==event.gameId){const guide=n("button","game-guide",(gm[event.gameId]?.name||event.gameId)+" ↓");guide.type="button";guide.title="定位到此游戏的第一项活动";pendingGuide=guide;lanes.append(guide);previousGame=event.gameId}const lane=n("div","lane"),bar=n("a","event-bar "+status(event));lane.dataset.gameAnchor=event.gameId;if(pendingGuide){const target=lane;pendingGuide.onclick=()=>{const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;target.tabIndex=-1;target.focus({preventScroll:true});target.scrollIntoView({block:"start",inline:"nearest",behavior:reduced?"instant":"smooth"})};pendingGuide=null;}const x=position(event.startAt,start),last=position(event.endAt,start),width=Math.max(2,last-x);bar.style.left=x+"px";bar.style.width=width+"px";bar.style.setProperty("--c",colors[[...event.gameId].reduce((sum,ch)=>sum+ch.charCodeAt(0),0)%colors.length]);const banner=url(event.imageUrl);if(banner)bar.style.setProperty("--banner",`url("${banner.replaceAll(String.fromCharCode(34),"")}")`);bar.href="#activity";bar.onclick=e=>{e.preventDefault();window.openActivity?.(event)};bar.title=`${event.title} · ${fmt.format(new Date(event.startAt))} 至 ${fmt.format(new Date(event.endAt))}`;bar.append(n("strong","",event.title+" · "+(gm[event.gameId]?.name||event.gameId)));lane.append(bar);if(status(event)==="live"){const badge=n("span","remaining-badge",remain(event.endAt));badge.dataset.countdownEnd=event.endAt;badge.style.left=last+8+"px";lane.append(badge)}lanes.append(lane)}board.append(head,grid,lanes);scroll.append(board);root.append(scroll);S.scroll=scroll;attachDrag(scroll);bindTimelinePosition(scroll,start);}
+function render(){const f=S.feed||{games:[],events:[],sources:[]},gm=Object.fromEntries(f.games.map(g=>[g.id,g])),select=$("game-filter"),old=S.game;select.replaceChildren(new Option("我的全部游戏","all"));f.games.filter(g=>S.selected.has(g.id)&&f.events.some(e=>e.gameId===g.id)).forEach(g=>select.add(new Option(g.name,g.id)));select.value=[...select.options].some(o=>o.value===old)?old:"all";S.game=select.value;const events=f.events.filter(e=>S.selected.has(e.gameId)&&Number.isFinite(Date.parse(e.startAt))&&Number.isFinite(Date.parse(e.endAt))).filter(e=>(S.status==="all"||status(e)===S.status)&&(S.game==="all"||e.gameId===S.game)&&(!S.query||(e.title+" "+(gm[e.gameId]?.name||"")).toLowerCase().includes(S.query))).sort(compareTimeline);$("event-count").textContent=events.length;const root=$("timeline"),oldScroll=S.scroll,oldLeft=oldScroll?.scrollLeft,hadBoard=!!oldScroll?.querySelector(".timeline-board");root.replaceChildren();timelineTools.hidden=!events.length;if(!events.length){showTimelineEmpty(root,f);S.scroll=null;return}const now=new Date(),start=day(new Date(Math.min(Date.now(),...events.map(e=>Date.parse(e.startAt)))));start.setDate(start.getDate()-2);const end=day(new Date(Math.max(Date.now(),...events.map(e=>Date.parse(e.endAt)))));end.setDate(end.getDate()+4);const days=Math.max(16,dayIndex(end,start)),scroll=n("div","timeline-scroll"),board=n("div","timeline-board"),head=n("div","date-head"),grid=n("div","grid"),lanes=n("div","lanes");board.style.width=days*DW+"px";for(let i=0;i<days;i++){const date=new Date(start.getFullYear(),start.getMonth(),start.getDate()+i),cell=n("div","date-cell"+(date.toDateString()===now.toDateString()?" today":""));if(i===0||date.getDate()===1)cell.append(n("b","month-name",new Intl.DateTimeFormat("zh-CN",{month:"long"}).format(date)));cell.append(n("small","",new Intl.DateTimeFormat("zh-CN",{weekday:"short"}).format(date)),n("strong","",date.getDate()));head.append(cell);const line=n("i","grid-line");line.style.left=i*DW+"px";grid.append(line)}const marker=n("div","now-marker");marker.style.left=position(now,start)+"px";marker.append(n("span","","现在"));grid.append(marker);let previousGame=null,endedHeading=false,doneHeading=false,pendingGuide=null;for(const event of events){if(status(event)==="ended"){if(!endedHeading){lanes.append(n("div","ended-heading","已结束活动"));endedHeading=true}}else if(window.activityDone?.(event.id)){if(!doneHeading){lanes.append(n("div","ended-heading","已完成活动"));doneHeading=true}}else if(activityBucket(event)===1){if(!doneHeading){lanes.append(n("div","ended-heading","已完成活动"));doneHeading=true}}else if(previousGame!==event.gameId){const guide=n("button","game-guide",(gm[event.gameId]?.name||event.gameId)+" ↓");guide.type="button";guide.title="定位到此游戏的第一项活动";pendingGuide=guide;lanes.append(guide);previousGame=event.gameId}const lane=n("div","lane"),bar=n("a","event-bar "+status(event));lane.dataset.gameAnchor=event.gameId;if(pendingGuide){const target=lane;pendingGuide.onclick=()=>{const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;target.tabIndex=-1;target.focus({preventScroll:true});target.scrollIntoView({block:"start",inline:"nearest",behavior:reduced?"instant":"smooth"})};pendingGuide=null;}const x=position(event.startAt,start),last=position(event.endAt,start),width=Math.max(2,last-x);bar.style.left=x+"px";bar.style.width=width+"px";bar.style.setProperty("--c",colors[[...event.gameId].reduce((sum,ch)=>sum+ch.charCodeAt(0),0)%colors.length]);const banner=url(event.imageUrl);if(banner)bar.style.setProperty("--banner",`url("${banner.replaceAll(String.fromCharCode(34),"")}")`);bar.href="#activity";bar.onclick=e=>{e.preventDefault();window.openActivity?.(event)};bar.title=`${event.title} · ${fmt.format(new Date(event.startAt))} 至 ${fmt.format(new Date(event.endAt))}`;bar.append(n("strong","",event.title+" · "+(gm[event.gameId]?.name||event.gameId)));lane.append(bar);if(status(event)==="live"){const badge=n("span","remaining-badge",remain(event.endAt));badge.dataset.countdownEnd=event.endAt;badge.style.left=last+8+"px";lane.append(badge)}lanes.append(lane)}board.append(head,grid,lanes);scroll.append(board);root.append(scroll);S.scroll=scroll;attachDrag(scroll);bindTimelinePosition(scroll,start,days);}
 let feedRefreshing=false,feedAppliedAt=0;
 function validHotFeed(feed){
  if(!feed||!Array.isArray(feed.games)||!Array.isArray(feed.events)||!Array.isArray(feed.sources)||!Number.isFinite(Date.parse(feed.generatedAt)))throw Error('活动数据格式无效');
@@ -89,7 +193,8 @@ function hotFeedKey(feed){return JSON.stringify([feed.games,feed.events,feed.hon
 function homeHotBusy(){return !!document.querySelector('dialog[open],#game-modal:not([hidden]),.timeline-scroll.dragging')||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)}
 async function refresh(options={}){
  const background=options.background===true;if(feedRefreshing||(background&&(document.hidden||homeHotBusy())))return;
- feedRefreshing=true;$('refresh').disabled=true;
+ feedRefreshing=true;$('refresh').disabled=true;feedRetry.disabled=true;
+ if(!S.feed)showFeedNotice('正在加载活动数据…');
  try{
   const response=await fetch('/data/events.json',{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!response.ok)throw Error('HTTP '+response.status);
   const incoming=validHotFeed(await response.json());
@@ -102,14 +207,20 @@ async function refresh(options={}){
   const stale=incoming.sources.filter(x=>x.status!=='ok'),time=fmt.format(new Date(incoming.generatedAt));
   $('updated-at').textContent='生成于 '+time;$('side-updated').textContent=time;
   $('source-summary').textContent=stale.length?`${stale.length} 个来源使用旧数据`:'全部正常';
+  showFeedNotice(stale.length ? `部分来源使用旧数据。最近生成于 ${time}。` : "");
   $('sync-status').textContent=stale.length?'部分来源使用旧数据':'已连接共享活动数据';
   if(changed){const x=window.scrollX,y=window.scrollY;render();requestAnimationFrame(()=>window.scrollTo(x,y));window.dispatchEvent(new CustomEvent('timeline-feed-updated',{detail:{generatedAt:incoming.generatedAt}}))}
   feedAppliedAt=Date.now();
- }catch(error){$('sync-status').textContent=(S.feed?'自动更新暂不可用，保留上次数据：':'读取失败：')+error.message}
- finally{feedRefreshing=false;$('refresh').disabled=false}
+ }catch(error){
+  $('sync-status').textContent=S.feed?'更新暂不可用，已保留上次数据':'活动数据读取失败';
+  showFeedNotice(S.feed ? '更新失败。当前显示的数据生成于 '+fmt.format(new Date(S.feed.generatedAt))+'。' : '读取活动失败，请检查网络后重试。',true);
+  if(!S.feed)render();
+ }
+ finally{feedRefreshing=false;$('refresh').disabled=false;feedRetry.disabled=false}
 }
 
-document.querySelectorAll("[data-status]").forEach(button=>button.onclick=()=>{document.querySelectorAll("[data-status]").forEach(x=>x.classList.toggle("active",x===button));S.status=button.dataset.status;S.scroll=null;render()});$("game-filter").onchange=e=>{S.game=e.target.value;S.scroll=null;render()};$("search").oninput=e=>{S.query=e.target.value.trim().toLowerCase();render()};$("refresh").onclick=refresh;$("choose-games").onclick=()=>picker();$("save-games").onclick=save;$("select-all").onclick=()=>document.querySelectorAll("#game-options input").forEach(x=>x.checked=true);refresh();setInterval(()=>refresh({background:true}),60000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)refresh({background:true})});window.addEventListener("online",()=>refresh({background:true}));setInterval(()=>{if(Date.now()-feedAppliedAt>60000)refresh({background:true})},10000);setInterval(()=>S.feed&&render(),60000);
+setStatusFilter(S.status);
+document.querySelectorAll("[data-status]").forEach(button=>button.onclick=()=>{setStatusFilter(button.dataset.status);S.scroll=null;render()});$("game-filter").onchange=e=>{S.game=e.target.value;S.scroll=null;render()};$("search").oninput=e=>{S.query=e.target.value.trim().toLowerCase();render()};$("refresh").onclick=refresh;$("choose-games").onclick=()=>picker();$("save-games").onclick=save;$("select-all").onclick=()=>document.querySelectorAll("#game-options input").forEach(x=>x.checked=true);refresh();setInterval(()=>refresh({background:true}),60000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)refresh({background:true})});window.addEventListener("online",()=>refresh({background:true}));setInterval(()=>{if(Date.now()-feedAppliedAt>60000)refresh({background:true})},10000);setInterval(()=>S.feed&&render(),60000);
 document.getElementById("admin-entry").addEventListener("dblclick",()=>location.assign("/admin/"));
 
 const orderButton=n("button","","游戏排序");orderButton.type="button";document.querySelector(".top-actions").append(orderButton);

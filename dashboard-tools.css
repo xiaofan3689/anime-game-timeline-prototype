@@ -1,0 +1,591 @@
+.timeline-date-tools, .timeline-date-tools form, .timeline-date-tools label,
+.timeline-feed-notice, .completion-notice, .smart-card-actions {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.timeline-date-tools { margin-block: .6rem; }
+.timeline-date-tools form { margin: 0; }
+.timeline-date-tools label { color: var(--ui-muted); }
+.timeline-date-tools input { padding-inline: .6rem; min-height: 40px; }
+.timeline-date-feedback { color: var(--ui-muted); font-size: .85rem; }
+.timeline-feed-notice {
+  background: var(--ui-raised);
+  border: 1px solid var(--ui-border);
+  border-radius: 10px;
+  padding: .55rem .75rem;
+  margin-block: .65rem;
+}
+.timeline-feed-notice p { margin: 0; color: var(--ui-muted); }
+.public-ui :is(.timeline-date-tools, .timeline-feed-notice, #timeline .empty, .completion-notice) button {
+  background: var(--ui-raised);
+  color: var(--ui-text);
+  border: 1px solid #777096;
+  border-radius: 8px;
+  min-height: 40px;
+  padding: .4rem .7rem;
+  font-size: .875rem;
+}
+.public-ui :is(.timeline-date-tools form, .completion-notice) button:first-of-type {
+  background: var(--ui-primary);
+}
+.public-ui #timeline .empty { padding: 2.5rem 1rem; }
+.public-ui .timeline-meta { font-size: .78rem; }
+.completion-notice {
+  position: fixed;
+  inset: auto max(.75rem,env(safe-area-inset-right)) max(.75rem,env(safe-area-inset-bottom)) auto;
+  z-index: 60;
+  width: min(28rem,calc(100% - 1.5rem));
+  padding: .7rem;
+  background: var(--ui-panel);
+  color: var(--ui-text);
+  border: 1px solid #777096;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px #0a091480;
+}
+.completion-notice span { flex: 1 0 100%; overflow-wrap: anywhere; }
+.completion-notice-inline { position: static; width: 100%; margin-block-start: .8rem; box-shadow: none; }
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row > div {
+  max-height: none !important;
+  align-self: stretch !important;
+  overflow: visible !important;
+}
+.public-ui .event-dashboard #smart-panel .smart-card-copy p {
+  font-size: .78rem !important;
+  line-height: 1.35 !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+}
+.public-ui .event-dashboard #smart-panel .smart-countdown {
+  color: var(--ui-text);
+  font-variant-numeric: tabular-nums;
+}
+.public-ui .smart-card-actions { margin-block-start: .35rem; }
+.public-ui .event-dashboard #smart-panel .smart-card-actions button {
+  flex: 0 1 auto;
+  width: auto;
+  min-width: 0;
+  white-space: normal;
+}
+@media(max-width:680px) {
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages {
+    grid-auto-rows: auto !important;
+    height: auto !important;
+    max-height: 21rem !important;
+    align-items: stretch !important;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-row strong { font-size: .8rem !important; line-height: 1.35 !important; }
+  .public-ui .smart-card-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .25rem; }
+  .public-ui .event-dashboard #smart-panel .smart-card-actions button {
+    min-height: 44px !important;
+    height: auto !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: .2rem !important;
+    font-size: .75rem !important;
+    line-height: 1.25;
+  }
+  .public-ui #smart-panel .smart-card-actions button::before { inset: 0; }
+  .public-ui #smart-panel .smart-card-actions :is(.smart-follow,.smart-daily-done) { display: none !important; }
+  .public-ui :is(.timeline-date-tools, .timeline-feed-notice, #timeline .empty, .completion-notice) button { min-height: 44px; }
+}
+
+/* Legacy mobile cards positioned their direct action buttons in a second grid row. */
+@media(max-width:680px) {
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row {
+    flex-wrap: nowrap;
+  }
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row > div {
+    flex-basis: auto;
+    width: 100%;
+  }
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row .smart-card-actions > button {
+    grid-row: auto !important;
+    grid-column: auto !important;
+    position: static !important;
+    align-self: stretch !important;
+    justify-self: stretch !important;
+    min-height: 44px !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: .2rem !important;
+    font-size: .75rem !important;
+  }
+}
+
+/* Restore the compact internal viewport while retaining the v123 card controls. */
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages {
+  height: 330px !important;
+  max-height: 330px !important;
+  overflow-y: auto;
+}
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding: .45rem .65rem !important;
+  gap: .2rem !important;
+}
+.public-ui .event-dashboard #smart-panel .smart-card-copy p {
+  margin: 0 !important;
+}
+.public-ui .event-dashboard #smart-panel .smart-card-actions {
+  margin-block-start: 0;
+}
+@media (min-width: 681px) {
+  .public-ui .event-dashboard #smart-panel .smart-card-copy strong {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-card-copy p {
+    display: inline;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-countdown {
+    margin-inline-start: .65rem !important;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-card-actions button {
+    min-height: 36px;
+    padding-block: .3rem;
+  }
+}
+@media (max-width: 680px) {
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages {
+    height: 222px !important;
+    max-height: 222px !important;
+    grid-auto-rows: minmax(108px, max-content) !important;
+  }
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row {
+    padding: 4px 6px !important;
+    gap: 2px !important;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-card-copy strong {
+    line-height: 14px !important;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-card-copy p {
+    line-height: 13px !important;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-card-copy .smart-game-name {
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* Only the right panel stretches when the dashboard has two columns. */
+@media (min-width: 1024px) {
+  .public-ui .event-dashboard > .milestones {
+    align-self: start;
+  }
+  .public-ui .event-dashboard > #smart-panel {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+  }
+  .public-ui .event-dashboard > #smart-panel > :not(.smart-list) {
+    flex-shrink: 0;
+  }
+  .public-ui .event-dashboard > #smart-panel > .smart-list.smart-pages {
+    /* Reserve about three cards for row sizing, then fill any extra height. */
+    flex: 1 0 330px;
+    contain: size;
+    max-height: none !important;
+  }
+}
+
+
+/* A shared summary row gives counts priority over supporting instructions. */
+.public-ui #smart-panel > h2 { margin: 0 0 1rem; }
+.public-ui #smart-panel > .smart-summary {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: .75rem;
+  margin: 0 0 .6rem;
+  padding: .7rem 0;
+  border-block: 1px solid var(--ui-border);
+}
+.public-ui #smart-panel .smart-summary > div {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: .2rem;
+}
+.public-ui #smart-panel .smart-summary dt {
+  font-size: .78rem;
+  line-height: 1.4;
+  color: var(--ui-muted);
+}
+.public-ui #smart-panel .smart-summary dd {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--ui-text);
+}
+.public-ui #smart-panel .smart-summary .summary-urgent dd { color: var(--ui-accent); }
+.public-ui #smart-panel .smart-hint {
+  font-size: .78rem;
+  line-height: 1.5;
+  margin: 0 0 .7rem;
+  color: var(--ui-muted);
+}
+.public-ui #smart-panel .smart-card-copy strong {
+  font-weight: 650;
+}
+.public-ui #smart-panel .smart-card-actions {
+  gap: .4rem;
+}
+.public-ui #smart-panel .smart-card-actions .smart-follow {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--ui-muted);
+}
+.public-ui #smart-panel .smart-card-actions .smart-follow[aria-pressed=true] {
+  color: var(--ui-accent);
+}
+.public-ui #smart-panel > .smart-page-indicator {
+  margin: .5rem 0;
+  font-size: .78rem;
+  color: var(--ui-muted);
+}
+.public-ui .hero { padding-block: 1rem; }
+.public-ui .hero h1 { font-size: 2rem; }
+.public-ui .hero-copy { margin-block: .4rem; }
+.public-ui .toolbar { align-items: center; }
+.public-ui .section-heading { gap: .8rem; flex-wrap: wrap; }
+.public-ui .timeline-date-feedback { flex: 1; }
+.public-ui .timeline-feed-notice { font-size: .8rem; }
+@media(max-width:680px) {
+  .public-ui #smart-panel .smart-summary dt { font-size: .72rem; }
+  .public-ui #smart-panel .smart-summary dd { font-size: 1.25rem; }
+  .public-ui #smart-panel > h2 { margin-block-end: .6rem; }
+  .public-ui #smart-panel > .smart-summary { gap: .5rem; padding-block: .5rem; }
+  .public-ui .hero h1 { font-size: 1.35rem; }
+}
+
+
+/* Keep the repeated daily actions and dates above decorative emphasis. */
+.public-ui .dashboard-shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.2rem;
+  margin-block-start: .8rem;
+}
+.public-ui .dashboard-shortcuts a {
+  color: var(--ui-accent);
+  font-size: .875rem;
+  text-decoration-thickness: 1px;
+}
+.public-ui :is(#smart-panel, #activity-timeline) { scroll-margin-top: 1rem; }
+.public-ui #smart-panel .smart-summary dd { order: -1; }
+.public-ui #smart-panel .smart-summary .summary-urgent dt {
+  color: var(--ui-accent);
+  font-weight: 600;
+}
+.public-ui #smart-panel .smart-card-copy .smart-game-name {
+  color: var(--ui-muted);
+  font-weight: 400;
+}
+.public-ui .event-dashboard #smart-panel .smart-card-copy .smart-countdown {
+  display: block;
+  margin-inline-start: 0 !important;
+  font-weight: 600;
+}
+.public-ui .event-dashboard #smart-panel .ending-soon .smart-countdown {
+  color: #f1b36f;
+}
+.public-ui #smart-panel .smart-card-actions .smart-detail {
+  border-color: #9485bd;
+}
+.public-ui .event-dashboard .milestone-card h3 {
+  font-size: 1rem;
+  margin-block: .2rem .6rem;
+}
+.public-ui .event-dashboard .milestone-card p {
+  color: var(--ui-muted);
+  line-height: 1.5;
+}
+.public-ui .content .toolbar {
+  gap: .75rem 1rem;
+  padding-block: .7rem;
+  border-block: 1px solid var(--ui-border);
+}
+.public-ui .content .section-heading h2 #event-count {
+  display: inline-block;
+  font-size: .95rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  background: transparent;
+  color: var(--ui-accent);
+}
+.public-ui .content > .timeline-guide-help { display: none; }
+.public-ui .timeline-meta strong { font-weight: 500; }
+.public-ui .top-actions #choose-games {
+  background: var(--ui-primary);
+  border-color: var(--ui-primary);
+  color: white;
+}
+@media (max-width:680px) {
+  .public-ui .dashboard-shortcuts { gap: .4rem 1rem; margin-block-start: .6rem; }
+  .public-ui .dashboard-shortcuts a { display: inline-flex; align-items: center; min-height: 44px; }
+  .public-ui .content .toolbar { align-items: stretch; }
+  .public-ui .timeline-meta { row-gap: .4rem; }
+}
+
+/* Explicit content and action rows prevent older card rules shrinking the copy. */
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row {
+  display: grid !important;
+  grid-template-columns: minmax(0,1fr) !important;
+  grid-template-rows: auto auto !important;
+  align-content: start !important;
+  justify-content: stretch;
+  gap: 8px !important;
+  flex: 0 0 auto !important;
+  padding: 10px 12px !important;
+  height: auto !important;
+  min-height: min-content !important;
+  max-height: none !important;
+}
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row > .smart-card-copy,
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row > .smart-card-actions {
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  min-width: 0;
+  width: 100%;
+  margin: 0 !important;
+  flex: none !important;
+  align-self: start !important;
+}
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row > .smart-card-copy {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  display: grid;
+  gap: 2px;
+}
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row > .smart-card-actions {
+  grid-column: 1 !important;
+  grid-row: 2 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  overflow: visible !important;
+}
+.public-ui .event-dashboard #smart-panel .smart-card-copy :is(strong,p) {
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+.public-ui .event-dashboard #smart-panel .smart-card-copy p {
+  display: block;
+}
+.public-ui .event-dashboard #smart-panel .smart-card-actions > button {
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+  grid-area: auto !important;
+  margin: 0 !important;
+  min-height: 36px;
+  max-height: none;
+  flex: 0 0 auto;
+  line-height: 1.3;
+}
+@media(max-width:680px) {
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row {
+    gap: 5px !important;
+    padding: 6px !important;
+  }
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row > .smart-card-actions {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 5px;
+  }
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row .smart-card-actions > button {
+    min-height: 44px !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+}
+
+
+/* Clear primary task, then supporting controls, then the activity detail. */
+.public-ui .topbar {
+  height: auto;
+  min-height: 72px;
+  padding-block: 12px;
+  flex-wrap: wrap;
+}
+.public-ui .top-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+.public-ui .top-actions :is(button,a.admin-link) { font-weight: 500; }
+.public-ui .top-actions :is(#apply-collaborator,.admin-link) {
+  background: transparent;
+  border-color: transparent;
+  color: var(--ui-muted);
+}
+.public-ui #smart-panel > .smart-summary {
+  grid-template-columns: 1.35fr 1fr 1fr;
+  align-items: start;
+  padding-block: 12px;
+  gap: 12px;
+}
+.public-ui #smart-panel .smart-summary dd {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.public-ui #smart-panel .summary-unit {
+  font-size: .75rem;
+  font-weight: 400;
+  color: var(--ui-muted);
+}
+.public-ui #smart-panel .summary-urgent .summary-value {
+  font-size: 2rem;
+}
+.public-ui #smart-panel .smart-hint { max-width: 65ch; }
+.public-ui #smart-panel .smart-card-actions { align-items: center; }
+.public-ui #smart-panel .smart-card-actions > .smart-follow { order: 1; }
+.public-ui #smart-panel > .smart-warning {
+  font-size: .8rem;
+  line-height: 1.5;
+  margin-block: 12px 0;
+}
+.public-ui .content .searches { flex-wrap: wrap; min-width: 0; }
+.public-ui .content .searches label { min-width: 0; }
+.public-ui .content .searches input { min-width: 0; max-width: 100%; }
+.public-ui .timeline-meta { border-top: 1px solid var(--ui-border); padding-top: 12px; }
+@media(max-width:680px) {
+  .public-ui .top-actions {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    width: 100%;
+  }
+  .public-ui #smart-panel > .smart-summary { gap: 8px; }
+  .public-ui #smart-panel .summary-urgent .summary-value { font-size: 1.5rem; }
+  .public-ui .content .searches { display: grid; width: 100%; }
+  .public-ui #smart-panel .smart-card-actions > .smart-follow { order: 0; }
+}
+
+
+/* A compact introduction leads directly into the working dashboard. */
+.public-ui .hero {
+  display: block;
+  min-height: 0;
+  padding: 18px 22px;
+  margin-block: 16px;
+}
+.public-ui .hero > div:first-child {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto;
+  gap: 8px 24px;
+  align-items: center;
+}
+.public-ui .hero h1 {
+  grid-column: 1;
+  font-size: 1.65rem;
+  line-height: 1.3;
+  margin: 0;
+}
+.public-ui .hero h1 br { display: none; }
+.public-ui .hero h1 span,
+.public-ui .hero h1 em { display: inline; white-space: normal; }
+.public-ui .hero h1 em::before { content: " "; }
+.public-ui .hero-copy {
+  grid-column: 1;
+  font-size: .8rem;
+  max-width: 65ch;
+  margin: 0;
+}
+.public-ui .hero-meta {
+  grid-column: 1;
+  flex-wrap: wrap;
+  font-size: .78rem;
+  margin: 0;
+}
+.public-ui .hero .dashboard-shortcuts {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  flex-direction: column;
+  margin: 0;
+  gap: 8px;
+}
+.public-ui .hero .dashboard-shortcuts a {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+}
+.public-ui .event-dashboard { gap: 24px; }
+.public-ui .event-dashboard :is(.milestones,#smart-panel) > h2 {
+  font-size: 1.35rem;
+  line-height: 1.3;
+  margin-block: 0 14px;
+}
+.public-ui #smart-panel > .smart-summary {
+  margin-block: 0 10px;
+  border-top: none;
+  padding-block: 0 12px;
+}
+.public-ui #smart-panel .smart-summary > div {
+  gap: 4px;
+}
+.public-ui #smart-panel .smart-summary dt {
+  font-size: .8rem;
+}
+.public-ui #smart-panel .smart-summary dd {
+  line-height: 1.15;
+}
+.public-ui #smart-panel > .smart-hint {
+  margin-block: 0 12px;
+}
+@media(min-width:681px) {
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row > .smart-card-copy {
+    grid-template-columns: minmax(0,1fr) auto;
+    align-items: baseline;
+    column-gap: 12px;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-card-copy > strong {
+    grid-column: 1 / -1;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-card-copy > .smart-game-name {
+    grid-column: 1;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-card-copy > .smart-countdown {
+    grid-column: 2;
+    text-align: end;
+    white-space: nowrap !important;
+  }
+}
+@media(max-width:900px) {
+  .public-ui .hero > div:first-child { grid-template-columns: minmax(0,1fr); }
+  .public-ui .hero .dashboard-shortcuts {
+    grid-column: 1;
+    grid-row: auto;
+    flex-direction: row;
+    gap: 8px 18px;
+  }
+}
+@media(max-width:680px) {
+  .public-ui .hero { padding: 12px; margin-block: 10px; }
+  .public-ui .hero h1 { font-size: 1.25rem; }
+  .public-ui .hero .dashboard-shortcuts a { min-height: 44px; }
+  .public-ui .event-dashboard { gap: 12px; }
+  .public-ui .event-dashboard :is(.milestones,#smart-panel) > h2 { font-size: 1.15rem; }
+  .public-ui #smart-panel .smart-summary dt { font-size: .72rem; }
+}

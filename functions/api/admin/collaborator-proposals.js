@@ -10,7 +10,7 @@ export const onRequest=endpoint(async({request,env})=>{
   const r=await db.prepare('SELECT id,email,login,status,head_sha,pr_url,note,created_at,updated_at FROM collaborator_reviews_v79 WHERE id NOT IN (SELECT id FROM collaborator_hidden_records) ORDER BY created_at DESC LIMIT 200').all();return json({items:r.results});
  }
  if(request.method!=='POST')return json({error:'方法不支持'},405);
- const b=await body(request),p=await db.prepare('SELECT * FROM collaborator_reviews_v79 WHERE id=?').bind(b.id||'').first();if(!p)throw fail('提案不存在',404);
+ const b=await body(request);const withdrawing=b.action==='withdraw';if(b.action==='withdraw'){b.action='return';b.note=b.note||'管理员撤回，待修改';}const p=await db.prepare('SELECT * FROM collaborator_reviews_v79 WHERE id=?').bind(b.id||'').first();if(!p)throw fail('提案不存在',404);
  if(b.action==='merge'){
   if(!['pending','merging','merged'].includes(p.status))throw fail('提案状态不允许合并',409);
   if(p.status==='merged')return json({ok:true,mergeSha:p.merge_sha,message:'已合并'});
@@ -23,5 +23,5 @@ export const onRequest=endpoint(async({request,env})=>{
  if(p.pr_number){const pr=await gh(env.GH_TOKEN,repoPath(mainRepo(env))+'/pulls/'+p.pr_number);if(pr.merged)throw fail('GitHub 上已合并，请先核对合并状态',409);if(pr.state==='open')await gh(env.GH_TOKEN,repoPath(mainRepo(env))+'/pulls/'+p.pr_number,'PATCH',{state:'closed'});}
  const r=await db.prepare("UPDATE collaborator_reviews_v79 SET status=?,note=?,updated_at=? WHERE id=? AND status IN ('pending','failed')").bind(b.action==='return'?'returned':'rejected',note,Date.now(),p.id).run();if(!r.meta.changes)throw fail('提案状态已变化',409);
  try{await cleanupBranch(env,p)}catch(e){if(p.status!=='failed')console.warn('temporary branch cleanup failed',e.message)}
- await audit(env,actor,p.id,b.action,note);return json({ok:true});
+ await audit(env,actor,p.id,b.action,note);return json({ok:true,...(withdrawing?{data:JSON.parse(p.proposed),proposalId:p.id}:{})});
 });

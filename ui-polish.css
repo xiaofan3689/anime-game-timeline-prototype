@@ -1,0 +1,232 @@
+/* Shared controls and surfaces for the timeline and maintenance pages. */
+:root {
+  color-scheme: dark;
+  --ui-page: #141422;
+  --ui-panel: #1b1c2d;
+  --ui-raised: #242539;
+  --ui-field: #171827;
+  --ui-border: #43445e;
+  --ui-text: #f3f1fb;
+  --ui-muted: #c0bfd3;
+  --ui-accent: #dacaff;
+  --ui-primary: #6652a3;
+  --ui-focus: #d6baff;
+  accent-color: #a488e9;
+  scrollbar-color: #77708e #202032;
+  scroll-padding-block-start: 7rem;
+}
+::selection { background: #624c96; color: white; }
+body { color: var(--ui-text); line-height: 1.55; }
+[hidden] { display: none !important; }
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--ui-focus);
+  outline-offset: 3px;
+}
+:where(button, input, select, textarea) { font: inherit; }
+body a { text-underline-offset: .2em; }
+body button:not(:disabled), summary { cursor: pointer; }
+body button:disabled { opacity: .58; cursor: default; }
+body :is(input, select, textarea):disabled { opacity: .65; }
+body :is(input:not([type=checkbox], [type=radio], [type=range]), select, textarea) {
+  min-width: 0;
+  max-width: 100%;
+  background: var(--ui-field);
+  border: 1px solid var(--ui-border);
+  border-radius: 8px;
+  color: var(--ui-text);
+  caret-color: var(--ui-accent);
+}
+body textarea { resize: vertical; }
+::placeholder { color: #aaa8c3; opacity: 1; }
+body :is(button, .admin-nav a, .official-game-link, .admin-link) {
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+@media (hover: hover) {
+  body :is(button:not(:disabled), .admin-nav a, .official-game-link, .admin-link):hover {
+    border-color: #9485bd;
+    filter: brightness(1.13);
+  }
+}
+body :is(.application-dialog, .email-dialog, .feedback-dialog, .theme-dialog,
+  .activity-dialog, .completed-dialog, .repo-image-dialog, .game-picker,
+  .game-update-dialog, .preview-dialog, dialog) {
+  color: var(--ui-text);
+  background: var(--ui-panel);
+  border: 1px solid var(--ui-border);
+  border-radius: 15px;
+  max-inline-size: calc(100% - 24px);
+  max-block-size: min(86dvh, 52rem);
+  overflow: auto;
+  overscroll-behavior: contain;
+  overflow-wrap: anywhere;
+}
+body dialog::backdrop { background: #0a0914cc; }
+body :is(dialog, .game-picker) :is(h2, h3) { line-height: 1.25; text-wrap: balance; }
+body :is(dialog, .game-picker) p { color: var(--ui-muted); }
+body :is(dialog, .game-picker) :is(input:not([type=checkbox], [type=radio], [type=range]), select, textarea) {
+  padding: .55rem .7rem;
+}
+body :is(dialog, .game-picker) button {
+  border: 1px solid #676083;
+  border-radius: 8px;
+  background: var(--ui-raised);
+  color: var(--ui-text);
+  min-block-size: 36px;
+  padding: .4rem .7rem;
+}
+body :is(#save-games, dialog button[type=submit], #verify) { background: var(--ui-primary); color: white; }
+body :is(.picker-actions, .activity-actions, .repo-image-actions, .featured-card-actions) { gap: .5rem; flex-wrap: wrap; }
+.game-choice { min-inline-size: 0; }
+.game-choice :is(strong, small) { overflow-wrap: anywhere; }
+
+/* Public dashboard. The date grid and event track retain their existing geometry. */
+.public-ui .topbar { gap: .75rem; }
+.public-ui .top-actions { gap: .45rem; }
+.public-ui .top-actions :is(button, .admin-link) { border-radius: 8px; }
+.public-ui .hero {
+  min-block-size: 0;
+  padding: 1.5rem clamp(1rem, 3vw, 2.25rem);
+  border-radius: 15px;
+  background: linear-gradient(100deg, #201d36eb, #211c3680);
+  border-color: var(--ui-border);
+}
+.public-ui .hero::after, .public-ui .eyebrow, .game-picker .eyebrow { display: none; }
+.public-ui .hero h1 {
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  line-height: 1.13;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+  margin: 0 0 .6rem;
+}
+.public-ui .hero h1 em { color: var(--ui-accent); text-shadow: none; }
+.public-ui :is(.hero-copy, .hero-meta, .smart-summary, .smart-hint, .smart-page-indicator, .timeline-meta, footer) {
+  color: var(--ui-muted);
+}
+.public-ui .event-dashboard { align-items: start; }
+.public-ui :is(.content, #smart-panel, .milestones) {
+  background: #1b1c2df7;
+  border: 1px solid var(--ui-border);
+  border-radius: 15px;
+  box-shadow: none;
+}
+.public-ui .event-dashboard > #smart-panel { min-height: 0; }
+.public-ui .event-dashboard > #smart-panel > .smart-list.smart-pages {
+  flex: none;
+  min-height: 0;
+}
+.public-ui .event-dashboard .milestone-card {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--ui-border);
+  border-radius: 0;
+  margin: 0;
+}
+.public-ui .milestone-card a { color: var(--ui-accent); }
+.public-ui .milestone-card img { object-fit: contain; }
+.public-ui .smart-row { border-radius: 10px; background: var(--ui-raised); }
+.public-ui :is(.smart-row p, .date-head, .timeline-countdown, .hero-meta) { font-variant-numeric: tabular-nums; }
+.public-ui .filters button.active { background: var(--ui-primary); color: white; }
+.public-ui .empty { color: var(--ui-muted); }
+.public-ui .timeline-meta { gap: .5rem 1rem; }
+.public-ui .mobile-gallery img { border-radius: 10px; }
+
+/* Maintenance screens. Shared navigation, editor controls and long records. */
+.ops-ui, .preview-ui { background: var(--ui-page); }
+.ops-ui main { max-inline-size: 76rem; padding: clamp(.85rem, 3vw, 2rem); }
+.ops-ui main > header { gap: .75rem; margin-block-end: .85rem; border-color: var(--ui-border); }
+.ops-ui :is(h1, h2, h3) { line-height: 1.25; overflow-wrap: anywhere; }
+.ops-ui h1 { font-size: 1.85rem; letter-spacing: -.02em; }
+.ops-ui h2 { font-size: 1.28rem; }
+.ops-ui h3 { font-size: 1.03rem; }
+.ops-ui :is(p, small, label, li) { color: var(--ui-muted); }
+.ops-ui p { overflow-wrap: anywhere; }
+.ops-ui a { color: var(--ui-accent); }
+.ops-ui :is(.admin-nav, .actions, .publish) { flex-wrap: wrap; gap: .55rem; }
+.ops-ui .admin-nav a[aria-current=page] { background: var(--ui-primary); color: white; }
+.ops-ui :is(.editor, aside, .collab-card, #activation-panel) {
+  min-inline-size: 0;
+  background: var(--ui-panel);
+  border: 1px solid var(--ui-border);
+  border-radius: 14px;
+  padding: clamp(.8rem, 2vw, 1.3rem);
+  box-shadow: none;
+}
+.ops-ui :is(.collab-event, .feedback-record, #review-list article) {
+  min-inline-size: 0;
+  background: var(--ui-raised);
+  border: 1px solid var(--ui-border);
+  border-radius: 12px;
+  padding: .85rem;
+  overflow-wrap: anywhere;
+}
+.ops-ui :is(.feedback-record, #review-list article) :is(h2, h3, p) { margin-block: 0 .45rem; }
+.ops-ui :is(#list, #history, #review-list, #feedback-records) > details > summary {
+  padding: .65rem .5rem;
+  color: var(--ui-accent);
+}
+.ops-ui .diff-columns > * { min-inline-size: 0; }
+.ops-ui pre { max-inline-size: 100%; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; }
+.ops-ui :is(form, .layout, .diff-columns) > * { min-inline-size: 0; }
+.ops-ui :is(button, .admin-nav a), .preview-ui button {
+  min-block-size: 36px;
+  padding: .42rem .7rem;
+  border: 1px solid #676083;
+  border-radius: 8px;
+  background: var(--ui-raised);
+  color: var(--ui-text);
+  max-inline-size: 100%;
+  overflow-wrap: anywhere;
+}
+.ops-ui :is(button[type=submit], #publish, #save, #submit, #merge, #oauth-start, #activate),
+.preview-ui #verify { background: var(--ui-primary); color: white; }
+.ops-ui :is(.danger, #reject) { background: #642f48; color: #ffebf3; }
+.ops-ui :is(.feedback-record, #review-list article) :is(button, a) { margin: .2rem .45rem .2rem 0; }
+.ops-ui :is(#source-events, #users) { display: flex; flex-wrap: wrap; gap: .45rem; }
+.ops-ui :is(#source-events, #users) p { flex-basis: 100%; margin: .35rem 0 0; }
+.ops-ui .version-save-options { grid-column: 1 / -1; }
+.ops-ui table { width: 100%; table-layout: fixed; border-collapse: collapse; overflow-wrap: anywhere; }
+.ops-ui :is(td, th) { padding: .6rem .7rem; text-align: start; border-bottom: 1px solid var(--ui-border); }
+.ops-ui th { background: var(--ui-raised); color: var(--ui-text); }
+.ops-ui #backend-top-dock .backend-update-bar { gap: .5rem; }
+.preview-ui > #status { margin: 0; padding: .65rem 1rem; background: var(--ui-panel); overflow-wrap: anywhere; }
+.preview-ui > iframe { display: block; }
+.preview-ui > dialog { padding: 1rem; }
+.preview-ui > dialog button { margin: .2rem .2rem .2rem 0; }
+
+@media (max-width: 680px) {
+  .public-ui .hero { padding: .85rem 1rem; }
+  .public-ui .hero h1 { line-height: 1.2; }
+  .public-ui .hero h1 :is(span, em) { white-space: normal; }
+  .public-ui .event-dashboard .milestone-card { padding: .65rem 0; }
+  .public-ui :is(.timeline-meta, .smart-summary) { line-height: 1.55; }
+  .ops-ui :is(form, .diff-columns) { grid-template-columns: minmax(0, 1fr); }
+  .ops-ui #backend-top-dock .backend-update-bar { flex-wrap: wrap; }
+  body :is(dialog, .game-picker) button, .ops-ui :is(button, .admin-nav a) { min-block-size: 44px; }
+  body :is(dialog, .game-picker) :is(input:not([type=checkbox], [type=radio], [type=range]), select, textarea),
+  .ops-ui :is(input:not([type=checkbox], [type=radio]), select, textarea) { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body :is(button, .admin-nav a, .official-game-link, .admin-link) { transition: none; }
+}
+
+/* Action hierarchy and compact list rows within scrollable dialogs. */
+body .order-dialog .order-actions > button:first-child,
+body .game-update-dialog .picker-actions > button:first-child,
+body #verify { background: var(--ui-primary); color: white; }
+body .order-dialog .order-row {
+  min-block-size: 3rem;
+  padding-block: .3rem;
+  border-bottom: 1px solid var(--ui-border);
+}
+.ops-ui :is(#game-fields, .collab-event) > label { margin-block-end: .3rem; }
+.ops-ui .layout { grid-template-columns: minmax(14rem, 17rem) minmax(0, 1fr); }
+.ops-ui .entry.active { border-color: #bca5fc; background: #36304f; }
+@media (max-width: 900px) {
+  .ops-ui .layout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 680px) {
+  body .order-dialog .order-row > button { min-inline-size: 44px; }
+}
+
+html:has(body.ops-ui, body.preview-ui) { background: var(--ui-page); }
+.ops-ui main > .collab-card { max-inline-size: none; margin-inline: 0; }
