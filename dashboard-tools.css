@@ -123,3 +123,61 @@
     font-size: .75rem !important;
   }
 }
+
+/* Restore the compact internal viewport while retaining the v123 card controls. */
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages {
+  height: 330px !important;
+  max-height: 330px !important;
+  overflow-y: auto;
+}
+.public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding: .45rem .65rem !important;
+  gap: .2rem !important;
+}
+.public-ui .event-dashboard #smart-panel .smart-card-copy p {
+  margin: 0 !important;
+}
+.public-ui .event-dashboard #smart-panel .smart-card-actions {
+  margin-block-start: 0;
+}
+@media (min-width: 681px) {
+  .public-ui .event-dashboard #smart-panel .smart-card-copy strong {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-card-copy p {
+    display: inline;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-countdown {
+    margin-inline-start: .65rem !important;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-card-actions button {
+    min-height: 36px;
+    padding-block: .3rem;
+  }
+}
+@media (max-width: 680px) {
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages {
+    height: 222px !important;
+    max-height: 222px !important;
+    grid-auto-rows: minmax(108px, max-content) !important;
+  }
+  .public-ui .event-dashboard #smart-panel > .smart-list.smart-pages > .smart-row {
+    padding: 4px 6px !important;
+    gap: 2px !important;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-card-copy strong {
+    line-height: 14px !important;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-card-copy p {
+    line-height: 13px !important;
+  }
+  .public-ui .event-dashboard #smart-panel .smart-card-copy .smart-game-name {
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
