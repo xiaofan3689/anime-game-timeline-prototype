@@ -419,3 +419,66 @@
     max-height: none !important;
   }
 }
+
+
+/* Clear primary task, then supporting controls, then the activity detail. */
+.public-ui .topbar {
+  height: auto;
+  min-height: 72px;
+  padding-block: 12px;
+  flex-wrap: wrap;
+}
+.public-ui .top-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+.public-ui .top-actions :is(button,a.admin-link) { font-weight: 500; }
+.public-ui .top-actions :is(#apply-collaborator,.admin-link) {
+  background: transparent;
+  border-color: transparent;
+  color: var(--ui-muted);
+}
+.public-ui #smart-panel > .smart-summary {
+  grid-template-columns: 1.35fr 1fr 1fr;
+  align-items: start;
+  padding-block: 12px;
+  gap: 12px;
+}
+.public-ui #smart-panel .smart-summary dd {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.public-ui #smart-panel .summary-unit {
+  font-size: .75rem;
+  font-weight: 400;
+  color: var(--ui-muted);
+}
+.public-ui #smart-panel .summary-urgent .summary-value {
+  font-size: 2rem;
+}
+.public-ui #smart-panel .smart-hint { max-width: 65ch; }
+.public-ui #smart-panel .smart-card-actions { align-items: center; }
+.public-ui #smart-panel .smart-card-actions > .smart-follow { order: 1; }
+.public-ui #smart-panel > .smart-warning {
+  font-size: .8rem;
+  line-height: 1.5;
+  margin-block: 12px 0;
+}
+.public-ui .content .searches { flex-wrap: wrap; min-width: 0; }
+.public-ui .content .searches label { min-width: 0; }
+.public-ui .content .searches input { min-width: 0; max-width: 100%; }
+.public-ui .timeline-meta { border-top: 1px solid var(--ui-border); padding-top: 12px; }
+@media(max-width:680px) {
+  .public-ui .top-actions {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    width: 100%;
+  }
+  .public-ui #smart-panel > .smart-summary { gap: 8px; }
+  .public-ui #smart-panel .summary-urgent .summary-value { font-size: 1.5rem; }
+  .public-ui .content .searches { display: grid; width: 100%; }
+  .public-ui #smart-panel .smart-card-actions > .smart-follow { order: 0; }
+}

@@ -54,7 +54,9 @@ function smartRender(){
   ["已标记完成", events.filter(e=>progress[e.id]?.done).length, ""]
  ]) {
   const item = n("div",className);
-  item.append(n("dt","",label),n("dd","",String(count)));
+  const value = n("dd");
+  value.append(n("span","summary-value",String(count)),n("span","summary-unit","项"));
+  item.append(n("dt","",label),value);
   summary.append(item);
  }
  root.append(summary,hint);
