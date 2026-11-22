@@ -1,7 +1,7 @@
 (()=>{
  const header=document.querySelector('.topbar');if(!header)return;
  const gallery=document.createElement('section');gallery.className='mobile-gallery';gallery.setAttribute('aria-label','游戏展览区');
- const title=document.createElement('h2');title.textContent='游戏展览区';const track=document.createElement('div');track.className='mobile-gallery-track';track.tabIndex=0;track.setAttribute('aria-label','已选游戏图片，可左右滑动');gallery.append(title,track);header.after(gallery);
+ const title=document.createElement('h2');title.textContent='游戏展览区';const track=document.createElement('div');track.className='mobile-gallery-track';track.tabIndex=0;track.setAttribute('aria-label','已选游戏图片，可左右滑动');gallery.append(title,track);(document.querySelector('.hero') || header).after(gallery);
  let signature='',index=0,touch=false;
  function draw(){
   const games=(S.feed?.games||[]).filter(g=>S.selected.has(g.id)&&url(g.bannerUrl));const next=JSON.stringify(games.map(g=>[g.id,g.name,g.bannerUrl]));if(next===signature)return;signature=next;track.replaceChildren();index=0;gallery.hidden=!games.length;

@@ -724,3 +724,24 @@
   .public-ui .activity-overview .smart-summary dd { font-size: 1.35rem; }
   .public-ui .activity-overview .summary-urgent .summary-value { font-size: 1.55rem; }
 }
+
+
+/* Put the selected-games overview in the first reading position. */
+.public-ui .activity-overview { margin-top: 16px; }
+.public-ui .hero { background: transparent; border: 0; padding: 8px 0 12px; margin-block: 0 12px; }
+.public-ui .hero h1 { font-size: 1.1rem; line-height: 1.4; }
+.public-ui .hero h1 em { color: var(--ui-text); }
+.public-ui .hero .hero-copy { display: none; }
+.public-ui .hero .dashboard-shortcuts a { font-size: .8rem; }
+.public-ui .activity-overview .smart-summary { column-gap: 24px; }
+.public-ui .activity-overview .summary-urgent dt { color: var(--ui-accent); font-weight: 600; }
+.public-ui .activity-overview .smart-summary dd { font-size: 1.6rem; }
+.public-ui .activity-overview .summary-urgent .summary-value { font-size: 2.2rem; }
+@media(max-width:680px) {
+ .public-ui .hero h1 { font-size: .95rem !important; white-space: normal !important; }
+ .public-ui .hero { padding: 4px 0 8px !important; margin: 0 !important; }
+ .public-ui .activity-overview .smart-summary { gap: 8px; }
+ .public-ui .activity-overview .smart-summary dd { font-size: 1.25rem; }
+ .public-ui .activity-overview .summary-urgent .summary-value { font-size: 1.7rem; }
+ .public-ui .mobile-gallery:not([hidden]) { margin-block: 8px 12px; }
+}
