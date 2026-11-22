@@ -646,3 +646,81 @@
   .public-ui .content .timeline-date-tools label { flex: 1; }
   .public-ui .content .timeline-date-tools input { width: 100%; }
 }
+
+
+/* Shared counts precede both activity panels and describe the selected games. */
+.public-ui .activity-overview {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto;
+  align-items: baseline;
+  column-gap: 16px;
+  padding: 18px 22px;
+  margin-block: 16px;
+  border-block: 1px solid var(--ui-border);
+  background: var(--ui-panel);
+}
+.public-ui .activity-overview .overview-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.public-ui .activity-overview .overview-scope {
+  margin: 0;
+  font-size: .8rem;
+  color: var(--ui-muted);
+}
+.public-ui .activity-overview .smart-summary {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 24px;
+  margin: 14px 0 0;
+}
+.public-ui .activity-overview .smart-summary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.public-ui .activity-overview .smart-summary dt {
+  font-size: .85rem;
+  line-height: 1.5;
+  color: var(--ui-muted);
+}
+.public-ui .activity-overview .smart-summary dd {
+  order: -1;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+.public-ui .activity-overview .summary-unit {
+  font-size: .8rem;
+  font-weight: 400;
+  color: var(--ui-muted);
+}
+.public-ui .activity-overview .summary-urgent dd {
+  color: var(--ui-accent);
+}
+.public-ui .activity-overview .summary-urgent .summary-value {
+  font-size: 2rem;
+}
+@media(max-width:680px) {
+  .public-ui .activity-overview {
+    padding: 12px;
+    margin-block: 10px;
+    column-gap: 8px;
+  }
+  .public-ui .activity-overview .smart-summary {
+    gap: 10px;
+    margin-block-start: 10px;
+  }
+  .public-ui .activity-overview .smart-summary dt { font-size: .72rem; }
+  .public-ui .activity-overview .smart-summary dd { font-size: 1.35rem; }
+  .public-ui .activity-overview .summary-urgent .summary-value { font-size: 1.55rem; }
+}
