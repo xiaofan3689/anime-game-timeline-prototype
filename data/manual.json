@@ -1177,6 +1177,40 @@
       "endAt": "2031-11-20T07:18:00+08:00",
       "imageUrl": "https://assets.fz.wiki/27a62342d7861270/b899b6171a5d8e7a.png",
       "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E6%8C%BD%E5%BC%93%E8%AF%95%E7%82%BC%C2%B710%E6%9C%8815%E6%97%A5"
+    },
+    {
+      "hidden": true,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "cfa07ad28cca514118fa",
+      "gameId": "zzz",
+      "title": "游戏调研有奖问卷",
+      "category": "活动",
+      "startAt": "2026-11-20T10:00:00+08:00",
+      "endAt": "2026-11-24T00:00:00+08:00",
+      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/29/d3f04e9206edc9d7315541706ae11778_7254485188011911447_transformed.png",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
+    },
+    {
+      "hidden": true,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "a7fab10561e03f5c2734",
+      "gameId": "zzz",
+      "title": "3.3版本「丽都城募」说明",
+      "category": "活动",
+      "startAt": "2026-10-20T14:00:00+08:00",
+      "endAt": "2026-11-30T03:59:00+08:00",
+      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/16/4a81388acbbe241827ec534f9df62fed_6277365941721836895_transformed.png",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
     }
   ]
 }
