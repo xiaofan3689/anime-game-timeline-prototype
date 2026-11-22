@@ -1,0 +1,82 @@
+/* The illustration and activity readouts share the existing violet palette. */
+.public-ui section.hero {
+  display: grid;
+  align-items: center;
+  min-height: clamp(242px, 22vw, 312px);
+  padding: clamp(24px, 4vw, 54px);
+  background: #211a32;
+  border-color: #8b74af;
+}
+.public-ui .hero > div:first-child { width: 64%; gap: 14px; }
+.public-ui .hero .hero-character { inset: 0 0 0 33%; }
+.public-ui .hero-character img { object-position: center 40%; }
+.public-ui .hero-character img:not([data-banner-source]) { object-position: right 38%; }
+.public-ui .hero-character::after {
+  background: linear-gradient(90deg, #211a32 0%, #211a32ed 22%, #211a3270 52%, #211a3210 88%);
+}
+.public-ui .hero-character::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 12px 12px 12px auto;
+  width: 24px;
+  border: solid #f1def8aa;
+  border-width: 1px 1px 1px 0;
+}
+.public-ui .hero h1 {
+  font-size: clamp(1.8rem, 3.2vw, 3.25rem);
+  line-height: 1.18;
+  letter-spacing: -.035em;
+  color: #faf4ff;
+}
+.public-ui .hero h1 br { display: initial; }
+.public-ui .hero h1 em { color: #e0c9ff; }
+.public-ui .hero h1 em::before { content: none; }
+.public-ui .hero .hero-meta { color: #efe2fd; }
+.public-ui .hero .dashboard-shortcuts {
+  display: flex;
+  gap: 6px 8px;
+}
+.public-ui .hero .dashboard-shortcuts a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  flex: 0 1 auto;
+  padding: 4px 11px;
+  border: 1px solid #896fa8;
+  border-radius: 7px;
+  color: #f1dfff;
+  background: #2b2141;
+  text-decoration: none;
+}
+.public-ui .hero .dashboard-shortcuts a:is(:hover,:focus-visible) {
+  background: #46325f;
+  color: #fff;
+}
+.public-ui .activity-overview .summary-urgent .summary-value {
+  color: #f0dcff;
+  font-variant-numeric: tabular-nums;
+}
+.public-ui .activity-overview .summary-urgent dt { color: #f0dcff; }
+.public-ui #activity-timeline .date-cell.today {
+  background: #594581;
+  color: white;
+  box-shadow: inset 0 -3px #e0c9ff;
+}
+@media (max-width: 680px) {
+  .public-ui section.hero { min-height: 202px; align-items: end; padding: 12px !important; }
+  .public-ui .hero > div:first-child { width: 100%; gap: 7px; }
+  .public-ui .hero .hero-character { inset: 0; opacity: 1; }
+  .public-ui .hero-character::after {
+    background: linear-gradient(0deg, #211a32 0%, #211a32f7 54%, #211a3226 95%);
+  }
+  .public-ui .hero-character::before { inset: 8px 8px 8px auto; width: 12px; }
+  .public-ui .hero h1 { max-width: 100%; font-size: clamp(.95rem, 4.3vw, 1.3rem) !important; }
+  .public-ui .hero h1 br { display: none; }
+  .public-ui .hero h1 em::before { content: " "; }
+  .public-ui .hero .dashboard-shortcuts a {
+    min-height: 44px;
+    padding-inline: 7px;
+    font-size: .73rem;
+  }
+}
