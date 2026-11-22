@@ -648,79 +648,111 @@
 }
 
 
-/* Shared counts precede both activity panels and describe the selected games. */
-.public-ui .activity-overview {
-  display: grid;
-  grid-template-columns: minmax(0,1fr) auto;
-  align-items: baseline;
-  column-gap: 16px;
-  padding: 18px 22px;
-  margin-block: 16px;
-  border-block: 1px solid var(--ui-border);
-  background: var(--ui-panel);
+/* Game title-screen menu rhythm, using the timeline's existing palette and art. */
+.public-ui .hero {
+  border-radius: 12px;
+  border-color: #75658e;
+  background: linear-gradient(100deg,#1b192ff2 0%,#28203dd9 55%,#28203d55 100%);
+  padding: 24px;
 }
-.public-ui .activity-overview .overview-title {
-  margin: 0;
-  font-size: 1.05rem;
-  font-weight: 600;
-  line-height: 1.4;
+.public-ui .hero > div:first-child {
+  grid-template-columns: minmax(0,1fr) minmax(230px, .6fr);
+  gap: 10px 32px;
 }
-.public-ui .activity-overview .overview-scope {
-  margin: 0;
-  font-size: .8rem;
-  color: var(--ui-muted);
-}
-.public-ui .activity-overview .smart-summary {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(3,minmax(0,1fr));
-  gap: 24px;
-  margin: 14px 0 0;
-}
-.public-ui .activity-overview .smart-summary > div {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
-}
-.public-ui .activity-overview .smart-summary dt {
-  font-size: .85rem;
-  line-height: 1.5;
-  color: var(--ui-muted);
-}
-.public-ui .activity-overview .smart-summary dd {
-  order: -1;
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-  margin: 0;
-  font-size: 1.75rem;
-  font-weight: 700;
-  line-height: 1.2;
-  font-variant-numeric: tabular-nums;
-}
-.public-ui .activity-overview .summary-unit {
-  font-size: .8rem;
-  font-weight: 400;
-  color: var(--ui-muted);
-}
-.public-ui .activity-overview .summary-urgent dd {
-  color: var(--ui-accent);
-}
-.public-ui .activity-overview .summary-urgent .summary-value {
+.public-ui .hero h1 {
+  font-weight: 800;
   font-size: 2rem;
+  letter-spacing: -.03em;
+  max-width: 22ch;
 }
+.public-ui .hero h1 em { color: #dacaff; }
+.public-ui .hero .dashboard-shortcuts {
+  gap: 10px;
+  padding-inline: 8px;
+}
+.public-ui .hero .dashboard-shortcuts a {
+  display: flex;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 10px 20px;
+  border: 1px solid #a18bc6;
+  background: #29233e;
+  color: #f3f1fb;
+  font-size: .95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transform: skewX(-8deg);
+  border-radius: 3px;
+}
+.public-ui .hero .dashboard-shortcuts a:first-child {
+  background: #6652a3;
+  border-color: #c1a8f0;
+}
+.public-ui .hero .dashboard-shortcuts a::after { content: "→"; margin-inline-start: 12px; }
+.public-ui .hero .dashboard-shortcuts a:hover { background: #7860b3; }
+.public-ui .event-dashboard :is(.milestones,#smart-panel) > h2 {
+  letter-spacing: -.02em;
+  font-weight: 800;
+}
+.public-ui #smart-panel > .smart-summary {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 10px;
+  border: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+.public-ui #smart-panel .smart-summary > div {
+  background: #242039;
+  border: 1px solid #514564;
+  border-radius: 4px;
+  padding: 10px 12px;
+}
+.public-ui #smart-panel .smart-summary > .summary-urgent {
+  background: #35294e;
+  border-color: #a68bc9;
+}
+.public-ui #smart-panel .smart-summary dt { font-weight: 500; }
+.public-ui #smart-panel .smart-summary dd { min-height: 0; }
+.public-ui #smart-panel .summary-value { font-weight: 800; }
+.public-ui .content .filters button.active {
+  background: #6652a3;
+  box-shadow: none;
+}
+.public-ui .content .section-heading h2 { font-weight: 800; }
+.public-ui .event-dashboard .milestone-card .featured-card-actions { margin-top: 10px; }
+@media (max-width: 900px) {
+  .public-ui .hero > div:first-child { grid-template-columns: minmax(0,1fr); }
+  .public-ui .hero .dashboard-shortcuts {
+    flex-direction: row;
+    padding-inline: 4px;
+  }
+  .public-ui .hero .dashboard-shortcuts a { flex: 1; justify-content: center; }
+}
+@media (max-width: 680px) {
+  .public-ui .hero { padding: 12px; }
+  .public-ui .hero h1 { font-size: 1.3rem; }
+  .public-ui .hero .dashboard-shortcuts { gap: 8px; }
+  .public-ui .hero .dashboard-shortcuts a {
+    min-height: 44px;
+    font-size: .75rem;
+    padding: 8px 6px;
+  }
+  .public-ui .hero .dashboard-shortcuts a::after { display: none; }
+  .public-ui #smart-panel > .smart-summary { gap: 6px; }
+  .public-ui #smart-panel .smart-summary > div { padding: 8px 6px; }
+  .public-ui #smart-panel .smart-summary dt { font-size: .7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .public-ui .hero .dashboard-shortcuts a { transition: none; }
+}
+
+.public-ui .hero h1 { max-width: none; text-wrap: initial; }
+.public-ui .hero h1 span,
+.public-ui .hero h1 em { display: block; }
+.public-ui .hero h1 em::before { content: none; }
 @media(max-width:680px) {
-  .public-ui .activity-overview {
-    padding: 12px;
-    margin-block: 10px;
-    column-gap: 8px;
-  }
-  .public-ui .activity-overview .smart-summary {
-    gap: 10px;
-    margin-block-start: 10px;
-  }
-  .public-ui .activity-overview .smart-summary dt { font-size: .72rem; }
-  .public-ui .activity-overview .smart-summary dd { font-size: 1.35rem; }
-  .public-ui .activity-overview .summary-urgent .summary-value { font-size: 1.55rem; }
+  .public-ui .hero h1 { font-size: 14px !important; white-space: normal; }
+  .public-ui .hero h1 span,
+  .public-ui .hero h1 em { display: inline; }
 }

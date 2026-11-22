@@ -64,14 +64,7 @@ function smartRender(){
  sortingHelp.open = sortingHelpOpen;
  sortingHelp.append(n("summary","","排序说明"),hint);
  sortingHelp.addEventListener("toggle",()=>{ sortingHelpOpen = sortingHelp.open; });
- const overview = document.getElementById("activity-overview");
- if (overview) {
-  const heading = n("h2","overview-title","我的活动");
-  const scope = n("p","overview-scope","已选 " + S.selected.size + " 款游戏");
-  overview.replaceChildren(heading,scope,summary);
- }
- root.append(sortingHelp);
- if (!overview) root.insertBefore(summary,sortingHelp);
+ root.append(summary,sortingHelp);
  const list=n("div","smart-list");
  const pending=events.filter(e=>!progress[e.id]?.done&&!e.featured).sort((a,b)=>{const now=Date.now(),week=7*DAY,nearA=Date.parse(a.endAt)-now<=week,nearB=Date.parse(b.endAt)-now<=week;return Number(nearB)-Number(nearA)||(nearA&&nearB?Date.parse(a.endAt)-Date.parse(b.endAt):0)||Number(Date.parse(b.endAt)-Date.now()<=7*DAY)-Number(Date.parse(a.endAt)-Date.now()<=7*DAY)||((Date.parse(a.endAt)-Date.now()<=7*DAY&&Date.parse(b.endAt)-Date.now()<=7*DAY)?Date.parse(a.endAt)-Date.parse(b.endAt):0)||gameOrderRank(a.gameId)-gameOrderRank(b.gameId)||a.gameId.localeCompare(b.gameId)||Number(!!progress[b.id]?.star)-Number(!!progress[a.id]?.star)||Date.parse(a.endAt)-Date.parse(b.endAt)});
  const pageSize=3,pageCount=Math.max(1,Math.ceil(pending.length/pageSize)),page=Math.max(0,Math.min(pageCount-1,Number(root.dataset.page||0)));root.dataset.page=page;
