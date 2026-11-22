@@ -1,0 +1,142 @@
+/* Anime game-terminal details, built on the existing violet palette. */
+.public-ui .hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 172px;
+  margin: 16px 0 20px;
+  padding: 22px 26px;
+  border: 1px solid #756590;
+  border-radius: 14px;
+  background: #252038;
+}
+.public-ui .hero > div:first-child {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 65%;
+}
+.public-ui .hero h1 {
+  font-size: 1.55rem;
+  font-weight: 750;
+  line-height: 1.45;
+  margin: 0;
+}
+.public-ui .hero h1 em { color: var(--ui-accent); }
+.public-ui .hero .hero-meta { font-size: .78rem; gap: 6px; }
+.public-ui .hero .dashboard-shortcuts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+.public-ui .hero .dashboard-shortcuts a { font-size: .85rem; }
+.public-ui .hero .hero-character {
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 0 40%;
+  overflow: hidden;
+  pointer-events: none;
+}
+.public-ui .hero-character img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 100% 46%;
+}
+.public-ui .hero-character::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,#252038 0%,#252038e6 24%,#25203840 65%,#25203818);
+}
+.public-ui .activity-overview {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid #66577e;
+  border-radius: 14px;
+  background: #211d33;
+}
+.public-ui .activity-overview::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 330px;
+  height: 150px;
+  right: -70px;
+  top: -30px;
+  border: 1px solid #bca5ed24;
+  border-radius: 50%;
+  transform: rotate(-28deg);
+  pointer-events: none;
+}
+.public-ui .activity-overview::before {
+  content: "";
+  position: absolute;
+  inset: 12px 12px auto auto;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #dacaff;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+.public-ui .activity-overview .overview-scope { padding-right: 14px; }
+.public-ui .activity-overview .summary-urgent .summary-value {
+  color: #e6d7ff;
+  letter-spacing: -.03em;
+}
+.public-ui .event-dashboard :is(.milestones,#smart-panel) > h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.public-ui .event-dashboard :is(.milestones,#smart-panel) > h2::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border: 1px solid #bca5ed;
+  transform: rotate(45deg);
+  flex: none;
+}
+.public-ui .event-dashboard :is(.milestones,#smart-panel),
+.public-ui .content { border-color: #544863; }
+.public-ui .top-actions #choose-games,
+.public-ui .filters button.active {
+  background: #6652a3;
+  border-color: #c2a4ff;
+  box-shadow: inset 0 1px 0 #e6d7ff30;
+}
+.public-ui .event-dashboard #smart-panel .smart-row {
+  background: #272339;
+  border: 1px solid transparent;
+}
+@media(hover:hover) {
+  .public-ui .event-dashboard #smart-panel .smart-row:hover { border-color: #806b9f; }
+  .public-ui .event-dashboard .milestone-card a:hover { color: #f3e9ff; }
+}
+.public-ui .date-cell.today { background: #6652a3; color: #fff; }
+.public-ui .event-bar:focus-visible { outline: 2px solid #e6d7ff; outline-offset: 3px; }
+@keyframes character-reveal {
+  from { opacity: 0; transform: translateX(12px); }
+  to { opacity: 1; transform: none; }
+}
+@media(prefers-reduced-motion:no-preference) {
+  .public-ui .hero-character img { animation: character-reveal 500ms cubic-bezier(.16,1,.3,1) both; }
+}
+@media(max-width:680px) {
+  .public-ui .hero {
+    padding: 14px !important;
+    min-height: 150px;
+    margin: 10px 0 12px !important;
+  }
+  .public-ui .hero > div:first-child { width: 100%; gap: 6px; }
+  .public-ui .hero h1 { font-size: 1.05rem !important; max-width: 80%; }
+  .public-ui .hero .hero-character { left: 25%; opacity: .65; }
+  .public-ui .hero-character::after { background: linear-gradient(90deg,#252038 0%,#252038e6 45%,#25203855); }
+  .public-ui .hero .dashboard-shortcuts { gap: 6px 12px; }
+}
