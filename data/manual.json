@@ -516,6 +516,8 @@
   ],
   "events": [
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -531,6 +533,8 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/ys.json"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "",
@@ -546,6 +550,8 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/sr.json"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -561,6 +567,8 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/ba-global.json"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -576,6 +584,8 @@
       "sourceUrl": "https://bluearchive-cn.com/news/1997"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -591,6 +601,8 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/xtlr.json"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -606,6 +618,8 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -621,6 +635,8 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -636,6 +652,8 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -651,6 +669,8 @@
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -666,6 +686,8 @@
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -681,6 +703,8 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -696,6 +720,8 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -711,6 +737,8 @@
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -726,6 +754,8 @@
       "sourceUrl": "https://yh.wanmei.com/m/news/gamebroad/20261118/265103.html"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -741,6 +771,8 @@
       "sourceUrl": ""
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "https://act.mihoyo.com/zzz/event/e20261120reserve-auy9i1/index.html",
@@ -756,6 +788,8 @@
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -771,6 +805,8 @@
       "sourceUrl": ""
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -786,6 +822,8 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/nte.json"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "",
@@ -801,6 +839,8 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/nte.json"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "",
@@ -816,6 +856,8 @@
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/mc"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "",
@@ -831,6 +873,8 @@
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "",
@@ -846,6 +890,8 @@
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "https://azurpromilia.manjuu.com/",
@@ -861,6 +907,8 @@
       "sourceUrl": ""
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "https://azurpromilia.manjuu.com/kibo-game?utm_campaign=OFAN&utm_source=CAMPAIGN",
@@ -876,6 +924,8 @@
       "sourceUrl": ""
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -891,6 +941,8 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/ww.json"
     },
     {
+      "hidden": false,
+      "recurring": false,
       "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "",
@@ -906,8 +958,10 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/ww.json"
     },
     {
+      "hidden": true,
+      "recurring": false,
       "dailyCheckin": false,
-      "checkinTarget": 1,
+      "checkinTarget": 14,
       "activityUrl": "",
       "disabled": false,
       "featured": false,
@@ -919,6 +973,210 @@
       "endAt": "2031-11-20T07:18:00+08:00",
       "imageUrl": "https://assets.fz.wiki/27a62342d7861270/f8e909962fc828da.png",
       "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E5%94%A4%E9%86%92%E7%AD%BE%E5%88%B0"
+    },
+    {
+      "hidden": true,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "ce4cfb4d51ee9ad86401",
+      "gameId": "end",
+      "title": "于此启程",
+      "category": "活动",
+      "startAt": "2025-12-09T04:00:00+08:00",
+      "endAt": "2031-11-20T07:18:00+08:00",
+      "imageUrl": "https://assets.fz.wiki/27a62342d7861270/420cfdbfb8949da4.png",
+      "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E4%BA%8E%E6%AD%A4%E5%90%AF%E7%A8%8B"
+    },
+    {
+      "hidden": true,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "a2ebdcadabc72fdc1d33",
+      "gameId": "end",
+      "title": "协议重连",
+      "category": "活动",
+      "startAt": "2025-12-09T04:00:00+08:00",
+      "endAt": "2031-11-20T07:18:00+08:00",
+      "imageUrl": "https://assets.fz.wiki/27a62342d7861270/ab31e6429c6f0311.png",
+      "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E5%8D%8F%E8%AE%AE%E9%87%8D%E8%BF%9E%C2%B712%E6%9C%889%E6%97%A5"
+    },
+    {
+      "hidden": true,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "1c807039a03bdb2c9500",
+      "gameId": "end",
+      "title": "启程福利展览板",
+      "category": "活动",
+      "startAt": "2025-12-09T04:00:00+08:00",
+      "endAt": "2031-11-20T07:18:00+08:00",
+      "imageUrl": "https://assets.fz.wiki/27a62342d7861270/75eab0f434f24063.png",
+      "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E5%90%AF%E7%A8%8B%E7%A6%8F%E5%88%A9%E5%B1%95%E8%A7%88%E6%9D%BF"
+    },
+    {
+      "hidden": true,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "4bb26a9dd46a97563edc",
+      "gameId": "end",
+      "title": "权限等阶奖励",
+      "category": "活动",
+      "startAt": "2025-12-09T04:00:00+08:00",
+      "endAt": "2031-11-20T07:18:00+08:00",
+      "imageUrl": "https://assets.fz.wiki/27a62342d7861270/5c240d95bf7c973c.png",
+      "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E6%9D%83%E9%99%90%E7%AD%89%E9%98%B6%E5%A5%96%E5%8A%B1"
+    },
+    {
+      "hidden": true,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "3ec6ad60fc8e85cb7dc3",
+      "gameId": "end",
+      "title": "每周事务",
+      "category": "活动",
+      "startAt": "2026-01-19T04:00:00+08:00",
+      "endAt": "2031-11-20T07:18:00+08:00",
+      "imageUrl": "https://assets.fz.wiki/27a62342d7861270/c6527392867d8371.png",
+      "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E6%AF%8F%E5%91%A8%E4%BA%8B%E5%8A%A1"
+    },
+    {
+      "hidden": true,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "272c5460b43ef309ad3a",
+      "gameId": "end",
+      "title": "影拓丰碑",
+      "category": "活动",
+      "startAt": "2026-02-12T12:00:00+08:00",
+      "endAt": "2031-11-20T07:18:00+08:00",
+      "imageUrl": "https://assets.fz.wiki/27a62342d7861270/16f77414db10074c.png",
+      "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E5%BD%B1%E6%8B%93%E4%B8%B0%E7%A2%91"
+    },
+    {
+      "hidden": true,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "0144bdbbee9620e83e7e",
+      "gameId": "end",
+      "title": "密境行者",
+      "category": "活动",
+      "startAt": "2026-02-24T12:00:00+08:00",
+      "endAt": "2031-11-20T07:18:00+08:00",
+      "imageUrl": "https://assets.fz.wiki/27a62342d7861270/98e428a1e6a5b5ba.png",
+      "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E5%AF%86%E5%A2%83%E8%A1%8C%E8%80%85"
+    },
+    {
+      "hidden": true,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "359125ffb6caa43f07b9",
+      "gameId": "end",
+      "title": "新手特许赠礼",
+      "category": "活动",
+      "startAt": "2026-03-12T07:00:00+08:00",
+      "endAt": "2031-11-20T07:18:00+08:00",
+      "imageUrl": "https://assets.fz.wiki/27a62342d7861270/668e36e0a61708b6.png",
+      "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E6%96%B0%E6%89%8B%E7%89%B9%E8%AE%B8%E8%B5%A0%E7%A4%BC"
+    },
+    {
+      "hidden": true,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "c165670b2ed0cac29c88",
+      "gameId": "end",
+      "title": "干员培养助力",
+      "category": "活动",
+      "startAt": "2026-04-17T07:00:00+08:00",
+      "endAt": "2031-11-20T07:18:00+08:00",
+      "imageUrl": "https://assets.fz.wiki/27a62342d7861270/937975b9d47bd8e4.png",
+      "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E5%B9%B2%E5%91%98%E5%9F%B9%E5%85%BB%E5%8A%A9%E5%8A%9B"
+    },
+    {
+      "hidden": true,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "f4788c4c51d2d94ac4de",
+      "gameId": "end",
+      "title": "主线先行解锁：武陵",
+      "category": "活动",
+      "startAt": "2026-07-16T07:00:00+08:00",
+      "endAt": "2031-11-20T07:18:00+08:00",
+      "imageUrl": "https://assets.fz.wiki/27a62342d7861270/5fab29b2bf69de01.png",
+      "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E4%B8%BB%E7%BA%BF%E5%85%88%E8%A1%8C%E8%A7%A3%E9%94%81%EF%BC%9A%E6%AD%A6%E9%99%B5"
+    },
+    {
+      "hidden": true,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "4ca8a7d509760d019509",
+      "gameId": "end",
+      "title": "战争回响",
+      "category": "活动",
+      "startAt": "2026-07-16T07:00:00+08:00",
+      "endAt": "2031-11-20T07:18:00+08:00",
+      "imageUrl": "https://assets.fz.wiki/27a62342d7861270/59124017419d59e9.png",
+      "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E6%88%98%E4%BA%89%E5%9B%9E%E5%93%8D"
+    },
+    {
+      "hidden": true,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "f3dbce33ef74c8d23b1a",
+      "gameId": "end",
+      "title": "挽弓试炼",
+      "category": "活动",
+      "startAt": "2026-10-15T06:00:00+08:00",
+      "endAt": "2031-11-20T07:18:00+08:00",
+      "imageUrl": "https://assets.fz.wiki/27a62342d7861270/b899b6171a5d8e7a.png",
+      "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E6%8C%BD%E5%BC%93%E8%AF%95%E7%82%BC%C2%B710%E6%9C%8815%E6%97%A5"
     }
   ]
 }
