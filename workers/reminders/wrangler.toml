@@ -9,4 +9,4 @@ SITE_URL = "https://xiaofan3689.dpdns.org/"
 [[d1_databases]]
 binding = "APPLICATION_DB"
 database_name = "timeline-applications"
-database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+database_id = "14ccd5a2-b311-41e7-96ff-ef76a69fe371"
