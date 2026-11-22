@@ -46,7 +46,7 @@
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: 100% 46%;
+  object-position: center 45%;
 }
 .public-ui .hero-character::after {
   content: "";
