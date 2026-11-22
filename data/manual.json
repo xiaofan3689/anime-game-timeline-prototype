@@ -774,7 +774,7 @@
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
-      "disabled": false,
+      "disabled": true,
       "featured": false,
       "id": "0fbf9de4521b2efe359b",
       "gameId": "nte",
@@ -786,7 +786,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/nte.json"
     },
     {
-      "dailyCheckin": false,
+      "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "",
       "disabled": false,
@@ -801,8 +801,8 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/nte.json"
     },
     {
-      "dailyCheckin": false,
-      "checkinTarget": 1,
+      "dailyCheckin": true,
+      "checkinTarget": 7,
       "activityUrl": "",
       "disabled": false,
       "featured": false,
@@ -874,6 +874,51 @@
       "endAt": "2026-12-31T23:59:00+08:00",
       "imageUrl": "/assets/games/azurpro/ScreenShot_2026-11-20_234131_533.png",
       "sourceUrl": ""
+    },
+    {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "253aafefb30bf8175028",
+      "gameId": "ww",
+      "title": "忆旅赠礼II",
+      "category": "唤取活动",
+      "startAt": "2026-11-12T11:00:00+08:00",
+      "endAt": "2026-12-21T11:59:59+08:00",
+      "imageUrl": "https://prod-alicdn-community.kurobbs.com/forum/ee62903f3b04469098889d32481f54fa20261111.png",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/ww.json"
+    },
+    {
+      "dailyCheckin": true,
+      "checkinTarget": 7,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "422008be13ee240b460a",
+      "gameId": "ww",
+      "title": "昔梦赠礼",
+      "category": "登录活动",
+      "startAt": "2026-11-12T11:00:00+08:00",
+      "endAt": "2026-12-21T03:59:00+08:00",
+      "imageUrl": "https://prod-alicdn-community.kurobbs.com/forum/d03c6285c8aa45499c09d47c9f046ade20261111.png",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/ww.json"
+    },
+    {
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "fceceb902e729252c656",
+      "gameId": "end",
+      "title": "唤醒签到",
+      "category": "活动",
+      "startAt": "2025-12-09T04:00:00+08:00",
+      "endAt": "2031-11-20T07:18:00+08:00",
+      "imageUrl": "https://assets.fz.wiki/27a62342d7861270/f8e909962fc828da.png",
+      "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E5%94%A4%E9%86%92%E7%AD%BE%E5%88%B0"
     }
   ]
 }
