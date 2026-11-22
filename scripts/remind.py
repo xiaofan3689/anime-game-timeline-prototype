@@ -60,7 +60,7 @@ def main():
         message["To"] = os.environ["ALERT_EMAIL"]
         game = games.get(event["gameId"], event["gameId"])
         message["Subject"] = f"[次元时刻] {game} 活动将在 {threshold} 小时内结束"
-        message.set_content("\n".join((f"游戏：{game}", f"活动：{event['title']}", f"结束时间：{end.strftime('%Y-%m-%d %H:%M %z')}", f"公告：{event.get('sourceUrl') or '无'}", f"时间线：{os.environ.get('SITE_URL') or 'https://xiaofan3689.dpdns.org/'}")))
+        message.set_content("\n".join((f"游戏：{game}", f"活动：{event['title']}", f"结束时间：{end.strftime('%Y-%m-%d %H:%M %z')}", f"公告：{event.get('sourceUrl') or '无'}", f"时间线：{os.environ.get('SITE_URL') or '未配置'}")))
         send(message)
         sent[key] = now.isoformat(timespec="seconds")
         LEDGER.write_text(json.dumps(ledger, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

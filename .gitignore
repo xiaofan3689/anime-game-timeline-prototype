@@ -3,3 +3,16 @@ __pycache__/
 work/
 .dev.vars*
 .env*
+.wrangler/
+node_modules/
+*.pem
+*.key
+*.pfx
+*.p12
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.log
+*.zip
+workers/reminders/wrangler.local.toml

@@ -1,0 +1,134 @@
+:root {
+  --workspace-ink: #f1edf9;
+  --workspace-muted: #c5b9d7;
+  --workspace-line: #554966;
+  --workspace-base: #1e1a2b;
+  --workspace-accent: #ddc7ff;
+}
+.skip-content {
+  position: fixed;
+  inset: .5rem auto auto .5rem;
+  z-index: 20000;
+  padding: .65rem 1rem;
+  background: #312447;
+  color: white;
+  transform: translateY(-150%);
+}
+.skip-content:focus { transform: none; }
+body :is(button,a,input,select,summary):focus-visible {
+  outline: 2px solid var(--workspace-accent);
+  outline-offset: 3px;
+}
+body ::selection { background: #bfa4f0; color: #21172f; }
+.public-ui .dashboard-shortcuts a { text-decoration-thickness: 1px; text-underline-offset: .25em; }
+.public-ui .dashboard-shortcuts a:is(:hover,:focus-visible) { color: #fff; }
+.public-ui :is(#smart-panel,#version-events,#activity-timeline) { scroll-margin-top: 1rem; }
+.public-ui .timeline-meta { font-variant-numeric: tabular-nums; }
+.public-ui .milestone-card h3 { line-height: 1.4; }
+.public-ui .smart-card-copy .smart-game-name { color: var(--workspace-muted); }
+.public-ui .smart-card-copy .smart-countdown { font-variant-numeric: tabular-nums; }
+
+.ops-ui main > header {
+  padding-block: 1.1rem .85rem;
+  border-bottom: 1px solid var(--workspace-line);
+}
+.ops-ui main > header > a, .ops-ui main > header > div > a {
+  text-underline-offset: .22em;
+  font-size: .875rem;
+}
+.ops-ui .workspace-directory {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-block: .8rem 1.25rem;
+  padding-block-end: .8rem;
+  border-bottom: 1px solid var(--workspace-line);
+}
+.ops-ui main:not(:has(#collab-editor:not([hidden]))) .workspace-directory:not(.admin-directory),
+.ops-ui main:has(#collab-account[hidden]) .workspace-directory a[href="#collab-account"] { display: none; }
+.ops-ui .workspace-directory a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: .8rem;
+  background: #2d243d;
+  color: var(--workspace-ink);
+  border: 1px solid var(--workspace-line);
+  border-radius: 7px;
+  text-decoration: none;
+}
+.ops-ui .workspace-directory a:hover { background: #493763; }
+.ops-ui :is(#editor-workspace,#reminder-tools,.collab-card) { scroll-margin-top: 8rem; }
+.ops-ui :is(.editor,.collab-card,#activation-panel) { background: var(--workspace-base); }
+.ops-ui :is(.editor,.collab-card) h2 {
+  color: var(--workspace-ink);
+  margin-block: 0 .8rem;
+  padding-block-end: .65rem;
+  border-bottom: 1px solid var(--workspace-line);
+}
+.ops-ui :is(.editor,.collab-card) h3 { margin-block: 1.35rem .6rem; }
+.ops-ui :is(#history,#review-list) details + details { margin-top: .65rem; }
+.ops-ui :is(#history,#review-list) summary { color: var(--workspace-accent); }
+.ops-ui :is(#identity,#connection) { overflow-wrap: anywhere; color: var(--workspace-muted); }
+.ops-ui :is(#game-fields,.collab-event) { gap: .65rem 1rem; }
+.ops-ui :is(#save,#submit,#publish) { padding-inline: 1rem; }
+.ops-ui :is(#submit,#publish):enabled { background: #6650a1; }
+.ops-ui #backend-top-dock { overflow-wrap: anywhere; }
+
+.public-ui .completion-notice:not([hidden]) {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0,1fr) auto;
+  gap: .5rem .65rem;
+  align-items: center;
+  padding: .75rem;
+  color: var(--workspace-ink);
+  background: #302345;
+  border-color: #aa89db;
+}
+.public-ui .completion-notice .completion-title { grid-column: 2 / -1; font-weight: 700; }
+.public-ui .completion-notice button:first-of-type { grid-column: 2; justify-self: start; }
+.completion-seal {
+  grid-row: 1 / span 2;
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  aspect-ratio: 1;
+  position: relative;
+  isolation: isolate;
+  color: #f0deff;
+}
+.completion-seal::before, .completion-seal::after { content: ""; grid-area: 1 / 1; }
+.completion-seal::before {
+  width: 1.65rem;
+  aspect-ratio: 1;
+  transform: rotate(45deg);
+  border-radius: 4px;
+  border: 1px solid #d8b4ff;
+  background: #65488a;
+}
+.completion-seal::after {
+  width: .65rem;
+  height: .35rem;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: translateY(-.1rem) rotate(-45deg);
+}
+.completion-play .completion-seal::before { animation: stamp-in 480ms cubic-bezier(.16,1,.3,1) both; }
+.completion-play .completion-seal::after { animation: stamp-check 340ms 90ms ease-out both; }
+@keyframes stamp-in {
+  from { opacity: 0; transform: rotate(32deg) scale(1.65); }
+  to { opacity: 1; transform: rotate(45deg) scale(1); }
+}
+@keyframes stamp-check {
+  from { opacity: 0; clip-path: inset(0 100% 0 0); }
+  to { opacity: 1; clip-path: inset(0); }
+}
+@media (max-width: 680px) {
+  .ops-ui .workspace-directory { gap: .4rem; }
+  .ops-ui .workspace-directory a { flex: 1 1 auto; justify-content: center; font-size: .82rem; }
+  .public-ui .hero .dashboard-shortcuts { flex-wrap: wrap; }
+  .public-ui .hero .dashboard-shortcuts a { flex: 1 1 auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .completion-play .completion-seal::before, .completion-play .completion-seal::after { animation: none; }
+}

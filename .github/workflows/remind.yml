@@ -28,7 +28,7 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           ALERT_HOURS: ${{ vars.ALERT_HOURS }}
           ALERT_GAME_IDS: ${{ vars.ALERT_GAME_IDS }}
-          SITE_URL: https://xiaofan3689.dpdns.org/
+          SITE_URL: ${{ vars.SITE_URL }}
         run: python scripts/remind.py
       - name: Commit sent ledger
         run: |

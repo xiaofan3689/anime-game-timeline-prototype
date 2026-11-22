@@ -137,7 +137,7 @@
     }
   ],
   "schemaVersion": 1,
-  "generatedAt": "2026-11-22T16:25:39+00:00",
+  "generatedAt": "2026-11-22T14:43:52+00:00",
   "games": [
     {
       "id": "ys",
@@ -283,7 +283,7 @@
       "versionNoticeAt": "2026-10-15T11:00:00+08:00",
       "nextVersionAt": "2026-11-25T11:00:00+08:00",
       "nextVersionEstimated": false,
-      "previewBannerUrl": "/assets/games/1120end.webp",
+      "previewBannerUrl": "",
       "previewUrl": "https://live.bilibili.com/h5/1921300321",
       "previewAt": "2026-11-21T19:30:00+08:00",
       "codesExpireAt": "2026-11-24T23:50:00+08:00",
@@ -4433,6 +4433,30 @@
       "imageUrl": "https://gf2-cn.cdn.sunborngame.com/website/platform/1791615799323.png"
     },
     {
+      "id": "a312f8d5301ab7251aff",
+      "gameId": "zzz",
+      "title": "新剧情：主线第三季第四章「重返天空的旅程」",
+      "startAt": "2026-10-19T14:30:00+08:00",
+      "endAt": "2026-12-01T06:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz",
+      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/16/857013191f9f318ca367c504871f6b9f_1882304297068249626_transformed.png"
+    },
+    {
+      "id": "a7fab10561e03f5c2734",
+      "gameId": "zzz",
+      "title": "3.3版本「丽都城募」说明",
+      "startAt": "2026-10-20T14:00:00+08:00",
+      "endAt": "2026-11-30T03:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz",
+      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/16/4a81388acbbe241827ec534f9df62fed_6277365941721836895_transformed.png"
+    },
+    {
       "recurring": false,
       "dailyCheckin": true,
       "checkinTarget": 7,
@@ -4484,6 +4508,30 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/724782.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/829/images/w_1280/h_720/1609130/2026/9/20/45459016mvgujnm2.webp"
+    },
+    {
+      "id": "51c8960134649e34849b",
+      "gameId": "zzz",
+      "title": "3.3版本「重返天空的旅程」更新公告",
+      "startAt": "2026-10-21T06:00:00+08:00",
+      "endAt": "2026-12-02T06:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz",
+      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/21/22a23769988f3e1b09d9b23c9ffd5351_2551844542532046139_transformed.jpg"
+    },
+    {
+      "id": "91e15d5e9ee8f54c1e7c",
+      "gameId": "zzz",
+      "title": "已知问题及游戏优化说明",
+      "startAt": "2026-10-21T06:00:00+08:00",
+      "endAt": "2026-12-02T06:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz",
+      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/12/30/d5ff609cfd2e21cef425170d044f4aca_4578138034465937229_transformed.png"
     },
     {
       "recurring": false,
@@ -4630,7 +4678,7 @@
       "sourceType": "manual",
       "sourceName": "人工录入",
       "sourceUrl": "",
-      "imageUrl": "/assets/games/azurpro/ScreenShot_2026-11-20_234131_533.png"
+      "imageUrl": ""
     },
     {
       "id": "eeb28646003565062737",
@@ -5073,6 +5121,23 @@
       "sourceName": "SRA 社区整理",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/sr.json",
       "imageUrl": ""
+    },
+    {
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "featured": false,
+      "id": "70669e377f1ad7084826",
+      "gameId": "ys",
+      "title": "砺行修远（第六期）",
+      "startAt": "2026-11-02T04:00:00+08:00",
+      "endAt": "2027-01-25T03:59:00+08:00",
+      "category": "活动",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/ys.json",
+      "imageUrl": "https://sdk.hoyoverse.com/upload/ann/2026/03/04/9e61fb52eb6c278d1c0c354a4cc12047_5706720538292727403_transformed.png"
     },
     {
       "id": "965fda7fca846ac1c9bc",
@@ -5625,6 +5690,18 @@
       "imageUrl": ""
     },
     {
+      "id": "6e46462b2a48728f566a",
+      "gameId": "zzz",
+      "title": "3.3版本限时频段（下期）",
+      "startAt": "2026-11-09T14:00:00+08:00",
+      "endAt": "2026-12-01T14:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz",
+      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/02/788b5084a7b459ce61145d821c109a58_5228933785553884104_transformed.jpg"
+    },
+    {
       "id": "4007e17fa4f79287adf1",
       "gameId": "zzz",
       "title": "「跛脚乌鸦奇踪记」活动说明",
@@ -5758,6 +5835,23 @@
       "title": "「嗯呢」从天降",
       "startAt": "2026-11-11T10:00:00+08:00",
       "endAt": "2026-11-12T03:59:00+08:00",
+      "category": "活动",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json",
+      "imageUrl": ""
+    },
+    {
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "featured": false,
+      "id": "13dfaf8bbde9847203c1",
+      "gameId": "zzz",
+      "title": "跛脚乌鸦奇踪记",
+      "startAt": "2026-11-11T10:00:00+08:00",
+      "endAt": "2026-11-30T03:59:00+08:00",
       "category": "活动",
       "sourceType": "manual",
       "sourceName": "人工录入",
@@ -5988,7 +6082,7 @@
       "gameId": "ww",
       "title": "忆旅赠礼II",
       "startAt": "2026-11-12T11:00:00+08:00",
-      "endAt": "2026-12-21T11:59:00+08:00",
+      "endAt": "2026-12-21T11:59:59+08:00",
       "category": "唤取活动",
       "sourceType": "manual",
       "sourceName": "人工录入",
@@ -6421,7 +6515,7 @@
       "sourceType": "manual",
       "sourceName": "人工录入",
       "sourceUrl": "",
-      "imageUrl": "/assets/games/1118end.png"
+      "imageUrl": ""
     },
     {
       "recurring": false,
@@ -6626,6 +6720,18 @@
       "imageUrl": ""
     },
     {
+      "id": "cfa07ad28cca514118fa",
+      "gameId": "zzz",
+      "title": "游戏调研有奖问卷",
+      "startAt": "2026-11-20T10:00:00+08:00",
+      "endAt": "2026-11-24T00:00:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "game-schedule",
+      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz",
+      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/29/d3f04e9206edc9d7315541706ae11778_7254485188011911447_transformed.png"
+    },
+    {
       "id": "3051d13cf97ab17a778b",
       "gameId": "hyrz",
       "title": "永夜逐光主题活动",
@@ -6676,7 +6782,7 @@
       "sourceType": "manual",
       "sourceName": "人工录入",
       "sourceUrl": "",
-      "imageUrl": "/assets/games/azurpro/ScreenShot_2026-11-20_234236_875.png"
+      "imageUrl": ""
     },
     {
       "id": "f50066fe8ce7870bd967",
@@ -6787,19 +6893,14 @@
       "imageUrl": ""
     },
     {
-      "recurring": false,
-      "dailyCheckin": false,
-      "checkinTarget": 1,
-      "activityUrl": "",
-      "featured": false,
       "id": "1357b55d6836ecd79d1b",
       "gameId": "zzz",
       "title": "数据悬赏-实战模拟",
       "startAt": "2026-11-25T04:00:00+08:00",
-      "endAt": "2026-11-30T03:59:00+08:00",
+      "endAt": "2026-11-30T03:59:59+08:00",
       "category": "活动",
-      "sourceType": "manual",
-      "sourceName": "人工录入",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json",
       "imageUrl": ""
     },
@@ -7070,7 +7171,7 @@
       "sourceType": "manual",
       "sourceName": "人工录入",
       "sourceUrl": "",
-      "imageUrl": "/assets/games/planet/XBGD1204.webp"
+      "imageUrl": ""
     },
     {
       "id": "feeeaa25af1ed405a103",
@@ -7101,126 +7202,126 @@
     {
       "gameId": "ys",
       "url": "https://starrailassistant.top/api/v1/activity/ys.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "nte",
       "url": "https://starrailassistant.top/api/v1/activity/nte.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "sr",
       "url": "https://starrailassistant.top/api/v1/activity/sr.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "zzz",
       "url": "https://starrailassistant.top/api/v1/activity/zzz.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ww",
       "url": "https://starrailassistant.top/api/v1/activity/ww.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ak",
       "url": "https://starrailassistant.top/api/v1/activity/ak.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 3
     },
     {
       "gameId": "end",
       "url": "https://starrailassistant.top/api/v1/activity/end.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 14
     },
     {
       "gameId": "ba-cn",
       "url": "https://starrailassistant.top/api/v1/activity/ba-cn.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 3
     },
     {
       "gameId": "ba-jp",
       "url": "https://starrailassistant.top/api/v1/activity/ba-jp.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "ba-global",
       "url": "https://starrailassistant.top/api/v1/activity/ba-global.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "xtlr",
       "url": "https://starrailassistant.top/api/v1/activity/xtlr.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "infinitynikki",
       "url": "https://starrailassistant.top/api/v1/activity/infinitynikki.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "gf2",
       "url": "https://starrailassistant.top/api/v1/activity/gf2.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "pgr",
       "url": "https://starrailassistant.top/api/v1/activity/pgr.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "czn",
       "url": "https://starrailassistant.top/api/v1/activity/czn.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 18
     },
     {
       "gameId": "bd2",
       "url": "https://starrailassistant.top/api/v1/activity/bd2.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "nikke",
       "url": "https://starrailassistant.top/api/v1/activity/nikke.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "hyrz",
       "url": "https://starrailassistant.top/api/v1/activity/hyrz.json",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "status": "ok",
       "eventCount": 12
     },
@@ -7329,7 +7430,7 @@
       "url": "https://gebc.lee-sikaha.cloudns.ch/endfield",
       "status": "stale",
       "fetchedAt": null,
-      "eventCount": 6,
+      "eventCount": 18,
       "error": "signal only works in main thread of the main interpreter"
     },
     {
@@ -7347,7 +7448,7 @@
       "url": "https://gebc.lee-sikaha.cloudns.ch/zzz",
       "status": "stale",
       "fetchedAt": null,
-      "eventCount": 3,
+      "eventCount": 9,
       "error": "signal only works in main thread of the main interpreter"
     },
     {
@@ -7355,7 +7456,7 @@
       "sourceName": "Ennead",
       "url": "https://api.ennead.cc/mihoyo/honkai/news/events?lang=zh-cn",
       "status": "ok",
-      "fetchedAt": "2026-11-22T16:25:39+00:00",
+      "fetchedAt": "2026-11-22T14:43:52+00:00",
       "kind": "news"
     }
   ]

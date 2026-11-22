@@ -21,7 +21,7 @@ export async function onRequest({request,env}){
   const result=await db.prepare("INSERT OR IGNORE INTO user_feedback(id,category,email,description,created_at,updated_at) VALUES (?,?,?,?,?,?)").bind(b.id,b.category,email,description,now,now).run();
   if(!result.meta.changes)return json({ok:true,message:'反馈已记录，请勿重复提交。'});
   const site=new URL(request.url).origin;let sent=true;
-  try{await sendApplicationMail(env,`收到一条用户建议反馈，待管理员审理。\n编号：${b.id}\n类别：${b.category}\n用户填写邮箱（未经本接口验证）：${email}\n\n反馈描述：\n${description}\n\n审理入口：${site}/admin/feedback.html`, 'xiaofan3689@qq.com','次元时刻：用户反馈待审理')}catch{sent=false}
+  try{await sendApplicationMail(env,`收到一条用户建议反馈，待管理员审理。\n编号：${b.id}\n类别：${b.category}\n用户填写邮箱（未经本接口验证）：${email}\n\n反馈描述：\n${description}\n\n审理入口：${site}/admin/feedback.html`, env.FEEDBACK_NOTIFY_EMAIL || env.ADMIN_EMAIL || '', '次元时刻：用户反馈待审理')}catch{sent=false}
   try{await db.prepare('UPDATE user_feedback SET notification=? WHERE id=?').bind(sent?'accepted':'uncertain',b.id).run()}catch{/* Feedback is already saved: do not report submission failure. */}
   return json({ok:true,message:sent?'反馈已记录，审理通知已交给邮件服务器。':'反馈已记录，管理员可在后台查看；邮件通知暂未确认成功，请勿重复提交。'});
  }catch{return json({error:'反馈暂未确认保存，请检查网络后重试；管理员需确认 feedback.sql 已在绑定库执行'},500)}
