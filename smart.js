@@ -37,7 +37,11 @@ function showCompletionNotice(root, activity) {
    activityDialog.querySelector(".activity-actions button")?.focus({preventScroll:true});
   }
  };
- root.replaceChildren(announcement,undo,dismiss);
+ const seal = n("span","completion-seal");
+ seal.setAttribute("aria-hidden","true");
+ announcement.className = "completion-title";
+ root.classList.remove("completion-play");
+ root.replaceChildren(seal,announcement,undo,dismiss);
  root.hidden = false;
  return undo;
 }
@@ -117,7 +121,17 @@ function smartRender(){
  const generated=Date.parse(S.feed.generatedAt);
  if(!Number.isFinite(generated)||Date.now()-generated>6*3600000)root.append(n("p","smart-warning","活动数据超过 6 小时未更新或更新时间无效，请核对官方公告后安排活动。"));
 }
-function smartPersist(){try{localStorage.setItem(SMART_KEY,JSON.stringify(progress))}catch{document.getElementById("smart-panel").append(n("p","smart-warning","浏览器禁止保存，当前标记将在刷新后丢失。"))}window.dispatchEvent(new Event("timeline-preferences-changed"));}
+function smartPersist(){
+ let saved = false;
+ try {
+  localStorage.setItem(SMART_KEY,JSON.stringify(progress));
+  saved = true;
+ } catch {
+  document.getElementById("smart-panel").append(n("p","smart-warning","浏览器禁止保存，当前标记将在刷新后丢失。"));
+ }
+ window.dispatchEvent(new Event("timeline-preferences-changed"));
+ return saved;
+}
 function smartUpdate(id,key,value){
  // Rebuilding cards removes the focused button. Restore document position after layout.
  const top=window.scrollY,left=window.scrollX;
@@ -129,13 +143,19 @@ function smartUpdate(id,key,value){
   completionNotice.hidden = true;
  }
  const inDetails = activityDialog.open;
- progress[id]={...progress[id],[key]:value};render();smartPersist();window.updateActivityDialog?.();
+ progress[id]={...progress[id],[key]:value};
+ render();
+ const saved = smartPersist();
+ if (newlyDone && !saved) completedAction = null;
+ window.updateActivityDialog?.();
  if (newlyDone && completedAction) {
   if (inDetails) {
    completionNotice.hidden = true;
+   activityDialog.querySelector(".completion-notice")?.classList.add("completion-play");
    activityDialog.querySelector(".completion-notice button")?.focus({preventScroll:true});
   } else {
    showCompletionNotice(completionNotice,completedAction).focus({preventScroll:true});
+   completionNotice.classList.add("completion-play");
   }
  }
  window.scrollTo({top,left,behavior:"instant"});

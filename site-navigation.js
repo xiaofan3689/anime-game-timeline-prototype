@@ -35,7 +35,7 @@
   function collectEntries() {
     const selector = document.body.classList.contains('public-ui')
       ? '.top-actions button, .top-actions a, .dashboard-shortcuts a'
-      : '.admin-nav a, .admin-nav button, main > header a, main > header button';
+      : '.admin-nav a, .admin-nav button, .workspace-directory a, main > header a, main > header button';
     const unique = new Set();
     const controls = [...document.querySelectorAll(selector)].filter(element => {
       const label = element.textContent.trim();
