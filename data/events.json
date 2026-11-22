@@ -137,7 +137,7 @@
     }
   ],
   "schemaVersion": 1,
-  "generatedAt": "2026-11-22T12:01:57+00:00",
+  "generatedAt": "2026-11-22T14:32:41+00:00",
   "games": [
     {
       "id": "ys",
@@ -2069,6 +2069,7 @@
       "imageUrl": "https://assets.fz.wiki/27a62342d7861270/75eab0f434f24063.png"
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -4617,6 +4618,7 @@
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/16/4a81388acbbe241827ec534f9df62fed_6277365941721836895_transformed.png"
     },
     {
+      "recurring": false,
       "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "",
@@ -4693,6 +4695,7 @@
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/12/30/d5ff609cfd2e21cef425170d044f4aca_4578138034465937229_transformed.png"
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -4781,6 +4784,7 @@
       "imageUrl": ""
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -4821,6 +4825,7 @@
       "imageUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg"
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "https://azurpromilia.manjuu.com/kibo-game?utm_campaign=OFAN&utm_source=CAMPAIGN",
@@ -4897,6 +4902,7 @@
       "imageUrl": "https://web.hycdn.cn/announce/images/20261023/9a4b1aac4203343a79c3f2df9b332deb.jpg"
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -5117,6 +5123,7 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/215/images/w_522/h_217/4408/2026/9/30/68135036mvul5he3.jpg"
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -5277,6 +5284,7 @@
       "imageUrl": ""
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -5485,6 +5493,7 @@
       "imageUrl": "https://i0.hdslb.com/bfs/new_dyn/abd1dd667974fe7d9985910563d63f683546636978489848.jpg"
     },
     {
+      "recurring": false,
       "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "",
@@ -5729,6 +5738,7 @@
       "imageUrl": "https://assets.fz.wiki/27a62342d7861270/b731f48a809a5b4f.png"
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -5865,6 +5875,7 @@
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/06/9cc4f934f6ffda939a80c2fc70769e47_885571584667886245_transformed.png"
     },
     {
+      "recurring": false,
       "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "",
@@ -5881,6 +5892,7 @@
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/06/41167d6e12b410834dbc7b567f0635ad_7274554495606633977_transformed.jpg"
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -5909,6 +5921,7 @@
       "imageUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/11/05/TF84F7um.jpg"
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -5973,6 +5986,7 @@
       "imageUrl": ""
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -5989,6 +6003,7 @@
       "imageUrl": ""
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -6029,6 +6044,7 @@
       "imageUrl": "https://i0.hdslb.com/bfs/new_dyn/a559fdebf0d3f0ba1eff611eca5870331340190821.jpg"
     },
     {
+      "recurring": false,
       "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "",
@@ -6201,6 +6217,7 @@
       "imageUrl": "https://prod-alicdn-community.kurobbs.com/forum/471058f95231497c902661a95684210f20261111.png"
     },
     {
+      "recurring": false,
       "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "",
@@ -6217,6 +6234,7 @@
       "imageUrl": "https://prod-alicdn-community.kurobbs.com/forum/528aff07a9604b149680e11fb015541620261111.jpg"
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -6233,6 +6251,7 @@
       "imageUrl": "https://prod-alicdn-community.kurobbs.com/forum/ee62903f3b04469098889d32481f54fa20261111.png"
     },
     {
+      "recurring": false,
       "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "",
@@ -6513,6 +6532,7 @@
       "imageUrl": ""
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -6565,6 +6585,7 @@
       "imageUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/11/16/JyYuhOqM.jpg"
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -6641,6 +6662,7 @@
       "imageUrl": "https://assets.fz.wiki/27a62342d7861270/4651f7d3eadae94e.png"
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -6657,6 +6679,7 @@
       "imageUrl": "/assets/games/1118end.png"
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -6805,6 +6828,7 @@
       "imageUrl": "https://prod-alicdn-community.kurobbs.com/forum/5d387fe4f622489ba4f311e52435548a20261116.png"
     },
     {
+      "recurring": false,
       "dailyCheckin": true,
       "checkinTarget": 7,
       "activityUrl": "https://act.mihoyo.com/zzz/event/e20261120reserve-auy9i1/index.html",
@@ -6905,6 +6929,7 @@
       "imageUrl": ""
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "https://azurpromilia.manjuu.com/",
@@ -7293,6 +7318,7 @@
       "imageUrl": "https://resource.starrailassistant.top/ba/activity/9166afb38aaebf5080ef5a7d35f2991bf14e7795.webp"
     },
     {
+      "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
@@ -7337,126 +7363,126 @@
     {
       "gameId": "ys",
       "url": "https://starrailassistant.top/api/v1/activity/ys.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "nte",
       "url": "https://starrailassistant.top/api/v1/activity/nte.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "sr",
       "url": "https://starrailassistant.top/api/v1/activity/sr.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "zzz",
       "url": "https://starrailassistant.top/api/v1/activity/zzz.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ww",
       "url": "https://starrailassistant.top/api/v1/activity/ww.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ak",
       "url": "https://starrailassistant.top/api/v1/activity/ak.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 3
     },
     {
       "gameId": "end",
       "url": "https://starrailassistant.top/api/v1/activity/end.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 14
     },
     {
       "gameId": "ba-cn",
       "url": "https://starrailassistant.top/api/v1/activity/ba-cn.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 3
     },
     {
       "gameId": "ba-jp",
       "url": "https://starrailassistant.top/api/v1/activity/ba-jp.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "ba-global",
       "url": "https://starrailassistant.top/api/v1/activity/ba-global.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "xtlr",
       "url": "https://starrailassistant.top/api/v1/activity/xtlr.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "infinitynikki",
       "url": "https://starrailassistant.top/api/v1/activity/infinitynikki.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "gf2",
       "url": "https://starrailassistant.top/api/v1/activity/gf2.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "pgr",
       "url": "https://starrailassistant.top/api/v1/activity/pgr.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "czn",
       "url": "https://starrailassistant.top/api/v1/activity/czn.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 18
     },
     {
       "gameId": "bd2",
       "url": "https://starrailassistant.top/api/v1/activity/bd2.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "nikke",
       "url": "https://starrailassistant.top/api/v1/activity/nikke.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "hyrz",
       "url": "https://starrailassistant.top/api/v1/activity/hyrz.json",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "status": "ok",
       "eventCount": 12
     },
@@ -7565,7 +7591,7 @@
       "url": "https://gebc.lee-sikaha.cloudns.ch/endfield",
       "status": "stale",
       "fetchedAt": null,
-      "eventCount": 19,
+      "eventCount": 18,
       "error": "signal only works in main thread of the main interpreter"
     },
     {
@@ -7591,7 +7617,7 @@
       "sourceName": "Ennead",
       "url": "https://api.ennead.cc/mihoyo/honkai/news/events?lang=zh-cn",
       "status": "ok",
-      "fetchedAt": "2026-11-22T12:01:57+00:00",
+      "fetchedAt": "2026-11-22T14:32:41+00:00",
       "kind": "news"
     }
   ]
