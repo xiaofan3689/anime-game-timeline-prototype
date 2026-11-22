@@ -140,3 +140,12 @@
   .public-ui .hero-character::after { background: linear-gradient(90deg,#252038 0%,#252038e6 45%,#25203855); }
   .public-ui .hero .dashboard-shortcuts { gap: 6px 12px; }
 }
+
+/* Short reveal only on the image; the text and layout stay still. */
+@keyframes banner-refresh {
+  from { opacity: .72; }
+  to { opacity: 1; }
+}
+@media(prefers-reduced-motion:no-preference) {
+  .public-ui .hero-character img.banner-refresh { animation: banner-refresh 420ms ease-out both; }
+}
