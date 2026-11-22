@@ -149,19 +149,22 @@
       "versionName": "丹青渡",
       "bannerUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg",
       "versionNoticeAt": "2026-10-15T11:00:00+08:00",
-      "nextVersionAt": "2026-11-26T11:00:00+08:00",
-      "nextVersionEstimated": true,
+      "nextVersionAt": "2026-11-25T11:00:00+08:00",
+      "nextVersionEstimated": false,
       "syncWithSra": true,
       "previousVersionAt": null,
       "updateReferenceAt": null,
       "preDownloadAt": null,
       "officialUrl": "https://endfield.hypergryph.com",
-      "previewRecapUrl": null,
+      "previewRecapUrl": "https://www.bilibili.com/opus/1273471549311025159",
       "previewBannerUrl": "/assets/games/1120end.webp",
       "previewUrl": "https://live.bilibili.com/h5/1921300321",
       "previewAt": "2026-11-21T19:30:00+08:00",
-      "codesExpireAt": null,
-      "previewCodes": []
+      "codesExpireAt": "2026-11-24T23:50:00+08:00",
+      "previewCodes": [
+        "https://endfield.hypergryph.com/version_briefing/latest?source_from=live",
+        "上面网站领"
+      ]
     },
     {
       "disabled": false,
