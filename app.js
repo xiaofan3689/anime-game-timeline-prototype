@@ -230,8 +230,8 @@ async function refresh(options={}){
   const stale=incoming.sources.filter(x=>x.status!=='ok'),time=fmt.format(new Date(incoming.generatedAt));
   $('updated-at').textContent='生成于 '+time;$('side-updated').textContent=time;
   $('source-summary').textContent=stale.length?`${stale.length} 个来源使用旧数据`:'全部正常';
-  showFeedNotice(stale.length ? `部分来源使用旧数据。最近生成于 ${time}。` : "");
-  $('sync-status').textContent=stale.length?'部分来源使用旧数据':'已连接共享活动数据';
+  showFeedNotice(stale.length ? `已连接共享活动数据，最近生成于 ${time}。` : "");
+  $('sync-status').textContent=stale.length?'已连接共享活动数据，下方入口点击即可跳转，跳转后点击右下角顶部即可返回该页面':'已连接共享活动数据，下方入口点击即可跳转，跳转后点击右下角顶部即可返回该页面';
   if(changed){const x=window.scrollX,y=window.scrollY;render();requestAnimationFrame(()=>window.scrollTo(x,y));window.dispatchEvent(new CustomEvent('timeline-feed-updated',{detail:{generatedAt:incoming.generatedAt}}))}
   feedAppliedAt=Date.now();
  }catch(error){
