@@ -521,7 +521,7 @@
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
-      "disabled": false,
+      "disabled": true,
       "featured": false,
       "id": "70669e377f1ad7084826",
       "gameId": "ys",
@@ -936,7 +936,7 @@
       "title": "忆旅赠礼II",
       "category": "唤取活动",
       "startAt": "2026-11-12T11:00:00+08:00",
-      "endAt": "2026-12-21T11:59:59+08:00",
+      "endAt": "2026-12-21T11:59:00+08:00",
       "imageUrl": "https://prod-alicdn-community.kurobbs.com/forum/ee62903f3b04469098889d32481f54fa20261111.png",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/ww.json"
     },
@@ -1276,7 +1276,7 @@
       "title": "数据悬赏-实战模拟",
       "category": "活动",
       "startAt": "2026-11-25T04:00:00+08:00",
-      "endAt": "2026-11-30T03:59:59+08:00",
+      "endAt": "2026-11-30T03:59:00+08:00",
       "imageUrl": "",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
