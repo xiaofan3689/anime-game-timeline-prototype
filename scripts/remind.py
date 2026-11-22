@@ -15,6 +15,8 @@ LEDGER = ROOT / "data/reminders-sent.json"
 def due(feed, sent, now, thresholds, selected):
     items = []
     for event in feed.get("events", []):
+        if event.get("hidden") or event.get("disabled"):
+            continue
         if selected and event.get("gameId") not in selected:
             continue
         try:

@@ -30,7 +30,7 @@
   return Object.fromEntries([...dates].sort(([a],[b])=>a.localeCompare(b)).map(([id,days])=>[id,[...days].sort().slice(-366)]));
  }
  function clearCheckins(){for(const k of Object.keys(localStorage))if(k.startsWith(checkinPrefix))localStorage.removeItem(k)}
- function snapshot(){if(!S.feed)throw Error('活动数据尚未加载，请稍后再试');return {checkins:checkins(),games:[...S.selected],completed:Object.keys(progress).filter(id=>progress[id]?.done)}}
+ function snapshot(){if(!S.feed)throw Error('活动数据尚未加载，请稍后再试');return {checkins:checkins(),games:[...S.selected],completed:Object.keys(progress).filter(id=>window.activityDone(id))}}
  function restore(b,keepLocalCheckins=false){
   if(!Array.isArray(b.games)||!Array.isArray(b.completed))return;
   const dates=mergeCheckins(b.checkins,keepLocalCheckins?checkins():null);

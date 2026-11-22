@@ -185,13 +185,13 @@ def main():
         if not any(mark in item["startAt"][10:] for mark in ("+", "-", "Z")) or not any(mark in item["endAt"][10:] for mark in ("+", "-", "Z")):
             raise ValueError("人工活动时间必须带时区偏移，例如 +08:00")
         events.append(valid_event({
-            "dailyCheckin": item.get("dailyCheckin") is True, "checkinTarget": int(item.get("checkinTarget") or 1), "activityUrl": item.get("activityUrl") or "", "featured": item.get("featured") is True, "id": item.get("id") or event_id(game_id, title, start),
+            "recurring": item.get("recurring") is True, "dailyCheckin": item.get("dailyCheckin") is True, "checkinTarget": int(item.get("checkinTarget") or 1), "activityUrl": item.get("activityUrl") or "", "featured": item.get("featured") is True, "id": item.get("id") or event_id(game_id, title, start),
             "gameId": game_id, "title": title, "startAt": start, "endAt": end,
             "category": item.get("category") or "活动",
             "sourceType": "manual", "sourceName": "人工录入",
             "sourceUrl": item.get("sourceUrl"), "imageUrl": item.get("imageUrl"),
         }))
-    suppressed = {e.get("id") or event_id(e["gameId"], e["title"].strip(), iso(e["startAt"])) for e in manual.get("events", []) if e.get("disabled") is True}
+    suppressed = {e.get("id") or event_id(e["gameId"], e["title"].strip(), iso(e["startAt"])) for e in manual.get("events", []) if e.get("disabled") is True or e.get("hidden") is True}
     disabled = {g["id"] for g in manual.get("games", []) if g.get("disabled") is True}
     games = {k: v for k, v in games.items() if k not in disabled}
     events = [e for e in events if e["gameId"] not in disabled and e["id"] not in suppressed]

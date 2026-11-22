@@ -28,7 +28,7 @@ export async function onRequest(context){
   let feed;try{feed=JSON.parse(feedText)}catch{return json({error:'本站 /data/events.json 返回的不是 JSON，可能是 Access 登录页、404 页面或部署错误。请检查公共数据路径及部署版本。',stage},502)}
   stage='校验活动数据';if(!Array.isArray(feed.events)||!Array.isArray(feed.games))return json({error:'活动数据格式无效'},502);
   if(!Number.isFinite(Date.parse(feed.generatedAt))||Date.now()-Date.parse(feed.generatedAt)>6*3600000)return json({error:'活动数据超过6小时未更新或更新时间无效，请先运行 Sync game events'},409);
-  const events=eligible(feed,b.games,b.completed);
+  const events=eligible(feed,b.games,b.completed,Date.now(),b.checkins||{});
   if(!events.length)return json({ok:true,count:0,message:'当前浏览器所选游戏没有未完成且将在48小时内结束的活动，未发送邮件。'});
   const now=Date.now();
   stage='写入邮件发送频率表';
