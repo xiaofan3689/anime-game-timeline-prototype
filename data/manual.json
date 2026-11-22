@@ -509,29 +509,6 @@
       "previewCodes": [
         "XBGD1204"
       ]
-    },
-    {
-      "disabled": true,
-      "id": "testa",
-      "name": "123",
-      "iconUrl": "/assets/games/XBGD1204.webp",
-      "version": "1",
-      "versionName": "1",
-      "bannerUrl": "/assets/games/1120end.webp",
-      "versionNoticeAt": null,
-      "nextVersionAt": "2026-11-11T00:00:00+08:00",
-      "nextVersionEstimated": false,
-      "syncWithSra": false,
-      "previousVersionAt": null,
-      "updateReferenceAt": null,
-      "preDownloadAt": null,
-      "officialUrl": null,
-      "previewRecapUrl": "/assets/games/1118end.png",
-      "previewBannerUrl": "/assets/games/1118end.png",
-      "previewUrl": null,
-      "previewAt": null,
-      "codesExpireAt": null,
-      "previewCodes": []
     }
   ],
   "events": [
