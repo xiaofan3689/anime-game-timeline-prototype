@@ -240,3 +240,17 @@ body :is(.site-index,.site-image-viewer,.activity-dialog,.game-picker) {
   .public-ui .cover-spread .activity-overview .overview-scope { margin-block: 2px 4px; }
   .public-ui .cover-spread .activity-overview .summary-value { font-size: 1.5rem; }
 }
+
+.ended-archive-toggle {
+  display: block;
+  z-index: 4;
+  min-height: 44px;
+  text-align: start;
+  border: 1px solid #78658b;
+  border-radius: 8px;
+  background: #2d243d;
+  color: #f1edf9;
+  cursor: pointer;
+}
+.ended-archive-toggle:hover { background: #493763; }
+.ended-archive-rows[hidden] { display: none; }

@@ -13,6 +13,9 @@ export async function onRequest({request,env}){
  const db=env.APPLICATION_DB,rawKey=await hash(b.token),key=await accountKey(db,rawKey),now=Date.now();
  const verifyKey='verify:'+rawKey;
  let row=await db.prepare('SELECT * FROM email_subscriptions WHERE token_hash=?').bind(['request-code','confirm'].includes(b.action)?verifyKey:key).first();
+ if(row && (row.email || b.action==='confirm') && !Object.hasOwn(row,'checkins')){
+  return json({error:'当前邮件数据库缺少签到字段，请在 Pages 绑定的 D1 上执行 email-checkins-v120.sql'},503);
+ }
  if(b.action==='get')return json({email:row?.email||'',pendingEmail:row?.pending_email||'',active:!!row?.active,...(row?.email?stateOf(row):{})});
  if(b.action==='request-code'){
   const email=typeof b.email==='string'?b.email.trim().toLowerCase():'';
@@ -42,7 +45,7 @@ export async function onRequest({request,env}){
   const existing=await db.prepare('SELECT * FROM email_subscriptions WHERE email=?').bind(row.pending_email).first();
   if(existing){
    await db.prepare('INSERT INTO email_sessions(token_hash,account_hash) VALUES (?,?) ON CONFLICT(token_hash) DO UPDATE SET account_hash=excluded.account_hash').bind(rawKey,existing.token_hash).run();
-   await db.prepare('UPDATE email_subscriptions SET active=1,pending_email=NULL,revision=revision+1 WHERE token_hash=?').bind(existing.token_hash).run();
+   await db.prepare('UPDATE email_subscriptions SET revision=revision+CASE WHEN active=1 THEN 0 ELSE 1 END,active=1,pending_email=NULL WHERE token_hash=?').bind(existing.token_hash).run();
    const restored=await db.prepare('SELECT * FROM email_subscriptions WHERE token_hash=?').bind(existing.token_hash).first();
    return json({ok:true,restored:true,...stateOf(restored)});
   }
@@ -53,7 +56,11 @@ export async function onRequest({request,env}){
  }else{
   if(!row.active)return json({error:'提醒已停止，请验证邮箱重新启用'},409);
   if(!Number.isInteger(b.revision))return json({error:'请刷新页面加载最新同步版本'},409);
-  const result=await db.prepare('UPDATE email_subscriptions SET games=?,completed=?,checkins=?,revision=revision+1,updated_at=? WHERE token_hash=? AND active=1 AND revision=?').bind(JSON.stringify([...new Set(b.games)]),JSON.stringify([...new Set(b.completed)]),JSON.stringify(b.checkins),now,key,b.revision).run();
+  const dates=new Map(Object.entries(stateOf(row).checkins));
+  for(const [id,days] of Object.entries(b.checkins)){
+   dates.set(id,[...new Set([...(dates.get(id)||[]),...days])].sort().slice(-366));
+  }
+  const result=await db.prepare('UPDATE email_subscriptions SET games=?,completed=?,checkins=?,revision=revision+1,updated_at=? WHERE token_hash=? AND active=1 AND revision=?').bind(JSON.stringify([...new Set(b.games)]),JSON.stringify([...new Set(b.completed)]),JSON.stringify(Object.fromEntries(dates)),now,key,b.revision).run();
   if(!result.meta.changes){const latest=await db.prepare('SELECT * FROM email_subscriptions WHERE token_hash=?').bind(key).first();return json({error:'其他浏览器已更新，已恢复最新状态，请刷新页面',conflict:true,...stateOf(latest)},409)}
   return json({ok:true,revision:b.revision+1});
  }
