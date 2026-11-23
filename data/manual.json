@@ -1365,6 +1365,40 @@
       "endAt": "2026-12-01T06:00:00+08:00",
       "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/16/857013191f9f318ca367c504871f6b9f_1882304297068249626_transformed.png",
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
+    },
+    {
+      "hidden": false,
+      "recurring": true,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "64c71d93-f8c0-496d-b346-81053991aa15",
+      "gameId": "hna",
+      "title": "崩坏：因缘精灵【幸福测试】",
+      "category": "测试",
+      "startAt": "2026-11-25T10:00:00+08:00",
+      "endAt": "2027-01-06T18:00:00+08:00",
+      "imageUrl": "",
+      "sourceUrl": ""
+    },
+    {
+      "hidden": false,
+      "recurring": true,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "6e5b1c4a-2cbd-426d-aedc-0e7c367ca5c1",
+      "gameId": "shuilingmiao",
+      "title": "时之铃【一测】",
+      "category": "测试",
+      "startAt": "2026-11-25T12:00:00+08:00",
+      "endAt": "2032-11-24T01:06:00+08:00",
+      "imageUrl": "",
+      "sourceUrl": ""
     }
   ]
 }
