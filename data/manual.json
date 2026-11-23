@@ -670,7 +670,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/xtlr.json"
     },
     {
-      "hidden": false,
+      "hidden": true,
       "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
@@ -687,7 +687,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
-      "hidden": false,
+      "hidden": true,
       "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
@@ -704,7 +704,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
-      "hidden": false,
+      "hidden": true,
       "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
@@ -721,7 +721,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
-      "hidden": false,
+      "hidden": true,
       "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
@@ -738,7 +738,7 @@
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz"
     },
     {
-      "hidden": false,
+      "hidden": true,
       "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
@@ -772,7 +772,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
-      "hidden": false,
+      "hidden": true,
       "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
@@ -789,7 +789,7 @@
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json"
     },
     {
-      "hidden": false,
+      "hidden": true,
       "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
