@@ -1399,6 +1399,23 @@
       "endAt": "2032-11-24T01:06:00+08:00",
       "imageUrl": "",
       "sourceUrl": ""
+    },
+    {
+      "hidden": false,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": true,
+      "featured": false,
+      "id": "fb57df67-412e-4732-8638-eb38308a3b12",
+      "gameId": "ananta",
+      "title": "testa",
+      "category": "活动",
+      "startAt": "2026-01-12T21:00:00+08:00",
+      "endAt": "2026-11-25T12:00:00+08:00",
+      "imageUrl": "",
+      "sourceUrl": ""
     }
   ]
 }
