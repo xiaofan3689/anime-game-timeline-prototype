@@ -137,7 +137,7 @@
     }
   ],
   "schemaVersion": 1,
-  "generatedAt": "2026-11-23T07:38:04+00:00",
+  "generatedAt": "2026-11-24T04:49:04+00:00",
   "games": [
     {
       "id": "ys",
@@ -254,7 +254,7 @@
     {
       "id": "ak",
       "name": "明日方舟",
-      "iconUrl": "https://ak.hypergryph.com/favicon.ico",
+      "iconUrl": "/assets/games/icon/ak.webp",
       "version": "2026-11-22",
       "versionName": "雪山降临1101 限时复刻",
       "bannerUrl": "https://web.hycdn.cn/upload/image/20261110/36fac97b33ce9616e4267efb034b5bc9.jpg",
@@ -276,7 +276,7 @@
     {
       "id": "end",
       "name": "明日方舟：终末地",
-      "iconUrl": "https://endfield.hypergryph.com/favicon.ico",
+      "iconUrl": "/assets/games/icon/end.webp",
       "version": "1.6",
       "versionName": "丹青渡",
       "bannerUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg",
@@ -367,7 +367,7 @@
     {
       "id": "xtlr",
       "name": "星塔旅人",
-      "iconUrl": "https://stella-sora.com/favicon.ico",
+      "iconUrl": "/assets/games/icon/xtlr.webp",
       "version": "2026-11-13",
       "versionName": "执笔展卷，勾勒未名之境",
       "bannerUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/11/09/sgus1yfz.jpg",
@@ -389,7 +389,7 @@
     {
       "id": "infinitynikki",
       "name": "无限暖暖",
-      "iconUrl": "https://infinitynikki.infoldgames.com/favicon.ico",
+      "iconUrl": "/assets/games/icon/nuannuan.webp",
       "version": "2.11",
       "versionName": "时光缝合的扉页",
       "bannerUrl": "https://webstatic.papegames.com/5af052bffce5c899/images/bg/yxtMDTt0VBdwtIuR.jpg",
@@ -411,10 +411,10 @@
     {
       "id": "gf2",
       "name": "少女前线2：追放",
-      "iconUrl": "https://gf2.sunborngame.com/favicon.ico",
-      "version": "2026-11-03",
-      "versionName": "热寂悖论",
-      "bannerUrl": "https://i0.hdslb.com/bfs/archive/0c38c8078f74299ee985f014708a14e2ffdc4cae.jpg",
+      "iconUrl": "/assets/games/icon/shaoqian2.webp",
+      "version": "2026-11-24",
+      "versionName": "直播重连世界海",
+      "bannerUrl": null,
       "versionNoticeAt": null,
       "nextVersionAt": null,
       "nextVersionEstimated": false,
@@ -433,7 +433,7 @@
     {
       "id": "pgr",
       "name": "战双帕弥什",
-      "iconUrl": "https://pns.kurogames.com/favicon.ico",
+      "iconUrl": "/assets/games/icon/zhanshuang.webp",
       "version": "2026-11-05",
       "versionName": "流光抛诸寰宇",
       "bannerUrl": "https://i.17173cdn.com/2fhnvk/YWxqaGBf/cms3/PkGyFcbugdgskae.jpg",
@@ -455,7 +455,7 @@
     {
       "id": "czn",
       "name": "卡厄斯梦境（国际服）",
-      "iconUrl": "https://chaoszeronightmare.com/favicon.ico",
+      "iconUrl": "/assets/games/icon/kaesi.webp",
       "version": "2026-11-11",
       "versionName": "凝结于雪上的约定·第2章",
       "bannerUrl": "https://vasd-cms.qq.com/vasd-cms/ee57a83c423151259fffcaf375147fe03546720799557898_jpg_b1ad8b6506.avif",
@@ -477,7 +477,7 @@
     {
       "id": "bd2",
       "name": "棕色尘埃2",
-      "iconUrl": "https://www.browndust2.com/favicon.ico",
+      "iconUrl": "/assets/games/icon/brown.webp",
       "version": "2026-11-05",
       "versionName": "Blood Royale",
       "bannerUrl": null,
@@ -583,7 +583,7 @@
       "previewBannerUrl": "https://l1-all-plat-server.manjuu.com/websiteManagent/img/notice/1ee30950a80e092040b390bb7ac393b7-1792651127802-0.jpeg",
       "previewUrl": "https://live.bilibili.com/1731831751",
       "previewAt": "2026-11-20T19:00:00+08:00",
-      "codesExpireAt": null,
+      "codesExpireAt": "2026-11-22T01:16:00+08:00",
       "previewCodes": [],
       "previousVersionAt": null,
       "updateReferenceAt": null,
@@ -637,6 +637,72 @@
       "officialUrl": "https://planet.mihoyo.com/",
       "previewRecapUrl": "https://www.bilibili.com/opus/1265702823245381637",
       "syncWithSra": true
+    },
+    {
+      "id": "shuilingmiao",
+      "name": "时之铃",
+      "iconUrl": "/assets/games/icon/icon-szl.jpg",
+      "version": "0.5",
+      "versionName": "一测",
+      "bannerUrl": "https://i0.hdslb.com/bfs/new_dyn/adcae9597076533711a6ec2fa7cf6fbb3707011178957484.png@1404w_788h_1c.webp",
+      "versionNoticeAt": null,
+      "nextVersionAt": "2026-11-25T12:00:00+08:00",
+      "nextVersionEstimated": false,
+      "previewBannerUrl": "https://i0.hdslb.com/bfs/new_dyn/adcae9597076533711a6ec2fa7cf6fbb3707011178957484.png@1404w_788h_1c.webp",
+      "previewUrl": null,
+      "previewAt": "2026-11-21T01:20:00+08:00",
+      "codesExpireAt": "2026-11-23T01:17:00+08:00",
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": "2026-11-25T00:00:00+08:00",
+      "officialUrl": "https://www.shuilingmiao.com",
+      "previewRecapUrl": null,
+      "syncWithSra": false
+    },
+    {
+      "id": "hna",
+      "name": "崩坏：因缘精灵",
+      "iconUrl": "/assets/games/icon/yyjl.webp",
+      "version": "0.75.2",
+      "versionName": "幸福测试",
+      "bannerUrl": "https://i0.hdslb.com/bfs/new_dyn/f3d9c38930ae734fcb9cdd5687d4ede33546886017387331.png@1052w_!web-dynamic.avif",
+      "versionNoticeAt": null,
+      "nextVersionAt": "2026-11-25T10:00:00+08:00",
+      "nextVersionEstimated": false,
+      "previewBannerUrl": "https://i0.hdslb.com/bfs/new_dyn/f3d9c38930ae734fcb9cdd5687d4ede33546886017387331.png@1052w_!web-dynamic.avif",
+      "previewUrl": null,
+      "previewAt": "2026-11-22T01:14:00+08:00",
+      "codesExpireAt": "2026-11-23T01:22:00+08:00",
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": "2026-11-23T12:00:00+08:00",
+      "officialUrl": "https://yyjl.mihoyo.com",
+      "previewRecapUrl": null,
+      "syncWithSra": false
+    },
+    {
+      "id": "ananta",
+      "name": "无限大",
+      "iconUrl": "/assets/games/icon/ananta.webp",
+      "version": "1.0",
+      "versionName": "公测",
+      "bannerUrl": "https://i0.hdslb.com/bfs/new_dyn/405a4e091c585a0c1dcbc5e7614dcdae3494379073309365.png@1404w_788h_1c.webp",
+      "versionNoticeAt": null,
+      "nextVersionAt": "2027-01-15T10:00:00+08:00",
+      "nextVersionEstimated": true,
+      "previewBannerUrl": "https://i0.hdslb.com/bfs/new_dyn/405a4e091c585a0c1dcbc5e7614dcdae3494379073309365.png@1404w_788h_1c.webp",
+      "previewUrl": null,
+      "previewAt": null,
+      "codesExpireAt": null,
+      "previewCodes": [],
+      "previousVersionAt": null,
+      "updateReferenceAt": null,
+      "preDownloadAt": null,
+      "officialUrl": null,
+      "previewRecapUrl": null,
+      "syncWithSra": false
     }
   ],
   "events": [
@@ -4486,23 +4552,6 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/829/images/w_1280/h_720/1609130/2026/9/20/45459016mvgujnm2.webp"
     },
     {
-      "recurring": false,
-      "dailyCheckin": false,
-      "checkinTarget": 1,
-      "activityUrl": "",
-      "featured": false,
-      "id": "790e6d83146e249c7f26",
-      "gameId": "zzz",
-      "title": "全新放送",
-      "startAt": "2026-10-21T11:00:00+08:00",
-      "endAt": "2026-11-01T03:59:00+08:00",
-      "category": "活动",
-      "sourceType": "manual",
-      "sourceName": "人工录入",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json",
-      "imageUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166970/616a76f9fec948951b690270d84cadac_9098996815758943439.png"
-    },
-    {
       "id": "69d9be5de9cb3a883059",
       "gameId": "czn",
       "title": "「希格」限定营救概率提升",
@@ -4575,23 +4624,6 @@
       "imageUrl": ""
     },
     {
-      "recurring": false,
-      "dailyCheckin": false,
-      "checkinTarget": 1,
-      "activityUrl": "",
-      "featured": false,
-      "id": "9b565b5310440990f27d",
-      "gameId": "zzz",
-      "title": "怪奇诡屋惊魂记",
-      "startAt": "2026-10-22T10:00:00+08:00",
-      "endAt": "2026-10-30T03:59:00+08:00",
-      "category": "活动",
-      "sourceType": "manual",
-      "sourceName": "人工录入",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json",
-      "imageUrl": "https://fastcdn.mihoyo.com/content-v2/nap/166971/e60c90b0d9aee6fd8448586ee92e7712_304316638077624531.jpg"
-    },
-    {
       "id": "164160bd0cda593be63e",
       "gameId": "end",
       "title": "「丰碑留名·魇林」限时挑战",
@@ -4655,18 +4687,6 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/ak",
       "imageUrl": "https://web.hycdn.cn/announce/images/20261008/9fdb67c6667984ea4fa1be6633cdc4af.JPG"
-    },
-    {
-      "id": "1c07fe23ab3730cf5218",
-      "gameId": "ak",
-      "title": "「冻土与火种」网页活动",
-      "startAt": "2026-10-24T20:00:00+08:00",
-      "endAt": "2026-11-24T03:59:59+08:00",
-      "category": "活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/ak.json",
-      "imageUrl": ""
     },
     {
       "id": "28c9ea8739ceae5ea4a3",
@@ -5072,18 +5092,6 @@
       "sourceType": "community",
       "sourceName": "SRA 社区整理",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/sr.json",
-      "imageUrl": ""
-    },
-    {
-      "id": "965fda7fca846ac1c9bc",
-      "gameId": "gf2",
-      "title": "「热寂悖论」限时主题活动",
-      "startAt": "2026-11-03T12:00:00+08:00",
-      "endAt": "2026-11-24T08:59:00+08:00",
-      "category": "活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/gf2.json",
       "imageUrl": ""
     },
     {
@@ -5512,23 +5520,6 @@
       "imageUrl": "https://assets.fz.wiki/27a62342d7861270/b731f48a809a5b4f.png"
     },
     {
-      "recurring": false,
-      "dailyCheckin": false,
-      "checkinTarget": 1,
-      "activityUrl": "",
-      "featured": false,
-      "id": "26a31a520db968fabb81",
-      "gameId": "zzz",
-      "title": "《绝区零》对iPhone Duo机型的适配说明",
-      "startAt": "2026-11-05T14:00:00+08:00",
-      "endAt": "2026-11-12T06:00:00+08:00",
-      "category": "活动",
-      "sourceType": "manual",
-      "sourceName": "人工录入",
-      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz",
-      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/04/31277066e538fef43aa5dafe73e3533d_8985718310596300355_transformed.png"
-    },
-    {
       "id": "288dfbf72f69a5953c85",
       "gameId": "pgr",
       "title": "【流光抛诸寰宇】诸星迷寂-BOSS挑战",
@@ -5683,23 +5674,6 @@
       "imageUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/11/05/TF84F7um.jpg"
     },
     {
-      "recurring": false,
-      "dailyCheckin": false,
-      "checkinTarget": 1,
-      "activityUrl": "",
-      "featured": false,
-      "id": "a3e7e413ff2cd7f64440",
-      "gameId": "zzz",
-      "title": "3.3版本「商城」上新说明",
-      "startAt": "2026-11-10T12:00:00+08:00",
-      "endAt": "2026-11-12T05:59:00+08:00",
-      "category": "活动",
-      "sourceType": "manual",
-      "sourceName": "人工录入",
-      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz",
-      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/06/258b465a8fb84ddde3dd2096cacaf718_5878293889572538722.jpg"
-    },
-    {
       "id": "13dde1888aa1181e84fe",
       "gameId": "ba-jp",
       "title": "课程表·交流会2倍",
@@ -5745,23 +5719,6 @@
       "sourceType": "community",
       "sourceName": "SRA 社区整理",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/ys.json",
-      "imageUrl": ""
-    },
-    {
-      "recurring": false,
-      "dailyCheckin": false,
-      "checkinTarget": 1,
-      "activityUrl": "",
-      "featured": false,
-      "id": "6ca8c641e9abd9dd36a0",
-      "gameId": "zzz",
-      "title": "「嗯呢」从天降",
-      "startAt": "2026-11-11T10:00:00+08:00",
-      "endAt": "2026-11-12T03:59:00+08:00",
-      "category": "活动",
-      "sourceType": "manual",
-      "sourceName": "人工录入",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json",
       "imageUrl": ""
     },
     {
@@ -6265,23 +6222,6 @@
       "imageUrl": ""
     },
     {
-      "recurring": false,
-      "dailyCheckin": false,
-      "checkinTarget": 1,
-      "activityUrl": "",
-      "featured": false,
-      "id": "f49a16a7d2bd5452deba",
-      "gameId": "zzz",
-      "title": "修复吧！漂流画集",
-      "startAt": "2026-11-16T10:00:00+08:00",
-      "endAt": "2026-11-17T03:59:00+08:00",
-      "category": "活动",
-      "sourceType": "manual",
-      "sourceName": "人工录入",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/zzz.json",
-      "imageUrl": ""
-    },
-    {
       "id": "0dcf0b409f390a4c0f4d",
       "gameId": "ak",
       "title": "八、复刻时装限时上架",
@@ -6306,6 +6246,18 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/1253/images/w_860/h_364/4408/2026/10/17/09324348mwkduqbk.jpg"
     },
     {
+      "id": "53d0d5bd4ac30359714f",
+      "gameId": "gf2",
+      "title": "「战前补给」七日签到活动",
+      "startAt": "2026-11-17T05:00:00+08:00",
+      "endAt": "2026-11-27T04:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/gf2.json",
+      "imageUrl": ""
+    },
+    {
       "id": "188e337566844b632c26",
       "gameId": "xtlr",
       "title": "「划破黑暗的银枪」复刻纪念活动",
@@ -6316,23 +6268,6 @@
       "sourceName": "SRA 社区整理",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/xtlr.json",
       "imageUrl": "https://webusstatic.yo-star.com/web-cms-test/upload/content/2026/11/16/JyYuhOqM.jpg"
-    },
-    {
-      "recurring": false,
-      "dailyCheckin": false,
-      "checkinTarget": 1,
-      "activityUrl": "",
-      "featured": false,
-      "id": "0c085f366efeb73f35ac",
-      "gameId": "zzz",
-      "title": "3.4版本「长日终尽」前瞻特别节目预告",
-      "startAt": "2026-11-17T18:30:00+08:00",
-      "endAt": "2026-11-17T19:30:00+08:00",
-      "category": "活动",
-      "sourceType": "manual",
-      "sourceName": "人工录入",
-      "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/zzz",
-      "imageUrl": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/17/cc6e2f1dc1359ea87ac0b94dffa69124_4310232316573069326_transformed.jpg"
     },
     {
       "id": "1367efc6c1fbca7958e6",
@@ -6703,6 +6638,18 @@
       "imageUrl": "//i0.hdslb.com/bfs/game/27cfd3a55b08f6a9db0f227b01a4ba1a41fc3f4c.png"
     },
     {
+      "id": "df15bc43758d99f8cec5",
+      "gameId": "gf2",
+      "title": "「情报补给」",
+      "startAt": "2026-11-21T05:00:00+08:00",
+      "endAt": "2026-11-26T04:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/gf2.json",
+      "imageUrl": ""
+    },
+    {
       "id": "0099c1e16e20b4be003e",
       "gameId": "ak",
       "title": "SideStory「雪山降临1101」限时复刻",
@@ -6737,6 +6684,30 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://gebc.lee-sikaha.cloudns.ch/ak",
       "imageUrl": "https://web.hycdn.cn/announce/images/20261110/cf85c35a989226bfca8d4cc3edf773d0.jpg"
+    },
+    {
+      "id": "8a35bac724abcb4502ca",
+      "gameId": "ba-global",
+      "title": "瘟疫危机～奇迹的松饼～-复刻-",
+      "startAt": "2026-11-24T10:00:00+08:00",
+      "endAt": "2026-12-08T10:00:59+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/ba-global.json",
+      "imageUrl": "https://resource.starrailassistant.top/ba/activity/e6460b8402226ae0801765ad89806525972c61b1.webp"
+    },
+    {
+      "id": "1bdc4af10af3074629f6",
+      "gameId": "gf2",
+      "title": "「直播重连世界海」限时主题活动",
+      "startAt": "2026-11-24T12:00:00+08:00",
+      "endAt": "2026-12-15T08:59:00+08:00",
+      "category": "活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/gf2.json",
+      "imageUrl": ""
     },
     {
       "id": "415ed28b7be7bc447ba3",
@@ -6802,6 +6773,40 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E7%83%9F%E7%81%AB%E7%94%9F%E7%BC%98%C2%B711%E6%9C%8825%E6%97%A5",
       "imageUrl": "https://assets.fz.wiki/27a62342d7861270/9415b09695597f5e.png"
+    },
+    {
+      "recurring": true,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "featured": false,
+      "id": "64c71d93-f8c0-496d-b346-81053991aa15",
+      "gameId": "hna",
+      "title": "崩坏：因缘精灵【幸福测试】",
+      "startAt": "2026-11-25T10:00:00+08:00",
+      "endAt": "2027-01-06T18:00:00+08:00",
+      "category": "测试",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
+      "sourceUrl": "",
+      "imageUrl": ""
+    },
+    {
+      "recurring": true,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "featured": false,
+      "id": "6e5b1c4a-2cbd-426d-aedc-0e7c367ca5c1",
+      "gameId": "shuilingmiao",
+      "title": "时之铃【一测】",
+      "startAt": "2026-11-25T12:00:00+08:00",
+      "endAt": "2032-11-24T01:06:00+08:00",
+      "category": "测试",
+      "sourceType": "manual",
+      "sourceName": "人工录入",
+      "sourceUrl": "",
+      "imageUrl": ""
     },
     {
       "id": "973a6c7ea40402bf54ac",
@@ -7089,126 +7094,126 @@
     {
       "gameId": "ys",
       "url": "https://starrailassistant.top/api/v1/activity/ys.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "nte",
       "url": "https://starrailassistant.top/api/v1/activity/nte.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "sr",
       "url": "https://starrailassistant.top/api/v1/activity/sr.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "zzz",
       "url": "https://starrailassistant.top/api/v1/activity/zzz.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ww",
       "url": "https://starrailassistant.top/api/v1/activity/ww.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ak",
       "url": "https://starrailassistant.top/api/v1/activity/ak.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
-      "eventCount": 3
+      "eventCount": 2
     },
     {
       "gameId": "end",
       "url": "https://starrailassistant.top/api/v1/activity/end.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
       "eventCount": 14
     },
     {
       "gameId": "ba-cn",
       "url": "https://starrailassistant.top/api/v1/activity/ba-cn.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
       "eventCount": 3
     },
     {
       "gameId": "ba-jp",
       "url": "https://starrailassistant.top/api/v1/activity/ba-jp.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "ba-global",
       "url": "https://starrailassistant.top/api/v1/activity/ba-global.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "xtlr",
       "url": "https://starrailassistant.top/api/v1/activity/xtlr.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "infinitynikki",
       "url": "https://starrailassistant.top/api/v1/activity/infinitynikki.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "gf2",
       "url": "https://starrailassistant.top/api/v1/activity/gf2.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
-      "eventCount": 2
+      "eventCount": 4
     },
     {
       "gameId": "pgr",
       "url": "https://starrailassistant.top/api/v1/activity/pgr.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "czn",
       "url": "https://starrailassistant.top/api/v1/activity/czn.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
       "eventCount": 18
     },
     {
       "gameId": "bd2",
       "url": "https://starrailassistant.top/api/v1/activity/bd2.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "nikke",
       "url": "https://starrailassistant.top/api/v1/activity/nikke.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "hyrz",
       "url": "https://starrailassistant.top/api/v1/activity/hyrz.json",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "status": "ok",
       "eventCount": 11
     },
@@ -7343,7 +7348,7 @@
       "sourceName": "Ennead",
       "url": "https://api.ennead.cc/mihoyo/honkai/news/events?lang=zh-cn",
       "status": "ok",
-      "fetchedAt": "2026-11-23T07:38:04+00:00",
+      "fetchedAt": "2026-11-24T04:49:04+00:00",
       "kind": "news"
     }
   ]
