@@ -8,7 +8,7 @@ export async function onRequest({request,env}){
   const actor=await admin(request,env);
   if(request.method==='GET'){
    stage='applications';
-   const rows=await env.APPLICATION_DB.prepare('SELECT id,email,has_github,use_github,username,status,created_at FROM collaborator_applications ORDER BY created_at DESC LIMIT 1000').all();
+   const rows=await env.APPLICATION_DB.prepare('SELECT id,email,has_github,use_github,username,status,created_at,reactivation_reason FROM collaborator_applications ORDER BY created_at DESC LIMIT 1000').all();
    stage='catalog';const catalog=await reviewCatalog(request,env);
    const archive=await env.APPLICATION_DB.prepare('SELECT * FROM collaborator_application_archive ORDER BY reviewed_at DESC LIMIT 1000').all();return json({applications:[...(rows.results||[]),...(archive.results||[])],games:catalog.games,catalogSource:catalog.source});
   }

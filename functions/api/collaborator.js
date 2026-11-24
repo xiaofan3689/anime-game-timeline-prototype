@@ -3,6 +3,26 @@ import {pendingApplicationNotice,validApplicationClient} from '../../lib/applica
 const reply=(body,status=200)=>Response.json(body,{status,headers:{'Cache-Control':'no-store'}});
 const duplicate='您已申请提交，请勿重复提交';
 
+const activeMessage='您已是协作者，无需反复提交';
+const inactiveMessage='您的权限已被停用，请补充申请理由';
+const underReview="status IN ('pending','sent','reviewing')";
+const invitationPending=`status='approved' AND (NOT EXISTS (SELECT 1 FROM collaborator_users WHERE lower(trim(email))=?)
+ OR EXISTS (SELECT 1 FROM collaborator_invitations WHERE application_id=a.id AND status='sent' AND expires_at>? AND a.reactivation_reason IS NOT NULL))`;
+async function emailStatus(db,email){
+ const [account,application]=await Promise.all([
+  db.prepare('SELECT MAX(active) AS active FROM collaborator_users WHERE lower(trim(email))=?').bind(email).first(),
+  db.prepare(`SELECT 1 FROM collaborator_applications a WHERE lower(trim(email))=? AND (${underReview} OR (${invitationPending})) LIMIT 1`)
+   .bind(email,email,Date.now()).first()
+ ]);
+ if(application)return 'pending';
+ if(account.active===1)return 'active';
+ return account.active===0?'inactive':'new';
+}
+function stateResponse(state){
+ const error={pending:duplicate,active:activeMessage,inactive:inactiveMessage}[state];
+ return reply({state,error},error?409:200);
+}
+
 export async function onRequest({request,env}){
  const db=env.APPLICATION_DB;
  if(!db)return reply({error:'申请服务尚未配置数据库，请联系管理员'},503);
@@ -13,10 +33,11 @@ export async function onRequest({request,env}){
    const id=url.searchParams.get('id');
    if(!validApplicationClient(id))return reply({submitted:false,generation,notice:null});
    const [row,notice]=await Promise.all([
-    db.prepare('SELECT 1 FROM collaborator_applications WHERE generation=? AND client_id=?').bind(generation,id).first(),
+    db.prepare('SELECT email FROM collaborator_applications WHERE client_id=? ORDER BY created_at DESC,id LIMIT 1').bind(id).first(),
     pendingApplicationNotice(db,id)
    ]);
-   return reply({submitted:!!row,generation,notice});
+   const state=row?await emailStatus(db,row.email.trim().toLowerCase()):'new';
+   return reply({submitted:state==='pending',state,generation,notice});
   }
   if(request.method!=='POST')return reply({error:'方法不支持'},405);
   if(request.headers.get('Origin')!==url.origin)return reply({error:'来源无效'},403);
@@ -33,21 +54,38 @@ export async function onRequest({request,env}){
    return reply({ok:true});
   }
   const email=typeof b.email==='string'?b.email.trim().toLowerCase():'';
-  if(typeof b.hasGithub!=='boolean'||typeof b.useGithub!=='boolean'||!/^\S+@\S+\.\S+$/.test(email)||email.length>254)return reply({error:'请填写有效回信邮箱'},400);
+  if(email.length>254||!/^\S+@\S+\.\S+$/.test(email))return reply({error:'请填写有效回信邮箱'},400);
+  const notice=await pendingApplicationNotice(db,b.clientId);
+  if(notice)return reply({error:'请先确认申请通知',notice},409);
+  const state=await emailStatus(db,email);
+  if(b.action==='check-email'||state==='pending'||state==='active')return stateResponse(state);
+  const reactivation=b.action==='reactivate';
+  if(reactivation&&state!=='inactive')return reply({error:'账号状态已变化，请重新打开申请窗口'},409);
+  if(!reactivation&&state==='inactive')return stateResponse(state);
+  const reason=typeof b.reason==='string'?b.reason.trim():'';
+  if(reactivation&&(!reason||reason.length>500))return reply({error:'请填写申请理由（最多 500 字）'},400);
+  if(typeof b.hasGithub!=='boolean'||typeof b.useGithub!=='boolean')return reply({error:'请选择 GitHub 账号选项'},400);
   if(b.useGithub&&!b.hasGithub)return reply({error:'选项不一致'},400);
   if(b.useGithub&&!/^[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,37}[a-zA-Z0-9])?$/.test(b.username||''))return reply({error:'请填写有效 GitHub 用户名'},400);
-  const id=crypto.randomUUID(),username=b.useGithub?b.username:'';
+  const id=crypto.randomUUID(),username=b.useGithub?b.username:'',now=Date.now();
   const result=await db.prepare(`INSERT OR IGNORE INTO collaborator_applications
-   (id,generation,client_id,email,has_github,use_github,username,status,created_at)
-   SELECT ?,COALESCE((SELECT value FROM application_settings WHERE key='generation'),'1'),?,?,?,?,?,'pending',?
-   WHERE NOT EXISTS (SELECT 1 FROM collaborator_applications WHERE lower(trim(email))=?)
-     AND NOT EXISTS (SELECT 1 FROM collaborator_users WHERE lower(trim(email))=?)
-     AND NOT EXISTS (SELECT 1 FROM collaborator_application_notices WHERE client_id=? AND acknowledged_at IS NULL)`)
-   .bind(id,b.clientId,email,+b.hasGithub,+b.useGithub,username,new Date().toISOString(),email,email,b.clientId).run();
+   (id,generation,client_id,email,has_github,use_github,username,status,created_at,reactivation_reason)
+   SELECT ?,COALESCE(?,(SELECT value FROM application_settings WHERE key='generation'),'1'),?,?,?,?,?,?,?,?
+   WHERE NOT EXISTS (SELECT 1 FROM collaborator_applications a
+    WHERE (lower(trim(email))=? OR client_id=?) AND (${underReview} OR (lower(trim(email))=? AND (${invitationPending}))))
+    AND NOT EXISTS (SELECT 1 FROM collaborator_users WHERE lower(trim(email))=? AND (?=0 OR active=1))
+    AND (?=0 OR EXISTS (SELECT 1 FROM collaborator_users WHERE lower(trim(email))=? AND active=0))
+    AND NOT EXISTS (SELECT 1 FROM collaborator_application_notices WHERE client_id=? AND acknowledged_at IS NULL)`)
+   .bind(id,reactivation?'reactivation:'+id:null,b.clientId,email,+b.hasGithub,+b.useGithub,username,
+    reactivation?'sent':'pending',new Date(now).toISOString(),reactivation?reason:null,email,b.clientId,
+    email,email,now,email,+reactivation,+reactivation,email,b.clientId).run();
   if(!result.meta.changes){
-   const notice=await pendingApplicationNotice(db,b.clientId);
-   return reply(notice?{error:'请先确认申请通知',notice}:{error:duplicate},409);
+   const currentNotice=await pendingApplicationNotice(db,b.clientId);
+   if(currentNotice)return reply({error:'请先确认申请通知',notice:currentNotice},409);
+   const current=await emailStatus(db,email);
+   return stateResponse(current==='new'||(reactivation&&current==='inactive')?'pending':current);
   }
+  if(reactivation)return reply({ok:true,state:'pending'});
   if(!env.QQ_SMTP_USER||!env.QQ_SMTP_AUTH_CODE){
    await db.prepare('DELETE FROM collaborator_applications WHERE id=?').bind(id).run();
    return reply({error:'申请邮件尚未配置，请联系管理员'},503);
