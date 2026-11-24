@@ -1406,7 +1406,7 @@
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
-      "disabled": false,
+      "disabled": true,
       "featured": false,
       "id": "fb57df67-412e-4732-8638-eb38308a3b12",
       "gameId": "ananta",
