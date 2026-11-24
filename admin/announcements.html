@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>管理员公告 · 次元时刻</title><link rel="stylesheet" href="/admin/style.css?v=121-integrated"><link rel="stylesheet" href="/responsive.css?v=121-integrated"><link rel="stylesheet" href="/admin/approvals.css?v=announcements-1"><link rel="stylesheet" href="/admin/navigation.css?v=121-integrated"><link rel="stylesheet" href="/collaborator-page.css?v=121-integrated"><link rel="stylesheet" href="/ui-polish.css?v=122"><link rel="stylesheet" href="/reference-ui.css?v=135"><link rel="stylesheet" href="/interface-v138.css?v=138"><link rel="stylesheet" href="/edition.css?v=140"><link rel="stylesheet" href="/announcements.css?v=1"></head>
+<body class="ops-ui announcements-view">
+<a class="skip-content" href="#main-content">跳到工作区</a>
+<main id="main-content">
+<header><a href="/">返回首页</a><h1>管理员公告</h1></header>
+<nav class="actions admin-nav edition-nav" aria-label="管理导航"><a href="/admin/">游戏与活动管理</a><a href="/admin/approvals.html">协作者审批管理</a><a href="/admin/collaborator-proposals.html">协作者修改审批</a><a href="/admin/feedback.html">用户反馈审理</a><a href="/admin/announcements.html" aria-current="page">管理员公告</a></nav>
+<p id="announcement-status" class="announcement-status" role="status">正在加载公告…</p>
+<div class="announcement-layout">
+<section class="editor">
+ <h2 id="announcement-editor-title">发布公告</h2>
+ <form id="announcement-editor" class="announcement-form">
+  <label>标题<input name="title" required maxlength="100"></label>
+  <label>正文<textarea name="message" rows="6" required maxlength="5000"></textarea></label>
+  <label>公告类型<select name="kind"><option value="permanent">长期公告</option><option value="limited">限时公告</option></select></label>
+  <label id="announcement-expiration" hidden>截止时间（本地时区）<input type="datetime-local" name="expires" min="0001-01-01T00:00" max="9999-12-31T23:59"></label>
+  <label class="announcement-confirmation"><input type="checkbox" name="confirmation">需要协作者本人确认</label>
+  <div class="actions"><button type="submit" name="save">发布公告</button><button type="button" name="cancel">清空编辑</button></div>
+ </form>
+</section>
+<section class="editor" aria-labelledby="announcement-list-title">
+ <div class="announcement-heading"><h2 id="announcement-list-title">已发布公告</h2><button id="announcement-refresh" type="button">刷新列表</button></div>
+ <div id="announcement-list" class="announcement-list"></div>
+</section>
+</div>
+</main>
+<script type="module" src="/announcement-board.js?v=1"></script><script src="/site-navigation.js?v=138" defer></script>
+</body></html>

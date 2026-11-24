@@ -1,5 +1,6 @@
 import {admin,body,json} from '../../../lib/collaborator-auth.js';
 import {reviewApplication} from '../../../lib/collaborator-invitations.js';
+import {rejectInvalidApplication} from '../../../lib/application-notices.js';
 import {reviewCatalog} from '../../../lib/review-catalog.js';
 export async function onRequest({request,env}){
  let stage='authentication';const requestId=crypto.randomUUID();
@@ -13,6 +14,12 @@ export async function onRequest({request,env}){
   }
   if(request.method!=='POST')return json({error:'方法不支持'},405);
   stage='input';const input=await body(request);
+  if(input?.action==='invalid-email'){
+   if(typeof input.id!=='string')return json({error:'申请编号无效'},400);
+   stage='review';
+   if(!await rejectInvalidApplication(env.APPLICATION_DB,actor,input.id))return json({error:'申请状态已变化，请刷新'},409);
+   return json({ok:true,message:'已删除待审申请并归档。申请人在原浏览器确认通知后可重新申请。'});
+  }
   if(input.allGames===true)input.games=['*'];
   if(input.action!=='refuse'&&input.allGames!==true){stage='catalog';const catalog=await reviewCatalog(request,env);if(!Array.isArray(input.games)||input.games.some(id=>!catalog.games.some(g=>g.id===id)))return json({error:'分配的游戏不存在',code:'REVIEW_GAMES_INVALID'},400)}
   stage='review';
