@@ -137,7 +137,7 @@
     }
   ],
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24T09:32:20+00:00",
+  "generatedAt": "2026-11-24T17:43:50+00:00",
   "games": [
     {
       "id": "ys",
@@ -149,7 +149,7 @@
       "versionNoticeAt": "2026-11-04T11:00:00+08:00",
       "nextVersionAt": "2026-12-16T11:00:00+08:00",
       "nextVersionEstimated": true,
-      "previewBannerUrl": null,
+      "previewBannerUrl": "/assets/games/banner/yys.webp",
       "previewUrl": null,
       "previewAt": null,
       "codesExpireAt": null,
@@ -642,7 +642,7 @@
       "id": "shuilingmiao",
       "name": "时之铃",
       "iconUrl": "/assets/games/icon/icon-szl.jpg",
-      "version": "0.5",
+      "version": "2025.11.25",
       "versionName": "一测",
       "bannerUrl": "https://i0.hdslb.com/bfs/new_dyn/adcae9597076533711a6ec2fa7cf6fbb3707011178957484.png@1404w_788h_1c.webp",
       "versionNoticeAt": null,
@@ -655,7 +655,7 @@
       "previewCodes": [],
       "previousVersionAt": null,
       "updateReferenceAt": null,
-      "preDownloadAt": "2026-11-25T00:00:00+08:00",
+      "preDownloadAt": "2026-11-25T12:00:00+08:00",
       "officialUrl": "https://www.shuilingmiao.com",
       "previewRecapUrl": null,
       "syncWithSra": false
@@ -666,11 +666,11 @@
       "iconUrl": "/assets/games/icon/yyjl.webp",
       "version": "0.75.2",
       "versionName": "幸福测试",
-      "bannerUrl": "https://i0.hdslb.com/bfs/new_dyn/f3d9c38930ae734fcb9cdd5687d4ede33546886017387331.png@1052w_!web-dynamic.avif",
+      "bannerUrl": "/assets/games/hna/2027formal.jpg",
       "versionNoticeAt": null,
       "nextVersionAt": "2026-11-25T10:00:00+08:00",
       "nextVersionEstimated": false,
-      "previewBannerUrl": "https://i0.hdslb.com/bfs/new_dyn/f3d9c38930ae734fcb9cdd5687d4ede33546886017387331.png@1052w_!web-dynamic.avif",
+      "previewBannerUrl": "/assets/games/hna/2027formal.jpg",
       "previewUrl": null,
       "previewAt": "2026-11-22T01:14:00+08:00",
       "codesExpireAt": "2026-11-23T01:22:00+08:00",
@@ -686,7 +686,7 @@
       "id": "ananta",
       "name": "无限大",
       "iconUrl": "/assets/games/icon/ananta.webp",
-      "version": "1.0",
+      "version": "2027.01.15",
       "versionName": "公测",
       "bannerUrl": "https://i0.hdslb.com/bfs/new_dyn/405a4e091c585a0c1dcbc5e7614dcdae3494379073309365.png@1404w_788h_1c.webp",
       "versionNoticeAt": null,
@@ -7094,126 +7094,126 @@
     {
       "gameId": "ys",
       "url": "https://starrailassistant.top/api/v1/activity/ys.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "nte",
       "url": "https://starrailassistant.top/api/v1/activity/nte.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "sr",
       "url": "https://starrailassistant.top/api/v1/activity/sr.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "zzz",
       "url": "https://starrailassistant.top/api/v1/activity/zzz.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ww",
       "url": "https://starrailassistant.top/api/v1/activity/ww.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ak",
       "url": "https://starrailassistant.top/api/v1/activity/ak.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "end",
       "url": "https://starrailassistant.top/api/v1/activity/end.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 14
     },
     {
       "gameId": "ba-cn",
       "url": "https://starrailassistant.top/api/v1/activity/ba-cn.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 3
     },
     {
       "gameId": "ba-jp",
       "url": "https://starrailassistant.top/api/v1/activity/ba-jp.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "ba-global",
       "url": "https://starrailassistant.top/api/v1/activity/ba-global.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "xtlr",
       "url": "https://starrailassistant.top/api/v1/activity/xtlr.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "infinitynikki",
       "url": "https://starrailassistant.top/api/v1/activity/infinitynikki.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "gf2",
       "url": "https://starrailassistant.top/api/v1/activity/gf2.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 4
     },
     {
       "gameId": "pgr",
       "url": "https://starrailassistant.top/api/v1/activity/pgr.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "czn",
       "url": "https://starrailassistant.top/api/v1/activity/czn.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 18
     },
     {
       "gameId": "bd2",
       "url": "https://starrailassistant.top/api/v1/activity/bd2.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "nikke",
       "url": "https://starrailassistant.top/api/v1/activity/nikke.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "hyrz",
       "url": "https://starrailassistant.top/api/v1/activity/hyrz.json",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "status": "ok",
       "eventCount": 11
     },
@@ -7348,7 +7348,7 @@
       "sourceName": "Ennead",
       "url": "https://api.ennead.cc/mihoyo/honkai/news/events?lang=zh-cn",
       "status": "ok",
-      "fetchedAt": "2026-11-24T09:32:20+00:00",
+      "fetchedAt": "2026-11-24T17:43:50+00:00",
       "kind": "news"
     }
   ]
