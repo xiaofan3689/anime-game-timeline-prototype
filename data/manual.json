@@ -1423,7 +1423,7 @@
       "dailyCheckin": false,
       "checkinTarget": 1,
       "activityUrl": "",
-      "disabled": false,
+      "disabled": true,
       "featured": false,
       "id": "86928b7b-8dcc-4109-adfe-ab414c40357a",
       "gameId": "shuilingmiao",
