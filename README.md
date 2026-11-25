@@ -1,3 +1,5 @@
+> 当前邮件接入使用 Resend。请以 [Resend 上线与 EdgeOne 迁移](RESEND_EDGEONE_MIGRATION.md) 为准，旧 QQ SMTP 步骤仅供历史参考。
+
 # 二游活动时刻表（原型）
 
 一个无需自有服务器的静态网页。GitHub Actions 定时读取活动来源，合并人工维护的 `data/manual.json`，生成供网页及未来 Android、Windows 客户端共用的 `data/events.json`。

@@ -1,4 +1,4 @@
-import {sendApplicationMail} from '../../lib/qq-smtp.js';
+import {requireMailConfig,sendMail} from '../../lib/resend-mail.js';
 import {pendingApplicationNotice,validApplicationClient} from '../../lib/application-notices.js';
 const reply=(body,status=200)=>Response.json(body,{status,headers:{'Cache-Control':'no-store'}});
 const duplicate='您已申请提交，请勿重复提交';
@@ -86,12 +86,12 @@ export async function onRequest({request,env}){
    return stateResponse(current==='new'||(reactivation&&current==='inactive')?'pending':current);
   }
   if(reactivation)return reply({ok:true,state:'pending'});
-  if(!env.QQ_SMTP_USER||!env.QQ_SMTP_AUTH_CODE){
+  try{requireMailConfig(env)}catch{
    await db.prepare('DELETE FROM collaborator_applications WHERE id=?').bind(id).run();
    return reply({error:'申请邮件尚未配置，请联系管理员'},503);
   }
   try{
-   await sendApplicationMail(env,`回信邮箱：${email}\n拥有 GitHub：${b.hasGithub?'是':'否'}\n本人账号维护：${b.useGithub?'是':'否'}\nGitHub 用户名：${username||'未提供'}\n申请编号：${id}`);
+   await sendMail(env,`回信邮箱：${email}\n拥有 GitHub：${b.hasGithub?'是':'否'}\n本人账号维护：${b.useGithub?'是':'否'}\nGitHub 用户名：${username||'未提供'}\n申请编号：${id}`);
   }catch{
    await db.prepare('DELETE FROM collaborator_applications WHERE id=?').bind(id).run();
    return reply({error:'邮件发送失败，请稍后重试'},502);

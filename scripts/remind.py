@@ -1,11 +1,12 @@
 """Send ending-event reminders once per event and threshold."""
 import json
 import os
-import smtplib
-import ssl
+import hashlib
 from datetime import datetime, timezone
 from email.message import EmailMessage
 from pathlib import Path
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 FEED = ROOT / "data/events.json"
@@ -33,14 +34,32 @@ def due(feed, sent, now, thresholds, selected):
     return items
 
 
-def send(message):
-    with smtplib.SMTP_SSL(os.environ["SMTP_HOST"], int(os.environ.get("SMTP_PORT") or "465"), context=ssl.create_default_context(), timeout=30) as server:
-        server.login(os.environ["SMTP_USER"], os.environ["SMTP_PASSWORD"])
-        server.send_message(message)
+def send(key, message):
+    payload = json.dumps({
+        "from": str(message["From"]),
+        "to": [str(message["To"])],
+        "subject": str(message["Subject"]),
+        "text": message.get_content(),
+    }, ensure_ascii=False).encode("utf-8")
+    digest = hashlib.sha256(key.encode("utf-8") + b"\0" + payload).hexdigest()
+    request = Request("https://api.resend.com/emails", data=payload, method="POST", headers={
+        "Authorization": "Bearer " + os.environ["RESEND_API_KEY"],
+        "Content-Type": "application/json",
+        "Idempotency-Key": "owner-reminder/" + digest,
+    })
+    try:
+        with urlopen(request, timeout=15) as response:
+            result = json.load(response)
+    except HTTPError as error:
+        raise RuntimeError(f"Resend HTTP {error.code}") from None
+    except (URLError, TimeoutError, ValueError):
+        raise RuntimeError("Resend response unavailable") from None
+    if not isinstance(result, dict) or not result.get("id"):
+        raise RuntimeError("Resend did not confirm acceptance")
 
 
 def main():
-    required = ("ALERT_EMAIL", "ALERT_FROM", "SMTP_HOST", "SMTP_USER", "SMTP_PASSWORD")
+    required = ("ALERT_EMAIL", "RESEND_FROM_EMAIL", "RESEND_API_KEY")
     missing = [key for key in required if not os.environ.get(key)]
     if missing:
         print("SKIP reminders: configure " + ", ".join(missing))
@@ -56,12 +75,12 @@ def main():
     games = {game["id"]: game["name"] for game in feed.get("games", [])}
     for key, threshold, event, end in due(feed, sent, now, thresholds, selected):
         message = EmailMessage()
-        message["From"] = os.environ["ALERT_FROM"]
+        message["From"] = os.environ["RESEND_FROM_EMAIL"]
         message["To"] = os.environ["ALERT_EMAIL"]
         game = games.get(event["gameId"], event["gameId"])
         message["Subject"] = f"[次元时刻] {game} 活动将在 {threshold} 小时内结束"
         message.set_content("\n".join((f"游戏：{game}", f"活动：{event['title']}", f"结束时间：{end.strftime('%Y-%m-%d %H:%M %z')}", f"公告：{event.get('sourceUrl') or '无'}", f"时间线：{os.environ.get('SITE_URL') or '未配置'}")))
-        send(message)
+        send(key, message)
         sent[key] = now.isoformat(timespec="seconds")
         LEDGER.write_text(json.dumps(ledger, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(f"SENT {event['gameId']} {event['title']} ({threshold}h)")

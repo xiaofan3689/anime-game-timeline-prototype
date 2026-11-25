@@ -1,7 +1,7 @@
 import {accountKey} from '../../../lib/email-session.js';
 import {authorize} from './manual.js';
 import {eligible,hash} from '../../../lib/email-reminders.js';
-import {sendApplicationMail} from '../../../lib/qq-smtp.js';
+import {sendMail} from '../../../lib/resend-mail.js';
 const json=(data,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'no-store'}});
 const validList=(value,max)=>Array.isArray(value)&&value.length<=max&&value.every(x=>typeof x==='string'&&x.length>0&&x.length<=160);
 export async function onRequest(context){
@@ -39,7 +39,7 @@ export async function onRequest(context){
   stage='生成邮件内容';
   const names=Object.fromEntries(feed.games.map(g=>[g.id,g.name]));
   const text='【管理员手动测试】\n当前浏览器所选游戏中，以下活动未标记完成，并将在48小时内结束：\n\n'+events.map(e=>`${names[e.gameId]||e.gameId} · ${e.title}\n截止：${new Date(e.endAt).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',hour12:false})}（北京时间）`).join('\n\n')+'\n\n查看活动：'+site+'/\n本邮件为手动测试，不占用自动提醒的发送记录。';
-  try{await sendApplicationMail(env,text,sub.email,'次元时刻：管理员测试活动提醒')}catch{return json({error:'测试邮件未确认发送成功，请检查 QQ SMTP 配置和日志；不要立即重复点击'},502)}
+  try{await sendMail(env,text,sub.email,'次元时刻：管理员测试活动提醒')}catch{return json({error:'测试邮件未确认发送成功，请检查 Resend 配置和日志；不要立即重复点击'},502)}
   return json({ok:true,count:events.length,message:`已将 ${events.length} 项活动的测试提醒交给邮件服务器，收件邮箱：${sub.email}。请检查收件箱及垃圾箱。`});
  }catch(error){
   const detail=String(error?.message||'');let reason='服务器内部错误，请按错误编号查询日志';

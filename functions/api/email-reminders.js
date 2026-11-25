@@ -1,6 +1,6 @@
 import {accountKey,stateOf} from '../../lib/email-session.js';
 import {hash} from '../../lib/email-reminders.js';
-import {sendApplicationMail} from '../../lib/qq-smtp.js';
+import {requireMailConfig,sendMail} from '../../lib/resend-mail.js';
 const json=(body,status=200)=>Response.json(body,{status,headers:{'Cache-Control':'no-store'}});
 const list=(x,max)=>Array.isArray(x)&&x.length<=max&&x.every(v=>typeof v==='string'&&v.length>0&&v.length<=160);
 export async function onRequest({request,env}){
@@ -18,6 +18,7 @@ export async function onRequest({request,env}){
  }
  if(b.action==='get')return json({email:row?.email||'',pendingEmail:row?.pending_email||'',active:!!row?.active,...(row?.email?stateOf(row):{})});
  if(b.action==='request-code'){
+  try{requireMailConfig(env)}catch{return json({error:'提醒邮件服务尚未配置'},503);}
   const email=typeof b.email==='string'?b.email.trim().toLowerCase():'';
   if(email.length>254||!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email))return json({error:'请输入有效邮箱'},400);
   if(row&&now-row.code_sent<60000)return json({error:'请60秒后再试'},429);
@@ -27,7 +28,7 @@ export async function onRequest({request,env}){
   }
   const numbers=new Uint32Array(1);crypto.getRandomValues(numbers);const code=String(numbers[0]%1000000).padStart(6,'0');
   await db.prepare(`INSERT INTO email_subscriptions(token_hash,pending_email,code_hash,code_expires,code_sent,updated_at) VALUES (?,?,?,?,?,?) ON CONFLICT(token_hash) DO UPDATE SET pending_email=excluded.pending_email,code_hash=excluded.code_hash,code_expires=excluded.code_expires,code_sent=excluded.code_sent,attempts=0`).bind(verifyKey,email,await hash(verifyKey+email+code),now+600000,now,now).run();
-  try{await sendApplicationMail(env,`你的次元时刻邮件提醒验证码是：${code}\n10分钟内有效。只有在网站确认后才会注册或切换邮箱账号，原账号数据保留。若非本人操作，请忽略。`,email,'次元时刻：验证提醒邮箱')}catch{return json({error:'验证码未确认发送成功，请稍后重试'},502)}
+  try{await sendMail(env,`你的次元时刻邮件提醒验证码是：${code}\n10分钟内有效。只有在网站确认后才会注册或切换邮箱账号，原账号数据保留。若非本人操作，请忽略。`,email,'次元时刻：验证提醒邮箱')}catch{return json({error:'验证码未确认发送成功，请稍后重试'},502)}
   return json({ok:true});
  }
  if(!row)return json({error:'请先验证邮箱'},400);

@@ -21,11 +21,8 @@ jobs:
       - name: Send pending reminders
         env:
           ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
-          ALERT_FROM: ${{ secrets.ALERT_FROM }}
-          SMTP_HOST: ${{ secrets.SMTP_HOST }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          SMTP_USER: ${{ secrets.SMTP_USER }}
-          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          RESEND_FROM_EMAIL: ${{ vars.RESEND_FROM_EMAIL }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           ALERT_HOURS: ${{ vars.ALERT_HOURS }}
           ALERT_GAME_IDS: ${{ vars.ALERT_GAME_IDS }}
           SITE_URL: ${{ vars.SITE_URL }}

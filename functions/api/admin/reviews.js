@@ -1,6 +1,7 @@
 import {admin,body,json} from '../../../lib/collaborator-auth.js';
 import {reviewApplication} from '../../../lib/collaborator-invitations.js';
 import {rejectInvalidApplication} from '../../../lib/application-notices.js';
+import {sendMail} from '../../../lib/resend-mail.js';
 import {reviewCatalog} from '../../../lib/review-catalog.js';
 export async function onRequest({request,env}){
  let stage='authentication';const requestId=crypto.randomUUID();
@@ -23,7 +24,6 @@ export async function onRequest({request,env}){
   if(input.allGames===true)input.games=['*'];
   if(input.action!=='refuse'&&input.allGames!==true){stage='catalog';const catalog=await reviewCatalog(request,env);if(!Array.isArray(input.games)||input.games.some(id=>!catalog.games.some(g=>g.id===id)))return json({error:'分配的游戏不存在',code:'REVIEW_GAMES_INVALID'},400)}
   stage='review';
-  const sendMail=async(...args)=>{const {sendApplicationMail}=await import('../../../lib/qq-smtp.js');return sendApplicationMail(...args)};
   return json(await reviewApplication(env,actor,input,sendMail));
  }catch(e){
   const code=e.code?.startsWith('ACCESS_')?e.code:'REVIEW_'+stage.toUpperCase()+'_FAILED';
