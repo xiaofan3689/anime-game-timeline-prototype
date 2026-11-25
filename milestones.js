@@ -18,7 +18,7 @@ function milestoneRender(){
  for(const g of S.feed.games.filter(g=>S.selected.has(g.id))){
  const at=Date.parse(g.previewAt),expiry=Date.parse(g.codesExpireAt);const cnDay=t=>Number.isFinite(t)?new Date(t+8*3600000).toISOString().slice(0,10):"";
  const timing=versionMilestoneTiming(g,now),update=timing.update;
- const hasPreview=Number.isFinite(at);const hasCodes=Array.isArray(g.previewCodes)&&g.previewCodes.some(Boolean);const hasCodeDeadline=Number.isFinite(expiry);const recap=url(g.previewRecapUrl),showCodes=previewCodesVisible(g,now);if(!hasPreview&&!hasCodes&&!hasCodeDeadline&&!recap)continue;if(timing.hidden&&!showCodes)continue;
+ const hasPreview=Number.isFinite(at);const hasCodes=Array.isArray(g.previewCodes)&&g.previewCodes.some(Boolean);const hasCodeDeadline=Number.isFinite(expiry);const recap=url(g.previewRecapUrl),showCodes=previewCodesVisible(g,now);if(!timing.highlight&&!hasPreview&&!hasCodes&&!hasCodeDeadline&&!recap)continue;if(timing.hidden&&!showCodes)continue;
  const highlight=timing.highlight;
  const endOfLive=new Date(at+8*3600000);endOfLive.setUTCHours(22,0,0,0);const ended=!Number.isFinite(at)||now>=endOfLive.getTime()-8*3600000;
  const card=n("article","milestone-card"),isExpired=Number.isFinite(expiry)&&now>=expiry;card.append(n("h3","",g.name));

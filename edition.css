@@ -105,6 +105,13 @@
   border-color: var(--edition-rule);
   padding-block: 14px;
 }
+.public-ui .event-dashboard .milestone-card.update-today {
+  background: #503a26;
+  border: 1px solid #c69856;
+  border-radius: 12px;
+  padding-inline: 12px;
+}
+.public-ui .event-dashboard .milestone-card.update-today > strong { color: #ffdc9f; }
 .public-ui #smart-panel .smart-card-copy strong { color: var(--edition-ink); }
 .public-ui #activity-timeline .date-cell.today { background: #654785; color: #fff; }
 body :is(.site-index,.site-image-viewer,.activity-dialog,.game-picker) {
