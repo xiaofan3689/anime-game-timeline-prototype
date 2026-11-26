@@ -1433,6 +1433,23 @@
       "endAt": "2026-11-26T01:31:00+08:00",
       "imageUrl": "",
       "sourceUrl": ""
+    },
+    {
+      "hidden": false,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": false,
+      "featured": false,
+      "id": "cea5b57d-6480-4de4-86fc-5f210d4fd320",
+      "gameId": "ap",
+      "title": "test1",
+      "category": "测试",
+      "startAt": "2026-11-26T14:28:00+08:00",
+      "endAt": "2026-11-27T14:28:00+08:00",
+      "imageUrl": "",
+      "sourceUrl": ""
     }
   ]
 }
