@@ -137,7 +137,7 @@
     }
   ],
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T15:40:53+00:00",
+  "generatedAt": "2026-11-26T04:23:47+00:00",
   "games": [
     {
       "id": "ys",
@@ -277,9 +277,9 @@
       "id": "end",
       "name": "明日方舟：终末地",
       "iconUrl": "/assets/games/icon/end.webp",
-      "version": "1.6",
-      "versionName": "丹青渡",
-      "bannerUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg",
+      "version": "1.7",
+      "versionName": "穿越甚大蘑境与你相逢",
+      "bannerUrl": "https://web.hycdn.cn/upload/image/20261124/818bac8b584d3949f589963dba7b635b.jpg",
       "versionNoticeAt": "2026-10-15T11:00:00+08:00",
       "nextVersionAt": "2026-11-25T11:00:00+08:00",
       "nextVersionEstimated": false,
@@ -4235,18 +4235,6 @@
       "imageUrl": "https://i0.hdslb.com/bfs/article/839c3f2ba8ffc2b63b4cd209f8f989041340190821.jpg"
     },
     {
-      "id": "6166b7b178e48a42ce52",
-      "gameId": "end",
-      "title": "「丰碑留名·刻影」限时挑战",
-      "startAt": "2026-10-05T12:00:00+08:00",
-      "endAt": "2026-10-19T04:00:00+08:00",
-      "category": "挑战活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
-      "imageUrl": ""
-    },
-    {
       "id": "8942a1429455c382076d",
       "gameId": "ba-jp",
       "title": "交流会掉落2倍",
@@ -4377,54 +4365,6 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/723297.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/829/images/w_1280/h_720/492704/2026/9/6/61109004muwaczhb.webp"
-    },
-    {
-      "id": "4ee2de345131e9e9decd",
-      "gameId": "end",
-      "title": "「万物有灵」签到活动",
-      "startAt": "2026-10-15T12:00:00+08:00",
-      "endAt": "2026-11-05T11:59:59+08:00",
-      "category": "限时签到",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
-      "imageUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg"
-    },
-    {
-      "id": "2dfb87e83eb176c349cd",
-      "gameId": "end",
-      "title": "「墨分诸彩」引入活动",
-      "startAt": "2026-10-15T12:00:00+08:00",
-      "endAt": "2026-11-05T12:00:00+08:00",
-      "category": "引入活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
-      "imageUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg"
-    },
-    {
-      "id": "2db38a5b0e84147d189c",
-      "gameId": "end",
-      "title": "「异想赛季」（战争回响）",
-      "startAt": "2026-10-15T12:00:00+08:00",
-      "endAt": "2026-11-05T11:59:59+08:00",
-      "category": "活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
-      "imageUrl": ""
-    },
-    {
-      "id": "fc33558cc6c6a85432cc",
-      "gameId": "end",
-      "title": "「烟火生缘」趣味活动",
-      "startAt": "2026-10-15T12:00:00+08:00",
-      "endAt": "2026-11-26T05:59:59+08:00",
-      "category": "趣味活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
-      "imageUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg"
     },
     {
       "id": "1bbfc925c128cd1bcc3a",
@@ -4622,30 +4562,6 @@
       "sourceName": "SRA 社区整理",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/czn.json",
       "imageUrl": ""
-    },
-    {
-      "id": "164160bd0cda593be63e",
-      "gameId": "end",
-      "title": "「丰碑留名·魇林」限时挑战",
-      "startAt": "2026-10-22T12:00:00+08:00",
-      "endAt": "2026-11-05T04:00:00+08:00",
-      "category": "挑战活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
-      "imageUrl": ""
-    },
-    {
-      "id": "3e4e052dc8ab0e9be34f",
-      "gameId": "end",
-      "title": "「卡莉的芳菲童话」拍照活动",
-      "startAt": "2026-10-22T12:00:00+08:00",
-      "endAt": "2026-11-05T04:00:00+08:00",
-      "category": "拍照活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
-      "imageUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg"
     },
     {
       "recurring": false,
@@ -4896,30 +4812,6 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://www.gamekee.com/ba/725953.html",
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/829/images/w_1400/h_787/1609130/2026/9/27/12118306mvqfu27f.webp"
-    },
-    {
-      "id": "47c0dced3e4d6b9a5814",
-      "gameId": "end",
-      "title": "「危机筹备」限时活动",
-      "startAt": "2026-10-29T04:00:00+08:00",
-      "endAt": "2026-11-05T04:00:00+08:00",
-      "category": "限时活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
-      "imageUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg"
-    },
-    {
-      "id": "dafc578fe58c2356db9b",
-      "gameId": "end",
-      "title": "「百趣演武」挑战活动",
-      "startAt": "2026-10-29T12:00:00+08:00",
-      "endAt": "2026-11-19T04:00:00+08:00",
-      "category": "挑战活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
-      "imageUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg"
     },
     {
       "id": "a34aeaa784858e2e90f6",
@@ -5388,54 +5280,6 @@
       "imageUrl": ""
     },
     {
-      "id": "5da691d6d1170b220dd5",
-      "gameId": "end",
-      "title": "「危机合约 浸蓝测试作战」挑战活动",
-      "startAt": "2026-11-05T12:00:00+08:00",
-      "endAt": "2026-11-26T05:59:59+08:00",
-      "category": "挑战活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
-      "imageUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg"
-    },
-    {
-      "id": "1763c0543a36bb0323f5",
-      "gameId": "end",
-      "title": "「归野」叙事活动",
-      "startAt": "2026-11-05T12:00:00+08:00",
-      "endAt": "2026-11-26T05:59:59+08:00",
-      "category": "叙事活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
-      "imageUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg"
-    },
-    {
-      "id": "e4594ba2124f8b90bb44",
-      "gameId": "end",
-      "title": "「星河共我」签到活动",
-      "startAt": "2026-11-05T12:00:00+08:00",
-      "endAt": "2026-11-26T05:59:59+08:00",
-      "category": "限时签到",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
-      "imageUrl": "https://web.hycdn.cn/upload/image/20261014/36c2e3fbd1f70b9a3402167ac404ea96.jpg"
-    },
-    {
-      "id": "b0d21dfb13e76ec0e2b5",
-      "gameId": "end",
-      "title": "「狂热赛季」（战争回响）",
-      "startAt": "2026-11-05T12:00:00+08:00",
-      "endAt": "2026-11-26T05:59:59+08:00",
-      "category": "活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
-      "imageUrl": ""
-    },
-    {
       "id": "f972c672265b496032f2",
       "gameId": "end",
       "title": "危机合约",
@@ -5446,6 +5290,18 @@
       "sourceName": "game-schedule",
       "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E5%8D%B1%E6%9C%BA%E5%90%88%E7%BA%A6",
       "imageUrl": "https://assets.fz.wiki/27a62342d7861270/026989ec9e3f0c7c.png"
+    },
+    {
+      "id": "8bc29888be7538ff6fd0",
+      "gameId": "end",
+      "title": "危机合约 浸蓝测试作战",
+      "startAt": "2026-11-05T12:00:00+08:00",
+      "endAt": "2026-12-02T03:59:59+08:00",
+      "category": "挑战活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
+      "imageUrl": "https://data.akedata.wiki/public/images/assets/beyond/dynamicassets/gameplay/ui/sprites/activity/activity_tab_bg_contingency_new.png"
     },
     {
       "id": "6807ff2592b878661182",
@@ -6270,18 +6126,6 @@
       "imageUrl": "//cdnimg-v2.gamekee.com/wiki2.0/pro/829/images/w_1280/h_720/1609130/2026/10/10/12088855mwajab8c.webp"
     },
     {
-      "id": "f14d049f926b309ab0b8",
-      "gameId": "end",
-      "title": "理智补给",
-      "startAt": "2026-11-18T04:00:00+08:00",
-      "endAt": "2026-11-25T04:00:00+08:00",
-      "category": "活动",
-      "sourceType": "community",
-      "sourceName": "game-schedule",
-      "sourceUrl": "https://fz.wiki/wiki/%E6%B4%BB%E5%8A%A8/%E7%90%86%E6%99%BA%E8%A1%A5%E7%BB%99%C2%B711%E6%9C%8818%E6%97%A5",
-      "imageUrl": "https://assets.fz.wiki/27a62342d7861270/4651f7d3eadae94e.png"
-    },
-    {
       "recurring": false,
       "dailyCheckin": false,
       "checkinTarget": 1,
@@ -6314,18 +6158,6 @@
       "sourceName": "人工录入",
       "sourceUrl": "https://yh.wanmei.com/m/news/gamebroad/20261118/265103.html",
       "imageUrl": "https://yh.wanmei.com/resources/jpg/20261118/11432ed6309180de4271910df88ef238d096.jpg"
-    },
-    {
-      "id": "bd82a9a9497a5867d31f",
-      "gameId": "end",
-      "title": "「理智补给」限时活动",
-      "startAt": "2026-11-19T04:00:00+08:00",
-      "endAt": "2026-11-26T04:00:00+08:00",
-      "category": "限时活动",
-      "sourceType": "community",
-      "sourceName": "SRA 社区整理",
-      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
-      "imageUrl": ""
     },
     {
       "id": "f1bacff13fa2aa6f8e80",
@@ -6727,6 +6559,66 @@
       "imageUrl": "https://assets.fz.wiki/27a62342d7861270/9415b09695597f5e.png"
     },
     {
+      "id": "47151365205a75a26874",
+      "gameId": "end",
+      "title": "作战演练",
+      "startAt": "2026-11-25T07:00:00+08:00",
+      "endAt": "2026-12-23T11:59:59+08:00",
+      "category": "干员试用活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
+      "imageUrl": "https://data.akedata.wiki/public/images/assets/beyond/dynamicassets/gameplay/ui/sprites/activity/activity_tab_character_trial_sweetpie.png"
+    },
+    {
+      "id": "9dc979e55febec585298",
+      "gameId": "end",
+      "title": "漫野探奇签到",
+      "startAt": "2026-11-25T07:00:00+08:00",
+      "endAt": "2026-12-23T11:59:59+08:00",
+      "category": "限时签到",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
+      "imageUrl": "https://data.akedata.wiki/public/images/assets/beyond/dynamicassets/gameplay/ui/sprites/activity/bg_activity_tab_char_sign_sweetpie.png"
+    },
+    {
+      "id": "b65267a2964f3e82eb9e",
+      "gameId": "end",
+      "title": "蘑菇！蕈类！真菌！",
+      "startAt": "2026-11-25T07:00:00+08:00",
+      "endAt": "2026-12-23T11:59:59+08:00",
+      "category": "引入活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
+      "imageUrl": "https://data.akedata.wiki/public/images/assets/beyond/dynamicassets/gameplay/ui/sprites/activity/activity_tab_bg_guide_dam.png"
+    },
+    {
+      "id": "2abf242b44e9c0d70973",
+      "gameId": "end",
+      "title": "蜜饼是我的祈愿",
+      "startAt": "2026-11-25T07:00:00+08:00",
+      "endAt": "2027-01-07T05:59:59+08:00",
+      "category": "叙事活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
+      "imageUrl": "https://data.akedata.wiki/public/images/assets/beyond/dynamicassets/gameplay/ui/sprites/activity/bg_activity_tab_char_guide_sweetpie.png"
+    },
+    {
+      "id": "4c6fcd731ba25a7bf6ed",
+      "gameId": "end",
+      "title": "阵列建设：旧伤弥合",
+      "startAt": "2026-11-25T07:00:00+08:00",
+      "endAt": "2027-01-07T05:59:59+08:00",
+      "category": "建设活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
+      "imageUrl": "https://data.akedata.wiki/public/images/assets/beyond/dynamicassets/gameplay/ui/sprites/activity/bg_activity_tab_wonder_build.png"
+    },
+    {
       "id": "61658381cc9d8d6373e4",
       "gameId": "ba-jp",
       "title": "被操控的艺术～象牙之塔与不速之客～",
@@ -6941,6 +6833,18 @@
       "imageUrl": "https://i0.hdslb.com/bfs/new_dyn/13e21e998566cef8e41f4ae287c17fc11340190821.jpg"
     },
     {
+      "id": "a4254836619dd2f56aff",
+      "gameId": "end",
+      "title": "丰碑揭示·暴虐",
+      "startAt": "2026-12-02T12:00:00+08:00",
+      "endAt": "2026-12-23T03:59:59+08:00",
+      "category": "挑战活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
+      "imageUrl": "https://data.akedata.wiki/public/images/assets/beyond/dynamicassets/gameplay/ui/sprites/activity/activity_tab_bg_highdifficulty_v1d7.png"
+    },
+    {
       "id": "8580fb9dde8648fb5f24",
       "gameId": "ba-cn",
       "title": "【预告】限时活动：沙勒总决算",
@@ -7030,6 +6934,18 @@
       "imageUrl": "/assets/games/planet/XBGD1204.webp"
     },
     {
+      "id": "6a98f2314c9bc809810c",
+      "gameId": "end",
+      "title": "理智补给",
+      "startAt": "2026-12-09T04:00:00+08:00",
+      "endAt": "2026-12-16T03:59:59+08:00",
+      "category": "限时活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
+      "imageUrl": "https://data.akedata.wiki/public/images/assets/beyond/dynamicassets/gameplay/ui/sprites/activity/activity_tab_bg_stamina.png"
+    },
+    {
       "id": "feeeaa25af1ed405a103",
       "gameId": "sr",
       "title": "混沌回忆•漆黑残响",
@@ -7052,132 +6968,156 @@
       "sourceName": "SRA 社区整理",
       "sourceUrl": "https://starrailassistant.top/api/v1/activity/ww.json",
       "imageUrl": "https://i0.hdslb.com/bfs/new_dyn/d28121ede1d524963a69bd0687731d3a1955897084.jpg"
+    },
+    {
+      "id": "970796b263f6ddecf0b2",
+      "gameId": "end",
+      "title": "方兴！竞技大会！",
+      "startAt": "2026-12-16T12:00:00+08:00",
+      "endAt": "2027-01-07T05:59:59+08:00",
+      "category": "含试用干员",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
+      "imageUrl": "https://data.akedata.wiki/public/images/assets/beyond/dynamicassets/gameplay/ui/sprites/activity/bg_activity_tab_double_assault_v2.png"
+    },
+    {
+      "id": "4f71f66c46793ddf9e6b",
+      "gameId": "end",
+      "title": "理智补给",
+      "startAt": "2026-12-31T04:00:00+08:00",
+      "endAt": "2027-01-07T03:59:59+08:00",
+      "category": "限时活动",
+      "sourceType": "community",
+      "sourceName": "SRA 社区整理",
+      "sourceUrl": "https://starrailassistant.top/api/v1/activity/end.json",
+      "imageUrl": "https://data.akedata.wiki/public/images/assets/beyond/dynamicassets/gameplay/ui/sprites/activity/activity_tab_bg_stamina.png"
     }
   ],
   "sources": [
     {
       "gameId": "ys",
       "url": "https://starrailassistant.top/api/v1/activity/ys.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "nte",
       "url": "https://starrailassistant.top/api/v1/activity/nte.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "sr",
       "url": "https://starrailassistant.top/api/v1/activity/sr.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "zzz",
       "url": "https://starrailassistant.top/api/v1/activity/zzz.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ww",
       "url": "https://starrailassistant.top/api/v1/activity/ww.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "ak",
       "url": "https://starrailassistant.top/api/v1/activity/ak.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "end",
       "url": "https://starrailassistant.top/api/v1/activity/end.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
-      "eventCount": 14
+      "eventCount": 10
     },
     {
       "gameId": "ba-cn",
       "url": "https://starrailassistant.top/api/v1/activity/ba-cn.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 3
     },
     {
       "gameId": "ba-jp",
       "url": "https://starrailassistant.top/api/v1/activity/ba-jp.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "ba-global",
       "url": "https://starrailassistant.top/api/v1/activity/ba-global.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 1
     },
     {
       "gameId": "xtlr",
       "url": "https://starrailassistant.top/api/v1/activity/xtlr.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 9
     },
     {
       "gameId": "infinitynikki",
       "url": "https://starrailassistant.top/api/v1/activity/infinitynikki.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 2
     },
     {
       "gameId": "gf2",
       "url": "https://starrailassistant.top/api/v1/activity/gf2.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 4
     },
     {
       "gameId": "pgr",
       "url": "https://starrailassistant.top/api/v1/activity/pgr.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "czn",
       "url": "https://starrailassistant.top/api/v1/activity/czn.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 15
     },
     {
       "gameId": "bd2",
       "url": "https://starrailassistant.top/api/v1/activity/bd2.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 11
     },
     {
       "gameId": "nikke",
       "url": "https://starrailassistant.top/api/v1/activity/nikke.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 6
     },
     {
       "gameId": "hyrz",
       "url": "https://starrailassistant.top/api/v1/activity/hyrz.json",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "status": "ok",
       "eventCount": 11
     },
@@ -7286,7 +7226,7 @@
       "url": "https://gebc.lee-sikaha.cloudns.ch/endfield",
       "status": "stale",
       "fetchedAt": null,
-      "eventCount": 6,
+      "eventCount": 5,
       "error": "signal only works in main thread of the main interpreter"
     },
     {
@@ -7312,7 +7252,7 @@
       "sourceName": "Ennead",
       "url": "https://api.ennead.cc/mihoyo/honkai/news/events?lang=zh-cn",
       "status": "ok",
-      "fetchedAt": "2026-11-25T15:40:53+00:00",
+      "fetchedAt": "2026-11-26T04:23:47+00:00",
       "kind": "news"
     }
   ]
