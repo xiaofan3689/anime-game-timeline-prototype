@@ -36,6 +36,19 @@ jobs:
         run: |
           python -u scripts/sync.py
           python -m json.tool data/events.json > /dev/null
+      - name: Clear previous auto-merge before updating the sync branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          pending=$(gh pr list --repo "$GH_REPO" --state open --base main --head automation/event-sync \
+            --json number,isCrossRepository,author,autoMergeRequest \
+            --jq '.[] | select(.isCrossRepository == false and (.author.login == "app/github-actions" or .author.login == "github-actions[bot]") and .autoMergeRequest != null) | .number')
+          if [[ -n "$pending" ]]; then
+            gh pr merge "$pending" --repo "$GH_REPO" --disable-auto
+          fi
       - name: Create feed PR with Actions identity
         id: pr
         uses: peter-evans/create-pull-request@v7
@@ -54,7 +67,7 @@ jobs:
         with:
           app-id: ${{ vars.SYNC_REVIEW_APP_ID }}
           private-key: ${{ secrets.SYNC_REVIEW_APP_PRIVATE_KEY }}
-      - name: Validate, approve and merge with App
+      - name: Validate, approve and request merge with App
         if: steps.pr.outputs.pull-request-number != ''
         env:
           GH_TOKEN: ${{ steps.app.outputs.token }}
@@ -64,20 +77,43 @@ jobs:
         run: |
           set -euo pipefail
           pr=$(gh api "repos/$GH_REPO/pulls/$PR_NUMBER")
+          pr_url=$(jq -r ".html_url" <<< "$pr")
           head=$(jq -r '.head.sha' <<< "$pr")
-          jq -e --arg repo "$GH_REPO" '.base.ref == "main" and .head.ref == "automation/event-sync" and .head.repo.full_name == $repo and .user.login == "github-actions[bot]" and .changed_files == 1' <<< "$pr" > /dev/null
-          gh api "repos/$GH_REPO/pulls/$PR_NUMBER/files" --jq 'length == 1 and .[0].filename == "data/events.json"' | grep -qx true
-          gh api "repos/$GH_REPO/pulls/$PR_NUMBER/reviews" -f event=APPROVE -f commit_id="$head" -f body='App已校验自动同步PR仅修改活动数据。'
-          # Wait briefly for mergeability; branch rules/required CI are never bypassed.
-          for attempt in 1 2 3 4 5 6; do
-            if gh pr merge "$PR_NUMBER" --repo "$GH_REPO" --merge --match-head-commit "$head"; then
+          if ! jq -e --arg repo "$GH_REPO" '.state == "open" and .base.ref == "main" and .head.ref == "automation/event-sync" and .head.repo.full_name == $repo and .user.login == "github-actions[bot]" and .changed_files == 1' <<< "$pr" > /dev/null; then
+            echo "::error::同步 PR 的状态、来源分支、作者或变更范围不符合预期：$pr_url"
+            exit 1
+          fi
+          if ! gh api "repos/$GH_REPO/pulls/$PR_NUMBER/files?per_page=100" --jq 'length == 1 and .[0].filename == "data/events.json"' | grep -qx true; then
+            echo "::error::无法确认同步 PR 只修改 data/events.json：$pr_url"
+            exit 1
+          fi
+
+          # Bind the approval and the merge request to the validated revision.
+          gh api "repos/$GH_REPO/pulls/$PR_NUMBER/reviews" -f event=APPROVE -f commit_id="$head" -f body='App已校验自动同步PR仅修改活动数据。' --jq '{state, commit_id, reviewer: .user.login}'
+          if gh pr merge "$PR_NUMBER" --repo "$GH_REPO" --merge --match-head-commit "$head"; then
+            if [[ "$(gh pr view "$PR_NUMBER" --repo "$GH_REPO" --json state --jq '.state')" == MERGED ]]; then
+              echo "同步 PR 已合并：$pr_url"
               current=$(gh api "repos/$GH_REPO/git/ref/heads/automation/event-sync" --jq '.object.sha' 2>/dev/null || true)
-              if [ "$current" = "$head" ]; then
-                gh api -X DELETE "repos/$GH_REPO/git/refs/heads/automation/event-sync"
+              if [[ "$current" == "$head" ]]; then
+                gh api -X DELETE "repos/$GH_REPO/git/refs/heads/automation/event-sync" ||
+                  echo "::warning::已合并，临时分支清理失败。"
               fi
-              exit 0
+            else
+              echo "已请求合并或加入合并队列，最终状态请查看 $pr_url"
             fi
-            sleep 10
-          done
-          echo 'PR已审核，但合并被规则或检查阻止。保留PR，请检查GitHub状态。'
+            exit 0
+          fi
+
+          if gh pr merge "$PR_NUMBER" --repo "$GH_REPO" --merge --auto --match-head-commit "$head"; then
+            echo "GitHub 已接受合并请求。若检查尚未通过，PR 将等待分支要求满足：$pr_url"
+            exit 0
+          fi
+
+          echo "::group::同步 PR 合并诊断"
+          gh pr view "$PR_NUMBER" --repo "$GH_REPO" --json state,headRefOid,mergeable,mergeStateStatus,reviewDecision,autoMergeRequest ||
+            echo "::warning::当前令牌无法读取 PR 合并状态。"
+          gh pr checks "$PR_NUMBER" --repo "$GH_REPO" --required ||
+            echo "必需检查尚未通过、未触发或当前令牌无法查询。请查看 PR 的 Checks 页面。"
+          echo "::endgroup::"
+          echo "::error::同步 PR 已提交批准，GitHub 拒绝合并及登记自动合并。请在 PR 合并框确认阻塞项，并在仓库设置核对 Allow auto-merge：$pr_url"
           exit 1
