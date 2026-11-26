@@ -1416,6 +1416,23 @@
       "endAt": "2026-11-25T12:00:00+08:00",
       "imageUrl": "",
       "sourceUrl": ""
+    },
+    {
+      "hidden": false,
+      "recurring": false,
+      "dailyCheckin": false,
+      "checkinTarget": 1,
+      "activityUrl": "",
+      "disabled": true,
+      "featured": false,
+      "id": "86928b7b-8dcc-4109-adfe-ab414c40357a",
+      "gameId": "shuilingmiao",
+      "title": "test11",
+      "category": "活动",
+      "startAt": "2026-11-26T01:08:00+08:00",
+      "endAt": "2026-11-26T01:31:00+08:00",
+      "imageUrl": "",
+      "sourceUrl": ""
     }
   ]
 }
