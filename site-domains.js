@@ -1,7 +1,7 @@
 (() => {
- const publicOrigin = 'https://www.xiaofan3689.top';
+ const publicOrigins = ['https://xiaofan3689.top', 'https://www.xiaofan3689.top'];
  const opsOrigin = 'https://ops.xiaofan3689.top';
- const onPublicSite = location.origin === publicOrigin;
+ const onPublicSite = publicOrigins.includes(location.origin);
  const actions = {
   '#open-application': 'apply-collaborator',
   '#open-feedback': 'site-feedback',
