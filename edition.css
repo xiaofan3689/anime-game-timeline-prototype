@@ -271,15 +271,15 @@ body :is(.site-index,.site-image-viewer,.activity-dialog,.game-picker) {
   }
   .public-ui .event-dashboard :is(.milestones, #smart-panel),
   .public-ui #activity-timeline {
-    background-color: color-mix(in srgb, var(--edition-panel) 75%, transparent);
+    background-color: color-mix(in srgb, var(--edition-panel) 50%, transparent);
   }
   .public-ui #activity-timeline .timeline {
     background-color: transparent;
   }
   .public-ui .event-dashboard #smart-panel .smart-row {
-    background-color: rgb(39 35 57 / 75%);
+    background-color: rgb(39 35 57 / 50%);
   }
   .public-ui #activity-timeline .event-bar {
-    background-color: color-mix(in srgb, var(--c) 75%, transparent);
+    background-color: color-mix(in srgb, var(--c) 50%, transparent);
   }
 }
