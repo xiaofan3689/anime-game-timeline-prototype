@@ -276,4 +276,10 @@ body :is(.site-index,.site-image-viewer,.activity-dialog,.game-picker) {
   .public-ui #activity-timeline .timeline {
     background-color: transparent;
   }
+  .public-ui .event-dashboard #smart-panel .smart-row {
+    background-color: rgb(39 35 57 / 75%);
+  }
+  .public-ui #activity-timeline .event-bar {
+    background-color: color-mix(in srgb, var(--c) 75%, transparent);
+  }
 }
