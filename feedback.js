@@ -1,5 +1,10 @@
 (()=>{
  const button=document.createElement('button');button.type='button';button.textContent='建议反馈';document.querySelector('.top-actions').append(button);
+ button.id='site-feedback';
+ if(window.timelineSite?.onPublicSite){
+  button.onclick=()=>location.assign(window.timelineSite.opsPath('/#open-feedback'));
+  return;
+ }
  const dialog=document.createElement('dialog');dialog.className='feedback-dialog';dialog.setAttribute('aria-labelledby','feedback-title');
  dialog.innerHTML=`<form><h2 id="feedback-title">建议反馈</h2><label>反馈类别<select name="category" required><option value="">请选择</option><option>现有功能使用</option><option>未有功能需求</option><option>优化建议</option><option>其他</option></select></label><label>用户邮箱<input name="email" type="email" required maxlength="254" autocomplete="email" placeholder="请填写便于联系的邮箱"></label><p class="feedback-hint">如已登记邮件提醒，将自动填写该账号邮箱；你也可以手动填写。</p><label>反馈描述<textarea name="description" required maxlength="3000" rows="5" placeholder="请描述遇到的问题或希望增加的功能（最多3000字）"></textarea></label><p class="feedback-status" role="status" aria-live="polite"></p><div class="feedback-actions"><button type="button">取消</button><button type="submit">提交</button></div></form>`;
  document.body.append(dialog);const form=dialog.querySelector('form'),message=dialog.querySelector('.feedback-status'),cancel=form.querySelector('[type=button]'),submit=form.querySelector('[type=submit]');let id='',busy=false,revision=0;

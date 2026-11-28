@@ -244,7 +244,7 @@ async function refresh(options={}){
 
 setStatusFilter(S.status);
 document.querySelectorAll("[data-status]").forEach(button=>button.onclick=()=>{setStatusFilter(button.dataset.status);S.scroll=null;render()});$("game-filter").onchange=e=>{S.game=e.target.value;S.scroll=null;render()};$("search").oninput=e=>{S.query=e.target.value.trim().toLowerCase();render()};$("refresh").onclick=refresh;$("choose-games").onclick=()=>picker();$("save-games").onclick=save;$("select-all").onclick=()=>document.querySelectorAll("#game-options input").forEach(x=>x.checked=true);refresh();setInterval(()=>refresh({background:true}),60000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)refresh({background:true})});window.addEventListener("online",()=>refresh({background:true}));setInterval(()=>{if(Date.now()-feedAppliedAt>60000)refresh({background:true})},10000);setInterval(()=>S.feed&&render(),60000);
-document.getElementById("admin-entry").addEventListener("dblclick",()=>location.assign("/admin/"));
+document.getElementById("admin-entry").addEventListener("dblclick",()=>location.assign(window.timelineSite?.opsPath("/admin/") || "/admin/"));
 
 const orderButton=n("button","","游戏排序");orderButton.type="button";document.querySelector(".top-actions").append(orderButton);
 const orderDialog=document.createElement("dialog");orderDialog.className="theme-dialog order-dialog";document.body.append(orderDialog);let orderDraft=[];

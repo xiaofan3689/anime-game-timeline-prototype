@@ -2,6 +2,11 @@
  const checkinPrefix='daily-checkin:';
  const credentialKey='timeline-email-token-v1';let token='',active=false,timer,sending=false,dirty=false,revision=null,refreshRequired=false,verifying=false;
  const button=document.createElement('button');button.type='button';button.textContent='邮件提醒';document.querySelector('.top-actions').prepend(button);
+ button.id='site-email-reminders';
+ if(window.timelineSite?.onPublicSite){
+  button.onclick=()=>location.assign(window.timelineSite.opsPath('/#open-email-reminders'));
+  return;
+ }
  const dialog=document.createElement('dialog');dialog.className='email-dialog';
  dialog.innerHTML=`<form><h2>邮件提醒</h2><p>提醒所选游戏中未完成、将在48小时内结束的活动。每项活动提醒一次。</p><p id="email-current"></p><label>邮箱账号<input name="email" type="email" maxlength="254" required autocomplete="email"></label><button type="button" id="email-code">发送验证码</button><label>邮箱验证码<input name="code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required autocomplete="one-time-code"></label><p>验证后注册或切换邮箱账号，原账号数据保留。选择游戏、完成标记和签到记录会同步到服务端；关闭网页后按最后同步状态提醒。其他浏览器验证同一邮箱后可恢复已选游戏、完成状态和签到记录；凭证请勿分享。</p><p id="email-status" role="status" aria-live="polite"></p><div class="email-actions"><button type="button" id="email-stop">停止提醒</button><button type="button" id="email-close">关闭</button><button type="submit">验证并进入账号</button></div></form>`;
  document.body.append(dialog);const form=dialog.querySelector('form'),message=dialog.querySelector('#email-status'),current=dialog.querySelector('#email-current');
