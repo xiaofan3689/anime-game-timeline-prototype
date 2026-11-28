@@ -264,14 +264,14 @@ body :is(.site-index,.site-image-viewer,.activity-dialog,.game-picker) {
 
 @media (min-width: 761px) {
   .public-ui .cover-spread section.hero {
-    background-color: rgb(35 27 51 / 85%);
+    background-color: rgb(35 27 51 / 75%);
   }
   .public-ui .cover-spread .activity-overview {
-    background-color: color-mix(in srgb, var(--edition-paper) 85%, transparent);
+    background-color: color-mix(in srgb, var(--edition-paper) 75%, transparent);
   }
   .public-ui .event-dashboard :is(.milestones, #smart-panel),
   .public-ui #activity-timeline {
-    background-color: color-mix(in srgb, var(--edition-panel) 85%, transparent);
+    background-color: color-mix(in srgb, var(--edition-panel) 75%, transparent);
   }
   .public-ui #activity-timeline .timeline {
     background-color: transparent;
