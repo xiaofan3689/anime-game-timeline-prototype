@@ -261,3 +261,10 @@ body :is(.site-index,.site-image-viewer,.activity-dialog,.game-picker) {
 }
 .ended-archive-toggle:hover { background: #493763; }
 .ended-archive-rows[hidden] { display: none; }
+
+@media (min-width: 761px) {
+  .public-ui main#main-content,
+  .public-ui main#main-content + footer {
+    opacity: 0.85;
+  }
+}
